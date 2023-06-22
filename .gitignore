@@ -7,3 +7,5 @@ package-lock.json
 # misc
 .DS_Store
 cypress/.DS_Store
+
+cypress/videos/
