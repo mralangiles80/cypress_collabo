@@ -10,6 +10,7 @@ pipeline{
   stages{
     stage('Build and run tests'){
       steps{
+        sh "export LIBGL_DRI3_DISABLE=1"
         sh "docker run -v $PWD:/e2e -w /e2e cypress/included:12.15.0"
       }
     }
