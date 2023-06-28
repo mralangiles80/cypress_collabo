@@ -8,15 +8,9 @@ pipeline{
   }
 
   stages{
-    stage('Build code'){
+    stage('Build and run tests'){
       steps{
-        echo 'Building..'
-      }
-    }
-    stage('Run tests'){
-      steps{
-        sh "npm i"
-        sh "npx cypress run --browser ${BROWSER} --spec ${SPEC}"
+        sh "docker run -it -v $PWD:/e2e -w /e2e cypress/included:3.4.0 --browser ${BROWSER} --spec ${SPEC}"
       }
     }
   }
