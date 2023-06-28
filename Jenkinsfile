@@ -7,10 +7,6 @@ pipeline{
     choice(name: 'BROWSER', choices: ['chrome', 'edge', 'firefox'], description: 'Choose browser to run on')
   }
 
-  options{
-    ansiColor('xterm')
-  }
-
   stages{
     stage('Build code'){
       steps{
