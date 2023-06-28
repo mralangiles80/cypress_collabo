@@ -10,7 +10,7 @@ pipeline{
   stages{
     stage('Build and run tests'){
       steps{
-        sh "docker run -v $PWD:/cypress cypress/included:12.16.0"
+        sh "docker run -it -v $PWD:/cypress cypress/included:12.18.0"
       }
     }
   }
