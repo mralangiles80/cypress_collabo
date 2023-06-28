@@ -10,7 +10,7 @@ pipeline{
   stages{
     stage('Build and run tests'){
       steps{
-        sh "docker run -it -v $PWD:/e2e -w /e2e cypress/included:3.4.0 --browser ${BROWSER} --spec ${SPEC}"
+        sh "docker run -v $PWD:/e2e -w /e2e cypress/included:3.4.0 --browser ${BROWSER} --spec ${SPEC}"
       }
     }
   }
