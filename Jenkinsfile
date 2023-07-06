@@ -15,7 +15,7 @@ pipeline{
     }
     stage('Run tests'){
       steps{
-        sh "docker run cypress-build -b chrome"
+        sh "docker run cypress-build"
       }
     }
   }
