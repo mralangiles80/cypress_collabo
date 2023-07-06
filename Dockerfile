@@ -7,4 +7,4 @@ WORKDIR /app
 COPY . .
 
 
-RUN npm install --save-dev cypress
+RUN CYPRESS_CACHE_FOLDER='./tmp/Cypress' npm install --save-dev cypress
