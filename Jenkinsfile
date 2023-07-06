@@ -8,10 +8,14 @@ pipeline{
   // }
 
   stages{
-    stage('Build and run tests'){
+    stage('Build container'){
       steps{
-        sh "docker build -t cypress-test-browser"
-        sh "docker run -it cypress-test-browser -b chrome"
+        sh "docker build . -t cypress-build"
+      }
+    }
+    stage('Run tests'){
+      steps{
+        sh "docker run -it cypress-build -b chrome"
       }
     }
   }
