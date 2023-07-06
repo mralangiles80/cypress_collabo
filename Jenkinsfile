@@ -15,6 +15,7 @@ pipeline{
     }
     stage('Run tests'){
       steps{
+        sh "CYPRESS_CACHE_FOLDER=./tmp/Cypress"
         sh "docker run cypress-build npx cypress run -b chrome"
       }
     }
