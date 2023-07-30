@@ -11,7 +11,7 @@ pipeline{
     stage('Build container and run tests'){
       steps{
         sh "docker build . -t cypress-build"
-        sh "docker run cypress-build npx cypress run --spec 'cypress/e2e/weather-api/*' -b chrome
+        sh "docker run cypress-build npx cypress run --spec 'cypress/e2e/weather-api/*' -b chrome"
       }
     }
   }
