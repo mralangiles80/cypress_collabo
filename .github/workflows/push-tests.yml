@@ -9,5 +9,5 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '14'
-      - run: npm ci --save-dev cypress
+      - run: npm install --save-dev cypress
       - run: npx cypress run --spec
