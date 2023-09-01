@@ -10,4 +10,4 @@ jobs:
         with:
           node-version: '14'
       - run: npm install --save-dev cypress
-      - run: npx cypress run --spec
+      - run: npx cypress run
