@@ -1,5 +1,12 @@
 {
+  "name": "cypress_collabo",
   "devDependencies": {
     "cypress": "^12.16.0"
+  },
+  "dependencies": {
+    "cypress": "10.11.0"
+  },
+  "scripts": {
+    "test": "cypress run"
   }
 }
