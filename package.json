@@ -1,7 +1,7 @@
 {
   "name": "cypress_collabo",
   "devDependencies": {
-    "cypress": "^12.16.0"
+    "cypress": "^13.1.0"
   },
   "dependencies": {
     "cypress": "13.1.0"
