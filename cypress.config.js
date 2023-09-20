@@ -1,5 +1,7 @@
 const { defineConfig } = require('cypress')
 
+import 'cypress-mochawesome-reporter/register';
+
 module.exports = defineConfig({
   reporter: 'cypress-mochawesome-reporter',
   e2e: {
