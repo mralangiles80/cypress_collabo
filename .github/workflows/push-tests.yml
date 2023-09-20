@@ -10,4 +10,6 @@ jobs:
         with:
           node-version: '14'
       - run: npm install --save-dev cypress
-      - run: npx cypress run
+      - run: npm install --save-dev mocha
+      - run: npm install --save-dev mochawesome
+      - run: npx cypress run 
