@@ -14,3 +14,7 @@ jobs:
       - run: npm install --save-dev mocha
       - run: npm install --save-dev mochawesome
       - run: npx cypress run 
+      - uses: actions/upload-artifact@v3
+        with:
+          name: upload to artifacts folder
+          path: artifacts/
