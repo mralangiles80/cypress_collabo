@@ -16,5 +16,5 @@ jobs:
       - run: npx cypress run 
       - uses: actions/upload-artifact@v3
         with:
-          name: upload to artifacts folder
+          name: reports-folder
           path: artifacts/
