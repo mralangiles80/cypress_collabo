@@ -1,4 +1,4 @@
-describe("Weather API", () => {
+describe("Weather API Alerts", () => {
 
   const weatherBaseUrl = "https://api.weather.gov";
 

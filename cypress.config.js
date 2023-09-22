@@ -1,9 +1,17 @@
 const { defineConfig } = require('cypress');
+const artifactsFolder = 'artifacts/'
 
 module.exports = defineConfig({
-  reporter: 'mochawesome',
   e2e: {
     supportFile: false,
-    video: false
+    video: false,
+    screenshotsFolder: artifactsFolder + 'screenshots/',
+    downloadsFolder : artifactsFolder + 'downloads/'
+  },
+  reporter: 'mochawesome',
+  reporterOptions: {
+    reportDir: artifactsFolder + 'reports/',
+    reportFilename: "report-[status]_[datetime]-[name]",
+    timestamp: 'dd-mm-yyyy-hhmmss',
   }
 })

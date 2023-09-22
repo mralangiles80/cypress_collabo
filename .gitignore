@@ -2,10 +2,12 @@
 
 # dependencies
 /node_modules
-#package-lock.json
 
-# misc
+# cypress
 .DS_Store
 cypress/.DS_Store
-
 cypress/videos/
+cypress/screenshots/
+cypress/downloads/
+# reports
+artifacts/
