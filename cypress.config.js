@@ -6,7 +6,15 @@ module.exports = defineConfig({
     supportFile: false,
     video: false,
     screenshotsFolder: artifactsFolder + 'screenshots/',
-    downloadsFolder : artifactsFolder + 'downloads/'
+    downloadsFolder : artifactsFolder + 'downloads/',
+     setupNodeEvents(on, config) {
+          on("task", {
+            log(args) {
+              console.log(...args);
+              return null;
+            }
+          });
+        },
   },
   reporter: 'mochawesome',
   reporterOptions: {
