@@ -7,7 +7,7 @@ describe("Weather API Alerts", () => {
         expect(response.status).to.eq(200);
         expect(response).to.have.property('headers')
         expect(response).to.have.property('duration')
-        cy.task("log", "response body: " + response.body.eventTypes);
+        // cy.task("log", "response body: " + response.body.eventTypes);
         expect(response.body.eventTypes[0]).to.contains(expectedEventType);
       })
     })
