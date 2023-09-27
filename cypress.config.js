@@ -5,7 +5,6 @@ module.exports = defineConfig({
   e2e: {
     baseUrl: 'https://api.weather.gov',
     screenshotOnRunFailure: false,
-    supportFile: false,
     video: false,
     retries: 10,
     screenshotsFolder: artifactsFolder + 'screenshots/',

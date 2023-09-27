@@ -1,4 +1,4 @@
-describe("Weather API Alerts", () => {
+describe("Weather API Tests", () => {
 
   var latitudes = [];
 
@@ -20,6 +20,7 @@ describe("Weather API Alerts", () => {
   context("GET temperature", () => {
     it("tests it meets temperature rules", () => {
       cy.request("GET", `gridpoints/${regionalOffice}/${randomLatitude},${randomLongtitude}/forecast`).then((response) => {
+      cy.dumpLog('response body', response.body)
       expect(response.status).to.eq(200);
       var forecastPeriods = response.body.properties.periods;
       forecastPeriods.forEach(function(forecastPeriod) {
