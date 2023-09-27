@@ -1,19 +1,11 @@
 describe("Weather API Tests", () => {
 
   var latitudes = [];
+  var longtitudes = [];
 
-  for (var i = 30; i <= 50; i++) {
-     latitudes.push(i);
-  }
-
- var longtitudes = [];
-
-  for (var i = 70; i <= 90; i++) {
-     longtitudes.push(i);
-  }
-
+  for (var i = 70; i <= 90; i++) { longtitudes.push(i);  }
+  for (var i = 30; i <= 50; i++) { latitudes.push(i);  }
   const regionalOffice = 'TOP';
-
   const randomLatitude = latitudes[Math.floor(Math.random() * latitudes.length)];
   const randomLongtitude = longtitudes[Math.floor(Math.random() * longtitudes.length)];
 
