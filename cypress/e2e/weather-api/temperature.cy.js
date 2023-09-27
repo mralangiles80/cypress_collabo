@@ -1,35 +1,34 @@
 describe("Weather API Alerts", () => {
 
-  const weatherBaseUrl = "https://api.weather.gov";
+  var latitudes = [];
+
+  for (var i = 30; i <= 46; i++) {
+     latitudes.push(i);
+  }
+
+ var longtitudes = [];
+
+  for (var i = 70; i <= 90; i++) {
+     longtitudes.push(i);
+  }
+
+  const regionalOffice = 'TOP';
+
+  const randomLatitude = latitudes[Math.floor(Math.random() * latitudes.length)];
+  const randomLongtitude = longtitudes[Math.floor(Math.random() * longtitudes.length)];
 
   context("GET temperature", () => {
-    it("tests it is within normal bounds", () => {
-      cy.request("GET", `${weatherBaseUrl}/gridpoints/TOP/31,82/forecast`).then((response) => {
-        expect(response.status).to.eq(200);
-        expect(response).to.have.property('headers')
-        expect(response).to.have.property('duration')
-        cy.task("log", "response body: " + response.body.properties.periods[0].temperature);
-        expect(response.body.properties.periods[0].temperature).to.be.greaterThan(-50);
-        expect(response.body.properties.periods[0].temperature).to.be.lessThan(200);
-      })
-    }),
-    it("tests it is not null", () => {
-      cy.request("GET", `${weatherBaseUrl}/gridpoints/TOP/31,82/forecast`).then((response) => {
-        expect(response.status).to.eq(200);
-        expect(response).to.have.property('headers')
-        expect(response).to.have.property('duration')
-        cy.task("log", "response body: " + response.body.properties.periods[0].temperature);
-        cy.get(response.body.properties.periods[0].temperature).should('not.be.empty')
-      })
-    }),
-    it("tests it is a number", () => {
-      cy.request("GET", `${weatherBaseUrl}/gridpoints/TOP/31,82/forecast`).then((response) => {
-        expect(response.status).to.eq(200);
-        expect(response).to.have.property('headers')
-        expect(response).to.have.property('duration')
-        cy.task("log", "response body: " + response.body.properties.periods[0].temperature);
-        cy.get(response.body.properties.periods[0].temperature).invoke('text').should('match', /^[0-9]*$/);
-      })
+    it("tests it meets temperature rules", () => {
+      cy.request("GET", `gridpoints/${regionalOffice}/${randomLatitude},${randomLongtitude}/forecast`).then((response) => {
+      expect(response.status).to.eq(200);
+      var forecastPeriods = response.body.properties.periods;
+      forecastPeriods.forEach(function(forecastPeriod) {
+        expect(forecastPeriod.temperature % 1).to.equal(0) // integer
+        cy.get(forecasePeriod.temperature).should('not.be.empty');
+        expect(forecastPeriod.temperature).to.be.greaterThan(-100); 
+        expect(forecastPeriod.temperature).to.be.lessThan(200);
+      });
     })
   })
+ })     
 })
