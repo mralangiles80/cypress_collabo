@@ -3,10 +3,21 @@ const artifactsFolder = 'artifacts/'
 
 module.exports = defineConfig({
   e2e: {
+    baseUrl: 'https://api.weather.gov',
+    screenshotOnRunFailure: false,
     supportFile: false,
     video: false,
+    retries: 5,
     screenshotsFolder: artifactsFolder + 'screenshots/',
-    downloadsFolder : artifactsFolder + 'downloads/'
+    downloadsFolder : artifactsFolder + 'downloads/',
+     setupNodeEvents(on, config) {
+          on("task", {
+            log(message) {
+              console.log(message);
+              return null;
+            }
+          });
+        },
   },
   reporter: 'mochawesome',
   reporterOptions: {
