@@ -2,7 +2,7 @@ describe("Weather API Alerts", () => {
 
   var latitudes = [];
 
-  for (var i = 30; i <= 46; i++) {
+  for (var i = 30; i <= 50; i++) {
      latitudes.push(i);
   }
 
