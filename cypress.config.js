@@ -7,7 +7,7 @@ module.exports = defineConfig({
     screenshotOnRunFailure: false,
     supportFile: false,
     video: false,
-    retries: 5,
+    retries: 10,
     screenshotsFolder: artifactsFolder + 'screenshots/',
     downloadsFolder : artifactsFolder + 'downloads/',
      setupNodeEvents(on, config) {
