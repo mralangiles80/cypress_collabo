@@ -19,6 +19,7 @@ describe("Wind Direction API Tests", () => {
           expect(forecastPeriod.windDirection).to.not.be.empty;
           expect(forecastPeriod.windDirection).to.have.length.of.at.most(3);
           expect(forecastPeriod.windDirection).to.match(/[A-Z]+/);
+          expect(forecastPeriod.windDirection).to.not.match(/[a-z]+/);
           expect(forecastPeriod.windDirection).to.be.oneOf(['N', 'S', 'E', 'W', 'SW', 'SE', 'NE', 'NW', 'NNE', 'ENE', 'ESE', 'SSE', 'SSW', 'WSW', 'WNW', 'NNW']);
         });
       })
