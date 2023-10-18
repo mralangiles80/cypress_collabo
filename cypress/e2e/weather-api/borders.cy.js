@@ -1,4 +1,4 @@
-describe("Weather API Tests", () => {
+describe("Border API Tests", () => {
 
   var latitudes = [];
   var longtitudes = [];
