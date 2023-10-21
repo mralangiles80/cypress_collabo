@@ -16,22 +16,30 @@ describe("Border API Tests", () => {
         failOnStatusCode:false,
       }).then((response) => {
             expect(response.status).to.eq(500)
-      }),  // australia
+      })  // australia
+    }),
+    it("checks the status of different regions in relation to US borders", () => {
       cy.request({
         url: `gridpoints/${regionalOffice}/32,116/forecast`,
         failOnStatusCode:false,
       }).then((response) => {
             expect(response.status).to.eq(500)
-      }), // mexican border
+      }) // mexican border
+    }),
+    it("checks the status of different regions in relation to US borders", () => {
       cy.request("GET", `gridpoints/${regionalOffice}/${randomLatitude},${randomLongtitude}/forecast`).then((response) => {
         expect(response.status).to.eq(200); // mid-west somewhere
-      }),
+      })
+    }),
+    it("checks the status of different regions in relation to US borders", () => {
       cy.request("GET", `gridpoints/${regionalOffice}/37,94/forecast`).then((response) => {
         expect(response.status).to.eq(200); // near the mexican border
-      }),
+      })
+    }),
+    it("checks the status of different regions in relation to US borders", () => {
       cy.request("GET", `gridpoints/${regionalOffice}/18,66/forecast`).then((response) => {
         expect(response.status).to.eq(200); // puerto rico
-      })
+      })     
     })
   })     
 })
