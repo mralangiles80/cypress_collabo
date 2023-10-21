@@ -10,7 +10,7 @@ describe("Wind Direction API Tests", () => {
   const randomLongtitude = longtitudes[Math.floor(Math.random() * longtitudes.length)];
 
   context("meets expectations for wind directions", () => {
-    it("should be a string", () => {
+    it("must be a string", () => {
       cy.request("GET", `gridpoints/${regionalOffice}/${randomLatitude},${randomLongtitude}/forecast`).then((response) => {
         expect(response.status).to.eq(200);
         var forecastPeriods = response.body.properties.periods;
@@ -19,7 +19,7 @@ describe("Wind Direction API Tests", () => {
         });
       })
     }),
-    it("should not be null", () => {
+    it("must not be null", () => {
       cy.request("GET", `gridpoints/${regionalOffice}/${randomLatitude},${randomLongtitude}/forecast`).then((response) => {
         expect(response.status).to.eq(200);
         var forecastPeriods = response.body.properties.periods;
@@ -28,7 +28,7 @@ describe("Wind Direction API Tests", () => {
         });
       })
     }),
-    it("should be up to 3 characters", () => {
+    it("must be up to 3 characters", () => {
       cy.request("GET", `gridpoints/${regionalOffice}/${randomLatitude},${randomLongtitude}/forecast`).then((response) => {
         expect(response.status).to.eq(200);
         var forecastPeriods = response.body.properties.periods;
@@ -37,7 +37,7 @@ describe("Wind Direction API Tests", () => {
         });
       })
     }),
-    it("should be upper case characters", () => {
+    it("must be upper case characters", () => {
       cy.request("GET", `gridpoints/${regionalOffice}/${randomLatitude},${randomLongtitude}/forecast`).then((response) => {
         expect(response.status).to.eq(200);
         var forecastPeriods = response.body.properties.periods;
@@ -47,7 +47,7 @@ describe("Wind Direction API Tests", () => {
         });
       })
     }),
-    it("should match the following characters", () => {
+    it("must match the following characters", () => {
       cy.request("GET", `gridpoints/${regionalOffice}/${randomLatitude},${randomLongtitude}/forecast`).then((response) => {
         expect(response.status).to.eq(200);
         var forecastPeriods = response.body.properties.periods;

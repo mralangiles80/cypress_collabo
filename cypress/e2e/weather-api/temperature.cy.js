@@ -9,7 +9,7 @@ describe("Temperature API Tests", () => {
   const randomLatitude = latitudes[Math.floor(Math.random() * latitudes.length)];
   const randomLongtitude = longtitudes[Math.floor(Math.random() * longtitudes.length)];
 
-  context("tests it meets temperature rules", () => {
+  context("meets temperature rules", () => {
     it("must be a whole number", () => {
       cy.request("GET", `gridpoints/${regionalOffice}/${randomLatitude},${randomLongtitude}/forecast`).then((response) => {
         expect(response.status).to.eq(200);
