@@ -22,7 +22,7 @@ describe("Temperature API Tests", () => {
       })
     }),
     it("must not be null", () => {
-      cy.request("GET", `gridpoints/${regionalOffice}/${randomLatitude},${randomLongtitude}/forecast`).then((response) => {
+      cy.request("GET", `gridpoints/${regionalOffice.code}/${randomLatitude},${randomLongtitude}/forecast`).then((response) => {
         expect(response.status).to.eq(200);
         var forecastPeriods = response.body.properties.periods;
         forecastPeriods.forEach(function(forecastPeriod) {
@@ -31,7 +31,7 @@ describe("Temperature API Tests", () => {
       })
     }),
     it("must meet a minimum", () => {
-      cy.request("GET", `gridpoints/${regionalOffice}/${randomLatitude},${randomLongtitude}/forecast`).then((response) => {
+      cy.request("GET", `gridpoints/${regionalOffice.code}/${randomLatitude},${randomLongtitude}/forecast`).then((response) => {
         expect(response.status).to.eq(200);
         var forecastPeriods = response.body.properties.periods;
         forecastPeriods.forEach(function(forecastPeriod) {
@@ -40,7 +40,7 @@ describe("Temperature API Tests", () => {
       })
     }),
     it("must meet a maximum", () => {
-      cy.request("GET", `gridpoints/${regionalOffice}/${randomLatitude},${randomLongtitude}/forecast`).then((response) => {
+      cy.request("GET", `gridpoints/${regionalOffice.code}/${randomLatitude},${randomLongtitude}/forecast`).then((response) => {
         expect(response.status).to.eq(200);
         var forecastPeriods = response.body.properties.periods;
         forecastPeriods.forEach(function(forecastPeriod) {
