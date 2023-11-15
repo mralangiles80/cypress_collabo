@@ -1,0 +1,12 @@
+[
+  {
+  "name": "Topeka",
+  "code": "TOP",
+  "defaultLongtitude": 25,
+  "defaultLatitude": 133,
+  "minLongtitude": 70,
+  "maxLongtitude": 90,
+  "minLatitude": 30,
+  "maxLatitude": 50
+  }
+]
