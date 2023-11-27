@@ -1,0 +1,7 @@
+{
+    "@context": [],
+    "eventTypes": [
+        "Craziness",
+        "Other stuff"
+    ]
+}
