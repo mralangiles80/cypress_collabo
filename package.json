@@ -4,8 +4,7 @@
     "cypress": "^13.1.0",
     "mocha": "^10.2.0",
     "mochawesome": "^7.1.3",
-    "moment": "^2.30.1",
-    "react-moment": "^1.1.3"
+    "moment": "^2.30.1"
   },
   "dependencies": {
     "cypress": "13.1.0"

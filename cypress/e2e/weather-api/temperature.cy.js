@@ -17,7 +17,6 @@ describe("Temperature API Tests", () => {
         expect(response.status).to.eq(200);
         var forecastPeriods = response.body.properties.periods;
         forecastPeriods.forEach(function(forecastPeriod) {
-          console.log(forecastPeriod)
           expect(forecastPeriod.temperature % 1).to.equal(0) // integer
         });
       })
@@ -28,7 +27,6 @@ describe("Temperature API Tests", () => {
         var forecastPeriods = response.body.properties.periods;
         forecastPeriods.forEach(function(forecastPeriod) {
           cy.get(forecastPeriod.temperature).should('not.be.empty');
-          cy.task('log', forecastPeriod.temperature);
         });
       })
     }),
