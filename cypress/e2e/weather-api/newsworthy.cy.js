@@ -1,3 +1,5 @@
+import moment from 'moment';
+
 describe("Newsworthy Alerts If The Asserts Fail", () => {
 
   var NMlongtitudes = [];
