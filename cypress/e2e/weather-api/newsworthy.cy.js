@@ -1,5 +1,3 @@
-const moment = require('moment')
-
 describe("Newsworthy Alerts If The Asserts Fail", () => {
 
   var NMlongtitudes = [];
