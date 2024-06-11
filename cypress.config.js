@@ -15,6 +15,7 @@ module.exports = defineConfig({
         },
       });
     },
+    fixturesFolder: 'cypress/fixtures/',
     screenshotsFolder: artifactsFolder + 'screenshots/',
     downloadsFolder : artifactsFolder + 'downloads/',
      setupNodeEvents(on, config) {
