@@ -34,14 +34,15 @@ describe("Newsworthy Alerts If The Asserts Fail", () => {
   });
 
   context("Newsworthy events", () => {
+    var currentDay = moment(d).format("YYYY-MM-DD");
     it("the current snowfall is NOT within normal (within 90th percentile?) range for this month in texas", () => {
-      cy.request("GET", `https://data.rcc-acis.org/StnData?sid=DALthr&sdate=2009-01-01&edate=2010-01-01&elems=10&output=json`).then((response) => {
+      cy.request("GET", `https://data.rcc-acis.org/StnData?sid=DALthr&sdate=2009-01-01&edate=` + currentDay + `&elems=10&output=json`).then((response) => {
         expect(response.status).to.eq(200);
         var HsnowFalls = response.body.data;
         HsnowFalls.forEach(function(HsnowFall) {
           var HdateData = moment(HsnowFall[0]).format("M");
           HxAxis.forEach(function(value) {
-            if (HsnowFall[1] !== 'T') {
+            if (HsnowFall[1] !== 'T' && HsnowFall[1] !== 'M') {
               if (HdateData === value && HdateData == month) {
                 HtemperatureFinal[value].sum += JSON.parse(HsnowFall[1]);
                 HtemperatureFinal[value].count++;
@@ -96,7 +97,7 @@ describe("Newsworthy Alerts If The Asserts Fail", () => {
       var number = StandardDeviation([historicalMonthData,forecastMonthData]);
       expect(number < 0.9);
     }),
-    it("assert there is not a hurricane due in florida in the next 48 hours", () => {
+    it("assert there is NOT a hurricane due in florida in the next 48 hours", () => {
       cy.request({ 
         url: `/alerts/active/area/FL`}).then((response) => {
         var alerts = response.body.features;
