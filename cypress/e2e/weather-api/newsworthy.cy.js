@@ -1,4 +1,4 @@
-import moment from 'moment';
+const moment = require('moment')
 
 describe("Newsworthy Alerts If The Asserts Fail", () => {
 
