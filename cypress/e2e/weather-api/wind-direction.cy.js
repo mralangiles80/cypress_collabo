@@ -25,6 +25,7 @@ describe("Wind Direction API Tests", () => {
         var forecastPeriods = response.body.properties.periods;
         forecastPeriods.forEach(function(forecastPeriod) {
           expect(forecastPeriod.windDirection).to.not.be.empty;
+
         });
       })
     }),
