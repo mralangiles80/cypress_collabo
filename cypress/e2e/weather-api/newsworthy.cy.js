@@ -11,7 +11,6 @@ describe("Newsworthy Alerts If The Asserts Fail", () => {
   let month = d.getMonth() + 1;
 
   var HxAxis = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']; // contains months (representing as integer)
-  HxAxis.push(month.toString());
   var HtemperatureFinal = {};
   HxAxis.forEach(month => {
     HtemperatureFinal[month] = {
@@ -35,7 +34,7 @@ describe("Newsworthy Alerts If The Asserts Fail", () => {
 
   context("Newsworthy events", () => {
     var currentDay = moment(d).format("YYYY-MM-DD");
-    it("the current snowfall is NOT within normal (within 90th percentile?) range for this month in texas", () => {
+    it("the current snowfall is NOT within normal range for this month in texas", () => {
       cy.request("GET", `https://data.rcc-acis.org/StnData?sid=DALthr&sdate=2009-01-01&edate=` + currentDay + `&elems=10&output=json`).then((response) => {
         expect(response.status).to.eq(200);
         var HsnowFalls = response.body.data;
@@ -54,12 +53,12 @@ describe("Newsworthy Alerts If The Asserts Fail", () => {
       });
       var historicalData = Object.values(HtemperatureFinal).map(h => h );
       var historicalMonthData = historicalData[parseInt(month)].count;
-      cy.request({ url: `gridpoints/FWD/119,69`}).then((response) => {
+      cy.request({ url: `gridpoints/FWD/32,96`}).then((response) => {
         expect(response.status).to.eq(200);
         var forecastSnowFallAmounts = response.body.properties.snowfallAmount.values;
         forecastSnowFallAmounts.forEach(function(forecastSnowFallAmount) {
-          var cleanString = (forecastSnowFallAmount.validTime).replace(/\/.*/g, "");
-          var dateData = moment(cleanString).format("M");
+          var snowFallAmountValidTime = (forecastSnowFallAmount.validTime).replace(/\/.*/g, "");
+          var dateData = moment(snowFallAmountValidTime).format("M");
           xAxis.forEach(function(value) {
           if (dateData === value && dateData == month) {
             temperatureFinal[value].sum += JSON.parse(forecastSnowFallAmount.value);
