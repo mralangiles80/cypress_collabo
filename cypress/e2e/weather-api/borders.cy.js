@@ -41,6 +41,22 @@ describe("Border API Tests", () => {
       cy.request("GET", `gridpoints/${regionalOffice.code}/18,66/forecast`).then((response) => {
         expect(response.status).to.eq(200); // puerto rico
       })     
+    }),
+    it("latitude must meet a minimum", () => {
+      cy.request({
+        url: `gridpoints/${regionalOffice}/${randomLatitude},-1/forecast`,
+        failOnStatusCode:false,
+      }).then((response) => {
+        expect(response.status).to.eq(404)
+      })
+    }),
+    it("longitude must meet a minimum", () => {
+           cy.request({
+        url: `gridpoints/${regionalOffice}/-1,${randomLongtitude}/forecast`,
+        failOnStatusCode:false,
+      }).then((response) => {
+        expect(response.status).to.eq(404)
+      })
     })
   })     
 })

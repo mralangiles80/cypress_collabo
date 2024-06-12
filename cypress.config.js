@@ -7,6 +7,14 @@ module.exports = defineConfig({
     screenshotOnRunFailure: false,
     video: false,
     retries: 10,
+    setupNodeEvents(on, config) {
+      on('task', {
+        log(message) {
+          console.log(message);
+          return null;
+        },
+      });
+    },
     fixturesFolder: 'cypress/fixtures/',
     screenshotsFolder: artifactsFolder + 'screenshots/',
     downloadsFolder : artifactsFolder + 'downloads/',
