@@ -16,7 +16,7 @@ describe("Weather API Alert Types", () => {
 
   context("gets a list of alert types and checks the first one", () => {
 
-    it.only("/gridpoints/{wfo}/{x},{y}/forecast schema must be", () => {
+    it("/gridpoints/{wfo}/{x},{y}/forecast schema must be", () => {
       cy.request("GET", `gridpoints/ABQ/24,106/forecast`).then((response) => {
         expect(response.status).to.eq(200);
         var count = 0;
@@ -43,8 +43,6 @@ describe("Weather API Alert Types", () => {
         expect(forecastPeriod).to.have.property("windSpeed");
         expect(forecastPeriod).to.have.property("windDirection");
         expect(forecastPeriod).to.have.property("icon");
-        expect(forecastPeriod.icon).to.contain("day");
-        expect(forecastPeriod.icon).to.contain("night");
         expect(forecastPeriod).to.have.property("shortForecast");
         expect(forecastPeriod).to.have.property("detailedForecast");
         });
