@@ -12,7 +12,7 @@ describe("Temperature API Tests", () => {
   const randomLongtitude = longtitudes[Math.floor(Math.random() * longtitudes.length)];
 
   context("meets temperature rules", () => {
-    it("must be a whole number", () => {
+    it("/" + regionalOffice.code + "/" + randomLatitude + "," + randomLongtitude + "must be a whole number", () => {
       cy.request("GET", `gridpoints/${regionalOffice.code}/${randomLatitude},${randomLongtitude}/forecast`).then((response) => {
         expect(response.status).to.eq(200);
         var forecastPeriods = response.body.properties.periods;
@@ -21,7 +21,7 @@ describe("Temperature API Tests", () => {
         });
       })
     }),
-    it("must not be null", () => {
+    it("/" + regionalOffice.code + "/" + randomLatitude + "," + randomLongtitude + "must not be null", () => {
       cy.request("GET", `gridpoints/${regionalOffice.code}/${randomLatitude},${randomLongtitude}/forecast`).then((response) => {
         expect(response.status).to.eq(200);
         var forecastPeriods = response.body.properties.periods;
@@ -30,7 +30,7 @@ describe("Temperature API Tests", () => {
         });
       })
     }),
-    it("must meet a minimum", () => {
+    it("/" + regionalOffice.code + "/" + randomLatitude + "," + randomLongtitude + "must meet a minimum", () => {
       cy.request("GET", `gridpoints/${regionalOffice.code}/${randomLatitude},${randomLongtitude}/forecast`).then((response) => {
         expect(response.status).to.eq(200);
         var forecastPeriods = response.body.properties.periods;
@@ -39,7 +39,7 @@ describe("Temperature API Tests", () => {
         });
       })
     }),
-    it("must meet a maximum", () => {
+    it("/" + regionalOffice.code + "/" + randomLatitude + "," + randomLongtitude + "must meet a maximum", () => {
       cy.request("GET", `gridpoints/${regionalOffice.code}/${randomLatitude},${randomLongtitude}/forecast`).then((response) => {
         expect(response.status).to.eq(200);
         var forecastPeriods = response.body.properties.periods;

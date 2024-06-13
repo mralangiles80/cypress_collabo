@@ -12,7 +12,7 @@ describe("Wind Direction API Tests", () => {
   const randomLongtitude = longtitudes[Math.floor(Math.random() * longtitudes.length)];
 
   context("meets expectations for wind directions", () => {
-    it("must be a string", () => {
+    it("/" + regionalOffice.code + "/" + randomLatitude + "," + randomLongtitude + " must be a string", () => {
       cy.request("GET", `gridpoints/${regionalOffice.code}/${randomLatitude},${randomLongtitude}/forecast`).then((response) => {
         expect(response.status).to.eq(200);
         var forecastPeriods = response.body.properties.periods;
@@ -21,7 +21,7 @@ describe("Wind Direction API Tests", () => {
         });
       })
     }),
-    it("must not be null", () => {
+    it("/" + regionalOffice.code + "/" + randomLatitude + "," + randomLongtitude + " must not be null", () => {
       cy.request("GET", `gridpoints/${regionalOffice.code}/${randomLatitude},${randomLongtitude}/forecast`).then((response) => {
         expect(response.status).to.eq(200);
         var forecastPeriods = response.body.properties.periods;
@@ -30,7 +30,7 @@ describe("Wind Direction API Tests", () => {
         });
       })
     }),
-    it("must be up to 3 characters", () => {
+    it("/" + regionalOffice.code + "/" + randomLatitude + "," + randomLongtitude + " must be up to 3 characters", () => {
       cy.request("GET", `gridpoints/${regionalOffice.code}/${randomLatitude},${randomLongtitude}/forecast`).then((response) => {
         expect(response.status).to.eq(200);
         var forecastPeriods = response.body.properties.periods;
@@ -39,7 +39,7 @@ describe("Wind Direction API Tests", () => {
         });
       })
     }),
-    it("must be upper case characters", () => {
+    it("/" + regionalOffice.code + "/" + randomLatitude + "," + randomLongtitude + " must be upper case characters", () => {
       cy.request("GET", `gridpoints/${regionalOffice.code}/${randomLatitude},${randomLongtitude}/forecast`).then((response) => {
         expect(response.status).to.eq(200);
         var forecastPeriods = response.body.properties.periods;
@@ -49,7 +49,8 @@ describe("Wind Direction API Tests", () => {
         });
       })
     }),
-    it("must match the following characters", () => {
+
+    it("/" + regionalOffice.code + "/" + randomLatitude + "," + randomLongtitude + " it matches the wind direction characters", () => {
       cy.request("GET", `gridpoints/${regionalOffice.code}/${randomLatitude},${randomLongtitude}/forecast`).then((response) => {
         expect(response.status).to.eq(200);
         var forecastPeriods = response.body.properties.periods;
