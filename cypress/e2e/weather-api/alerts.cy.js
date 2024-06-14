@@ -8,6 +8,13 @@ describe("Weather API Alert Types", () => {
     return (new Set(array)).size !== array.length;
   }
 
+  const removeDuplicates = (arr = []) => {
+    const map = new Map();
+    arr.forEach((x) => map.set(JSON.stringify(x), x));
+    arr = [...map.values()];
+    return arr;
+  };
+
   before(() => {
     cy.intercept({ url: url },
       { fixture: 'alert-types-stub.json' }
@@ -16,17 +23,59 @@ describe("Weather API Alert Types", () => {
 
   context("gets a list of alert types and checks the first one", () => {
 
+    it("gets the list from the real resource", () => {
+      cy.request("GET", `alerts/types`).then((response) => {
+        expect(response.status).to.eq(200);
+        expect(response.body.eventTypes[0]).to.contains(realEventType);
+      })
+    })
+
+    it("gets the list from the fixture mock", () => {
+      cy.wrap(fetch(url))
+        .then((rawResponse) => rawResponse.json())
+        .then((body) => {
+          expect(body.eventTypes[0]).to.eq(mockEventType)
+      })
+    })
+
+  })
+
+  context("schema", () => {
     it("/gridpoints/{wfo}/{x},{y}/forecast schema must be", () => {
       cy.request("GET", `gridpoints/ABQ/24,106/forecast`).then((response) => {
         expect(response.status).to.eq(200);
-        var count = 0;
+        expect(response.body).to.have.property("@context");
+        var context = response.body["@context"][1];
+        expect(context).to.have.property("@version");  
+        expect(context).to.have.property("geo");  
+        expect(context).to.have.property("unit");  
+        expect(context).to.have.property("@vocab");
+        expect(context).to.have.property("wx");  
+        expect(response.body).to.have.property("type");                  
+        expect(response.body).to.have.property("geometry");                  
+        expect(response.body.geometry).to.have.property("coordinates"); 
+        var coordinates = response.body.geometry.coordinates[0];
+        cy.task("log", coordinates);
+        cy.task("log", coordinates.length);
+        expect(coordinates.length).to.eq(4);
+        var properties = response.body.properties;
+        expect(properties).to.have.property("updated");
+        expect(properties).to.have.property("units");
+        expect(properties).to.have.property("forecastGenerator");
+        expect(properties).to.have.property("generatedAt");
+        expect(properties).to.have.property("updateTime");
+        expect(properties).to.have.property("validTimes");
+        expect(properties).to.have.property("elevation");
+        expect(properties.elevation).to.have.property("value");
+        expect(properties.elevation).to.have.property("unitCode");
         var forecastPeriods = response.body.properties.periods;
+        expect(forecastPeriods[0].length).to.eq(14);
         forecastPeriods.forEach(function(forecastPeriod) {
-        count++;
         expect(forecastPeriod).to.have.property("number");
         expect(forecastPeriod).to.have.property("name");
         expect(forecastPeriod).to.have.property("startTime");
         expect(forecastPeriod).to.have.property("endTime");
+        expect(forecastPeriod).to.have.property("isDaytime");
         expect(forecastPeriod).to.have.property("temperature");
         expect(forecastPeriod).to.have.property("temperatureUnit");
         expect(forecastPeriod).to.have.property("temperatureUnit");
@@ -46,22 +95,18 @@ describe("Weather API Alert Types", () => {
         expect(forecastPeriod).to.have.property("shortForecast");
         expect(forecastPeriod).to.have.property("detailedForecast");
         });
-        expect(count == 14);
       })
     }),
 
-    it("gets the list from the fixture mock", () => {
-      cy.wrap(fetch(url))
-        .then((rawResponse) => rawResponse.json())
-        .then((body) => {
-          expect(body.eventTypes[0]).to.eq(mockEventType)
-      })
-    })
-
-    it("gets the list from the real resource", () => {
-      cy.request("GET", `alerts/types`).then((response) => {
+    it("gridpoints show non-duplicate coordinates for N, S, E, W", () => {
+      cy.request("GET", `gridpoints/ABQ/24,105/forecast`).then((response) => {
         expect(response.status).to.eq(200);
-        expect(response.body.eventTypes[0]).to.contains(realEventType);
+
+        var coordinates = response.body.geometry.coordinates;
+        cy.task("log", coordinates[0].length);
+        cy.task("log", removeDuplicates(coordinates[0]).length);
+
+        expect(coordinates[0].length).to.eq(removeDuplicates(coordinates[0]).length);
       })
     })
 
