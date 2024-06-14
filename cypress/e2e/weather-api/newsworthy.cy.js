@@ -12,6 +12,29 @@ describe("Newsworthy Alerts If The Asserts Fail", () => {
    const d = new Date();
    let month = d.getMonth() + 1;
 
+   function StandardDeviation(arr) {
+
+      // Creating the mean with Array.reduce
+      let mean = arr.reduce((acc, curr) => {
+         return acc + curr
+      }, 0) / arr.length;
+
+      // Assigning (value - mean) ^ 2 to
+      // every array item
+      arr = arr.map((k) => {
+         return (k - mean) ** 2
+      });
+
+      // Calculating the sum of updated array 
+      let sum = arr.reduce((acc, curr) => acc + curr, 0);
+
+      // Calculating the variance
+      let variance = sum / arr.length
+
+      // Returning the standard deviation
+      return Math.sqrt(sum / arr.length)
+   }
+
    var historicalTemperatureFinal = {
       count: 0,
       sum: 0,
@@ -61,29 +84,6 @@ describe("Newsworthy Alerts If The Asserts Fail", () => {
             });
             var forecastData = Object.values(temperatureFinal).map(h => h);
             var forecastMonthData = forecastData.count;
-
-            function StandardDeviation(arr) {
-
-               // Creating the mean with Array.reduce
-               let mean = arr.reduce((acc, curr) => {
-                  return acc + curr
-               }, 0) / arr.length;
-
-               // Assigning (value - mean) ^ 2 to
-               // every array item
-               arr = arr.map((k) => {
-                  return (k - mean) ** 2
-               });
-
-               // Calculating the sum of updated array 
-               let sum = arr.reduce((acc, curr) => acc + curr, 0);
-
-               // Calculating the variance
-               let variance = sum / arr.length
-
-               // Returning the standard deviation
-               return Math.sqrt(sum / arr.length)
-            }
             var number = StandardDeviation([historicalMonthData, forecastMonthData]);
             expect(number < 0.9);
          }),
