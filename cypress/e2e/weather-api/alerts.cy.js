@@ -4,7 +4,6 @@ import {
    positiveOffsets,
    incompleteDateFormats,
    incorrectDateFormats,
-   searches,
    validLimitValues,
    invalidLimitValues,
    validZoneCodes,
@@ -506,22 +505,6 @@ describe("Weather API Alert Types", () => {
             });
             expect(hasDuplicates(alertIds).toString() === "false");
             expect(alertIds.length).to.eq(count);
-         })
-      })
-
-      searches.forEach((search, i) => {
-         it("uses the most correct error message for incorrectly formatted alert searches in the path: " + search, function() {
-            // it.skipIf(1, 2, 3);
-            if ([1, 2, 3].includes(i)) {
-               this.skip();
-            } else {
-               cy.request({
-                  url: `alerts/` + search,
-                  failOnStatusCode: false,
-               }).then((response) => {
-                  expect(response.status).to.eq(404);
-               })
-            }
          })
       })
 

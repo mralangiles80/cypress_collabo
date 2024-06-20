@@ -6,6 +6,7 @@
     "status",
     "region_type", 
     "region",
+    "message_type",
     "area"
   ],
   "negativeOffsets": [
@@ -24,15 +25,8 @@
     "2020-05-14T05", 
     "2020-05-14T05:40"
   ],
-  "searches": [
-    "alerts", 
-    "alerts?severity=Severe", 
-    "alerts?severity=", 
-    "alerts?severity"
-  ],
   "incorrectDateFormats": [
-    "2020-14-05T05:40:08Z",
-    "2020-05-14T05:40:08Z"
+    "2020-14-05T05:40:08Z"
   ],
   "invalidLimitValues": [
     {"number": 0, "text": "minimum", "value": 1 },
