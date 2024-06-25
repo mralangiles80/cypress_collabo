@@ -13,6 +13,7 @@
     "cypress": "13.1.0"
   },
   "scripts": {
+    "build": "npx tsc",
     "test": "cypress run --reporter mochawesome",
     "mochawesome": "^7.1.3"
   }
