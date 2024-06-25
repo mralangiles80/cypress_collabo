@@ -487,7 +487,7 @@ describe("Weather API Alert Types", () => {
          }).then((response) => {
             expect(response.status).to.eq(200);
             let alerts = response.body.features;
-            let alertIds = [];
+            let alertIds = new Array();
             let count = 0;
             let linksToMatchRegex = /https:\/\/api\.weather\.gov\/alerts\/urn:oid:2\.49\.0\.1\.840\.0.*/;
             alerts.forEach(function(alert: any) {

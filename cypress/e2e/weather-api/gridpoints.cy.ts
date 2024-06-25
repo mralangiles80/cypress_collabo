@@ -54,7 +54,7 @@ describe("api.weather.gov Border API Tests", () => {
          var forecastPeriods = response.body.properties.periods;
          expect(forecastPeriods.length).to.eq(14);
          expect(forecastPeriods[0].length).to.eq(14);
-         forecastPeriods.forEach(function(forecastPeriod) {
+         forecastPeriods.forEach(function(forecastPeriod: any) {
             expect(forecastPeriod).to.have.property("number");
             expect(forecastPeriod).to.have.property("name");
             expect(forecastPeriod).to.have.property("startTime");
