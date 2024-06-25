@@ -1,0 +1,68 @@
+{
+  "queryParameters": [
+    "urgency",
+    "severity",
+    "certainty",
+    "status",
+    "region_type", 
+    "region",
+    "message_type",
+    "area"
+  ],
+  "negativeOffsets": [
+    "2020-05-14T05:40:08-00:00", 
+    "2020-05-14T05:40:08-00", 
+    "2020-05-14T05:40:08-00:00:00"
+  ],
+  "positiveOffsets": [
+    "2020-05-14T05:40:08+00:00", 
+    "2020-05-14T05:40:08+00", 
+    "2020-05-14T05:40:08+00:00:00"
+  ],
+  "incompleteDateFormats": [
+    "2020-05-14", 
+    "2020-05-14T", 
+    "2020-05-14T05", 
+    "2020-05-14T05:40"
+  ],
+  "incorrectDateFormats": [
+    "2020-14-05T05:40:08Z"
+  ],
+  "invalidLimitValues": [
+    {"number": 0, "text": "minimum", "value": 1 },
+    {"number": 501, "text": "maximum", "value": 500 }
+  ],
+  "validLimitValues": [
+    1, 
+    10, 
+    500
+  ],
+  "validEventCodes": [
+      "Hurricane Warning",
+      "Hurricane%20Warning",
+      "hurricane+warning"
+  ],
+  "invalidEventCodes": [
+      "Hurricane-Warning",
+      "Hurricane_Warning"
+  ],
+  "validZoneCodes": [
+      "MDC029",
+      "MDC030",
+      "MDC031",
+      "MDC033",
+      "AKZ033",
+      "AMC111",
+      "DCZ999",
+      "RIC444",
+      "GMZ777"
+  ],
+  "invalidZoneCodes": [
+      "MDL033",
+      "AKL033",
+      "AML111",
+      "DCP999",
+      "RIP444",
+      "GMP777"
+  ]
+}
