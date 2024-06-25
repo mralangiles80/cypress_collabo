@@ -12,6 +12,7 @@ jobs:
       - run: mkdir artifacts
       - run: npm install -g typescript
       - run: npm install --save-dev cypress
+      - run: npm install --save-dev mocha
       - run: npm install --save-dev @types/mocha
       - run: npm install --save-dev mochawesome
       - run: npm install --save-dev moment
