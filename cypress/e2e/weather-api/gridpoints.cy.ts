@@ -53,6 +53,32 @@ describe("api.weather.gov Border API Tests", () => {
          expect(properties.elevation).to.have.property("unitCode");
          var forecastPeriods = response.body.properties.periods;
          expect(forecastPeriods.length).to.eq(14);
+         expect(forecastPeriods[0].length).to.eq(14);
+         forecastPeriods.forEach(function(forecastPeriod) {
+            expect(forecastPeriod).to.have.property("number");
+            expect(forecastPeriod).to.have.property("name");
+            expect(forecastPeriod).to.have.property("startTime");
+            expect(forecastPeriod).to.have.property("endTime");
+            expect(forecastPeriod).to.have.property("isDaytime");
+            expect(forecastPeriod).to.have.property("temperature");
+            expect(forecastPeriod).to.have.property("temperatureUnit");
+            expect(forecastPeriod).to.have.property("temperatureUnit");
+            expect(forecastPeriod).to.have.property("temperatureTrend");
+            expect(forecastPeriod).to.have.property("probabilityOfPrecipitation");
+            expect(forecastPeriod.probabilityOfPrecipitation).to.have.property("unitCode");
+            expect(forecastPeriod.probabilityOfPrecipitation).to.have.property("value");
+            expect(forecastPeriod).to.have.property("dewpoint");
+            expect(forecastPeriod.dewpoint).to.have.property("unitCode");
+            expect(forecastPeriod.dewpoint).to.have.property("value");
+            expect(forecastPeriod).to.have.property("relativeHumidity");
+            expect(forecastPeriod.relativeHumidity).to.have.property("unitCode");
+            expect(forecastPeriod.relativeHumidity).to.have.property("value");
+            expect(forecastPeriod).to.have.property("windSpeed");
+            expect(forecastPeriod).to.have.property("windDirection");
+            expect(forecastPeriod).to.have.property("icon");
+            expect(forecastPeriod).to.have.property("shortForecast");
+            expect(forecastPeriod).to.have.property("detailedForecast");
+         });
       })
    })
 

@@ -11,7 +11,7 @@ jobs:
           node-version: '14'
       - run: mkdir artifacts
       - run: npm install --save-dev cypress
-      - run: npm i --save-dev @types/mocha
+      - run: npm install --save-dev @types/mocha
       - run: npm install --save-dev mochawesome
       - run: npm install --save-dev moment
       - run: npx tsc
