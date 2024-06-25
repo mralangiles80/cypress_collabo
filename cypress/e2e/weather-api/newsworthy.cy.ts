@@ -2,7 +2,7 @@ import moment from 'moment';
 
 describe("Newsworthy Alerts If The Asserts Fail", () => {
 
-   var NMlongtitudes = [];
+   let NMlongtitudes = new Array();
 
    for (var i = 103; i <= 109; i++) {
       NMlongtitudes.push(i);
@@ -10,9 +10,10 @@ describe("Newsworthy Alerts If The Asserts Fail", () => {
    const NMregionalOffice = 'ABQ';
 
    const d = new Date();
-   let month = d.getMonth() + 1;
+   const month = d.getMonth() + 1;
+   const monthString = String(month);
 
-   function StandardDeviation(arr) {
+   function StandardDeviation(arr: Array<any>) {
 
       // Creating the mean with Array.reduce
       let mean = arr.reduce((acc, curr) => {
@@ -53,10 +54,10 @@ describe("Newsworthy Alerts If The Asserts Fail", () => {
             cy.request("GET", `https://data.rcc-acis.org/StnData?sid=DALthr&sdate=2009-01-01&edate=` + currentDay + `&elems=10&output=json`).then((response) => {
                expect(response.status).to.eq(200);
                var historicalSnowFalls = response.body.data;
-               historicalSnowFalls.forEach(function(historicalSnowFall) {
+               historicalSnowFalls.forEach(function(historicalSnowFall: any) {
                   var historicalDateData = moment(historicalSnowFall[0]).format("M");
                   if (historicalSnowFall[1] !== 'T' && historicalSnowFall[1] !== 'M') {
-                     if (historicalDateData == month) {
+                     if (historicalDateData === monthString) {
                         historicalTemperatureFinal.sum += JSON.parse(historicalSnowFall[1]);
                         historicalTemperatureFinal.count++;
                         historicalTemperatureFinal.average = historicalTemperatureFinal.sum / historicalTemperatureFinal.count;
@@ -65,17 +66,17 @@ describe("Newsworthy Alerts If The Asserts Fail", () => {
                });
             });
             var historicalData = Object.values(historicalTemperatureFinal).map(h => h);
-            var historicalMonthData = historicalData.count;
+            var historicalMonthData = historicalData.filter(i => i === 2).length;;
 
             cy.request({
                url: `gridpoints/FWD/32,96`
             }).then((response) => {
                expect(response.status).to.eq(200);
                var forecastSnowFallAmounts = response.body.properties.snowfallAmount.values;
-               forecastSnowFallAmounts.forEach(function(forecastSnowFallAmount) {
+               forecastSnowFallAmounts.forEach(function(forecastSnowFallAmount: any) {
                   var snowFallAmountValidTime = (forecastSnowFallAmount.validTime).replace(/\/.*/g, "");
                   var dateData = moment(snowFallAmountValidTime).format("M");
-                  if (dateData == month) {
+                  if (dateData == monthString) {
                      temperatureFinal.sum += JSON.parse(forecastSnowFallAmount.value);
                      temperatureFinal.count++;
                      temperatureFinal.average = temperatureFinal.sum / temperatureFinal.count;
@@ -83,7 +84,7 @@ describe("Newsworthy Alerts If The Asserts Fail", () => {
                });
             });
             var forecastData = Object.values(temperatureFinal).map(h => h);
-            var forecastMonthData = forecastData.count;
+            var forecastMonthData = forecastData.filter(i => i === 2).length;;
             var number = StandardDeviation([historicalMonthData, forecastMonthData]);
             expect(number < 0.9);
          }),
@@ -92,17 +93,17 @@ describe("Newsworthy Alerts If The Asserts Fail", () => {
                url: `/alerts/active/area/FL`
             }).then((response) => {
                var alerts = response.body.features;
-               alerts.forEach(function(alert) {
+               alerts.forEach(function(alert: any) {
                   expect(alert.properties.event).to.not.contain("Hurricane Warning");
                });
             })
          }),
          it("iceAccumulation < 1inch in new mexico", () => {
-            NMlongtitudes.forEach(function(NMlongtitude) {
+            NMlongtitudes.forEach(function(NMlongtitude: any) {
                cy.request("GET", `gridpoints/${NMregionalOffice}/31,${NMlongtitude}`).then((response) => {
                   expect(response.status).to.eq(200);
                   var forecasticeAccumulations = response.body.properties.iceAccumulation.values;
-                  forecasticeAccumulations.forEach(function(forecasticeAccumulation) {
+                  forecasticeAccumulations.forEach(function(forecasticeAccumulation: any) {
                      expect(forecasticeAccumulation.value < 3);
                   })
                })
