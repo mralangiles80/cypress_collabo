@@ -92,7 +92,7 @@ describe("Weather API Alert Types", () => {
 
       it("error message for invalid coordinates", () => {
          cy.fixture('alerts/point-out-of-bounds').then(response => {
-            cy.intercept('/alerts?point=38.09,-43.999999', response)
+            cy.intercept({ method: 'GET', url: '/alerts?point=38.09,-43.999999'}, response)
             expect(response.status).to.eq(400);
             expect(response).to.have.property("correlationId");
             expect(response).to.have.property("type");
