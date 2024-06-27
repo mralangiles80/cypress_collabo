@@ -105,7 +105,7 @@ describe("Weather API Alert Types", () => {
       it("error message for upstream data receipt issue", () => {
          cy.fixture('alerts/503-error').then(response => {
             cy.intercept({ method: 'GET', url: '/alerts?point=38.09,-43.999999'}, response)
-            expect(response.status).to.eq(400);
+            expect(response.status).to.eq(503);
             expect(response).to.have.property("correlationId");
             expect(response).to.have.property("type");
             expect(response).to.have.property("title");
