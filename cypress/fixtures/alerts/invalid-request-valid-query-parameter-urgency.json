@@ -1,0 +1,1 @@
+{"correlationId":"a0d4f5d","parameterErrors":[{"parameter":"query.urgency[0]","message":"Does not have a value in the enumeration [\"Immediate\",\"Expected\",\"Future\",\"Past\",\"Unknown\"]"}],"title":"Bad Request","type":"https://api.weather.gov/problems/BadRequest","status":400,"detail":"Bad Request","instance":"https://api.weather.gov/requests/a0d4f5d"}

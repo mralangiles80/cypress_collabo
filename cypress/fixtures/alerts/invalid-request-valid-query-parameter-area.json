@@ -1,0 +1,14 @@
+{
+    "correlationId": "23acad7",
+    "parameterErrors": [
+        {
+            "parameter": "query.area[0]",
+            "message": "Does not have a value in the enumeration [\"AK\",\"AL\",\"AM\",\"AN\",\"AR\",\"AS\",\"AZ\",\"CA\",\"CO\",\"CT\",\"DC\",\"DE\",\"FL\",\"FM\",\"GA\",\"GM\",\"GU\",\"HI\",\"IA\",\"ID\",\"IL\",\"IN\",\"KS\",\"KY\",\"LA\",\"LC\",\"LE\",\"LH\",\"LM\",\"LO\",\"LS\",\"MA\",\"MD\",\"ME\",\"MH\",\"MI\",\"MN\",\"MO\",\"MP\",\"MS\",\"MT\",\"NC\",\"ND\",\"NE\",\"NH\",\"NJ\",\"NM\",\"NV\",\"NY\",\"OH\",\"OK\",\"OR\",\"PA\",\"PH\",\"PK\",\"PM\",\"PR\",\"PS\",\"PW\",\"PZ\",\"RI\",\"SC\",\"SD\",\"SL\",\"TN\",\"TX\",\"UT\",\"VA\",\"VI\",\"VT\",\"WA\",\"WI\",\"WV\",\"WY\"]"
+        }
+    ],
+    "title": "Bad Request",
+    "type": "https://api.weather.gov/problems/BadRequest",
+    "status": 400,
+    "detail": "Bad Request",
+    "instance": "https://api.weather.gov/requests/23acad7"
+}

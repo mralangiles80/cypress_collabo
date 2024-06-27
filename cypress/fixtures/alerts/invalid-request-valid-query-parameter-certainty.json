@@ -1,0 +1,1 @@
+{"correlationId":"14de4","parameterErrors":[{"parameter":"query.certainty[0]","message":"Does not have a value in the enumeration [\"Observed\",\"Likely\",\"Possible\",\"Unlikely\",\"Unknown\"]"}],"title":"Bad Request","type":"https://api.weather.gov/problems/BadRequest","status":400,"detail":"Bad Request","instance":"https://api.weather.gov/requests/14de4"}
