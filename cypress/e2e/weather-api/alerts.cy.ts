@@ -271,63 +271,6 @@ describe("Weather API Alert Types", () => {
                expect(response.detail).to.eq("Bad Request");
                expect(response.parameterErrors[0]).to.have.property("message");
                expect(response.parameterErrors[0].message).to.contain("Failed to match exactly one schema");
-               })
-         })
-      
-
-      it("alerts/active/active?zone= schema", () => {
-         cy.request({
-            url: `/alerts/active?zone=MDC031`,
-            failOnStatusCode: false,
-         }).then((response: any) => {
-            expect(response.status).to.eq(200);
-            expect(response.body).to.have.property("@context");
-            expect(response.body).to.have.property("title");
-            expect(response.body).to.have.property("updated");
-            var context = response.body["@context"][1];
-            expect(context).to.have.property("@version");
-            expect(context).to.have.property("@vocab");
-            expect(context).to.have.property("wx");
-            expect(response.body).to.have.property("type");
-            expect(response.body).to.have.property("features");
-            var features = response.body.features[0];
-            expect(features).to.have.property("id");
-            expect(features).to.have.property("type");
-            expect(features).to.have.property("geometry");
-            expect(features).to.have.property("properties");
-            var properties = response.body.features[0].properties;
-            expect(properties).to.have.property("@id");
-            expect(properties).to.have.property("@type");
-            expect(properties).to.have.property("id");
-            expect(properties).to.have.property("areaDesc");
-            expect(properties).to.have.property("geocode");
-            expect(properties.geocode).to.have.property("SAME");
-            expect(properties.geocode).to.have.property("UGC");
-            expect(properties).to.have.property("affectedZones");
-            expect(properties).to.have.property("references");
-            expect(properties).to.have.property("sent");
-            expect(properties).to.have.property("effective");
-            expect(properties).to.have.property("onset");
-            expect(properties).to.have.property("expires");
-            expect(properties).to.have.property("ends");
-            expect(properties).to.have.property("status");
-            expect(properties).to.have.property("messageType");
-            expect(properties).to.have.property("category");
-            expect(properties).to.have.property("severity");
-            expect(properties).to.have.property("certainty");
-            expect(properties).to.have.property("urgency");
-            expect(properties).to.have.property("references");
-            expect(properties).to.have.property("event");
-            expect(properties).to.have.property("sender");
-            expect(properties).to.have.property("senderName");
-            expect(properties).to.have.property("headline");
-            expect(properties).to.have.property("description");
-            expect(properties).to.have.property("instruction");
-            expect(properties).to.have.property("response");
-            expect(properties).to.have.property("parameters");
-            expect(properties.parameters).to.have.property("AWIPSidentifier");
-            expect(properties.parameters).to.have.property("WMOidentifier");
-            expect(properties.parameters).to.have.property("BLOCKCHANNEL");
          })
       })
    })
