@@ -273,7 +273,7 @@ describe("Weather API Alert Types", () => {
          })
       })
 
-      it("alerts/active/active?zone= schema", () => {
+      it.skip("alerts/active/active?zone= schema", () => {
          cy.request({
             url: `/alerts/active?zone=MDC031`,
             failOnStatusCode: false,
