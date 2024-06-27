@@ -91,7 +91,7 @@ describe("Weather API Alert Types", () => {
 
       it("error message for invalid coordinates", () => {
          cy.fixture('alerts/point-out-of-bounds').then(response => {
-            cy.intercept('/alerts?point=38.09,-43.999999', response)
+            cy.intercept({ method: 'GET', url: '/alerts?point=38.09,-43.999999'}, response)
             expect(response.status).to.eq(400);
             expect(response).to.have.property("correlationId");
             expect(response).to.have.property("type");
@@ -103,7 +103,7 @@ describe("Weather API Alert Types", () => {
       });
 
       it("error message for upstream data receipt issue", () => {
-         cy.fixture('alerts/point-out-of-bounds').then(response => {
+         cy.fixture('alerts/503-error').then(response => {
             cy.intercept({ method: 'GET', url: '/alerts?point=38.09,-43.999999'}, response)
             expect(response.status).to.eq(400);
             expect(response).to.have.property("correlationId");
@@ -111,7 +111,9 @@ describe("Weather API Alert Types", () => {
             expect(response).to.have.property("title");
             expect(response).to.have.property("detail");
             expect(response).to.have.property("instance");
-            expect(response.title).to.eq("Invalid Parameter");
+            expect(response.title).to.eq("Service Unavailable");
+            expect(response.type).to.eq("https://api.weather.gov/problems/ServiceUnavailable");
+            expect(response.detail).to.eq("An upstream data source is temporarily unavailable. Please try again later. If this error continues, please contact support at nco.ops@noaa.gov.");
          })
       });
 
