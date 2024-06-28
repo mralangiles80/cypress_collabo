@@ -15,11 +15,11 @@ describe("api.weather.gov Border API Tests", () => {
    const randomLatitude = latitudes[Math.floor(Math.random() * latitudes.length)];
    const randomLongtitude = longtitudes[Math.floor(Math.random() * longtitudes.length)];
 
-   function hasDuplicates(array: Array<any>) {
+   function hasDuplicates(array: Array<number>) {
      return (new Set(array)).size !== array.length;
    }
 
-   const removeDuplicates = (arr: Array<any> = []) => {
+   const removeDuplicates = (arr: Array<number> = []) => {
      const map = new Map();
      arr.forEach((x) => map.set(JSON.stringify(x), x));
      arr = [...map.values()];
@@ -98,8 +98,8 @@ describe("api.weather.gov Border API Tests", () => {
             cy.request("GET", `gridpoints/${regionalOffice.code}/${randomLatitude},${randomLongtitude}/forecast`).then((response) => {
                expect(response.status).to.eq(200);
                var forecastPeriods = response.body.properties.periods;
-               forecastPeriods.forEach(function(forecastPeriod: any) {
-                  expect(forecastPeriod.temperature % 1).to.equal(0) // integer
+               forecastPeriods.forEach(function(forecastPeriod: Record<string, number>) {
+                  expect(forecastPeriod.temperature % 1).to.equal(0)
                });
             })
          })
@@ -108,8 +108,8 @@ describe("api.weather.gov Border API Tests", () => {
             cy.request("GET", `gridpoints/${regionalOffice.code}/${randomLatitude},${randomLongtitude}/forecast`).then((response) => {
                expect(response.status).to.eq(200);
                var forecastPeriods = response.body.properties.periods;
-               forecastPeriods.forEach(function(forecastPeriod: any) {
-                  cy.get(forecastPeriod.temperature).should('not.be.empty');
+               forecastPeriods.forEach(function(forecastPeriod: Record<string, number>) {
+                  expect(forecastPeriod.temperature.toString()).to.not.be.empty;
                });
             })
          })
@@ -118,7 +118,7 @@ describe("api.weather.gov Border API Tests", () => {
             cy.request("GET", `gridpoints/${regionalOffice.code}/${randomLatitude},${randomLongtitude}/forecast`).then((response) => {
                expect(response.status).to.eq(200);
                var forecastPeriods = response.body.properties.periods;
-               forecastPeriods.forEach(function(forecastPeriod: any) {
+               forecastPeriods.forEach(function(forecastPeriod: Record<string, number>) {
                   expect(forecastPeriod.temperature).to.be.greaterThan(-100);
                });
             })
@@ -127,7 +127,7 @@ describe("api.weather.gov Border API Tests", () => {
             cy.request("GET", `gridpoints/${regionalOffice.code}/${randomLatitude},${randomLongtitude}/forecast`).then((response) => {
                expect(response.status).to.eq(200);
                var forecastPeriods = response.body.properties.periods;
-               forecastPeriods.forEach(function(forecastPeriod: any) {
+               forecastPeriods.forEach(function(forecastPeriod: Record<string, number>) {
                   expect(forecastPeriod.temperature).to.be.lessThan(200);
                });
             })
@@ -140,7 +140,7 @@ describe("api.weather.gov Border API Tests", () => {
          cy.request("GET", `gridpoints/${regionalOffice.code}/${randomLatitude},${randomLongtitude}/forecast`).then((response) => {
             expect(response.status).to.eq(200);
             var forecastPeriods = response.body.properties.periods;
-            forecastPeriods.forEach(function(forecastPeriod: any) {
+            forecastPeriods.forEach(function(forecastPeriod: Record<string, number>) {
                expect(forecastPeriod.windDirection).to.be.a('string');
             });
          })
@@ -150,7 +150,7 @@ describe("api.weather.gov Border API Tests", () => {
          cy.request("GET", `gridpoints/${regionalOffice.code}/${randomLatitude},${randomLongtitude}/forecast`).then((response) => {
             expect(response.status).to.eq(200);
             var forecastPeriods = response.body.properties.periods;
-            forecastPeriods.forEach(function(forecastPeriod: any) {
+            forecastPeriods.forEach(function(forecastPeriod: Record<string, number>) {
                expect(forecastPeriod.windDirection).to.not.be.empty;
             });
          })
@@ -160,7 +160,7 @@ describe("api.weather.gov Border API Tests", () => {
          cy.request("GET", `gridpoints/${regionalOffice.code}/${randomLatitude},${randomLongtitude}/forecast`).then((response) => {
             expect(response.status).to.eq(200);
             var forecastPeriods = response.body.properties.periods;
-            forecastPeriods.forEach(function(forecastPeriod: any) {
+            forecastPeriods.forEach(function(forecastPeriod: Record<string, number>) {
                expect(forecastPeriod.windDirection).to.have.length.of.at.most(3);
             });
          })
@@ -170,7 +170,7 @@ describe("api.weather.gov Border API Tests", () => {
          cy.request("GET", `gridpoints/${regionalOffice.code}/${randomLatitude},${randomLongtitude}/forecast`).then((response) => {
             expect(response.status).to.eq(200);
             var forecastPeriods = response.body.properties.periods;
-            forecastPeriods.forEach(function(forecastPeriod: any) {
+            forecastPeriods.forEach(function(forecastPeriod: Record<string, number>) {
                expect(forecastPeriod.windDirection).to.match(/[A-Z]+/);
                expect(forecastPeriod.windDirection).to.not.match(/[a-z]+/);
             });
@@ -181,7 +181,7 @@ describe("api.weather.gov Border API Tests", () => {
          cy.request("GET", `gridpoints/${regionalOffice.code}/${randomLatitude},${randomLongtitude}/forecast`).then((response) => {
             expect(response.status).to.eq(200);
             var forecastPeriods = response.body.properties.periods;
-            forecastPeriods.forEach(function(forecastPeriod: any) {
+            forecastPeriods.forEach(function(forecastPeriod: Record<string, number>) {
                expect(forecastPeriod.windDirection).to.be.oneOf(['N', 'S', 'E', 'W', 'SW', 'SE', 'NE', 'NW', 'NNE', 'ENE', 'ESE', 'SSE', 'SSW', 'WSW', 'WNW', 'NNW']);
             });
          })

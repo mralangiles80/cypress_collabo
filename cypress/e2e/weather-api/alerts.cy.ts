@@ -16,11 +16,11 @@ describe("Weather API Alert Types", () => {
    let realEventType = '911'
    let mockEventType = 'Craziness'
 
-   function hasDuplicates(array: Array<any>) {
+   function hasDuplicates(array: Array<number>) {
      return (new Set(array)).size !== array.length;
    }
 
-   const removeDuplicates = (arr: Array<any> = []) => {
+   const removeDuplicates = (arr: Array<number> = []) => {
      const map = new Map();
      arr.forEach((x) => map.set(JSON.stringify(x), x));
      arr = [...map.values()];
@@ -50,7 +50,7 @@ describe("Weather API Alert Types", () => {
                statusCode: 503
             }),
             (request: any) => {
-               request.on('response', (response: any) => {
+               request.on('response', (response: Record<string, number>) => {
                   expect(response.status).to.eq(503);
                   expect(response).to.have.property("correlationId");
                   expect(response).to.have.property("title");
@@ -70,7 +70,7 @@ describe("Weather API Alert Types", () => {
                statusCode: 500
             }),
             (request: any) => {
-               request.on('response', (response: any) => {
+               request.on('response', (response: Record<string, number>) => {
                   expect(response.status).to.eq(500);
                   expect(response).to.have.property("correlationId");
                   expect(response).to.have.property("title");
@@ -123,7 +123,7 @@ describe("Weather API Alert Types", () => {
                statusCode: 503
             }),
             (request: any) => {
-               request.on('response', (response: any) => {
+               request.on('response', (response: Record<string, number>) => {
                   expect(response.status).to.eq(503);
                   expect(response).to.have.property("correlationId");
                   expect(response).to.have.property("title");
@@ -141,7 +141,7 @@ describe("Weather API Alert Types", () => {
                statusCode: 500
             }),
             (request: any) => {
-               request.on('response', (response: any) => { 
+               request.on('response', (response: Record<string, number>) => { 
                   expect(response.status).to.eq(500) 
                   expect(response).to.have.property("correlationId");
                   expect(response).to.have.property("title");
@@ -154,8 +154,8 @@ describe("Weather API Alert Types", () => {
          }  
       })
 
-      it("pretty prints the alert description", () => {
-         cy.fixture('alerts/point').then(response => {
+      it("pretty prints the alert description if exists", () => {
+         cy.fixture('alerts/alert-description').then(response => {
             cy.intercept({ method: 'GET', url: '/alerts?point=38.09,-76.999999'}, response)
             var forecastFeatures = response.features;
             forecastFeatures.forEach(function(forecastFeature: any) {
@@ -187,7 +187,7 @@ describe("Weather API Alert Types", () => {
                statusCode: 503
             }),
             (request: any) => {
-               request.on('response', (response: any) => {
+               request.on('response', (response: Record<string, number>) => {
                   expect(response.status).to.eq(503);
                   expect(response).to.have.property("correlationId");
                   expect(response).to.have.property("title");
@@ -207,7 +207,7 @@ describe("Weather API Alert Types", () => {
                statusCode: 500
             }),
             (request: any) => {
-               request.on('response', (response: any) => {
+               request.on('response', (response: Record<string, number>) => {
                   expect(response.status).to.eq(500);
                   expect(response).to.have.property("correlationId");
                   expect(response).to.have.property("title");
@@ -220,17 +220,17 @@ describe("Weather API Alert Types", () => {
          }  
       })
 
-      queryParameters.forEach((item: any) => {
+      queryParameters.forEach((item: {parameter: string, enumeration: {}}) => {
       let queryParameter = item.parameter;
          it("config for " + queryParameter + " query parameter matches values in error message array", () => {
             cy.request({
                url: `/alerts/active?` + queryParameter,
                failOnStatusCode: false,
-            }).then((response: any) => {
+            }).then((response: {body:any}) => {
                var errorMessage = response.body.parameterErrors[0].message;
                var parsedErrorMessageValues = (errorMessage).replace(/Does not have a value in the enumeration/g, "");
                var errorMessageValues = JSON.parse(parsedErrorMessageValues);
-               errorMessageValues.forEach(function(errorMessageValue: any) {
+               errorMessageValues.forEach(function(errorMessageValue: string) {
                   cy.request({
                      url: `/alerts?` + queryParameter + `=` + errorMessageValue,
                      failOnStatusCode: false,
@@ -285,7 +285,7 @@ describe("Weather API Alert Types", () => {
             statusCode: 503
          }),
          (request: any) => {
-            request.on('response', (response: any) => {
+            request.on('response', (response: Record<string, number>) => {
                expect(response.status).to.eq(503);
                expect(response).to.have.property("correlationId");
                expect(response).to.have.property("title");
@@ -305,8 +305,8 @@ describe("Weather API Alert Types", () => {
             }, {
                statusCode: 500
             }),
-            (request: any) => {
-               request.on('response', (response: any) => {
+            (request: any ) => {
+               request.on('response', (response: Record<string, number>) => {
                   expect(response.status).to.eq(500);
                   expect(response).to.have.property("correlationId");
                   expect(response).to.have.property("title");
@@ -332,7 +332,7 @@ describe("Weather API Alert Types", () => {
          cy.request({
             url: `/alerts?` + invalidQueryParameter + `=Avoid`,
             failOnStatusCode: false,
-         }).then((response: any) => {
+         }).then((response: {status:number, body:any}) => {
             expect(response.status).to.eq(400);
             expect(response.body).to.have.property("correlationId");
             expect(response.body).to.have.property("parameterErrors");
@@ -351,7 +351,7 @@ describe("Weather API Alert Types", () => {
          cy.request({
             url: `/alerts?event=&&`,
             failOnStatusCode: false,
-         }).then((response: any) => {
+         }).then((response: {status:number, body:any}) => {
             expect(response.status).to.eq(400);
             expect(response.body).to.have.property("correlationId");
             expect(response.body).to.have.property("parameterErrors");
@@ -375,7 +375,7 @@ describe("Weather API Alert Types", () => {
             let alertIds = new Array();
             let count = 0;
             let linksToMatchRegex = /https:\/\/api\.weather\.gov\/alerts\/urn:oid:2\.49\.0\.1\.840\.0.*/;
-            alerts.forEach(function(alert: any) {
+            alerts.forEach(function(alert: {id: string}) {
                alertIds.push(alert.id);
                count++;
                expect(linksToMatchRegex.test(alert.id)).to.equal(true);
@@ -385,7 +385,7 @@ describe("Weather API Alert Types", () => {
          })
       })
 
-      invalidZoneCodes.forEach((invalidZoneCode: any) => {
+      invalidZoneCodes.forEach((invalidZoneCode: string) => {
          it("does not accept invalid zone " + invalidZoneCode, () => {
             cy.request({
                url: `/alerts?zone=` + invalidZoneCode,
@@ -396,7 +396,7 @@ describe("Weather API Alert Types", () => {
          })
       })
 
-      validZoneCodes.forEach((validZoneCode: any) => {
+      validZoneCodes.forEach((validZoneCode: string) => {
          it("does accept valid zone " + validZoneCode, () => {
             cy.request({
                url: `/alerts?zone=` + validZoneCode,
@@ -407,7 +407,7 @@ describe("Weather API Alert Types", () => {
          })
       })
 
-      invalidEventCodes.forEach((invalidEventCode: any) => {
+      invalidEventCodes.forEach((invalidEventCode: string) => {
          it("does not accept invalid event " + invalidEventCode, () => {
             cy.request({
                url: `/alerts?event=` + invalidEventCode,
@@ -418,7 +418,7 @@ describe("Weather API Alert Types", () => {
          })
       })
 
-      validEventCodes.forEach((validEventCode: any) => {
+      validEventCodes.forEach((validEventCode: string) => {
          it("does accept valid event " + validEventCode, () => {
             cy.request({
                url: `/alerts?event=` + validEventCode,
@@ -429,7 +429,7 @@ describe("Weather API Alert Types", () => {
          })
       })
 
-      negativeOffsets.forEach((item: any) => {
+      negativeOffsets.forEach((item: {offset: string, number: number}) => {
          var negativeOffset = item.offset;
          var number = item.number;
          it("does not accept negative offset version " + negativeOffset, () => {
@@ -440,7 +440,7 @@ describe("Weather API Alert Types", () => {
          })
       })
 
-      positiveOffsets.forEach((positiveOffset: any) => {
+      positiveOffsets.forEach((positiveOffset: string) => {
          it("does not accept positive offset version " + positiveOffset, () => {
             cy.request({
                url: `/alerts?start=` + positiveOffset,
@@ -451,7 +451,7 @@ describe("Weather API Alert Types", () => {
          })
       })
 
-      validLimitValues.forEach((validLimitValue: any) => {
+      validLimitValues.forEach((validLimitValue: number) => {
          it("number of alerts matches requested limit: " + validLimitValue, () => {
             cy.request({
                url: `/alerts?limit=` + validLimitValue,
@@ -464,7 +464,7 @@ describe("Weather API Alert Types", () => {
          })
       })
 
-      invalidLimitValues.forEach((item: any) => {
+      invalidLimitValues.forEach((item: {number: number, text: string, value: number}) => {
          it("uses the most correct error message for incorrectly formatted alert searches in the path: /alerts?limit=" + item.number, () => {
             cy.request({
                url: `/alerts?limit=` + item.number,
@@ -494,7 +494,7 @@ describe("Weather API Alert Types", () => {
          })
       })
 
-      incompleteDateFormats.forEach((incompleteDateFormat: any) => {
+      incompleteDateFormats.forEach((incompleteDateFormat: string) => {
          it("requires the full date and does not accept " + incompleteDateFormat, () => {
             cy.request({
                url: `/alerts?start=` + incompleteDateFormat,
