@@ -13,7 +13,7 @@ describe("Newsworthy Alerts If The Asserts Fail", () => {
    const month = d.getMonth() + 1;
    const monthString = String(month);
 
-   function StandardDeviation(arr: Array<any>) {
+   function StandardDeviation(arr: Array<number>) {
 
       // Creating the mean with Array.reduce
       let mean = arr.reduce((acc, curr) => {
