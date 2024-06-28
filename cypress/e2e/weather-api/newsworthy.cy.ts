@@ -94,7 +94,7 @@ describe("Newsworthy Alerts If The Asserts Fail", () => {
             }).then((response) => {
                var alerts = response.body.features;
                alerts.forEach(function(alert: any) {
-                  expect(alert.properties.event).to.not.be("Hurricane Warning");
+                  expect(alert.properties.event).to.not.eq("Hurricane Warning");
                });
             })
          }),
@@ -103,8 +103,9 @@ describe("Newsworthy Alerts If The Asserts Fail", () => {
                cy.request("GET", `gridpoints/${NMregionalOffice}/31,${NMlongtitude}`).then((response) => {
                   expect(response.status).to.eq(200);
                   var forecasticeAccumulations = response.body.properties.iceAccumulation.values;
-                  forecasticeAccumulations.forEach(function(forecasticeAccumulation: number) {
-                     expect(forecasticeAccumulation).to.be.lessThan(3);
+                  forecasticeAccumulations.forEach(function(forecasticeAccumulation: Record<string, string>) {
+                     var iceAccumulationValue = Number(forecasticeAccumulation.value);
+                     expect(iceAccumulationValue).to.be.lessThan(3);
                   })
                })
             })
