@@ -1,6 +1,6 @@
 declare namespace Cypress {
     interface Chainable<Subject = any> {
-        myCommand(): Chainable<any>;
+        dumpLog(outputMessage: string, outputLog: string): Chainable<Element>;
     }
 }
 
