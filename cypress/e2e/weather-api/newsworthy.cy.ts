@@ -54,7 +54,7 @@ describe("Newsworthy Alerts If The Asserts Fail", () => {
             cy.request("GET", `https://data.rcc-acis.org/StnData?sid=DALthr&sdate=2009-01-01&edate=` + currentDay + `&elems=10&output=json`).then((response) => {
                expect(response.status).to.eq(200);
                var historicalSnowFalls = response.body.data;
-               historicalSnowFalls.forEach(function(historicalSnowFall: any) {
+               historicalSnowFalls.forEach(function(historicalSnowFall: string) {
                   var historicalDateData = moment(historicalSnowFall[0]).format("M");
                   if (historicalSnowFall[1] !== 'T' && historicalSnowFall[1] !== 'M') {
                      if (historicalDateData === monthString) {
@@ -73,7 +73,7 @@ describe("Newsworthy Alerts If The Asserts Fail", () => {
             }).then((response) => {
                expect(response.status).to.eq(200);
                var forecastSnowFallAmounts = response.body.properties.snowfallAmount.values;
-               forecastSnowFallAmounts.forEach(function(forecastSnowFallAmount: any) {
+               forecastSnowFallAmounts.forEach(function(forecastSnowFallAmount: {value:string, validTime:string}) {
                   var snowFallAmountValidTime = (forecastSnowFallAmount.validTime).replace(/\/.*/g, "");
                   var dateData = moment(snowFallAmountValidTime).format("M");
                   if (dateData == monthString) {
@@ -94,17 +94,17 @@ describe("Newsworthy Alerts If The Asserts Fail", () => {
             }).then((response) => {
                var alerts = response.body.features;
                alerts.forEach(function(alert: any) {
-                  expect(alert.properties.event).to.not.contain("Hurricane Warning");
+                  expect(alert.properties.event).to.not.be("Hurricane Warning");
                });
             })
          }),
          it("iceAccumulation < 1inch in new mexico", () => {
-            NMlongtitudes.forEach(function(NMlongtitude: any) {
+            NMlongtitudes.forEach(function(NMlongtitude: number) {
                cy.request("GET", `gridpoints/${NMregionalOffice}/31,${NMlongtitude}`).then((response) => {
                   expect(response.status).to.eq(200);
                   var forecasticeAccumulations = response.body.properties.iceAccumulation.values;
-                  forecasticeAccumulations.forEach(function(forecasticeAccumulation: any) {
-                     expect(forecasticeAccumulation.value < 3);
+                  forecasticeAccumulations.forEach(function(forecasticeAccumulation: number) {
+                     expect(forecasticeAccumulation).to.be.lessThan(3);
                   })
                })
             })
