@@ -1,0 +1,1 @@
+{"correlationId":"15a07","parameterErrors":[{"parameter":"query.message_type[0]","message":"Does not have a value in the enumeration [\"alert\",\"update\",\"cancel\"]"}],"title":"Bad Request","type":"https://api.weather.gov/problems/BadRequest","status":400,"detail":"Bad Request","instance":"https://api.weather.gov/requests/15a07"}

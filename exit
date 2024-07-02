@@ -1,0 +1,100 @@
+[33m36c3be9[m[33m ([m[1;36mHEAD[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{0}: rebase -i (start): checkout origin/main
+[33m912f57b[m[33m ([m[1;31morigin/stricter-typescript[m[33m, [m[1;32mstricter-typescript[m[33m)[m HEAD@{1}: commit: current progress in removing any
+[33mcd84305[m HEAD@{2}: commit: current progress in removing any
+[33m2a3a310[m HEAD@{3}: commit: current progress in removing any
+[33mb42de89[m HEAD@{4}: commit: current progress in removing any
+[33me8deca2[m HEAD@{5}: checkout: moving from mocks-skipped to stricter-typescript
+[33md96a2ae[m[33m ([m[1;31morigin/mocks-skipped[m[33m, [m[1;32mmocks-skipped[m[33m)[m HEAD@{6}: commit: test schemas in Pact instead
+[33m003ebe1[m HEAD@{7}: checkout: moving from stricter-typescript to mocks-skipped
+[33me8deca2[m HEAD@{8}: reset: moving to HEAD
+[33me8deca2[m HEAD@{9}: checkout: moving from mocks-skipped to stricter-typescript
+[33m003ebe1[m HEAD@{10}: commit: fix test bugs
+[33me8deca2[m HEAD@{11}: checkout: moving from stricter-typescript to mocks-skipped
+[33me8deca2[m HEAD@{12}: reset: moving to HEAD
+[33me8deca2[m HEAD@{13}: checkout: moving from js-to-ts to stricter-typescript
+[33m1d5af47[m[33m ([m[1;31morigin/js-to-ts[m[33m, [m[1;32mjs-to-ts[m[33m)[m HEAD@{14}: checkout: moving from stricter-typescript to js-to-ts
+[33me8deca2[m HEAD@{15}: checkout: moving from mocks-skipped to stricter-typescript
+[33me8deca2[m HEAD@{16}: commit: fix test bugs
+[33m0bc3601[m HEAD@{17}: checkout: moving from js-to-ts to mocks-skipped
+[33m1d5af47[m[33m ([m[1;31morigin/js-to-ts[m[33m, [m[1;32mjs-to-ts[m[33m)[m HEAD@{18}: checkout: moving from stricter-ts to js-to-ts
+[33m0bc3601[m HEAD@{19}: reset: moving to HEAD
+[33m0bc3601[m HEAD@{20}: checkout: moving from mocks-skipped to stricter-ts
+[33m0bc3601[m HEAD@{21}: checkout: moving from stricter-typescript to mocks-skipped
+[33m1d5af47[m[33m ([m[1;31morigin/js-to-ts[m[33m, [m[1;32mjs-to-ts[m[33m)[m HEAD@{22}: checkout: moving from mocks-skipped to stricter-typescript
+[33m0bc3601[m HEAD@{23}: checkout: moving from stricter-typescript to mocks-skipped
+[33m1d5af47[m[33m ([m[1;31morigin/js-to-ts[m[33m, [m[1;32mjs-to-ts[m[33m)[m HEAD@{24}: checkout: moving from js-to-ts to stricter-typescript
+[33m1d5af47[m[33m ([m[1;31morigin/js-to-ts[m[33m, [m[1;32mjs-to-ts[m[33m)[m HEAD@{25}: commit: skip flaky test
+[33m7b000b5[m HEAD@{26}: checkout: moving from mocks-skipped to js-to-ts
+[33m0bc3601[m HEAD@{27}: commit: fix error
+[33m0874161[m HEAD@{28}: commit: skips converted to mock responses
+[33m1cafcdb[m HEAD@{29}: checkout: moving from js-to-ts to mocks-skipped
+[33m7b000b5[m HEAD@{30}: commit: consistent style
+[33m1cafcdb[m HEAD@{31}: checkout: moving from mocks-skipped to js-to-ts
+[33m1cafcdb[m HEAD@{32}: checkout: moving from js-to-ts to mocks-skipped
+[33m1cafcdb[m HEAD@{33}: commit: fix actions
+[33mb4aa7ec[m HEAD@{34}: commit: skip flaky test
+[33m6a63ee5[m HEAD@{35}: commit: fix actions
+[33m5ca1072[m HEAD@{36}: commit: install typescript in the test server
+[33m1cf79ad[m HEAD@{37}: commit: migrated from javascript to typescript
+[33m5aa26e7[m HEAD@{38}: commit: migrated from javascript to typescript
+[33m12e64eb[m HEAD@{39}: commit: migrated from javascript to typescript
+[33mc252594[m[33m ([m[1;31morigin/alert-investigations[m[33m, [m[1;32malert-investigations[m[33m)[m HEAD@{40}: checkout: moving from alert-investigations to js-to-ts
+[33mc252594[m[33m ([m[1;31morigin/alert-investigations[m[33m, [m[1;32malert-investigations[m[33m)[m HEAD@{41}: commit: fixed some test bugs, removed some duplicate tests, added some tests along more endpoints, fixed up formatting
+[33mbaafd13[m HEAD@{42}: commit: fixed some test bugs, removed some duplicate tests, added some tests along more endpoints, fixed up formatting
+[33m4928c6c[m HEAD@{43}: commit: add more /alert tests and introduce fixtures for test data and API responses
+[33me34f8e6[m[33m ([m[1;31morigin/alert-dates[m[33m, [m[1;32malert-dates[m[33m)[m HEAD@{44}: checkout: moving from alert-dates to alert-investigations
+[33me34f8e6[m[33m ([m[1;31morigin/alert-dates[m[33m, [m[1;32malert-dates[m[33m)[m HEAD@{45}: commit: cleaned up code & skipped tests for features with suspected bugs - will be creating mocks for those first
+[33mdff8549[m HEAD@{46}: commit: cleaned up code & skipped tests for features with suspected bugs - will be creating mocks for those first
+[33mb742f42[m HEAD@{47}: commit: restructuring tests
+[33m0f891a2[m HEAD@{48}: commit: these tests will fail. they are meant to
+[33m4314752[m HEAD@{49}: commit: these tests will fail. they are meant to
+[33mb16ca43[m[33m ([m[1;31morigin/newsworthy-p1[m[33m, [m[1;32mnewsworthy-p1[m[33m)[m HEAD@{50}: checkout: moving from newsworthy-p1 to alert-dates
+[33mb16ca43[m[33m ([m[1;31morigin/newsworthy-p1[m[33m, [m[1;32mnewsworthy-p1[m[33m)[m HEAD@{51}: commit: clean up commit
+[33md7b1cce[m HEAD@{52}: commit: clean up commit
+[33me87ecbb[m HEAD@{53}: commit: remove unnecessary dependencies
+[33m3fe998c[m HEAD@{54}: commit: resolve moment dependency issues
+[33me671003[m HEAD@{55}: commit: resolve moment dependency issues
+[33m53c2ecd[m HEAD@{56}: commit: resolve moment dependency issues
+[33mbcc2295[m HEAD@{57}: commit: resolve moment dependency issues
+[33m99201df[m HEAD@{58}: commit: resolve moment dependency issues
+[33m9e863cd[m[33m ([m[1;32mashley-test-per-assert[m[33m)[m HEAD@{59}: checkout: moving from ashley-test-per-assert to newsworthy-p1
+[33m9e863cd[m[33m ([m[1;32mashley-test-per-assert[m[33m)[m HEAD@{60}: commit: newsworthy events - 'tests' for the PR team
+[33mec5746f[m HEAD@{61}: commit (merge): newsworthy events - 'tests' for the PR team
+[33ma33f070[m HEAD@{62}: checkout: moving from ashley-test-per-assert to ashley-test-per-assert
+[33ma33f070[m HEAD@{63}: checkout: moving from ashley-test-per-assert to ashley-test-per-assert
+[33ma33f070[m HEAD@{64}: commit: newsworthy events - 'tests' for the PR team
+[33m7b4c726[m HEAD@{65}: commit: convert to one assert per test
+[33m4ff3a5a[m HEAD@{66}: commit: convert to one assert per test
+[33m55d6dcb[m[33m ([m[1;32mmain[m[33m)[m HEAD@{67}: checkout: moving from main to ashley-test-per-assert
+[33m55d6dcb[m[33m ([m[1;32mmain[m[33m)[m HEAD@{68}: pull -r: Fast-forward
+[33mdd7c152[m HEAD@{69}: checkout: moving from ashley-wind-direction to main
+[33m2703f88[m[33m ([m[1;32mashley-wind-direction[m[33m)[m HEAD@{70}: reset: moving to HEAD
+[33m2703f88[m[33m ([m[1;32mashley-wind-direction[m[33m)[m HEAD@{71}: commit: add case test
+[33m9679cb8[m HEAD@{72}: commit: add wind direction tests
+[33mdd7c152[m HEAD@{73}: checkout: moving from main to ashley-wind-direction
+[33mdd7c152[m HEAD@{74}: pull -r: Fast-forward
+[33m57e7f56[m HEAD@{75}: checkout: moving from main to main
+[33m57e7f56[m HEAD@{76}: checkout: moving from ashley-borders to main
+[33mdc5f997[m[33m ([m[1;32mashley-borders[m[33m)[m HEAD@{77}: commit: border tests
+[33m57e7f56[m HEAD@{78}: checkout: moving from main to ashley-borders
+[33m57e7f56[m HEAD@{79}: commit: move all declarations to the top
+[33m3c8fe45[m HEAD@{80}: pull -r: Fast-forward
+[33mc1627b6[m HEAD@{81}: checkout: moving from ashleyg-temperature to main
+[33m02a0d29[m[33m ([m[1;32mashleyg-temperature[m[33m)[m HEAD@{82}: reset: moving to HEAD
+[33m02a0d29[m[33m ([m[1;32mashleyg-temperature[m[33m)[m HEAD@{83}: commit: combine temperature tests
+[33mef05c5c[m HEAD@{84}: commit: combine temperature tests
+[33m17df23d[m HEAD@{85}: commit: combine temperature tests
+[33ma317817[m HEAD@{86}: commit: add temperature tests & a new file for them
+[33mc1627b6[m HEAD@{87}: checkout: moving from main to ashleyg-temperature
+[33mc1627b6[m HEAD@{88}: pull -r: Fast-forward
+[33mea0774a[m[33m ([m[1;32mashley-temperature[m[33m)[m HEAD@{89}: checkout: moving from ashley-temperature to main
+[33mea0774a[m[33m ([m[1;32mashley-temperature[m[33m)[m HEAD@{90}: checkout: moving from main to ashley-temperature
+[33mea0774a[m[33m ([m[1;32mashley-temperature[m[33m)[m HEAD@{91}: commit: add mocha to workflows
+[33m8c86d5d[m HEAD@{92}: commit: add mochawesome to github workflows
+[33m5e150da[m HEAD@{93}: commit: alter run script for reporter
+[33m0354a98[m HEAD@{94}: commit: import mochawesome reporter
+[33m52a5a5a[m HEAD@{95}: commit: add mocha
+[33me6705e6[m HEAD@{96}: commit: html reporter
+[33m7c09efe[m HEAD@{97}: pull -r: Fast-forward
+[33ma7451e1[m HEAD@{98}: reset: moving to HEAD
+[33ma7451e1[m HEAD@{99}: clone: from https://github.com/mralangiles80/cypress_collabo.git

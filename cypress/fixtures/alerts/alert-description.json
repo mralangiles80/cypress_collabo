@@ -1,0 +1,1309 @@
+{
+  "@context": [
+    "https://geojson.org/geojson-ld/geojson-context.jsonld",
+    {
+      "@version": "1.1",
+      "wx": "https://api.weather.gov/ontology#",
+      "@vocab": "https://api.weather.gov/ontology#"
+    }
+  ],
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c6d3e15257be0e32a7eb93eab5421ee511552acc.001.1",
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c6d3e15257be0e32a7eb93eab5421ee511552acc.001.1",
+        "@type": "wx:Alert",
+        "id": "urn:oid:2.49.0.1.840.0.c6d3e15257be0e32a7eb93eab5421ee511552acc.001.1",
+        "areaDesc": "Dorchester, MD; Somerset, MD; Wicomico, MD; Worcester, MD; Bertie, NC; Camden, NC; Chowan, NC; Currituck, NC; Gates, NC; Hertford, NC; Northampton, NC; Pasquotank, NC; Perquimans, NC; Accomack, VA; Amelia, VA; Brunswick, VA; Caroline, VA; Charles City, VA; Chesterfield, VA; Cumberland, VA; Dinwiddie, VA; Essex, VA; Fluvanna, VA; Gloucester, VA; Goochland, VA; Greensville, VA; Hanover, VA; Henrico, VA; Isle of Wight, VA; James City, VA; King and Queen, VA; King William, VA; Lancaster, VA; Louisa, VA; Lunenburg, VA; Mathews, VA; Mecklenburg, VA; Middlesex, VA; New Kent, VA; Northampton, VA; Northumberland, VA; Nottoway, VA; Powhatan, VA; Prince Edward, VA; Prince George, VA; Richmond, VA; Southampton, VA; Surry, VA; Sussex, VA; Westmoreland, VA; York, VA; City of Chesapeake, VA; City of Colonial Heights, VA; City of Emporia, VA; City of Franklin, VA; City of Hampton, VA; City of Hopewell, VA; City of Newport News, VA; City of Norfolk, VA; City of Petersburg, VA; City of Poquoson, VA; City of Portsmouth, VA; City of Richmond, VA; City of Suffolk, VA; City of Virginia Beach, VA; City of Williamsburg, VA",
+        "geocode": {
+          "SAME": [
+            "024019",
+            "024039",
+            "024045",
+            "024047",
+            "037015",
+            "037029",
+            "037041",
+            "037053",
+            "037073",
+            "037091",
+            "037131",
+            "037139",
+            "037143",
+            "051001",
+            "051007",
+            "051025",
+            "051033",
+            "051036",
+            "051041",
+            "051049",
+            "051053",
+            "051057",
+            "051065",
+            "051073",
+            "051075",
+            "051081",
+            "051085",
+            "051087",
+            "051093",
+            "051095",
+            "051097",
+            "051101",
+            "051103",
+            "051109",
+            "051111",
+            "051115",
+            "051117",
+            "051119",
+            "051127",
+            "051131",
+            "051133",
+            "051135",
+            "051145",
+            "051147",
+            "051149",
+            "051159",
+            "051175",
+            "051181",
+            "051183",
+            "051193",
+            "051199",
+            "051550",
+            "051570",
+            "051595",
+            "051620",
+            "051650",
+            "051670",
+            "051700",
+            "051710",
+            "051730",
+            "051735",
+            "051740",
+            "051760",
+            "051800",
+            "051810",
+            "051830"
+          ],
+          "UGC": [
+            "MDC019",
+            "MDC039",
+            "MDC045",
+            "MDC047",
+            "NCC015",
+            "NCC029",
+            "NCC041",
+            "NCC053",
+            "NCC073",
+            "NCC091",
+            "NCC131",
+            "NCC139",
+            "NCC143",
+            "VAC001",
+            "VAC007",
+            "VAC025",
+            "VAC033",
+            "VAC036",
+            "VAC041",
+            "VAC049",
+            "VAC053",
+            "VAC057",
+            "VAC065",
+            "VAC073",
+            "VAC075",
+            "VAC081",
+            "VAC085",
+            "VAC087",
+            "VAC093",
+            "VAC095",
+            "VAC097",
+            "VAC101",
+            "VAC103",
+            "VAC109",
+            "VAC111",
+            "VAC115",
+            "VAC117",
+            "VAC119",
+            "VAC127",
+            "VAC131",
+            "VAC133",
+            "VAC135",
+            "VAC145",
+            "VAC147",
+            "VAC149",
+            "VAC159",
+            "VAC175",
+            "VAC181",
+            "VAC183",
+            "VAC193",
+            "VAC199",
+            "VAC550",
+            "VAC570",
+            "VAC595",
+            "VAC620",
+            "VAC650",
+            "VAC670",
+            "VAC700",
+            "VAC710",
+            "VAC730",
+            "VAC735",
+            "VAC740",
+            "VAC760",
+            "VAC800",
+            "VAC810",
+            "VAC830"
+          ]
+        },
+        "affectedZones": [
+          "https://api.weather.gov/zones/county/MDC019",
+          "https://api.weather.gov/zones/county/MDC039",
+          "https://api.weather.gov/zones/county/MDC045",
+          "https://api.weather.gov/zones/county/MDC047",
+          "https://api.weather.gov/zones/county/NCC015",
+          "https://api.weather.gov/zones/county/NCC029",
+          "https://api.weather.gov/zones/county/NCC041",
+          "https://api.weather.gov/zones/county/NCC053",
+          "https://api.weather.gov/zones/county/NCC073",
+          "https://api.weather.gov/zones/county/NCC091",
+          "https://api.weather.gov/zones/county/NCC131",
+          "https://api.weather.gov/zones/county/NCC139",
+          "https://api.weather.gov/zones/county/NCC143",
+          "https://api.weather.gov/zones/county/VAC001",
+          "https://api.weather.gov/zones/county/VAC007",
+          "https://api.weather.gov/zones/county/VAC025",
+          "https://api.weather.gov/zones/county/VAC033",
+          "https://api.weather.gov/zones/county/VAC036",
+          "https://api.weather.gov/zones/county/VAC041",
+          "https://api.weather.gov/zones/county/VAC049",
+          "https://api.weather.gov/zones/county/VAC053",
+          "https://api.weather.gov/zones/county/VAC057",
+          "https://api.weather.gov/zones/county/VAC065",
+          "https://api.weather.gov/zones/county/VAC073",
+          "https://api.weather.gov/zones/county/VAC075",
+          "https://api.weather.gov/zones/county/VAC081",
+          "https://api.weather.gov/zones/county/VAC085",
+          "https://api.weather.gov/zones/county/VAC087",
+          "https://api.weather.gov/zones/county/VAC093",
+          "https://api.weather.gov/zones/county/VAC095",
+          "https://api.weather.gov/zones/county/VAC097",
+          "https://api.weather.gov/zones/county/VAC101",
+          "https://api.weather.gov/zones/county/VAC103",
+          "https://api.weather.gov/zones/county/VAC109",
+          "https://api.weather.gov/zones/county/VAC111",
+          "https://api.weather.gov/zones/county/VAC115",
+          "https://api.weather.gov/zones/county/VAC117",
+          "https://api.weather.gov/zones/county/VAC119",
+          "https://api.weather.gov/zones/county/VAC127",
+          "https://api.weather.gov/zones/county/VAC131",
+          "https://api.weather.gov/zones/county/VAC133",
+          "https://api.weather.gov/zones/county/VAC135",
+          "https://api.weather.gov/zones/county/VAC145",
+          "https://api.weather.gov/zones/county/VAC147",
+          "https://api.weather.gov/zones/county/VAC149",
+          "https://api.weather.gov/zones/county/VAC159",
+          "https://api.weather.gov/zones/county/VAC175",
+          "https://api.weather.gov/zones/county/VAC181",
+          "https://api.weather.gov/zones/county/VAC183",
+          "https://api.weather.gov/zones/county/VAC193",
+          "https://api.weather.gov/zones/county/VAC199",
+          "https://api.weather.gov/zones/county/VAC550",
+          "https://api.weather.gov/zones/county/VAC570",
+          "https://api.weather.gov/zones/county/VAC595",
+          "https://api.weather.gov/zones/county/VAC620",
+          "https://api.weather.gov/zones/county/VAC650",
+          "https://api.weather.gov/zones/county/VAC670",
+          "https://api.weather.gov/zones/county/VAC700",
+          "https://api.weather.gov/zones/county/VAC710",
+          "https://api.weather.gov/zones/county/VAC730",
+          "https://api.weather.gov/zones/county/VAC735",
+          "https://api.weather.gov/zones/county/VAC740",
+          "https://api.weather.gov/zones/county/VAC760",
+          "https://api.weather.gov/zones/county/VAC800",
+          "https://api.weather.gov/zones/county/VAC810",
+          "https://api.weather.gov/zones/county/VAC830"
+        ],
+        "references": [
+          {
+            "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4223a352231c21c856588e143efe315d72d7df8d.001.1",
+            "identifier": "urn:oid:2.49.0.1.840.0.4223a352231c21c856588e143efe315d72d7df8d.001.1",
+            "sender": "w-nws.webmaster@noaa.gov",
+            "sent": "2024-06-30T15:23:00-04:00"
+          },
+          {
+            "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a8cfeb78f78f61fbb2815a19f171bff0f72c30de.001.1",
+            "identifier": "urn:oid:2.49.0.1.840.0.a8cfeb78f78f61fbb2815a19f171bff0f72c30de.001.1",
+            "sender": "w-nws.webmaster@noaa.gov",
+            "sent": "2024-06-30T21:53:00-04:00"
+          }
+        ],
+        "sent": "2024-06-30T21:55:00-04:00",
+        "effective": "2024-06-30T21:55:00-04:00",
+        "onset": "2024-06-30T21:55:00-04:00",
+        "expires": "2024-06-30T22:10:41-04:00",
+        "ends": "2024-06-30T23:00:00-04:00",
+        "status": "Actual",
+        "messageType": "Cancel",
+        "category": "Met",
+        "severity": "Minor",
+        "certainty": "Observed",
+        "urgency": "Past",
+        "event": "Severe Thunderstorm Watch",
+        "sender": "w-nws.webmaster@noaa.gov",
+        "senderName": "NWS Wakefield VA",
+        "headline": "The Severe Thunderstorm Watch has been cancelled.",
+        "description": "The Severe Thunderstorm Watch has been cancelled and is no longer in effect.",
+        "instruction": null,
+        "response": "AllClear",
+        "parameters": {
+          "AWIPSidentifier": [
+            "WCNAKQ"
+          ],
+          "WMOidentifier": [
+            "WWUS61 KAKQ 010155"
+          ],
+          "BLOCKCHANNEL": [
+            "EAS",
+            "NWEM",
+            "CMAS"
+          ],
+          "EAS-ORG": [
+            "WXR"
+          ],
+          "VTEC": [
+            "/O.CAN.KAKQ.SV.A.0491.000000T0000Z-240701T0300Z/"
+          ],
+          "eventEndingTime": [
+            "2024-07-01T03:00:00+00:00"
+          ]
+        }
+      }
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a8cfeb78f78f61fbb2815a19f171bff0f72c30de.001.1",
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a8cfeb78f78f61fbb2815a19f171bff0f72c30de.001.1",
+        "@type": "wx:Alert",
+        "id": "urn:oid:2.49.0.1.840.0.a8cfeb78f78f61fbb2815a19f171bff0f72c30de.001.1",
+        "areaDesc": "Dorchester, MD; Somerset, MD; Wicomico, MD; Worcester, MD; Bertie, NC; Camden, NC; Chowan, NC; Currituck, NC; Gates, NC; Hertford, NC; Northampton, NC; Pasquotank, NC; Perquimans, NC; Accomack, VA; Amelia, VA; Brunswick, VA; Caroline, VA; Charles City, VA; Chesterfield, VA; Cumberland, VA; Dinwiddie, VA; Essex, VA; Fluvanna, VA; Gloucester, VA; Goochland, VA; Greensville, VA; Hanover, VA; Henrico, VA; Isle of Wight, VA; James City, VA; King and Queen, VA; King William, VA; Lancaster, VA; Louisa, VA; Lunenburg, VA; Mathews, VA; Mecklenburg, VA; Middlesex, VA; New Kent, VA; Northampton, VA; Northumberland, VA; Nottoway, VA; Powhatan, VA; Prince Edward, VA; Prince George, VA; Richmond, VA; Southampton, VA; Surry, VA; Sussex, VA; Westmoreland, VA; York, VA; City of Chesapeake, VA; City of Colonial Heights, VA; City of Emporia, VA; City of Franklin, VA; City of Hampton, VA; City of Hopewell, VA; City of Newport News, VA; City of Norfolk, VA; City of Petersburg, VA; City of Poquoson, VA; City of Portsmouth, VA; City of Richmond, VA; City of Suffolk, VA; City of Virginia Beach, VA; City of Williamsburg, VA",
+        "geocode": {
+          "SAME": [
+            "024019",
+            "024039",
+            "024045",
+            "024047",
+            "037015",
+            "037029",
+            "037041",
+            "037053",
+            "037073",
+            "037091",
+            "037131",
+            "037139",
+            "037143",
+            "051001",
+            "051007",
+            "051025",
+            "051033",
+            "051036",
+            "051041",
+            "051049",
+            "051053",
+            "051057",
+            "051065",
+            "051073",
+            "051075",
+            "051081",
+            "051085",
+            "051087",
+            "051093",
+            "051095",
+            "051097",
+            "051101",
+            "051103",
+            "051109",
+            "051111",
+            "051115",
+            "051117",
+            "051119",
+            "051127",
+            "051131",
+            "051133",
+            "051135",
+            "051145",
+            "051147",
+            "051149",
+            "051159",
+            "051175",
+            "051181",
+            "051183",
+            "051193",
+            "051199",
+            "051550",
+            "051570",
+            "051595",
+            "051620",
+            "051650",
+            "051670",
+            "051700",
+            "051710",
+            "051730",
+            "051735",
+            "051740",
+            "051760",
+            "051800",
+            "051810",
+            "051830"
+          ],
+          "UGC": [
+            "MDC019",
+            "MDC039",
+            "MDC045",
+            "MDC047",
+            "NCC015",
+            "NCC029",
+            "NCC041",
+            "NCC053",
+            "NCC073",
+            "NCC091",
+            "NCC131",
+            "NCC139",
+            "NCC143",
+            "VAC001",
+            "VAC007",
+            "VAC025",
+            "VAC033",
+            "VAC036",
+            "VAC041",
+            "VAC049",
+            "VAC053",
+            "VAC057",
+            "VAC065",
+            "VAC073",
+            "VAC075",
+            "VAC081",
+            "VAC085",
+            "VAC087",
+            "VAC093",
+            "VAC095",
+            "VAC097",
+            "VAC101",
+            "VAC103",
+            "VAC109",
+            "VAC111",
+            "VAC115",
+            "VAC117",
+            "VAC119",
+            "VAC127",
+            "VAC131",
+            "VAC133",
+            "VAC135",
+            "VAC145",
+            "VAC147",
+            "VAC149",
+            "VAC159",
+            "VAC175",
+            "VAC181",
+            "VAC183",
+            "VAC193",
+            "VAC199",
+            "VAC550",
+            "VAC570",
+            "VAC595",
+            "VAC620",
+            "VAC650",
+            "VAC670",
+            "VAC700",
+            "VAC710",
+            "VAC730",
+            "VAC735",
+            "VAC740",
+            "VAC760",
+            "VAC800",
+            "VAC810",
+            "VAC830"
+          ]
+        },
+        "affectedZones": [
+          "https://api.weather.gov/zones/county/MDC019",
+          "https://api.weather.gov/zones/county/MDC039",
+          "https://api.weather.gov/zones/county/MDC045",
+          "https://api.weather.gov/zones/county/MDC047",
+          "https://api.weather.gov/zones/county/NCC015",
+          "https://api.weather.gov/zones/county/NCC029",
+          "https://api.weather.gov/zones/county/NCC041",
+          "https://api.weather.gov/zones/county/NCC053",
+          "https://api.weather.gov/zones/county/NCC073",
+          "https://api.weather.gov/zones/county/NCC091",
+          "https://api.weather.gov/zones/county/NCC131",
+          "https://api.weather.gov/zones/county/NCC139",
+          "https://api.weather.gov/zones/county/NCC143",
+          "https://api.weather.gov/zones/county/VAC001",
+          "https://api.weather.gov/zones/county/VAC007",
+          "https://api.weather.gov/zones/county/VAC025",
+          "https://api.weather.gov/zones/county/VAC033",
+          "https://api.weather.gov/zones/county/VAC036",
+          "https://api.weather.gov/zones/county/VAC041",
+          "https://api.weather.gov/zones/county/VAC049",
+          "https://api.weather.gov/zones/county/VAC053",
+          "https://api.weather.gov/zones/county/VAC057",
+          "https://api.weather.gov/zones/county/VAC065",
+          "https://api.weather.gov/zones/county/VAC073",
+          "https://api.weather.gov/zones/county/VAC075",
+          "https://api.weather.gov/zones/county/VAC081",
+          "https://api.weather.gov/zones/county/VAC085",
+          "https://api.weather.gov/zones/county/VAC087",
+          "https://api.weather.gov/zones/county/VAC093",
+          "https://api.weather.gov/zones/county/VAC095",
+          "https://api.weather.gov/zones/county/VAC097",
+          "https://api.weather.gov/zones/county/VAC101",
+          "https://api.weather.gov/zones/county/VAC103",
+          "https://api.weather.gov/zones/county/VAC109",
+          "https://api.weather.gov/zones/county/VAC111",
+          "https://api.weather.gov/zones/county/VAC115",
+          "https://api.weather.gov/zones/county/VAC117",
+          "https://api.weather.gov/zones/county/VAC119",
+          "https://api.weather.gov/zones/county/VAC127",
+          "https://api.weather.gov/zones/county/VAC131",
+          "https://api.weather.gov/zones/county/VAC133",
+          "https://api.weather.gov/zones/county/VAC135",
+          "https://api.weather.gov/zones/county/VAC145",
+          "https://api.weather.gov/zones/county/VAC147",
+          "https://api.weather.gov/zones/county/VAC149",
+          "https://api.weather.gov/zones/county/VAC159",
+          "https://api.weather.gov/zones/county/VAC175",
+          "https://api.weather.gov/zones/county/VAC181",
+          "https://api.weather.gov/zones/county/VAC183",
+          "https://api.weather.gov/zones/county/VAC193",
+          "https://api.weather.gov/zones/county/VAC199",
+          "https://api.weather.gov/zones/county/VAC550",
+          "https://api.weather.gov/zones/county/VAC570",
+          "https://api.weather.gov/zones/county/VAC595",
+          "https://api.weather.gov/zones/county/VAC620",
+          "https://api.weather.gov/zones/county/VAC650",
+          "https://api.weather.gov/zones/county/VAC670",
+          "https://api.weather.gov/zones/county/VAC700",
+          "https://api.weather.gov/zones/county/VAC710",
+          "https://api.weather.gov/zones/county/VAC730",
+          "https://api.weather.gov/zones/county/VAC735",
+          "https://api.weather.gov/zones/county/VAC740",
+          "https://api.weather.gov/zones/county/VAC760",
+          "https://api.weather.gov/zones/county/VAC800",
+          "https://api.weather.gov/zones/county/VAC810",
+          "https://api.weather.gov/zones/county/VAC830"
+        ],
+        "references": [
+          {
+            "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4223a352231c21c856588e143efe315d72d7df8d.001.1",
+            "identifier": "urn:oid:2.49.0.1.840.0.4223a352231c21c856588e143efe315d72d7df8d.001.1",
+            "sender": "w-nws.webmaster@noaa.gov",
+            "sent": "2024-06-30T15:23:00-04:00"
+          }
+        ],
+        "sent": "2024-06-30T21:53:00-04:00",
+        "effective": "2024-06-30T21:53:00-04:00",
+        "onset": "2024-06-30T21:53:00-04:00",
+        "expires": "2024-06-30T23:00:00-04:00",
+        "ends": "2024-06-30T23:00:00-04:00",
+        "status": "Actual",
+        "messageType": "Update",
+        "category": "Met",
+        "severity": "Severe",
+        "certainty": "Possible",
+        "urgency": "Future",
+        "event": "Severe Thunderstorm Watch",
+        "sender": "w-nws.webmaster@noaa.gov",
+        "senderName": "NWS Wakefield VA",
+        "headline": "Severe Thunderstorm Watch issued June 30 at 9:53PM EDT until June 30 at 11:00PM EDT by NWS Wakefield VA",
+        "description": "SEVERE THUNDERSTORM WATCH 491 REMAINS VALID UNTIL 11 PM EDT THIS\nEVENING FOR THE FOLLOWING AREAS\n\nIN MARYLAND THIS WATCH INCLUDES 4 COUNTIES\n\nIN SOUTHEAST MARYLAND\n\nDORCHESTER            SOMERSET              WICOMICO\nWORCESTER\n\nIN NORTH CAROLINA THIS WATCH INCLUDES 9 COUNTIES\n\nIN NORTHEAST NORTH CAROLINA\n\nBERTIE                CAMDEN                CHOWAN\nCURRITUCK             GATES                 HERTFORD\nNORTHAMPTON           PASQUOTANK            PERQUIMANS\n\nIN VIRGINIA THIS WATCH INCLUDES 53 COUNTIES\n\nIN CENTRAL VIRGINIA\n\nAMELIA                CHESTERFIELD\nCITY OF COLONIAL HEIGHTS                    CITY OF RICHMOND\nCUMBERLAND            FLUVANNA              GOOCHLAND\nHANOVER               HENRICO               LOUISA\nPOWHATAN              PRINCE EDWARD\n\nIN EAST CENTRAL VIRGINIA\n\nCHARLES CITY          ESSEX                 KING WILLIAM\nKING AND QUEEN        NEW KENT              RICHMOND\nWESTMORELAND\n\nIN EASTERN VIRGINIA\n\nLANCASTER             MATHEWS               MIDDLESEX\nNORTHAMPTON           NORTHUMBERLAND\n\nIN NORTH CENTRAL VIRGINIA\n\nCAROLINE\n\nIN SOUTH CENTRAL VIRGINIA\n\nBRUNSWICK             CITY OF HOPEWELL      CITY OF PETERSBURG\nDINWIDDIE             LUNENBURG             MECKLENBURG\nNOTTOWAY              PRINCE GEORGE\n\nIN SOUTHEAST VIRGINIA\n\nACCOMACK              CITY OF CHESAPEAKE    CITY OF EMPORIA\nCITY OF FRANKLIN      CITY OF HAMPTON       CITY OF NEWPORT NEWS\nCITY OF NORFOLK       CITY OF POQUOSON      CITY OF PORTSMOUTH\nCITY OF SUFFOLK       CITY OF VIRGINIA BEACH\nCITY OF WILLIAMSBURG  GLOUCESTER            GREENSVILLE\nISLE OF WIGHT         JAMES CITY            SOUTHAMPTON\nSURRY                 SUSSEX                YORK\n\nTHIS INCLUDES THE CITIES OF AHOSKIE, AMELIA COURTHOUSE, ANGOLA,\nANTE, BACONS CASTLE, BARHAM, BARNETTS, BAVON, BEACH, BON AIR,\nBOOTH FORK, BOTTOMS BRIDGE, BOWERS HILL, BOYKINS, BRAYS FORK,\nBROWNS CORNER, BRUNSWICK, BRYANTOWN, BUFFORD CROSSROADS,\nBURRUSS CORNER, BUSCH GARDENS, CAMBRIDGE, CAPE CHARLES,\nCAPE COLONY, CARET, CEDAR FORK, CENTER CROSS, CENTERVILLE,\nCHAMPLAIN, CHASE CITY, CHESAPEAKE AIRPORT, CHESTER, CHESTERFIELD,\nCHINCOTEAGUE, CHIPPOKES STATE PARK, CHRISTENSONS CORNER, CHULA,\nCLANCIE, CLARESVILLE, CLARKSVILLE, COLONIAL BEACH,\nCOLONIAL HEIGHTS, CORBIN, COURTLAND, COWIE CORNER, CREWE,\nCRISFIELD, CROAKER, CURRITUCK, DAWN, DEEP CREEK, DENARO,\nDRAGONVILLE, DUNBROOKE, DUNNSVILLE, DURAND, EAGLETOWN, EARLS,\nEDENHOUSE, EDENTON, EDGERTON, ELIZABETH CITY, EMPORIA,\nEMPORIA AIRPORT, EMPORIA RESERVOIR, EWELL, EXMORE, FARMVILLE,\nFENTRESS, FIVE FORKS, FORT LEE, FRANKLIN, GARYSBURG, GASTON,\nGATESVILLE, GLEN ALLEN, GLOUCESTER POINT, GOOCHLAND,\nGREAT BRIDGE, GREEN PLAIN, GREENBACKVILLE, GREENBRIER, GRESSIT,\nGROVE, GUINEA MILLS, GUM FORKS, GWALTNEY CORNER, HAMPTON,\nHANCOCK, HAWK, HERTFORD, HOG ISLAND GAME RESERVE, HOPEWELL,\nHORNTOWN, HORSESHOE, HOWERTONS, HUNTERDALE, IVOR, JETERSVILLE,\nKENBRIDGE, KILMARNOCK, KING AND QUEEN COURT HOUSE,\nLAKE MONTICELLO, LANCASTER, LAWRENCEVILLE, LEWISETTA, LILLY,\nLITTLE PLYMOUTH, LOUISA, MACEDONIA, MANNBORO, MASCOT, MATTAPONI,\nMAVATON, MEADOWVILLE, MECHANICSVILLE, MERRY HILL, MIDLOTHIAN,\nMIDWAY, MINERAL, MOSELEY, MOUNT PLEASANT, MOUNTCASTLE,\nNEW CHURCH, NEW KENT AIRPORT, NEW POINT, NEW POINT COMFORT,\nNEWPORT NEWS, NORFOLK, OCEAN CITY, ONANCOCK, ORAPAX FARMS, PEARY,\nPETERSBURG, POOLESVILLE, POQUOSON, PORTSMOUTH, POWHATAN,\nPRINCESS ANNE, QUINTON, QUITSNA, RAINES TAVERN, REAMS, REEDS,\nRICH SQUARE, RICHMOND, ROXBURY, SAINT JOHNS, SALISBURY, SANDSTON,\nSCOTTS FORK, SHARON, SMITHFIELD, SOUTH HILL, STODDERT, SUFFOLK,\nTALLEYSVILLE, TRIPLET, URBANNA, VALENTINES, VALHALLA, VICTORIA,\nVIRGINIA BEACH, VULTARE, WAKEFIELD, WARSAW, WAVERLY, WAYSIDE,\nWEST POINT, WHITE PLAINS, WILLIAMSBURG, WINDSOR, AND YORKTOWN.",
+        "instruction": null,
+        "response": "Monitor",
+        "parameters": {
+          "AWIPSidentifier": [
+            "WCNAKQ"
+          ],
+          "WMOidentifier": [
+            "WWUS61 KAKQ 010153"
+          ],
+          "BLOCKCHANNEL": [
+            "EAS",
+            "NWEM",
+            "CMAS"
+          ],
+          "EAS-ORG": [
+            "WXR"
+          ],
+          "VTEC": [
+            "/O.CON.KAKQ.SV.A.0491.000000T0000Z-240701T0300Z/"
+          ],
+          "eventEndingTime": [
+            "2024-07-01T03:00:00+00:00"
+          ]
+        },
+        "replacedBy": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c6d3e15257be0e32a7eb93eab5421ee511552acc.001.1",
+        "replacedAt": "2024-06-30T21:55:00-04:00"
+      }
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4223a352231c21c856588e143efe315d72d7df8d.001.1",
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4223a352231c21c856588e143efe315d72d7df8d.001.1",
+        "@type": "wx:Alert",
+        "id": "urn:oid:2.49.0.1.840.0.4223a352231c21c856588e143efe315d72d7df8d.001.1",
+        "areaDesc": "Dorchester, MD; Somerset, MD; Wicomico, MD; Worcester, MD; Bertie, NC; Camden, NC; Chowan, NC; Currituck, NC; Gates, NC; Hertford, NC; Northampton, NC; Pasquotank, NC; Perquimans, NC; Accomack, VA; Amelia, VA; Brunswick, VA; Caroline, VA; Charles City, VA; Chesterfield, VA; Cumberland, VA; Dinwiddie, VA; Essex, VA; Fluvanna, VA; Gloucester, VA; Goochland, VA; Greensville, VA; Hanover, VA; Henrico, VA; Isle of Wight, VA; James City, VA; King and Queen, VA; King William, VA; Lancaster, VA; Louisa, VA; Lunenburg, VA; Mathews, VA; Mecklenburg, VA; Middlesex, VA; New Kent, VA; Northampton, VA; Northumberland, VA; Nottoway, VA; Powhatan, VA; Prince Edward, VA; Prince George, VA; Richmond, VA; Southampton, VA; Surry, VA; Sussex, VA; Westmoreland, VA; York, VA; City of Chesapeake, VA; City of Colonial Heights, VA; City of Emporia, VA; City of Franklin, VA; City of Hampton, VA; City of Hopewell, VA; City of Newport News, VA; City of Norfolk, VA; City of Petersburg, VA; City of Poquoson, VA; City of Portsmouth, VA; City of Richmond, VA; City of Suffolk, VA; City of Virginia Beach, VA; City of Williamsburg, VA",
+        "geocode": {
+          "SAME": [
+            "024019",
+            "024039",
+            "024045",
+            "024047",
+            "037015",
+            "037029",
+            "037041",
+            "037053",
+            "037073",
+            "037091",
+            "037131",
+            "037139",
+            "037143",
+            "051001",
+            "051007",
+            "051025",
+            "051033",
+            "051036",
+            "051041",
+            "051049",
+            "051053",
+            "051057",
+            "051065",
+            "051073",
+            "051075",
+            "051081",
+            "051085",
+            "051087",
+            "051093",
+            "051095",
+            "051097",
+            "051101",
+            "051103",
+            "051109",
+            "051111",
+            "051115",
+            "051117",
+            "051119",
+            "051127",
+            "051131",
+            "051133",
+            "051135",
+            "051145",
+            "051147",
+            "051149",
+            "051159",
+            "051175",
+            "051181",
+            "051183",
+            "051193",
+            "051199",
+            "051550",
+            "051570",
+            "051595",
+            "051620",
+            "051650",
+            "051670",
+            "051700",
+            "051710",
+            "051730",
+            "051735",
+            "051740",
+            "051760",
+            "051800",
+            "051810",
+            "051830"
+          ],
+          "UGC": [
+            "MDC019",
+            "MDC039",
+            "MDC045",
+            "MDC047",
+            "NCC015",
+            "NCC029",
+            "NCC041",
+            "NCC053",
+            "NCC073",
+            "NCC091",
+            "NCC131",
+            "NCC139",
+            "NCC143",
+            "VAC001",
+            "VAC007",
+            "VAC025",
+            "VAC033",
+            "VAC036",
+            "VAC041",
+            "VAC049",
+            "VAC053",
+            "VAC057",
+            "VAC065",
+            "VAC073",
+            "VAC075",
+            "VAC081",
+            "VAC085",
+            "VAC087",
+            "VAC093",
+            "VAC095",
+            "VAC097",
+            "VAC101",
+            "VAC103",
+            "VAC109",
+            "VAC111",
+            "VAC115",
+            "VAC117",
+            "VAC119",
+            "VAC127",
+            "VAC131",
+            "VAC133",
+            "VAC135",
+            "VAC145",
+            "VAC147",
+            "VAC149",
+            "VAC159",
+            "VAC175",
+            "VAC181",
+            "VAC183",
+            "VAC193",
+            "VAC199",
+            "VAC550",
+            "VAC570",
+            "VAC595",
+            "VAC620",
+            "VAC650",
+            "VAC670",
+            "VAC700",
+            "VAC710",
+            "VAC730",
+            "VAC735",
+            "VAC740",
+            "VAC760",
+            "VAC800",
+            "VAC810",
+            "VAC830"
+          ]
+        },
+        "affectedZones": [
+          "https://api.weather.gov/zones/county/MDC019",
+          "https://api.weather.gov/zones/county/MDC039",
+          "https://api.weather.gov/zones/county/MDC045",
+          "https://api.weather.gov/zones/county/MDC047",
+          "https://api.weather.gov/zones/county/NCC015",
+          "https://api.weather.gov/zones/county/NCC029",
+          "https://api.weather.gov/zones/county/NCC041",
+          "https://api.weather.gov/zones/county/NCC053",
+          "https://api.weather.gov/zones/county/NCC073",
+          "https://api.weather.gov/zones/county/NCC091",
+          "https://api.weather.gov/zones/county/NCC131",
+          "https://api.weather.gov/zones/county/NCC139",
+          "https://api.weather.gov/zones/county/NCC143",
+          "https://api.weather.gov/zones/county/VAC001",
+          "https://api.weather.gov/zones/county/VAC007",
+          "https://api.weather.gov/zones/county/VAC025",
+          "https://api.weather.gov/zones/county/VAC033",
+          "https://api.weather.gov/zones/county/VAC036",
+          "https://api.weather.gov/zones/county/VAC041",
+          "https://api.weather.gov/zones/county/VAC049",
+          "https://api.weather.gov/zones/county/VAC053",
+          "https://api.weather.gov/zones/county/VAC057",
+          "https://api.weather.gov/zones/county/VAC065",
+          "https://api.weather.gov/zones/county/VAC073",
+          "https://api.weather.gov/zones/county/VAC075",
+          "https://api.weather.gov/zones/county/VAC081",
+          "https://api.weather.gov/zones/county/VAC085",
+          "https://api.weather.gov/zones/county/VAC087",
+          "https://api.weather.gov/zones/county/VAC093",
+          "https://api.weather.gov/zones/county/VAC095",
+          "https://api.weather.gov/zones/county/VAC097",
+          "https://api.weather.gov/zones/county/VAC101",
+          "https://api.weather.gov/zones/county/VAC103",
+          "https://api.weather.gov/zones/county/VAC109",
+          "https://api.weather.gov/zones/county/VAC111",
+          "https://api.weather.gov/zones/county/VAC115",
+          "https://api.weather.gov/zones/county/VAC117",
+          "https://api.weather.gov/zones/county/VAC119",
+          "https://api.weather.gov/zones/county/VAC127",
+          "https://api.weather.gov/zones/county/VAC131",
+          "https://api.weather.gov/zones/county/VAC133",
+          "https://api.weather.gov/zones/county/VAC135",
+          "https://api.weather.gov/zones/county/VAC145",
+          "https://api.weather.gov/zones/county/VAC147",
+          "https://api.weather.gov/zones/county/VAC149",
+          "https://api.weather.gov/zones/county/VAC159",
+          "https://api.weather.gov/zones/county/VAC175",
+          "https://api.weather.gov/zones/county/VAC181",
+          "https://api.weather.gov/zones/county/VAC183",
+          "https://api.weather.gov/zones/county/VAC193",
+          "https://api.weather.gov/zones/county/VAC199",
+          "https://api.weather.gov/zones/county/VAC550",
+          "https://api.weather.gov/zones/county/VAC570",
+          "https://api.weather.gov/zones/county/VAC595",
+          "https://api.weather.gov/zones/county/VAC620",
+          "https://api.weather.gov/zones/county/VAC650",
+          "https://api.weather.gov/zones/county/VAC670",
+          "https://api.weather.gov/zones/county/VAC700",
+          "https://api.weather.gov/zones/county/VAC710",
+          "https://api.weather.gov/zones/county/VAC730",
+          "https://api.weather.gov/zones/county/VAC735",
+          "https://api.weather.gov/zones/county/VAC740",
+          "https://api.weather.gov/zones/county/VAC760",
+          "https://api.weather.gov/zones/county/VAC800",
+          "https://api.weather.gov/zones/county/VAC810",
+          "https://api.weather.gov/zones/county/VAC830"
+        ],
+        "references": [],
+        "sent": "2024-06-30T15:23:00-04:00",
+        "effective": "2024-06-30T15:23:00-04:00",
+        "onset": "2024-06-30T15:23:00-04:00",
+        "expires": "2024-06-30T23:00:00-04:00",
+        "ends": "2024-06-30T23:00:00-04:00",
+        "status": "Actual",
+        "messageType": "Alert",
+        "category": "Met",
+        "severity": "Severe",
+        "certainty": "Possible",
+        "urgency": "Future",
+        "event": "Severe Thunderstorm Watch",
+        "sender": "w-nws.webmaster@noaa.gov",
+        "senderName": "NWS Wakefield VA",
+        "headline": "Severe Thunderstorm Watch issued June 30 at 3:23PM EDT until June 30 at 11:00PM EDT by NWS Wakefield VA",
+        "description": "THE NATIONAL WEATHER SERVICE HAS ISSUED SEVERE THUNDERSTORM WATCH\n491 IN EFFECT UNTIL 11 PM EDT THIS EVENING FOR THE FOLLOWING\nAREAS\n\nIN MARYLAND THIS WATCH INCLUDES 4 COUNTIES\n\nIN SOUTHEAST MARYLAND\n\nDORCHESTER            SOMERSET              WICOMICO\nWORCESTER\n\nIN NORTH CAROLINA THIS WATCH INCLUDES 9 COUNTIES\n\nIN NORTHEAST NORTH CAROLINA\n\nBERTIE                CAMDEN                CHOWAN\nCURRITUCK             GATES                 HERTFORD\nNORTHAMPTON           PASQUOTANK            PERQUIMANS\n\nIN VIRGINIA THIS WATCH INCLUDES 53 COUNTIES\n\nIN CENTRAL VIRGINIA\n\nAMELIA                CHESTERFIELD\nCITY OF COLONIAL HEIGHTS                    CITY OF RICHMOND\nCUMBERLAND            FLUVANNA              GOOCHLAND\nHANOVER               HENRICO               LOUISA\nPOWHATAN              PRINCE EDWARD\n\nIN EAST CENTRAL VIRGINIA\n\nCHARLES CITY          ESSEX                 KING WILLIAM\nKING AND QUEEN        NEW KENT              RICHMOND\nWESTMORELAND\n\nIN EASTERN VIRGINIA\n\nLANCASTER             MATHEWS               MIDDLESEX\nNORTHAMPTON           NORTHUMBERLAND\n\nIN NORTH CENTRAL VIRGINIA\n\nCAROLINE\n\nIN SOUTH CENTRAL VIRGINIA\n\nBRUNSWICK             CITY OF HOPEWELL      CITY OF PETERSBURG\nDINWIDDIE             LUNENBURG             MECKLENBURG\nNOTTOWAY              PRINCE GEORGE\n\nIN SOUTHEAST VIRGINIA\n\nACCOMACK              CITY OF CHESAPEAKE    CITY OF EMPORIA\nCITY OF FRANKLIN      CITY OF HAMPTON       CITY OF NEWPORT NEWS\nCITY OF NORFOLK       CITY OF POQUOSON      CITY OF PORTSMOUTH\nCITY OF SUFFOLK       CITY OF VIRGINIA BEACH\nCITY OF WILLIAMSBURG  GLOUCESTER            GREENSVILLE\nISLE OF WIGHT         JAMES CITY            SOUTHAMPTON\nSURRY                 SUSSEX                YORK\n\nTHIS INCLUDES THE CITIES OF AHOSKIE, AMELIA COURTHOUSE, ANGOLA,\nANTE, BACONS CASTLE, BARHAM, BARNETTS, BAVON, BEACH, BON AIR,\nBOOTH FORK, BOTTOMS BRIDGE, BOWERS HILL, BOYKINS, BRAYS FORK,\nBROWNS CORNER, BRUNSWICK, BRYANTOWN, BUFFORD CROSSROADS,\nBURRUSS CORNER, BUSCH GARDENS, CAMBRIDGE, CAPE CHARLES,\nCAPE COLONY, CARET, CEDAR FORK, CENTER CROSS, CENTERVILLE,\nCHAMPLAIN, CHASE CITY, CHESAPEAKE AIRPORT, CHESTER, CHESTERFIELD,\nCHINCOTEAGUE, CHIPPOKES STATE PARK, CHRISTENSONS CORNER, CHULA,\nCLANCIE, CLARESVILLE, CLARKSVILLE, COLONIAL BEACH,\nCOLONIAL HEIGHTS, CORBIN, COURTLAND, COWIE CORNER, CREWE,\nCRISFIELD, CROAKER, CURRITUCK, DAWN, DEEP CREEK, DENARO,\nDRAGONVILLE, DUNBROOKE, DUNNSVILLE, DURAND, EAGLETOWN, EARLS,\nEDENHOUSE, EDENTON, EDGERTON, ELIZABETH CITY, EMPORIA,\nEMPORIA AIRPORT, EMPORIA RESERVOIR, EWELL, EXMORE, FARMVILLE,\nFENTRESS, FIVE FORKS, FORT LEE, FRANKLIN, GARYSBURG, GASTON,\nGATESVILLE, GLEN ALLEN, GLOUCESTER POINT, GOOCHLAND,\nGREAT BRIDGE, GREEN PLAIN, GREENBACKVILLE, GREENBRIER, GRESSIT,\nGROVE, GUINEA MILLS, GUM FORKS, GWALTNEY CORNER, HAMPTON,\nHANCOCK, HAWK, HERTFORD, HOG ISLAND GAME RESERVE, HOPEWELL,\nHORNTOWN, HORSESHOE, HOWERTONS, HUNTERDALE, IVOR, JETERSVILLE,\nKENBRIDGE, KILMARNOCK, KING AND QUEEN COURT HOUSE,\nLAKE MONTICELLO, LANCASTER, LAWRENCEVILLE, LEWISETTA, LILLY,\nLITTLE PLYMOUTH, LOUISA, MACEDONIA, MANNBORO, MASCOT, MATTAPONI,\nMAVATON, MEADOWVILLE, MECHANICSVILLE, MERRY HILL, MIDLOTHIAN,\nMIDWAY, MINERAL, MOSELEY, MOUNT PLEASANT, MOUNTCASTLE,\nNEW CHURCH, NEW KENT AIRPORT, NEW POINT, NEW POINT COMFORT,\nNEWPORT NEWS, NORFOLK, OCEAN CITY, ONANCOCK, ORAPAX FARMS, PEARY,\nPETERSBURG, POOLESVILLE, POQUOSON, PORTSMOUTH, POWHATAN,\nPRINCESS ANNE, QUINTON, QUITSNA, RAINES TAVERN, REAMS, REEDS,\nRICH SQUARE, RICHMOND, ROXBURY, SAINT JOHNS, SALISBURY, SANDSTON,\nSCOTTS FORK, SHARON, SMITHFIELD, SOUTH HILL, STODDERT, SUFFOLK,\nTALLEYSVILLE, TRIPLET, URBANNA, VALENTINES, VALHALLA, VICTORIA,\nVIRGINIA BEACH, VULTARE, WAKEFIELD, WARSAW, WAVERLY, WAYSIDE,\nWEST POINT, WHITE PLAINS, WILLIAMSBURG, WINDSOR, AND YORKTOWN.",
+        "instruction": null,
+        "response": "Monitor",
+        "parameters": {
+          "AWIPSidentifier": [
+            "WCNAKQ"
+          ],
+          "WMOidentifier": [
+            "WWUS61 KAKQ 301923"
+          ],
+          "BLOCKCHANNEL": [
+            "EAS",
+            "NWEM",
+            "CMAS"
+          ],
+          "EAS-ORG": [
+            "WXR"
+          ],
+          "VTEC": [
+            "/O.NEW.KAKQ.SV.A.0491.240630T1923Z-240701T0300Z/"
+          ],
+          "eventEndingTime": [
+            "2024-07-01T03:00:00+00:00"
+          ]
+        },
+        "replacedBy": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c6d3e15257be0e32a7eb93eab5421ee511552acc.001.1",
+        "replacedAt": "2024-06-30T21:55:00-04:00"
+      }
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.bd0f1232c5f6a2746d65f6bc37e718caee1c89c9.001.1",
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -76.95,
+              38.21
+            ],
+            [
+              -76.87,
+              38.17
+            ],
+            [
+              -76.61,
+              38.15
+            ],
+            [
+              -76.6,
+              38.11
+            ],
+            [
+              -76.53,
+              38.07
+            ],
+            [
+              -76.51,
+              38.04
+            ],
+            [
+              -76.47,
+              38.01
+            ],
+            [
+              -76.52,
+              38.03
+            ],
+            [
+              -76.91,
+              38.02
+            ],
+            [
+              -76.92,
+              38.07
+            ],
+            [
+              -76.92,
+              38.03
+            ],
+            [
+              -77.36,
+              38.03
+            ],
+            [
+              -77.2099999,
+              38.2
+            ],
+            [
+              -77.17,
+              38.17
+            ],
+            [
+              -77.12,
+              38.15
+            ],
+            [
+              -77.09,
+              38.1599999
+            ],
+            [
+              -77.0699999,
+              38.14
+            ],
+            [
+              -77.05,
+              38.26
+            ],
+            [
+              -76.98,
+              38.28
+            ],
+            [
+              -76.95,
+              38.21
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.bd0f1232c5f6a2746d65f6bc37e718caee1c89c9.001.1",
+        "@type": "wx:Alert",
+        "id": "urn:oid:2.49.0.1.840.0.bd0f1232c5f6a2746d65f6bc37e718caee1c89c9.001.1",
+        "areaDesc": "Caroline; Westmoreland; Richmond; Northumberland; Western Essex",
+        "geocode": {
+          "SAME": [
+            "051033",
+            "051193",
+            "051159",
+            "051133",
+            "051057"
+          ],
+          "UGC": [
+            "VAZ064",
+            "VAZ075",
+            "VAZ076",
+            "VAZ077",
+            "VAZ521"
+          ]
+        },
+        "affectedZones": [
+          "https://api.weather.gov/zones/forecast/VAZ064",
+          "https://api.weather.gov/zones/forecast/VAZ075",
+          "https://api.weather.gov/zones/forecast/VAZ076",
+          "https://api.weather.gov/zones/forecast/VAZ077",
+          "https://api.weather.gov/zones/forecast/VAZ521"
+        ],
+        "references": [],
+        "sent": "2024-06-26T20:59:00-04:00",
+        "effective": "2024-06-26T20:59:00-04:00",
+        "onset": "2024-06-26T20:59:00-04:00",
+        "expires": "2024-06-26T21:30:00-04:00",
+        "ends": null,
+        "status": "Actual",
+        "messageType": "Alert",
+        "category": "Met",
+        "severity": "Moderate",
+        "certainty": "Observed",
+        "urgency": "Expected",
+        "event": "Special Weather Statement",
+        "sender": "w-nws.webmaster@noaa.gov",
+        "senderName": "NWS Wakefield VA",
+        "headline": "Special Weather Statement issued June 26 at 8:59PM EDT by NWS Wakefield VA",
+        "description": "At 859 PM EDT, Doppler radar was tracking strong thunderstorms along\na line extending from near Fort Walker to near Saint George Island.\nMovement was northeast at 25 mph.\n\nHAZARD...Wind gusts up to 40 mph.\n\nSOURCE...Radar indicated.\n\nIMPACT...Gusty winds could knock down tree limbs and blow around\nunsecured objects.\n\nStrong thunderstorms will be near...\nMontross, Coles Point, Loretto, and Leedstown around 905 PM EDT.\n\nOther locations impacted by these storms include Lerty, Currioman\nLanding, Hustle, Potomac Beach, Rollins Fork, Oak Grove, Supply,\nSingerly, Mount Holly, and Peeds.",
+        "instruction": "If outdoors, consider seeking shelter inside a building.",
+        "response": "Execute",
+        "parameters": {
+          "AWIPSidentifier": [
+            "SPSAKQ"
+          ],
+          "WMOidentifier": [
+            "WWUS81 KAKQ 270059"
+          ],
+          "NWSheadline": [
+            "STRONG THUNDERSTORMS WILL IMPACT NORTHWESTERN RICHMOND... NORTHEASTERN CAROLINE...WESTMORELAND AND NORTHWESTERN ESSEX COUNTIES THROUGH 930 PM EDT"
+          ],
+          "eventMotionDescription": [
+            "2024-06-27T00:59:00-00:00...storm...233DEG...22KT...38.08,-77.21 38.13,-76.46"
+          ],
+          "maxWindGust": [
+            "40 MPH"
+          ],
+          "maxHailSize": [
+            "0.00"
+          ],
+          "BLOCKCHANNEL": [
+            "EAS",
+            "NWEM",
+            "CMAS"
+          ],
+          "EAS-ORG": [
+            "WXR"
+          ]
+        }
+      }
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.217b03c1c9c11845f2ed31ac4c1663830e31a90b.001.1",
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -76.95,
+              38.21
+            ],
+            [
+              -76.87,
+              38.17
+            ],
+            [
+              -76.61,
+              38.15
+            ],
+            [
+              -76.6,
+              38.11
+            ],
+            [
+              -76.53,
+              38.07
+            ],
+            [
+              -76.52,
+              38.03
+            ],
+            [
+              -76.47,
+              38.02
+            ],
+            [
+              -76.41,
+              37.97
+            ],
+            [
+              -77.27,
+              38.01
+            ],
+            [
+              -77.2,
+              38.19
+            ],
+            [
+              -77.12,
+              38.15
+            ],
+            [
+              -77.09,
+              38.1599999
+            ],
+            [
+              -77.0699999,
+              38.14
+            ],
+            [
+              -77.05,
+              38.18
+            ],
+            [
+              -77.05,
+              38.26
+            ],
+            [
+              -76.98,
+              38.28
+            ],
+            [
+              -76.95,
+              38.21
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.217b03c1c9c11845f2ed31ac4c1663830e31a90b.001.1",
+        "@type": "wx:Alert",
+        "id": "urn:oid:2.49.0.1.840.0.217b03c1c9c11845f2ed31ac4c1663830e31a90b.001.1",
+        "areaDesc": "Caroline; Westmoreland; Richmond; Northumberland; Western Essex",
+        "geocode": {
+          "SAME": [
+            "051033",
+            "051193",
+            "051159",
+            "051133",
+            "051057"
+          ],
+          "UGC": [
+            "VAZ064",
+            "VAZ075",
+            "VAZ076",
+            "VAZ077",
+            "VAZ521"
+          ]
+        },
+        "affectedZones": [
+          "https://api.weather.gov/zones/forecast/VAZ064",
+          "https://api.weather.gov/zones/forecast/VAZ075",
+          "https://api.weather.gov/zones/forecast/VAZ076",
+          "https://api.weather.gov/zones/forecast/VAZ077",
+          "https://api.weather.gov/zones/forecast/VAZ521"
+        ],
+        "references": [],
+        "sent": "2024-06-26T17:12:00-04:00",
+        "effective": "2024-06-26T17:12:00-04:00",
+        "onset": "2024-06-26T17:12:00-04:00",
+        "expires": "2024-06-26T18:00:00-04:00",
+        "ends": null,
+        "status": "Actual",
+        "messageType": "Alert",
+        "category": "Met",
+        "severity": "Moderate",
+        "certainty": "Observed",
+        "urgency": "Expected",
+        "event": "Special Weather Statement",
+        "sender": "w-nws.webmaster@noaa.gov",
+        "senderName": "NWS Wakefield VA",
+        "headline": "Special Weather Statement issued June 26 at 5:12PM EDT by NWS Wakefield VA",
+        "description": "At 512 PM EDT, Doppler radar was tracking strong thunderstorms along\na line extending from near Colonial Beach to Leedstown to 7 miles\nsouthwest of Loretto. Movement was east at 45 mph.\n\nHAZARD...Wind gusts up to 50 mph.\n\nSOURCE...Radar indicated.\n\nIMPACT...Gusty winds could knock down small trees and blow around\nunsecured objects. Wind impacting handling of high profile\nvehicles.\n\nStrong thunderstorms will be near...\nMontross, Champlain, Loretto, Newland, and Leedstown around 520 PM\nEDT.\nHague and Coles Point around 535 PM EDT.\n\nOther locations impacted by these storms include Lerty, Ethel,\nCurrioman Landing, Threeway, Hustle, Potomac Beach, Oak Grove,\nSupply, Singerly, and Mount Holly.",
+        "instruction": "If outdoors, consider seeking shelter inside a building.",
+        "response": "Execute",
+        "parameters": {
+          "AWIPSidentifier": [
+            "SPSAKQ"
+          ],
+          "WMOidentifier": [
+            "WWUS81 KAKQ 262112"
+          ],
+          "NWSheadline": [
+            "STRONG THUNDERSTORMS WILL IMPACT NORTHWESTERN NORTHUMBERLAND... NORTHWESTERN RICHMOND...NORTHEASTERN CAROLINE...WESTMORELAND AND NORTHWESTERN ESSEX COUNTIES THROUGH 600 PM EDT"
+          ],
+          "eventMotionDescription": [
+            "2024-06-26T21:12:00-00:00...storm...264DEG...37KT...38.2,-76.96 38.1,-77.0 38.03,-77.17"
+          ],
+          "maxWindGust": [
+            "50 MPH"
+          ],
+          "maxHailSize": [
+            "0.00"
+          ],
+          "BLOCKCHANNEL": [
+            "EAS",
+            "NWEM",
+            "CMAS"
+          ],
+          "EAS-ORG": [
+            "WXR"
+          ]
+        }
+      }
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.91b12119366d5cba122cd3c1b544d507300d2861.001.1",
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -76.95,
+              38.21
+            ],
+            [
+              -76.83,
+              38.1599999
+            ],
+            [
+              -76.93,
+              38.09
+            ],
+            [
+              -77.35,
+              37.89
+            ],
+            [
+              -77.92,
+              37.9099999
+            ],
+            [
+              -77.81,
+              38.08
+            ],
+            [
+              -77.75,
+              38.05
+            ],
+            [
+              -77.75,
+              38.02
+            ],
+            [
+              -77.64,
+              37.99
+            ],
+            [
+              -77.35,
+              38.25
+            ],
+            [
+              -77.29,
+              38.24
+            ],
+            [
+              -77.29,
+              38.22
+            ],
+            [
+              -77.27,
+              38.25
+            ],
+            [
+              -77.23,
+              38.25
+            ],
+            [
+              -77.25,
+              38.2299999
+            ],
+            [
+              -77.25,
+              38.19
+            ],
+            [
+              -77.22,
+              38.2
+            ],
+            [
+              -77.0699999,
+              38.14
+            ],
+            [
+              -77.05,
+              38.26
+            ],
+            [
+              -76.98,
+              38.28
+            ],
+            [
+              -76.95,
+              38.21
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.91b12119366d5cba122cd3c1b544d507300d2861.001.1",
+        "@type": "wx:Alert",
+        "id": "urn:oid:2.49.0.1.840.0.91b12119366d5cba122cd3c1b544d507300d2861.001.1",
+        "areaDesc": "Caroline; Westmoreland; Eastern Louisa; Western Hanover; Western Essex",
+        "geocode": {
+          "SAME": [
+            "051033",
+            "051193",
+            "051109",
+            "051085",
+            "051057"
+          ],
+          "UGC": [
+            "VAZ064",
+            "VAZ075",
+            "VAZ510",
+            "VAZ511",
+            "VAZ521"
+          ]
+        },
+        "affectedZones": [
+          "https://api.weather.gov/zones/forecast/VAZ064",
+          "https://api.weather.gov/zones/forecast/VAZ075",
+          "https://api.weather.gov/zones/forecast/VAZ510",
+          "https://api.weather.gov/zones/forecast/VAZ511",
+          "https://api.weather.gov/zones/forecast/VAZ521"
+        ],
+        "references": [],
+        "sent": "2024-06-26T16:34:00-04:00",
+        "effective": "2024-06-26T16:34:00-04:00",
+        "onset": "2024-06-26T16:34:00-04:00",
+        "expires": "2024-06-26T17:15:00-04:00",
+        "ends": null,
+        "status": "Actual",
+        "messageType": "Alert",
+        "category": "Met",
+        "severity": "Moderate",
+        "certainty": "Observed",
+        "urgency": "Expected",
+        "event": "Special Weather Statement",
+        "sender": "w-nws.webmaster@noaa.gov",
+        "senderName": "NWS Wakefield VA",
+        "headline": "Special Weather Statement issued June 26 at 4:34PM EDT by NWS Wakefield VA",
+        "description": "At 434 PM EDT, Doppler radar was tracking strong thunderstorms along\na line extending from near Port Royal to 7 miles northwest of\nLadysmith to near Bumpass. Movement was east at 25 mph.\n\nHAZARD...Wind gusts up to 40 mph and pea size hail.\n\nSOURCE...Radar indicated.\n\nIMPACT...Gusty winds could knock down tree limbs and blow around\nunsecured objects. Minor hail damage to vegetation is\npossible.\n\nStrong thunderstorms will be near...\nPort Royal and Fort Walker around 440 PM EDT.\nLadysmith around 445 PM EDT.\n\nOther locations impacted by these storms include Chilesburg,\nGolansville, Hustle, Potomac Beach, Guinea, Corbin, Supply, Penola,\nNancy Wrights Corner, and Cedar Fork.",
+        "instruction": "If outdoors, consider seeking shelter inside a building.",
+        "response": "Execute",
+        "parameters": {
+          "AWIPSidentifier": [
+            "SPSAKQ"
+          ],
+          "WMOidentifier": [
+            "WWUS81 KAKQ 262034"
+          ],
+          "NWSheadline": [
+            "STRONG THUNDERSTORMS WILL IMPACT NORTHEASTERN LOUISA...CAROLINE... NORTHWESTERN WESTMORELAND...NORTHWESTERN HANOVER AND NORTHWESTERN ESSEX COUNTIES THROUGH 515 PM EDT"
+          ],
+          "eventMotionDescription": [
+            "2024-06-26T20:34:00-00:00...storm...257DEG...20KT...38.16,-77.24 38.09,-77.62 37.91,-77.78"
+          ],
+          "maxWindGust": [
+            "40 MPH"
+          ],
+          "maxHailSize": [
+            "0.25"
+          ],
+          "BLOCKCHANNEL": [
+            "EAS",
+            "NWEM",
+            "CMAS"
+          ],
+          "EAS-ORG": [
+            "WXR"
+          ]
+        }
+      }
+    }
+  ],
+  "title": "Watches, warnings, and advisories for 38.09 N, 76.999999 W",
+  "updated": "2024-07-01T01:57:37+00:00",
+  "pagination": {
+    "next": "https://api.weather.gov/alerts?point=38.09,-76.999999&limit=500&cursor=eyJ0IjoxNzE5NDM0MDQwLCJpIjoidXJuOm9pZDoyLjQ5LjAuMS44NDAuMC45MWIxMjExOTM2NmQ1Y2JhMTIyY2QzYzFiNTQ0ZDUwNzMwMGQyODYxLjAwMS4xIn0%3D"
+  }
+}

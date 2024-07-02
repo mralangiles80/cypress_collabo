@@ -11,3 +11,5 @@ cypress/screenshots/
 cypress/downloads/
 # reports
 artifacts/
+#typescript
+built/
