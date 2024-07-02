@@ -154,11 +154,11 @@ describe("Weather API Alert Types", () => {
          }  
       })
 
-      it("pretty prints the alert description", () => {
-         cy.fixture('alerts/point').then(response => {
+      it("pretty prints the alert description if exists", () => {
+         cy.fixture('alerts/alert-description').then(response => {
             cy.intercept({ method: 'GET', url: '/alerts?point=38.09,-76.999999'}, response)
             var forecastFeatures = response.features;
-            forecastFeatures.forEach(function(forecastFeature: any) {
+            forecastFeatures.forEach(function(forecastFeature: string) {
                var forecastFeatureDescription = forecastFeature.properties.description;
                if (forecastFeatureDescription.includes(" IN ")) {
                   expect(forecastFeatureDescription).to.contain("\n");
