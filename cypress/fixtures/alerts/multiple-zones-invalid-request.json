@@ -1,0 +1,14 @@
+{
+    "correlationId": "65856d6",
+    "parameterErrors": [
+        {
+            "parameter": "query.zone[0]",
+            "message": "Failed to match exactly one schema"
+        }
+    ],
+    "title": "Bad Request",
+    "type": "https://api.weather.gov/problems/BadRequest",
+    "status": 400,
+    "detail": "Bad Request",
+    "instance": "https://api.weather.gov/requests/65856d6"
+}

@@ -1,0 +1,14 @@
+{
+    "correlationId": "203e52",
+    "parameterErrors": [
+        {
+            "parameter": "query.start",
+            "message": "Invalid date-time \"2020-05-14T05:40:08-00:00\", expected format YYYY-MM-DDThh:mm:ssZ or YYYY-MM-DDThh:mm:ss+hh:mm"
+        }
+    ],
+    "title": "Bad Request",
+    "type": "https://api.weather.gov/problems/BadRequest",
+    "status": 400,
+    "detail": "Bad Request",
+    "instance": "https://api.weather.gov/requests/203e52"
+}
