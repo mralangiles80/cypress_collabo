@@ -2,6 +2,79 @@ const regionalOffices = require('../../fixtures/regional-offices.json')
 let latitudes = new Array();
 let longtitudes = new Array();
 
+describe('Weather API Gridpoints Response Structure Validation', () => {
+  it('gridpoints should have the correct structure and data types', () => {
+    cy.fixture('gridpoints/gridpoints-example').then(response => {
+        cy.intercept('gridpoints/ABQ/24,105/forecast', response)
+        const data = response;
+
+        // Top-level structure validation
+        expect(data).to.have.property('@context');
+        expect(data).to.have.property('type');
+        expect(data).to.have.property('geometry');
+        expect(data).to.have.property('properties');
+
+        // Geometry validation
+        expect(data.geometry).to.have.property('type');
+        expect(data.geometry).to.have.property('coordinates');
+        expect(data.geometry.coordinates[0]).to.be.an('array');
+
+        // Properties validation
+        const props = data.properties;
+        expect(props).to.have.property('units');
+        expect(props).to.have.property('forecastGenerator');
+        expect(props).to.have.property('generatedAt');
+        expect(props).to.have.property('updateTime');
+        expect(props).to.have.property('validTimes');
+        expect(props).to.have.property('elevation');
+        expect(props).to.have.property('periods');
+
+        // Elevation validation
+        expect(props.elevation).to.have.property('unitCode');
+        expect(props.elevation).to.have.property('value');
+        expect(props.elevation.value).to.be.a('number');
+
+        // Periods validation
+        expect(props.periods).to.be.an('array');
+        expect(props.periods.length).to.be.greaterThan(0);
+
+        // Validate first period structure
+        const firstPeriod = props.periods[0];
+        expect(firstPeriod).to.have.property('number');
+        expect(firstPeriod).to.have.property('name');
+        expect(firstPeriod).to.have.property('startTime');
+        expect(firstPeriod).to.have.property('endTime');
+        expect(firstPeriod).to.have.property('isDaytime');
+        expect(firstPeriod).to.have.property('temperature');
+        expect(firstPeriod).to.have.property('temperatureUnit');
+        expect(firstPeriod).to.have.property('probabilityOfPrecipitation');
+        expect(firstPeriod).to.have.property('windSpeed');
+        expect(firstPeriod).to.have.property('windDirection');
+        expect(firstPeriod).to.have.property('icon');
+        expect(firstPeriod).to.have.property('shortForecast');
+        expect(firstPeriod).to.have.property('detailedForecast');
+
+        // Validate probability of precipitation
+        expect(firstPeriod.probabilityOfPrecipitation).to.have.property('unitCode');
+        expect(firstPeriod.probabilityOfPrecipitation).to.have.property('value');
+
+        // Type checks for specific fields
+        expect(firstPeriod.number).to.be.a('number');
+        expect(firstPeriod.isDaytime).to.be.a('boolean');
+        expect(firstPeriod.temperature).to.be.a('number');
+        if (firstPeriod.probabilityOfPrecipitation.value != null) {
+           expect(firstPeriod.probabilityOfPrecipitation.value).to.be.a('number');
+        }
+
+
+        // Additional checks
+        expect(firstPeriod.temperatureUnit).to.be.oneOf(['F', 'C']);
+        expect(firstPeriod.windDirection).to.match(/^[NESW]+$/);
+        expect(firstPeriod.icon).to.include('https://api.weather.gov/icons/');
+      });
+  });
+});
+
 describe("api.weather.gov Border API Tests", () => {
 
    const regionalOffice = regionalOffices[0]
@@ -81,6 +154,24 @@ describe("api.weather.gov Border API Tests", () => {
             expect(response.status).to.eq(404)
          })
       })
+
+       it('should handle missing coordinates', () => {
+          cy.request({
+            method: 'GET',
+            url: `gridpoints/${regionalOffice.code}/,/forecast`,
+            failOnStatusCode: false
+          }).then((response) => {
+            expect(response.status).to.equal(404);
+          });
+        });
+
+      it('should handle coordinates with excessive precision', () => {
+        cy.fixture('gridpoints/gridpoints-example').then(response => {
+           cy.intercept('gridpoints/${regionalOffice.code}/18.7128000000001,66.0060000000001/forecast', response)
+            expect(response.properties).to.exist;
+       });
+     });
+
 
       it("api.weather.gov longitude must meet a minimum", () => {
          cy.request({

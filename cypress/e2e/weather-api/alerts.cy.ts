@@ -2,14 +2,180 @@ import {
    queryParameters,
    negativeOffsets,
    positiveOffsets,
-   incompleteDateFormats,
+   invalidDateFormats,
    validLimitValues,
    invalidLimitValues,
    validZoneCodes,
    invalidZoneCodes,
    validEventCodes,
-   invalidEventCodes
+   invalidEventCodes,
+   invalidAreaCodes,
 } from '../../fixtures/test-data.json';
+
+interface Geometry {
+  type: string;
+  coordinates: number[][][];
+}
+
+interface Geocode {
+  SAME: string[];
+  UGC: string[];
+}
+
+interface Reference {
+  "@id": string;
+  identifier: string;
+  sender: string;
+  sent: string;
+}
+
+interface Parameters {
+  AWIPSidentifier: string[];
+  WMOidentifier: string[];
+  NWSheadline: string[];
+  BLOCKCHANNEL: string[];
+  "EAS-ORG": string[];
+  VTEC: string[];
+  eventEndingTime: string[];
+  eventMotionDescription: string[];
+  expiredReferences: string[];
+  maxHailSize: string[];
+}
+
+interface Properties {
+  "@id": string;
+  "@type": string;
+  id: string;
+  areaDesc: string;
+  geocode: Geocode;
+  affectedZones: string[];
+  references: Reference[];
+  sent: string;
+  effective: string;
+  onset: string | null;
+  expires: string;
+  ends: string | null;
+  status: string;
+  messageType: string;
+  category: string;
+  severity: string;
+  certainty: string;
+  urgency: string;
+  event: string;
+  sender: string;
+  senderName: string;
+  headline: string | null;
+  description: string;
+  instruction: string | null;
+  response: string;
+  parameters: Parameters;
+}
+
+interface Feature {
+  id: string;
+  type: string;
+  geometry: Geometry | null;
+  properties: Properties;
+}
+
+interface WeatherAlertResponse {
+  "@context": (string | { [key: string]: string })[];
+  type: string;
+  features: Feature[];
+}
+
+describe('Weather Alert API Response Validation', () => {
+  let alertData: WeatherAlertResponse;
+
+  before(() => {
+    cy.fixture('alerts/alerts-example').then((data) => {
+      alertData = data;
+    });
+  });
+
+  it('should have the correct top-level structure', () => {
+    expect(alertData).to.have.all.keys('@context', 'type', 'features', 'pagination', 'title', 'updated');
+    expect(alertData.type).to.eq('FeatureCollection');
+    expect(alertData.features).to.be.an('array');
+  });
+
+  it('should have valid @context', () => {
+    expect(alertData['@context']).to.be.an('array');
+    expect(alertData['@context'][0]).to.eq('https://geojson.org/geojson-ld/geojson-context.jsonld');
+    expect(alertData['@context'][1]).to.be.an('object');
+  });
+
+  it('should have valid features', () => {
+    alertData.features.forEach((feature: Feature) => {
+      expect(feature).to.have.all.keys('id', 'type', 'geometry', 'properties');
+      expect(feature.type).to.eq('Feature');
+
+      if (feature.geometry) {
+        expect(feature.geometry).to.have.all.keys('type', 'coordinates');
+        expect(feature.geometry.type).to.eq('Polygon');
+        expect(feature.geometry.coordinates).to.be.an('array');
+        expect(feature.geometry.coordinates[0]).to.be.an('array');
+      }
+
+      validateProperties(feature.properties);
+    });
+  });
+
+  function validateProperties(properties: Properties) {
+    const requiredProps = ['@id', '@type', 'id', 'areaDesc', 'geocode', 'affectedZones', 'references', 'sent', 'effective', 'onset', 'expires', 'ends', 'status', 'messageType', 'category', 'severity', 'certainty', 'urgency', 'event', 'sender', 'senderName', 'headline', 'description', 'instruction', 'response', 'parameters'];
+    expect(properties).to.include.keys(requiredProps);
+
+    expect(properties.geocode).to.have.all.keys('SAME', 'UGC');
+    expect(properties.geocode.SAME).to.be.an('array');
+    expect(properties.geocode.UGC).to.be.an('array');
+
+    expect(properties.affectedZones).to.be.an('array');
+    properties.affectedZones.forEach((zone) => {
+      expect(zone).to.match(/^https:\/\/api\.weather\.gov\/zones\/(county|forecast)\/[A-Z]{3}\d{3}$/);
+    });
+
+    expect(properties.references).to.be.an('array');
+    properties.references.forEach((ref) => {
+      expect(ref).to.have.all.keys('@id', 'identifier', 'sender', 'sent');
+    });
+
+    validateDateTime(properties.sent);
+    validateDateTime(properties.effective);
+    if (properties.onset) validateDateTime(properties.onset);
+    validateDateTime(properties.expires);
+    if (properties.ends) validateDateTime(properties.ends);
+
+    if (properties.parameters.maxHailSize) expect(properties.parameters.maxHailSize).to.not.be.empty;
+
+    expect(properties.status).to.be.oneOf(['Actual', 'Exercise', 'System', 'Test', 'Draft']);
+    expect(properties.messageType).to.be.oneOf(['Alert', 'Update', 'Cancel', 'Ack', 'Error']);
+    expect(properties.category).to.eq('Met');
+    expect(properties.severity).to.be.oneOf(['Extreme', 'Severe', 'Moderate', 'Minor', 'Unknown']);
+    expect(properties.certainty).to.be.oneOf(['Observed', 'Likely', 'Possible', 'Unlikely', 'Unknown']);
+    expect(properties.urgency).to.be.oneOf(['Immediate', 'Expected', 'Future', 'Past', 'Unknown']);
+    expect(properties.response).to.be.oneOf(['Shelter', 'Evacuate', 'Prepare', 'Execute', 'Avoid', 'Monitor', 'Assess', 'AllClear', 'None']);
+
+    validateParameters(properties.parameters);
+  }
+
+  function validateDateTime(dateTime: string) {
+    expect(dateTime).to.match(/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:-\d{2}:\d{2}|\+\d{2}:\d{2})$/);
+  }
+
+  function validateParameters(parameters: Parameters) {
+    expect(parameters).to.include.keys('AWIPSidentifier', 'WMOidentifier', 'BLOCKCHANNEL');
+    expect(parameters.AWIPSidentifier).to.be.an('array');
+    expect(parameters.WMOidentifier).to.be.an('array');
+    expect(parameters.BLOCKCHANNEL).to.be.an('array');
+
+    if (parameters.NWSheadline) expect(parameters.NWSheadline).to.be.an('array');
+    if (parameters['EAS-ORG']) expect(parameters['EAS-ORG']).to.be.an('array');
+    if (parameters.VTEC) expect(parameters.VTEC).to.be.an('array');
+    if (parameters.eventEndingTime) expect(parameters.eventEndingTime).to.be.an('array');
+    if (parameters.eventMotionDescription) expect(parameters.eventMotionDescription).to.be.an('array');
+    if (parameters.expiredReferences) expect(parameters.expiredReferences).to.be.an('array');
+  }
+});
 
 describe("Weather API Alert Types", () => {
 
@@ -385,6 +551,7 @@ describe("Weather API Alert Types", () => {
          })
       })
 
+
       invalidZoneCodes.forEach((invalidZoneCode: string) => {
          it("does not accept invalid zone " + invalidZoneCode, () => {
             cy.request({
@@ -425,6 +592,17 @@ describe("Weather API Alert Types", () => {
                failOnStatusCode: false,
             }).then((response) => {
                expect(response.status).to.eq(200);
+            })
+         })
+      })
+
+      invalidAreaCodes.forEach((invalidAreaCode: string) => {
+         it("does not accept invalid area " + invalidAreaCode, () => {
+            cy.request({
+               url: `/alerts?area=` + invalidAreaCode,
+               failOnStatusCode: false,
+            }).then((response) => {
+               expect(response.status).to.eq(400);
             })
          })
       })
@@ -494,10 +672,10 @@ describe("Weather API Alert Types", () => {
          })
       })
 
-      incompleteDateFormats.forEach((incompleteDateFormat: string) => {
-         it("requires the full date and does not accept " + incompleteDateFormat, () => {
+      invalidDateFormats.forEach((invalidDateFormat: string) => {
+         it("requires the full date and does not accept " + invalidDateFormat, () => {
             cy.request({
-               url: `/alerts?start=` + incompleteDateFormat,
+               url: `/alerts?start=` + invalidDateFormat,
                failOnStatusCode: false,
             }).then((response) => {
                expect(response.status).to.eq(400);
