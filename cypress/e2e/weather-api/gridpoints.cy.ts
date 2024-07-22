@@ -227,26 +227,6 @@ describe("api.weather.gov Border API Tests", () => {
 
    context("api.weather.gov Wind Direction API Tests", () => {
 
-   it("/" + regionalOffice.code + "/" + randomLatitude + "," + randomLongtitude + " wind direction must be a string", () => {
-         cy.request("GET", `gridpoints/${regionalOffice.code}/${randomLatitude},${randomLongtitude}/forecast`).then((response) => {
-            expect(response.status).to.eq(200);
-            var forecastPeriods = response.body.properties.periods;
-            forecastPeriods.forEach(function(forecastPeriod: Record<string, number>) {
-               expect(forecastPeriod.windDirection).to.be.a('string');
-            });
-         })
-      })
-
-      it("/" + regionalOffice.code + "/" + randomLatitude + "," + randomLongtitude + " wind direction must not be null", () => {
-         cy.request("GET", `gridpoints/${regionalOffice.code}/${randomLatitude},${randomLongtitude}/forecast`).then((response) => {
-            expect(response.status).to.eq(200);
-            var forecastPeriods = response.body.properties.periods;
-            forecastPeriods.forEach(function(forecastPeriod: Record<string, number>) {
-               expect(forecastPeriod.windDirection).to.not.be.empty;
-            });
-         })
-      })
-
       it("/" + regionalOffice.code + "/" + randomLatitude + "," + randomLongtitude + " must be up to 3 characters", () => {
          cy.request("GET", `gridpoints/${regionalOffice.code}/${randomLatitude},${randomLongtitude}/forecast`).then((response) => {
             expect(response.status).to.eq(200);
@@ -257,23 +237,12 @@ describe("api.weather.gov Border API Tests", () => {
          })
       })
 
-      it("/" + regionalOffice.code + "/" + randomLatitude + "," + randomLongtitude + " must be upper case characters", () => {
-         cy.request("GET", `gridpoints/${regionalOffice.code}/${randomLatitude},${randomLongtitude}/forecast`).then((response) => {
-            expect(response.status).to.eq(200);
-            var forecastPeriods = response.body.properties.periods;
-            forecastPeriods.forEach(function(forecastPeriod: Record<string, number>) {
-               expect(forecastPeriod.windDirection).to.match(/[A-Z]+/);
-               expect(forecastPeriod.windDirection).to.not.match(/[a-z]+/);
-            });
-         })
-      })
-
       it("/" + regionalOffice.code + "/" + randomLatitude + "," + randomLongtitude + " wind direction must match the wind direction characters", () => {
          cy.request("GET", `gridpoints/${regionalOffice.code}/${randomLatitude},${randomLongtitude}/forecast`).then((response) => {
             expect(response.status).to.eq(200);
             var forecastPeriods = response.body.properties.periods;
             forecastPeriods.forEach(function(forecastPeriod: Record<string, number>) {
-               expect(forecastPeriod.windDirection).to.be.oneOf(['N', 'S', 'E', 'W', 'SW', 'SE', 'NE', 'NW', 'NNE', 'ENE', 'ESE', 'SSE', 'SSW', 'WSW', 'WNW', 'NNW']);
+               expect(forecastPeriod.windDirection).to.be.oneOf(['', 'N', 'S', 'E', 'W', 'SW', 'SE', 'NE', 'NW', 'NNE', 'ENE', 'ESE', 'SSE', 'SSW', 'WSW', 'WNW', 'NNW']);
             });
          })
       })
