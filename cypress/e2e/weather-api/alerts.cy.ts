@@ -9,7 +9,7 @@ import {
    invalidZoneCodes,
    validEventCodes,
    invalidEventCodes,
-   invalidAreaCodes,
+   invalidAreaCodes
 } from '../../fixtures/test-data.json';
 
 
@@ -298,7 +298,7 @@ describe("Weather API Alert Types", () => {
       })
 
       it('500 error returns the correct response', () => {
-      cy.intercept({ method: 'GET', url: '/alerts?point=38.09,-43.999999/'}, {
+         cy.intercept({ method: 'GET', url: '/alerts?point=38.09,-43.999999/'}, {
                statusCode: 500
             }),
             (request: any) => {
@@ -451,12 +451,33 @@ describe("Weather API Alert Types", () => {
          }  
       })
 
-      var dateTimeValue = "2020-05-14T05:40:08Z"
+      var dateTimeValue = "2020-05-14T05:40:08Z";
       it(`shouldn't accept the same start and end time - ${dateTimeValue} - as parameter values`, () => {
          cy.fixture('alerts/same-start-end-invalid-request').then(response => {
             cy.intercept({ method: 'GET', url: `/alerts?start=${dateTimeValue}&end=${dateTimeValue}`}, response)
                expect(response.status).to.eq(400);
          })
+      })
+
+      it(`should accept only start time - ${dateTimeValue} - as parameter values`, () => {
+            cy.request({ method: 'GET', url: `/alerts?start=${dateTimeValue}&end=${dateTimeValue}`}).then((response) => {
+               expect(response.status).to.eq(200);
+            })
+      })
+
+      var startDateTimeValue = "2020-05-21T05:40:08Z";
+      var endDateTimeValue = "2020-05-14T05:40:08Z";
+      it(`shouldn't accept the end time before start time - ${dateTimeValue} - as parameter values`, () => {
+         cy.fixture('alerts/end-date-before-start-date').then(response => {
+            cy.intercept({ method: 'GET', url: `/alerts?start=${startDateTimeValue}&end=${endDateTimeValue}`}, response)
+               expect(response.status).to.eq(400);
+            })
+      })
+
+      it(`should accept only end time - ${dateTimeValue} - as parameter values`, () => {
+            cy.request({ method: 'GET', url: `/alerts?start=${dateTimeValue}&end=${dateTimeValue}`}).then((response) => {
+               expect(response.status).to.eq(200);
+            })
       })
 
       var invalidQueryParameter = "response";

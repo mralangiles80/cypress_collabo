@@ -1,0 +1,18 @@
+{
+    "correlationId": "5011b9",
+    "parameterErrors": [
+        {
+            "parameter": "query.start",
+            "message": "Invalid date-time \"2020-05-21T05:40:08Z\", should not be earlier than query.end."
+        },
+        {
+            "parameter": "query.end",
+            "message": "Invalid date-time \"2020-05-14T05:40:08Z\", Should not be later than query.start."
+        }
+    ],
+    "title": "Bad Request",
+    "type": "https://api.weather.gov/problems/BadRequest",
+    "status": 400,
+    "detail": "Bad Request",
+    "instance": "https://api.weather.gov/requests/5011b9"
+}
