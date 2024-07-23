@@ -3,7 +3,6 @@ import {
    negativeOffsets,
    positiveOffsets,
    invalidDateFormats,
-   historicalDateTimes,
    validLimitValues,
    invalidLimitValues,
    validZoneCodes,
@@ -73,7 +72,7 @@ interface FeatureProperties {
 }
 
 
-function getLastWeekDates(startOffset, endOffset) {
+function getLastWeekDates(startOffset: number, endOffset: number) {
   const dates = [];
   const now = new Date();
   
@@ -419,7 +418,7 @@ describe("Weather API Alert Types", () => {
    context("alerts", () => {
 
       invalidDateFormats.forEach((invalidDateFormat: string) => {
-         it(`requires the full date and does not accept ${invalidDateFormat}`, () => {
+         it(`requires the valid dateTime format and does not accept ${invalidDateFormat}`, () => {
             cy.request({
                url: `/alerts?start=${invalidDateFormat}`,
                failOnStatusCode: false,
@@ -500,11 +499,11 @@ describe("Weather API Alert Types", () => {
             })
       })
 
-      const lastWeekDates = getLastWeekDates(1, 8);
-      lastWeekDates.forEach((lastWeekDate: string) => {
-         it(`alerts start from valid dateTime ${lastWeekDate}: /alerts?start=${lastWeekDate}`, () => {
+      const startAlertDates = getLastWeekDates(1, 8);
+      startAlertDates.forEach((startAlertDate: string) => {
+         it(`alerts start from valid dateTime ${startAlertDate}: /alerts?start=${startAlertDate}`, () => {
             cy.request({
-               url: `/alerts?start=${lastWeekDate}`,
+               url: `/alerts?start=${startAlertDate}`,
                failOnStatusCode: false,
             }).then((response) => {
                expect(response.status).to.eq(200);
@@ -513,15 +512,28 @@ describe("Weather API Alert Types", () => {
          })
       })
 
-      const lastWeekDates = getLastWeekDates(0, 7);
-      lastWeekDates.forEach((lastWeekDate: string) => {
-         it(`alerts exist until valid dateTime ${lastWeekDate}: /alerts?end=${lastWeekDate}`, () => {
+      const endAlertDates = getLastWeekDates(0, 7);
+      endAlertDates.forEach((endAlertDate: string) => {
+         it(`alerts exist until valid dateTime ${endAlertDate}: /alerts?end=${endAlertDate}`, () => {
             cy.request({
-               url: `/alerts?end=${lastWeekDate}`,
+               url: `/alerts?end=${endAlertDate}`,
                failOnStatusCode: false,
             }).then((response) => {
                expect(response.status).to.eq(200);
                expect(response.body.features.length).to.eq(500);
+            })
+         })
+      })
+
+      const outOfScopeAlertDates = getLastWeekDates(8, 15);
+      outOfScopeAlertDates.forEach((outOfScopeAlertDate: string) => {
+         it(`alerts before dateTime ${outOfScopeAlertDate} no longer exist: /alerts?start=${outOfScopeAlertDate}`, () => {
+            cy.request({
+               url: `/alerts?end=${outOfScopeAlertDate}`,
+               failOnStatusCode: false,
+            }).then((response) => {
+               expect(response.status).to.eq(200);
+               expect(response.body.features.length).to.eq(0);
             })
          })
       })
