@@ -165,6 +165,20 @@ describe("api.weather.gov Border API Tests", () => {
           });
         });
 
+        const urls = [
+         `gridpoints/${regionalOffice.code}/${randomLatitude} ,${randomLongtitude} /forecast`,
+         `gridpoints/${regionalOffice.code}/ ${randomLatitude}, ${randomLongtitude}/forecast`,
+         `gridpoints/${regionalOffice.code}/ ${randomLatitude} , ${randomLongtitude} /forecast`
+         ]
+      urls.forEach((url: string) => {
+        it(`should handle extra spaces: ${url}`, () => {
+            cy.fixture('gridpoints/gridpoints-example').then(response => {
+               cy.intercept(`${url}`, response)
+               expect(response.properties.periods.length).to.equal(14);
+          });
+        });
+      });
+
       it('should handle coordinates with excessive precision', () => {
         cy.fixture('gridpoints/gridpoints-example').then(response => {
            cy.intercept('gridpoints/${regionalOffice.code}/18.7128000000001,66.0060000000001/forecast', response)

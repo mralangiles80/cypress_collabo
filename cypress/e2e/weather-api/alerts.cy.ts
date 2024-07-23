@@ -3,6 +3,7 @@ import {
    negativeOffsets,
    positiveOffsets,
    invalidDateFormats,
+   historicalDateTimes,
    validLimitValues,
    invalidLimitValues,
    validZoneCodes,
@@ -70,6 +71,25 @@ interface FeatureProperties {
     [key: string]: any;
   };
 }
+
+
+function getLastWeekDates(startOffset, endOffset) {
+  const dates = [];
+  const now = new Date();
+  
+  for (let i = startOffset; i < endOffset; i++) {
+    const date = new Date(now);
+    date.setUTCDate(now.getUTCDate() - i);
+    dates.push(date.toISOString().slice(0, 19) + 'Z');
+  }
+  
+  return dates.reverse();
+}
+
+describe('Weather API Response Structure Validation', () => {
+
+   
+})
 
 describe('Weather API Response Structure Validation', () => {
   let apiResponse: WeatherAPIResponse;
@@ -480,6 +500,32 @@ describe("Weather API Alert Types", () => {
             })
       })
 
+      const lastWeekDates = getLastWeekDates(1, 8);
+      lastWeekDates.forEach((lastWeekDate: string) => {
+         it(`alerts start from valid dateTime ${lastWeekDate}: /alerts?start=${lastWeekDate}`, () => {
+            cy.request({
+               url: `/alerts?start=${lastWeekDate}`,
+               failOnStatusCode: false,
+            }).then((response) => {
+               expect(response.status).to.eq(200);
+               expect(response.body.features.length).to.eq(500);
+            })
+         })
+      })
+
+      const lastWeekDates = getLastWeekDates(0, 7);
+      lastWeekDates.forEach((lastWeekDate: string) => {
+         it(`alerts exist until valid dateTime ${lastWeekDate}: /alerts?end=${lastWeekDate}`, () => {
+            cy.request({
+               url: `/alerts?end=${lastWeekDate}`,
+               failOnStatusCode: false,
+            }).then((response) => {
+               expect(response.status).to.eq(200);
+               expect(response.body.features.length).to.eq(500);
+            })
+         })
+      })
+
       var invalidQueryParameter = "response";
       it(`shows the right information for invalid query parameter - ${invalidQueryParameter} - error response`, () => {
          cy.request({
@@ -537,7 +583,6 @@ describe("Weather API Alert Types", () => {
             expect(alertIds.length).to.eq(count);
          })
       })
-
 
       invalidZoneCodes.forEach((invalidZoneCode: string) => {
          it(`does not accept invalid zone ${invalidZoneCode}`, () => {
