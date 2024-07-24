@@ -1,0 +1,5 @@
+{
+  "hooks": {
+    "pre-commit": "npx tsc && npx cypress run --reporter mochawesome && lint-staged"
+  }
+}

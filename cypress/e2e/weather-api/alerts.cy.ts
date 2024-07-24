@@ -2,14 +2,194 @@ import {
    queryParameters,
    negativeOffsets,
    positiveOffsets,
-   incompleteDateFormats,
+   invalidDateFormats,
    validLimitValues,
    invalidLimitValues,
    validZoneCodes,
    invalidZoneCodes,
    validEventCodes,
-   invalidEventCodes
+   invalidEventCodes,
+   invalidAreaCodes
 } from '../../fixtures/test-data.json';
+
+
+interface WeatherAPIResponse {
+  '@context': any;
+  type: string;
+  features: Feature[];
+  title: string;
+  updated: string;
+  pagination: {
+    next: string;
+  };
+}
+
+interface Feature {
+  id: string;
+  type: string;
+  geometry: null | {
+    type: string;
+    coordinates: number[][][];
+  };
+  properties: FeatureProperties;
+}
+
+interface FeatureProperties {
+  '@id': string;
+  '@type': string;
+  id: string;
+  areaDesc: string;
+  geocode: {
+    SAME: string[];
+    UGC: string[];
+  };
+  affectedZones: string[];
+  references: any[];
+  sent: string;
+  effective: string;
+  onset: string;
+  expires: string;
+  ends: string | null;
+  status: string;
+  messageType: string;
+  category: string;
+  severity: string;
+  certainty: string;
+  urgency: string;
+  event: string;
+  sender: string;
+  senderName: string;
+  headline: string | null;
+  description: string;
+  instruction: string | null;
+  response: string;
+  parameters: {
+    AWIPSidentifier: string[];
+    WMOidentifier: string[];
+    BLOCKCHANNEL: string[];
+    [key: string]: any;
+  };
+}
+
+
+function getLastWeekDates(startOffset: number, endOffset: number) {
+  const dates = [];
+  const now = new Date();
+  
+  for (let i = startOffset; i < endOffset; i++) {
+    const date = new Date(now);
+    date.setUTCDate(now.getUTCDate() - i);
+    dates.push(date.toISOString().slice(0, 19) + 'Z');
+  }
+  
+  return dates.reverse();
+}
+
+describe('Weather API Response Structure Validation', () => {
+
+   
+})
+
+describe('Weather API Response Structure Validation', () => {
+  let apiResponse: WeatherAPIResponse;
+
+  before(() => {
+    // Use a fixture instead of making an API call
+    cy.fixture('alerts/alerts-example').then((response) => {
+      apiResponse = response;
+    });
+  });
+
+  it('should have the correct top-level structure', () => {
+    expect(apiResponse).to.have.all.keys('@context', 'type', 'features', 'title', 'updated', 'pagination');
+    expect(apiResponse.type).to.equal('FeatureCollection');
+    expect(apiResponse.features).to.be.an('array');
+    expect(apiResponse.title).to.be.a('string');
+    expect(apiResponse.updated).to.be.a('string');
+    expect(apiResponse.pagination).to.be.an('object').and.to.have.property('next').that.is.a('string');
+  });
+
+  it('should have valid features', () => {
+    const sampleSize = Math.min(5, apiResponse.features.length);
+    const sampleFeatures = apiResponse.features.slice(0, sampleSize);
+
+    sampleFeatures.forEach((feature: Feature) => {
+      expect(feature).to.have.all.keys('id', 'type', 'geometry', 'properties');
+      expect(feature.type).to.equal('Feature');
+      if (feature.geometry) {
+        expect(feature.geometry.type).to.equal('Polygon');
+        expect(feature.geometry.coordinates).to.be.an('array');
+      }
+    });
+  });
+
+  it('should have valid properties for each feature', () => {
+    const sampleSize = Math.min(5, apiResponse.features.length);
+    const sampleFeatures = apiResponse.features.slice(0, sampleSize);
+
+    sampleFeatures.forEach((feature: Feature) => {
+      const props = feature.properties;
+      expect(props).to.include.all.keys(
+        '@id', '@type', 'id', 'areaDesc', 'geocode', 'affectedZones', 'references',
+        'sent', 'effective', 'onset', 'expires', 'ends', 'status', 'messageType',
+        'category', 'severity', 'certainty', 'urgency', 'event', 'sender', 'senderName',
+        'headline', 'description', 'instruction', 'response', 'parameters'
+      );
+
+      expect(props['@type']).to.equal('wx:Alert');
+      expect(props.geocode).to.have.all.keys('SAME', 'UGC');
+      expect(props.parameters).to.include.all.keys('AWIPSidentifier', 'WMOidentifier', 'BLOCKCHANNEL');
+    });
+  });
+});
+
+describe('Query Parameter Tests', () => {
+  queryParameters.forEach((item: { parameter: string; enumeration: {} }) => {
+    const queryParameter = item.parameter;
+
+      it(`config for ${queryParameter} query parameter matches values in error message array`, () => {
+         cy.request({
+            url: `/alerts/active?${queryParameter}`,
+            failOnStatusCode: false,
+         }).then((response: {body:any}) => {
+            const errorMessage = response.body.parameterErrors[0].message;
+            const parsedErrorMessageValues = (errorMessage).replace(/Does not have a value in the enumeration/g, "");
+            const errorMessageValues = JSON.parse(parsedErrorMessageValues);
+            const requests = errorMessageValues.map((errorMessageValue: string) =>
+                cy.request({
+                  url: `/alerts?${queryParameter}=${errorMessageValue}`,
+                  failOnStatusCode: false,
+                }).then((response) => {
+                   expect(response.status).to.eq(200);
+                })
+              );
+            });
+            
+         })
+      
+
+    it(`error message for invalid request for valid query parameter - ${queryParameter} - is correct`, () => {
+      cy.fixture(`alerts/invalid-request-valid-query-parameter-${queryParameter}`).then((response) => {
+        cy.intercept({ method: 'GET', url: `/alerts/active?${queryParameter}` }, response);
+
+        // Perform all assertions in a single pass
+        expect(response).to.include.keys('correlationId', 'parameterErrors', 'title', 'detail');
+        expect(response.title).to.eq('Bad Request');
+        expect(response.detail).to.eq('Bad Request');
+        expect(response.parameterErrors[0]).to.have.property('message');
+
+        const errorMessage = response.parameterErrors[0].message;
+        const errorMessageValues = JSON.parse(
+          String(errorMessage).replace(/Does not have a value in the enumeration/g, '')
+        );
+
+        expect(String(item.enumeration)).to.eq(String(errorMessageValues));
+        expect(response.parameterErrors[0].parameter).to.contain(`query.${queryParameter}[0]`);
+      });
+    });
+  });
+});
+
 
 describe("Weather API Alert Types", () => {
 
@@ -137,7 +317,7 @@ describe("Weather API Alert Types", () => {
       })
 
       it('500 error returns the correct response', () => {
-      cy.intercept({ method: 'GET', url: '/alerts?point=38.09,-43.999999/'}, {
+         cy.intercept({ method: 'GET', url: '/alerts?point=38.09,-43.999999/'}, {
                statusCode: 500
             }),
             (request: any) => {
@@ -220,46 +400,6 @@ describe("Weather API Alert Types", () => {
          }  
       })
 
-      queryParameters.forEach((item: {parameter: string, enumeration: {}}) => {
-      let queryParameter = item.parameter;
-         it("config for " + queryParameter + " query parameter matches values in error message array", () => {
-            cy.request({
-               url: `/alerts/active?` + queryParameter,
-               failOnStatusCode: false,
-            }).then((response: {body:any}) => {
-               var errorMessage = response.body.parameterErrors[0].message;
-               var parsedErrorMessageValues = (errorMessage).replace(/Does not have a value in the enumeration/g, "");
-               var errorMessageValues = JSON.parse(parsedErrorMessageValues);
-               errorMessageValues.forEach(function(errorMessageValue: string) {
-                  cy.request({
-                     url: `/alerts?` + queryParameter + `=` + errorMessageValue,
-                     failOnStatusCode: false,
-                  }).then((response) => {
-                     expect(response.status).to.eq(200);
-                  })
-               })
-            })
-         })
-
-         it("error message for invalid request for valid query paramater - " + queryParameter + " - is correct", () => {
-            cy.fixture('alerts/invalid-request-valid-query-parameter-' + queryParameter).then(response => {
-               cy.intercept({ method: 'GET', url: '/alerts/active?' + queryParameter}, response)
-                  expect(response).to.have.property("correlationId");
-                  expect(response).to.have.property("parameterErrors");
-                  expect(response).to.have.property("title");
-                  expect(response).to.have.property("detail");
-                  expect(response.title).to.eq("Bad Request");
-                  expect(response.detail).to.eq("Bad Request");
-                  expect(response.parameterErrors[0]).to.have.property("message");
-                  var errorMessage = response.parameterErrors[0].message;
-                  var parsedErrorMessageValues = String(errorMessage).replace(/Does not have a value in the enumeration/g, "");
-                  var errorMessageValues = JSON.parse(parsedErrorMessageValues);
-                  expect(String(item.enumeration)).to.eq(String(errorMessageValues));
-                  expect(response.parameterErrors[0].parameter).to.contain("query\." + queryParameter + "[0]");
-                  })
-            })
-         })
-
       it("does not show results for multiple zones", () => {
          cy.fixture('alerts/multiple-zones-invalid-request').then(response => {
             cy.intercept({ method: 'GET', url: '/alerts?zone=MDC031&zone=MDC029'}, response)
@@ -276,6 +416,17 @@ describe("Weather API Alert Types", () => {
    })
 
    context("alerts", () => {
+
+      invalidDateFormats.forEach((invalidDateFormat: string) => {
+         it(`requires the valid dateTime format and does not accept ${invalidDateFormat}`, () => {
+            cy.request({
+               url: `/alerts?start=${invalidDateFormat}`,
+               failOnStatusCode: false,
+            }).then((response) => {
+        expect(response.status, `Failed for format: ${invalidDateFormat}`).to.eq(400);
+            })
+         })
+      })
 
       it('503 error returns the correct response', () => {
          cy.intercept({
@@ -319,18 +470,78 @@ describe("Weather API Alert Types", () => {
          }  
       })
 
-      var dateTimeValue = "2020-05-14T05:40:08Z"
-      it("shouldn't accept the same start and end time - " + dateTimeValue + " - as parameter values", () => {
+      var dateTimeValue = "2020-05-14T05:40:08Z";
+      it(`shouldn't accept the same start and end time - ${dateTimeValue} - as parameter values`, () => {
          cy.fixture('alerts/same-start-end-invalid-request').then(response => {
-            cy.intercept({ method: 'GET', url: '/alerts?start=' + dateTimeValue + '&end=' + dateTimeValue}, response)
+            cy.intercept({ method: 'GET', url: `/alerts?start=${dateTimeValue}&end=${dateTimeValue}`}, response)
                expect(response.status).to.eq(400);
          })
       })
 
+      it(`should accept only start time - ${dateTimeValue} - as parameter values`, () => {
+            cy.request({ method: 'GET', url: `/alerts?start=${dateTimeValue}&end=${dateTimeValue}`}).then((response) => {
+               expect(response.status).to.eq(200);
+            })
+      })
+
+      var startDateTimeValue = "2020-05-21T05:40:08Z";
+      var endDateTimeValue = "2020-05-14T05:40:08Z";
+      it(`shouldn't accept the end time before start time - ${dateTimeValue} - as parameter values`, () => {
+         cy.fixture('alerts/end-date-before-start-date').then(response => {
+            cy.intercept({ method: 'GET', url: `/alerts?start=${startDateTimeValue}&end=${endDateTimeValue}`}, response)
+               expect(response.status).to.eq(400);
+            })
+      })
+
+      it(`should accept only end time - ${dateTimeValue} - as parameter values`, () => {
+            cy.request({ method: 'GET', url: `/alerts?start=${dateTimeValue}&end=${dateTimeValue}`}).then((response) => {
+               expect(response.status).to.eq(200);
+            })
+      })
+
+      const startAlertDates = getLastWeekDates(1, 8);
+      startAlertDates.forEach((startAlertDate: string) => {
+         it(`alerts start from valid dateTime ${startAlertDate}: /alerts?start=${startAlertDate}`, () => {
+            cy.request({
+               url: `/alerts?start=${startAlertDate}`,
+               failOnStatusCode: false,
+            }).then((response) => {
+               expect(response.status).to.eq(200);
+               expect(response.body.features.length).to.eq(500);
+            })
+         })
+      })
+
+      const endAlertDates = getLastWeekDates(0, 7);
+      endAlertDates.forEach((endAlertDate: string) => {
+         it(`alerts exist until valid dateTime ${endAlertDate}: /alerts?end=${endAlertDate}`, () => {
+            cy.request({
+               url: `/alerts?end=${endAlertDate}`,
+               failOnStatusCode: false,
+            }).then((response) => {
+               expect(response.status).to.eq(200);
+               expect(response.body.features.length).to.eq(500);
+            })
+         })
+      })
+
+      const outOfScopeAlertDates = getLastWeekDates(8, 15);
+      outOfScopeAlertDates.forEach((outOfScopeAlertDate: string) => {
+         it(`alerts before dateTime ${outOfScopeAlertDate} no longer exist: /alerts?start=${outOfScopeAlertDate}`, () => {
+            cy.request({
+               url: `/alerts?end=${outOfScopeAlertDate}`,
+               failOnStatusCode: false,
+            }).then((response) => {
+               expect(response.status).to.eq(200);
+               expect(response.body.features.length).to.eq(0);
+            })
+         })
+      })
+
       var invalidQueryParameter = "response";
-      it("shows the right information for invalid query parameter - " + invalidQueryParameter + " - error response", () => {
+      it(`shows the right information for invalid query parameter - ${invalidQueryParameter} - error response`, () => {
          cy.request({
-            url: `/alerts?` + invalidQueryParameter + `=Avoid`,
+            url: `/alerts?${invalidQueryParameter}=Avoid`,
             failOnStatusCode: false,
          }).then((response: {status:number, body:any}) => {
             expect(response.status).to.eq(400);
@@ -342,8 +553,8 @@ describe("Weather API Alert Types", () => {
             expect(response.body.detail).to.eq("Bad Request");
             expect(response.body.parameterErrors[0]).to.have.property("parameter");
             expect(response.body.parameterErrors[0]).to.have.property("message");
-            expect(response.body.parameterErrors[0].parameter).to.contain("query\." + invalidQueryParameter);
-            expect(response.body.parameterErrors[0].message).to.contain("Query parameter \"" + invalidQueryParameter + "\" is not recognized");
+            expect(response.body.parameterErrors[0].parameter).to.contain(`query\.${invalidQueryParameter}`);
+            expect(response.body.parameterErrors[0].message).to.contain(`Query parameter \"${invalidQueryParameter}\" is not recognized`);
          })
       })
 
@@ -386,9 +597,9 @@ describe("Weather API Alert Types", () => {
       })
 
       invalidZoneCodes.forEach((invalidZoneCode: string) => {
-         it("does not accept invalid zone " + invalidZoneCode, () => {
+         it(`does not accept invalid zone ${invalidZoneCode}`, () => {
             cy.request({
-               url: `/alerts?zone=` + invalidZoneCode,
+               url: `/alerts?zone=${invalidZoneCode}`,
                failOnStatusCode: false,
             }).then((response) => {
                expect(response.status).to.eq(400);
@@ -397,9 +608,9 @@ describe("Weather API Alert Types", () => {
       })
 
       validZoneCodes.forEach((validZoneCode: string) => {
-         it("does accept valid zone " + validZoneCode, () => {
+         it(`does accept valid zone ${validZoneCode}`, () => {
             cy.request({
-               url: `/alerts?zone=` + validZoneCode,
+               url: `/alerts?zone=${validZoneCode}`,
                failOnStatusCode: false,
             }).then((response) => {
                expect(response.status).to.eq(200);
@@ -408,9 +619,9 @@ describe("Weather API Alert Types", () => {
       })
 
       invalidEventCodes.forEach((invalidEventCode: string) => {
-         it("does not accept invalid event " + invalidEventCode, () => {
+         it(`does not accept invalid event ${invalidEventCode}`, () => {
             cy.request({
-               url: `/alerts?event=` + invalidEventCode,
+               url: `/alerts?event=${invalidEventCode}`,
                failOnStatusCode: false,
             }).then((response) => {
                expect(response.status).to.eq(400);
@@ -419,9 +630,9 @@ describe("Weather API Alert Types", () => {
       })
 
       validEventCodes.forEach((validEventCode: string) => {
-         it("does accept valid event " + validEventCode, () => {
+         it(`does accept valid event ${validEventCode}`, () => {
             cy.request({
-               url: `/alerts?event=` + validEventCode,
+               url: `/alerts?event=${validEventCode}`,
                failOnStatusCode: false,
             }).then((response) => {
                expect(response.status).to.eq(200);
@@ -429,21 +640,32 @@ describe("Weather API Alert Types", () => {
          })
       })
 
+      invalidAreaCodes.forEach((invalidAreaCode: string) => {
+         it(`does not accept invalid area ${invalidAreaCode}`, () => {
+            cy.request({
+               url: `/alerts?area=${invalidAreaCode}`,
+               failOnStatusCode: false,
+            }).then((response) => {
+               expect(response.status).to.eq(400);
+            })
+         })
+      })
+
       negativeOffsets.forEach((item: {offset: string, number: number}) => {
          var negativeOffset = item.offset;
          var number = item.number;
-         it("does not accept negative offset version " + negativeOffset, () => {
-         cy.fixture('alerts/negative-offset-' + number).then(response => {
-            cy.intercept({ method: 'GET', url: '/alerts?start=' + negativeOffset}, response)
+         it(`does not accept negative offset version ${negativeOffset}`, () => {
+         cy.fixture(`alerts/negative-offset-${number}`).then(response => {
+            cy.intercept({ method: 'GET', url: `/alerts?start=${negativeOffset}`}, response)
                expect(response.status).to.eq(400);
             })
          })
       })
 
       positiveOffsets.forEach((positiveOffset: string) => {
-         it("does not accept positive offset version " + positiveOffset, () => {
+         it(`does not accept positive offset version ${positiveOffset}`, () => {
             cy.request({
-               url: `/alerts?start=` + positiveOffset,
+               url: `/alerts?start=${positiveOffset}`,
                failOnStatusCode: false,
             }).then((response) => {
                expect(response.status).to.eq(400);
@@ -452,9 +674,9 @@ describe("Weather API Alert Types", () => {
       })
 
       validLimitValues.forEach((validLimitValue: number) => {
-         it("number of alerts matches requested limit: " + validLimitValue, () => {
+         it(`number of alerts matches requested limit: ${validLimitValue}`, () => {
             cy.request({
-               url: `/alerts?limit=` + validLimitValue,
+               url: `/alerts?limit=${validLimitValue}`,
                failOnStatusCode: false,
             }).then((response) => {
                var number = response.body.features.length;
@@ -465,18 +687,18 @@ describe("Weather API Alert Types", () => {
       })
 
       invalidLimitValues.forEach((item: {number: number, text: string, value: number}) => {
-         it("uses the most correct error message for incorrectly formatted alert searches in the path: /alerts?limit=" + item.number, () => {
+         it(`uses the most correct error message for incorrectly formatted alert searches in the path: /alerts?limit=${item.number}`, () => {
             cy.request({
-               url: `/alerts?limit=` + item.number,
+               url: `/alerts?limit=${item.number}`,
                failOnStatusCode: false,
             }).then((response) => {
                expect(response.status).to.eq(400);
-               expect(response.body.parameterErrors[0].message).to.eq("Must have a " + item.text + " value of " + item.value);
+               expect(response.body.parameterErrors[0].message).to.eq(`Must have a ${item.text} value of ${item.value}`);
             })
          })
       })
 
-      it("does accept miliseconds", () => {
+      it(`does accept miliseconds`, () => {
          cy.request({
             url: `/alerts?start=2020-05-14T05:40:08.000Z`,
             failOnStatusCode: false,
@@ -485,23 +707,12 @@ describe("Weather API Alert Types", () => {
          })
       })
 
-      it("requires punctuation", () => {
+      it(`requires punctuation`, () => {
          cy.request({
             url: `/alerts?start=20200514T054008Z`,
             failOnStatusCode: false,
          }).then((response) => {
             expect(response.status).to.eq(400);
-         })
-      })
-
-      incompleteDateFormats.forEach((incompleteDateFormat: string) => {
-         it("requires the full date and does not accept " + incompleteDateFormat, () => {
-            cy.request({
-               url: `/alerts?start=` + incompleteDateFormat,
-               failOnStatusCode: false,
-            }).then((response) => {
-               expect(response.status).to.eq(400);
-            })
          })
       })
    })

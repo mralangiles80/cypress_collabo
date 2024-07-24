@@ -1,0 +1,3464 @@
+{
+	"@context": ["https://geojson.org/geojson-ld/geojson-context.jsonld", {
+		"@version": "1.1",
+		"wx": "https://api.weather.gov/ontology#",
+		"@vocab": "https://api.weather.gov/ontology#"
+	}],
+	"type": "FeatureCollection",
+	"features": [{
+		"id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.34e8d731e4000847d00cb597cafd01c368873f2f.001.1",
+		"type": "Feature",
+		"geometry": {
+			"type": "Polygon",
+			"coordinates": [
+				[
+					[-101.45, 38.44],
+					[-101.28, 38.46],
+					[-101.2, 38.5],
+					[-101.13, 38.58],
+					[-101.13, 38.26],
+					[-101.5699999, 38.26],
+					[-101.5699999, 38.44],
+					[-101.45, 38.44]
+				]
+			]
+		},
+		"properties": {
+			"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.34e8d731e4000847d00cb597cafd01c368873f2f.001.1",
+			"@type": "wx:Alert",
+			"id": "urn:oid:2.49.0.1.840.0.34e8d731e4000847d00cb597cafd01c368873f2f.001.1",
+			"areaDesc": "Wichita, KS",
+			"geocode": {
+				"SAME": ["020203"],
+				"UGC": ["KSC203"]
+			},
+			"affectedZones": ["https://api.weather.gov/zones/county/KSC203"],
+			"references": [{
+				"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ea74ee11e55a3057cdfc28a938c7d15ec25abc34.001.1",
+				"identifier": "urn:oid:2.49.0.1.840.0.ea74ee11e55a3057cdfc28a938c7d15ec25abc34.001.1",
+				"sender": "w-nws.webmaster@noaa.gov",
+				"sent": "2024-07-19T23:52:00-05:00"
+			}, {
+				"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.07a34b95416e78940aeecbaff7d53698ab3c0b5a.001.1",
+				"identifier": "urn:oid:2.49.0.1.840.0.07a34b95416e78940aeecbaff7d53698ab3c0b5a.001.1",
+				"sender": "w-nws.webmaster@noaa.gov",
+				"sent": "2024-07-20T00:08:00-05:00"
+			}, {
+				"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.facaa1a81ce586dbc38d0edccf0e2035b210fc32.001.1",
+				"identifier": "urn:oid:2.49.0.1.840.0.facaa1a81ce586dbc38d0edccf0e2035b210fc32.001.1",
+				"sender": "w-nws.webmaster@noaa.gov",
+				"sent": "2024-07-20T00:25:00-05:00"
+			}, {
+				"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2e6357fc75fc3692c23d83cdbc726ff5f5c61cce.001.1",
+				"identifier": "urn:oid:2.49.0.1.840.0.2e6357fc75fc3692c23d83cdbc726ff5f5c61cce.001.1",
+				"sender": "w-nws.webmaster@noaa.gov",
+				"sent": "2024-07-20T00:32:00-05:00"
+			}],
+			"sent": "2024-07-20T00:40:00-05:00",
+			"effective": "2024-07-20T00:40:00-05:00",
+			"onset": "2024-07-20T00:40:00-05:00",
+			"expires": "2024-07-20T00:50:00-05:00",
+			"ends": "2024-07-20T00:45:00-05:00",
+			"status": "Actual",
+			"messageType": "Update",
+			"category": "Met",
+			"severity": "Severe",
+			"certainty": "Observed",
+			"urgency": "Immediate",
+			"event": "Severe Thunderstorm Warning",
+			"sender": "w-nws.webmaster@noaa.gov",
+			"senderName": "NWS Goodland KS",
+			"headline": "Severe Thunderstorm Warning issued July 20 at 12:40AM CDT until July 20 at 12:45AM CDT by NWS Goodland KS",
+			"description": "The storms which prompted the warning have weakened and no longer\npose an immediate threat to life or property. As a result, the\nwarning will be allowed to expire.",
+			"instruction": null,
+			"response": "Shelter",
+			"parameters": {
+				"AWIPSidentifier": ["SVSGLD"],
+				"WMOidentifier": ["WWUS53 KGLD 200540"],
+				"NWSheadline": ["THE SEVERE THUNDERSTORM WARNING FOR SOUTHERN WICHITA COUNTY WILL EXPIRE AT 1245 AM CDT"],
+				"eventMotionDescription": ["2024-07-20T05:40:00-00:00...storm...358DEG...31KT...38.31,-101.14 38.31,-101.54"],
+				"BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"],
+				"EAS-ORG": ["WXR"],
+				"VTEC": ["/O.EXP.KGLD.SV.W.0285.000000T0000Z-240720T0545Z/"],
+				"eventEndingTime": ["2024-07-20T05:45:00+00:00"]
+			}
+		}
+	}, {
+		"id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c4b3f2fda8413ffa34efd16012343be21b17beb4.001.1",
+		"type": "Feature",
+		"geometry": {
+			"type": "Polygon",
+			"coordinates": [
+				[
+					[-99.6, 39.09],
+					[-99.77, 38.7],
+					[-100.15, 38.7],
+					[-100.16, 38.71],
+					[-100.03, 39.13],
+					[-99.6, 39.09]
+				]
+			]
+		},
+		"properties": {
+			"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c4b3f2fda8413ffa34efd16012343be21b17beb4.001.1",
+			"@type": "wx:Alert",
+			"id": "urn:oid:2.49.0.1.840.0.c4b3f2fda8413ffa34efd16012343be21b17beb4.001.1",
+			"areaDesc": "Trego",
+			"geocode": {
+				"SAME": ["020195"],
+				"UGC": ["KSZ030"]
+			},
+			"affectedZones": ["https://api.weather.gov/zones/forecast/KSZ030"],
+			"references": [],
+			"sent": "2024-07-20T00:30:00-05:00",
+			"effective": "2024-07-20T00:30:00-05:00",
+			"onset": "2024-07-20T00:30:00-05:00",
+			"expires": "2024-07-20T01:15:00-05:00",
+			"ends": null,
+			"status": "Actual",
+			"messageType": "Alert",
+			"category": "Met",
+			"severity": "Moderate",
+			"certainty": "Observed",
+			"urgency": "Expected",
+			"event": "Special Weather Statement",
+			"sender": "w-nws.webmaster@noaa.gov",
+			"senderName": "NWS Dodge City KS",
+			"headline": "Special Weather Statement issued July 20 at 12:30AM CDT by NWS Dodge City KS",
+			"description": "At 1229 AM CDT, Doppler radar was tracking strong thunderstorms along\na line extending from near Voda to 11 miles north of Utica. Movement\nwas east at 25 mph.\n\nHAZARD...Wind gusts of 50 to 55 mph.\n\nSOURCE...Radar indicated.\n\nIMPACT...Gusty winds could knock down tree limbs and blow around\nunsecured objects.\n\nStrong thunderstorms will be near...\nWakeeney around 1235 AM CDT.\nTrego Center around 1245 AM CDT.\n\nOther locations in the path of these storms include Ogallah.",
+			"instruction": "If outdoors, consider seeking shelter inside a building.",
+			"response": "Execute",
+			"parameters": {
+				"AWIPSidentifier": ["SPSDDC"],
+				"WMOidentifier": ["WWUS83 KDDC 200530"],
+				"NWSheadline": ["STRONG THUNDERSTORMS WILL IMPACT TREGO COUNTY THROUGH 115 AM CDT"],
+				"eventMotionDescription": ["2024-07-20T05:29:00-00:00...storm...287DEG...20KT...39.11,-99.98 38.81,-100.17"],
+				"maxWindGust": ["55 MPH"],
+				"maxHailSize": ["0.00"],
+				"BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"],
+				"EAS-ORG": ["WXR"]
+			}
+		}
+	}, {
+		"id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0-KEEPALIVE-16652",
+		"type": "Feature",
+		"geometry": null,
+		"properties": {
+			"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0-KEEPALIVE-16652",
+			"@type": "wx:Alert",
+			"id": "urn:oid:2.49.0.1.840.0-KEEPALIVE-16652",
+			"areaDesc": "Montgomery",
+			"geocode": {
+				"SAME": ["024031"],
+				"UGC": ["MDC031"]
+			},
+			"affectedZones": ["https://api.weather.gov/zones/county/MDC031"],
+			"references": [],
+			"sent": "2024-07-20T05:29:38+00:00",
+			"effective": "2024-07-20T05:29:38+00:00",
+			"onset": null,
+			"expires": "2024-07-20T05:39:38+00:00",
+			"ends": null,
+			"status": "Test",
+			"messageType": "Alert",
+			"category": "Met",
+			"severity": "Unknown",
+			"certainty": "Unknown",
+			"urgency": "Unknown",
+			"event": "Test Message",
+			"sender": "w-nws.webmaster@noaa.gov",
+			"senderName": "NWS",
+			"headline": null,
+			"description": "Monitoring message only. Please disregard.",
+			"instruction": "Monitoring message only. Please disregard.",
+			"response": "None",
+			"parameters": {
+				"AWIPSidentifier": ["KEPWBC"],
+				"WMOidentifier": ["NZUS91 KWBC 200529"],
+				"BLOCKCHANNEL": ["CMAS", "EAS", "NWEM"]
+			}
+		}
+	}, {
+		"id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.68c3f9fb764ec1503c5ade239f56baa00a70d7de.001.1",
+		"type": "Feature",
+		"geometry": {
+			"type": "Polygon",
+			"coordinates": [
+				[
+					[-111.13, 32.18],
+					[-111.13, 32.15],
+					[-111.16, 32.14],
+					[-111.21, 32.12],
+					[-111.25, 32.14],
+					[-111.21, 32.21],
+					[-111.15, 32.21],
+					[-111.13, 32.18]
+				]
+			]
+		},
+		"properties": {
+			"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.68c3f9fb764ec1503c5ade239f56baa00a70d7de.001.1",
+			"@type": "wx:Alert",
+			"id": "urn:oid:2.49.0.1.840.0.68c3f9fb764ec1503c5ade239f56baa00a70d7de.001.1",
+			"areaDesc": "Pima, AZ",
+			"geocode": {
+				"SAME": ["004019"],
+				"UGC": ["AZC019"]
+			},
+			"affectedZones": ["https://api.weather.gov/zones/county/AZC019"],
+			"references": [],
+			"sent": "2024-07-19T22:29:00-07:00",
+			"effective": "2024-07-19T22:29:00-07:00",
+			"onset": "2024-07-19T22:29:00-07:00",
+			"expires": "2024-07-19T22:39:00-07:00",
+			"ends": "2024-07-19T22:30:00-07:00",
+			"status": "Actual",
+			"messageType": "Alert",
+			"category": "Met",
+			"severity": "Severe",
+			"certainty": "Likely",
+			"urgency": "Immediate",
+			"event": "Flash Flood Warning",
+			"sender": "w-nws.webmaster@noaa.gov",
+			"senderName": "NWS Tucson AZ",
+			"headline": "Flash Flood Warning issued July 19 at 10:29PM MST until July 19 at 10:30PM MST by NWS Tucson AZ",
+			"description": "The heavy rain has ended. Flash flooding is no longer expected to\npose a threat. Please continue to heed remaining road closures.",
+			"instruction": null,
+			"response": "Avoid",
+			"parameters": {
+				"AWIPSidentifier": ["FFSTWC"],
+				"WMOidentifier": ["WGUS75 KTWC 200529"],
+				"NWSheadline": ["FLASH FLOOD WARNING WILL EXPIRE AT 1030 PM MST THIS EVENING FOR CENTRAL PIMA COUNTY"],
+				"BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"],
+				"EAS-ORG": ["WXR"],
+				"VTEC": ["/O.EXP.KTWC.FF.W.0023.000000T0000Z-240720T0530Z/"],
+				"eventEndingTime": ["2024-07-20T05:30:00+00:00"],
+				"expiredReferences": ["w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.13985e24b323d63476044f47272bc3ea6bc2cc79.001.1,2024-07-19T19:58:00-07:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.62ad11742fe376c2ffe0dd099221c0ae65290159.001.1,2024-07-19T19:20:00-07:00"]
+			}
+		}
+	}, {
+		"id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.87d7c080af1ecb29532d1554e6a5cb8974a233a0.001.1",
+		"type": "Feature",
+		"geometry": {
+			"type": "Polygon",
+			"coordinates": [
+				[
+					[-101.5, 36.36],
+					[-101.22, 36.4],
+					[-101.18, 36.36],
+					[-102.12, 35.83],
+					[-102.17, 35.97],
+					[-102.06, 36.1599999],
+					[-101.5, 36.36]
+				]
+			]
+		},
+		"properties": {
+			"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.87d7c080af1ecb29532d1554e6a5cb8974a233a0.001.1",
+			"@type": "wx:Alert",
+			"id": "urn:oid:2.49.0.1.840.0.87d7c080af1ecb29532d1554e6a5cb8974a233a0.001.1",
+			"areaDesc": "Hansford, TX; Moore, TX; Sherman, TX",
+			"geocode": {
+				"SAME": ["048195", "048341", "048421"],
+				"UGC": ["TXC195", "TXC341", "TXC421"]
+			},
+			"affectedZones": ["https://api.weather.gov/zones/county/TXC195", "https://api.weather.gov/zones/county/TXC341", "https://api.weather.gov/zones/county/TXC421"],
+			"references": [{
+				"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.eb036374573b008b7636f01d753536a6c1daa425.001.1",
+				"identifier": "urn:oid:2.49.0.1.840.0.eb036374573b008b7636f01d753536a6c1daa425.001.1",
+				"sender": "w-nws.webmaster@noaa.gov",
+				"sent": "2024-07-19T23:25:00-05:00"
+			}, {
+				"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f385e648cacd8b628f8f706bc28307b357e9b2ec.002.1",
+				"identifier": "urn:oid:2.49.0.1.840.0.f385e648cacd8b628f8f706bc28307b357e9b2ec.002.1",
+				"sender": "w-nws.webmaster@noaa.gov",
+				"sent": "2024-07-19T23:51:00-05:00"
+			}, {
+				"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0c00916e552e3c0afee75edfc9599fe0f30fcbf6.001.1",
+				"identifier": "urn:oid:2.49.0.1.840.0.0c00916e552e3c0afee75edfc9599fe0f30fcbf6.001.1",
+				"sender": "w-nws.webmaster@noaa.gov",
+				"sent": "2024-07-20T00:16:00-05:00"
+			}],
+			"sent": "2024-07-20T00:25:00-05:00",
+			"effective": "2024-07-20T00:25:00-05:00",
+			"onset": "2024-07-20T00:25:00-05:00",
+			"expires": "2024-07-20T00:34:00-05:00",
+			"ends": "2024-07-20T00:30:00-05:00",
+			"status": "Actual",
+			"messageType": "Update",
+			"category": "Met",
+			"severity": "Severe",
+			"certainty": "Observed",
+			"urgency": "Immediate",
+			"event": "Severe Thunderstorm Warning",
+			"sender": "w-nws.webmaster@noaa.gov",
+			"senderName": "NWS Amarillo TX",
+			"headline": "Severe Thunderstorm Warning issued July 20 at 12:25AM CDT until July 20 at 12:30AM CDT by NWS Amarillo TX",
+			"description": "The storms which prompted the warning have moved out of the area.\nTherefore, the warning will be allowed to expire.",
+			"instruction": null,
+			"response": "Shelter",
+			"parameters": {
+				"AWIPSidentifier": ["SVSAMA"],
+				"WMOidentifier": ["WWUS54 KAMA 200525"],
+				"NWSheadline": ["THE SEVERE THUNDERSTORM WARNING FOR CENTRAL HANSFORD...SOUTHERN SHERMAN AND NORTHWESTERN MOORE COUNTIES WILL EXPIRE AT 1230 AM CDT"],
+				"eventMotionDescription": ["2024-07-20T05:24:00-00:00...storm...314DEG...24KT...36.22,-101.11 35.86,-101.79"],
+				"BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"],
+				"EAS-ORG": ["WXR"],
+				"VTEC": ["/O.EXP.KAMA.SV.W.0232.000000T0000Z-240720T0530Z/"],
+				"eventEndingTime": ["2024-07-20T05:30:00+00:00"]
+			}
+		}
+	}, {
+		"id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.facaa1a81ce586dbc38d0edccf0e2035b210fc32.001.1",
+		"type": "Feature",
+		"geometry": {
+			"type": "Polygon",
+			"coordinates": [
+				[
+					[-101.47, 38.56],
+					[-101.27, 38.57],
+					[-101.18, 38.61],
+					[-101.13, 38.7],
+					[-101.13, 38.26],
+					[-101.5699999, 38.26],
+					[-101.5699999, 38.57],
+					[-101.47, 38.56]
+				]
+			]
+		},
+		"properties": {
+			"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.facaa1a81ce586dbc38d0edccf0e2035b210fc32.001.1",
+			"@type": "wx:Alert",
+			"id": "urn:oid:2.49.0.1.840.0.facaa1a81ce586dbc38d0edccf0e2035b210fc32.001.1",
+			"areaDesc": "Wichita, KS",
+			"geocode": {
+				"SAME": ["020203"],
+				"UGC": ["KSC203"]
+			},
+			"affectedZones": ["https://api.weather.gov/zones/county/KSC203"],
+			"references": [{
+				"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ea74ee11e55a3057cdfc28a938c7d15ec25abc34.001.1",
+				"identifier": "urn:oid:2.49.0.1.840.0.ea74ee11e55a3057cdfc28a938c7d15ec25abc34.001.1",
+				"sender": "w-nws.webmaster@noaa.gov",
+				"sent": "2024-07-19T23:52:00-05:00"
+			}, {
+				"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.07a34b95416e78940aeecbaff7d53698ab3c0b5a.001.1",
+				"identifier": "urn:oid:2.49.0.1.840.0.07a34b95416e78940aeecbaff7d53698ab3c0b5a.001.1",
+				"sender": "w-nws.webmaster@noaa.gov",
+				"sent": "2024-07-20T00:08:00-05:00"
+			}],
+			"sent": "2024-07-20T00:25:00-05:00",
+			"effective": "2024-07-20T00:25:00-05:00",
+			"onset": "2024-07-20T00:25:00-05:00",
+			"expires": "2024-07-20T00:45:00-05:00",
+			"ends": "2024-07-20T00:45:00-05:00",
+			"status": "Actual",
+			"messageType": "Update",
+			"category": "Met",
+			"severity": "Severe",
+			"certainty": "Observed",
+			"urgency": "Immediate",
+			"event": "Severe Thunderstorm Warning",
+			"sender": "w-nws.webmaster@noaa.gov",
+			"senderName": "NWS Goodland KS",
+			"headline": "Severe Thunderstorm Warning issued July 20 at 12:25AM CDT until July 20 at 12:45AM CDT by NWS Goodland KS",
+			"description": "At 1223 AM CDT, severe thunderstorms were located along a line\nextending from 4 miles west of Modoc to 10 miles west of Leoti,\nmoving south at 25 mph.\n\nHAZARD...60 to 70 mph wind gusts.\n\nSOURCE...Radar indicated.\n\nIMPACT...Expect damage to roofs, siding, and trees.\n\nThese severe thunderstorms will remain over mainly rural areas of\nWichita County, including the following locations... Marienthal,\nLydia, and Selkirk.\n\nThese storms have a history of producing 60 to 70 mph wind gusts,\nmainly along the leading edge of thunderstorm outflow, in advance of\nany rain. A 67 mph wind gust was observed at NWS Goodland at 958 PM\nMDT. A 64 mph wind gust was measured by a Kansas Mesonet site in\nRussell Springs at 1033 PM MDT.",
+			"instruction": "For your protection move to an interior room on the lowest floor of a\nbuilding.",
+			"response": "Shelter",
+			"parameters": {
+				"AWIPSidentifier": ["SVSGLD"],
+				"WMOidentifier": ["WWUS53 KGLD 200525"],
+				"NWSheadline": ["A SEVERE THUNDERSTORM WARNING REMAINS IN EFFECT UNTIL 1245 AM CDT FOR WICHITA COUNTY"],
+				"eventMotionDescription": ["2024-07-20T05:23:00-00:00...storm...002DEG...24KT...38.49,-101.15 38.49,-101.54"],
+				"windThreat": ["OBSERVED"],
+				"maxWindGust": ["60 MPH"],
+				"hailThreat": ["RADAR INDICATED"],
+				"maxHailSize": ["Up to .75"],
+				"BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"],
+				"EAS-ORG": ["WXR"],
+				"VTEC": ["/O.CON.KGLD.SV.W.0285.000000T0000Z-240720T0545Z/"],
+				"eventEndingTime": ["2024-07-20T05:45:00+00:00"]
+			},
+			"replacedBy": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.34e8d731e4000847d00cb597cafd01c368873f2f.001.1",
+			"replacedAt": "2024-07-20T00:40:00-05:00"
+		}
+	}, {
+		"id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1a47b21ee651e1a4cddfa8078ff94372f50aa667.001.1",
+		"type": "Feature",
+		"geometry": {
+			"type": "Polygon",
+			"coordinates": [
+				[
+					[-105.36, 33.44],
+					[-105.38, 33.4099999],
+					[-105.42, 33.4],
+					[-105.58, 33.31],
+					[-105.73, 33.31],
+					[-105.73, 33.39],
+					[-105.78, 33.39],
+					[-105.78, 33.4],
+					[-105.8, 33.4099999],
+					[-105.81, 33.44],
+					[-105.8, 33.4799999],
+					[-105.74, 33.4799999],
+					[-105.64, 33.46],
+					[-105.5699999, 33.4799999],
+					[-105.45, 33.54],
+					[-105.36, 33.5],
+					[-105.36, 33.44]
+				]
+			]
+		},
+		"properties": {
+			"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1a47b21ee651e1a4cddfa8078ff94372f50aa667.001.1",
+			"@type": "wx:Alert",
+			"id": "urn:oid:2.49.0.1.840.0.1a47b21ee651e1a4cddfa8078ff94372f50aa667.001.1",
+			"areaDesc": "Lincoln, NM",
+			"geocode": {
+				"SAME": ["035027"],
+				"UGC": ["NMC027"]
+			},
+			"affectedZones": ["https://api.weather.gov/zones/county/NMC027"],
+			"references": [{
+				"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d33d97dfd91c729dfb6269e51b9dec05984168b1.001.1",
+				"identifier": "urn:oid:2.49.0.1.840.0.d33d97dfd91c729dfb6269e51b9dec05984168b1.001.1",
+				"sender": "w-nws.webmaster@noaa.gov",
+				"sent": "2024-07-19T22:57:00-06:00"
+			}],
+			"sent": "2024-07-19T23:23:00-06:00",
+			"effective": "2024-07-19T23:23:00-06:00",
+			"onset": "2024-07-19T23:23:00-06:00",
+			"expires": "2024-07-20T02:00:00-06:00",
+			"ends": "2024-07-20T02:00:00-06:00",
+			"status": "Actual",
+			"messageType": "Update",
+			"category": "Met",
+			"severity": "Severe",
+			"certainty": "Likely",
+			"urgency": "Immediate",
+			"event": "Flash Flood Warning",
+			"sender": "w-nws.webmaster@noaa.gov",
+			"senderName": "NWS Albuquerque NM",
+			"headline": "Flash Flood Warning issued July 19 at 11:23PM MDT until July 20 at 2:00AM MDT by NWS Albuquerque NM",
+			"description": "At 1123 PM MDT, Doppler radar and automated rain gauges indicated\nthunderstorms producing heavy rain over the Blue 2, South Fork and\nMcBride burn scars. Up to 0.5 inches of rain have fallen. Flash\nflooding is ongoing or expected to begin shortly.\n\nExcessive rainfall over the burn scar will impact the Rio Bonito,\nEagle Creek, Cedar Creek and Rio Ruidoso drainages as well as\ndownstream along the Rio Hondo. Impacts will include but are not\nlimited to all nearby reservoirs, bridges, culverts and roadways\nassociated with these drainages, especially at those points where\nstreams merge.  Vulnerable properties in low lying areas are\nespecially at risk. Impacts could extend at least to Picacho, New\nMexico. The debris flow can consist of rock, mud, vegetation and\nother loose materials.\n\nHAZARD...Life threatening flash flooding. Thunderstorms producing\nflash flooding in and around the Blue 2, South Fork and\nMcBride burn scars.\n\nSOURCE...Radar and automated gauges.\n\nIMPACT...Life threatening flash flooding of areas in and around\nthe Blue 2, South Fork and McBride burn scars.\n\nSome locations that will experience flash flooding include...\nRuidoso, Lincoln, Ruidoso Downs, Fort Stanton, Alto, Glencoe,\nBonito Lake, Lincoln State Monument and Hollywood.\n\nThis includes Highway 380 between Mile Markers 91 and 99.\n\nAlthough rain may be ending, intensifying flows in streams and\nrivers will still exist. Do not be lulled into a false sense of\nsafety because rain may be ending.",
+			"instruction": "This is a life threatening situation. Heavy rainfall will cause\nextensive and severe flash flooding of creeks, streams and ditches\nin the Blue 2, South Fork and McBride burn scars. Severe debris\nflows can also be anticipated across roads. Roads and driveways may\nbe washed away in places. If you encounter flood waters, climb to\nsafety.\n\nBe especially cautious at night when it is harder to recognize the\ndangers of flooding.",
+			"response": "Avoid",
+			"parameters": {
+				"AWIPSidentifier": ["FFSABQ"],
+				"WMOidentifier": ["WGUS75 KABQ 200523"],
+				"NWSheadline": ["FLASH FLOOD WARNING FOR THE BLUE 2, SOUTH FORK AND MCBRIDE BURN SCARS REMAINS IN EFFECT UNTIL 2 AM MDT SATURDAY FOR SOUTH CENTRAL LINCOLN COUNTY"],
+				"flashFloodDetection": ["RADAR AND GAUGE INDICATED"],
+				"flashFloodDamageThreat": ["CONSIDERABLE"],
+				"BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"],
+				"EAS-ORG": ["WXR"],
+				"VTEC": ["/O.CON.KABQ.FF.W.0150.000000T0000Z-240720T0800Z/"],
+				"eventEndingTime": ["2024-07-20T08:00:00+00:00"]
+			},
+			"replacedBy": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.76dfb6d14755f6854c893d149204f8883ada6978.001.1",
+			"replacedAt": "2024-07-20T01:52:00-06:00"
+		}
+	}, {
+		"id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f87302ab3bc2f9254545393086e0eb149b5b547c.001.1",
+		"type": "Feature",
+		"geometry": {
+			"type": "Polygon",
+			"coordinates": [
+				[
+					[-100.06, 38.27],
+					[-100.95, 38.27],
+					[-100.86, 38.69],
+					[-99.91, 38.69],
+					[-100.06, 38.27]
+				]
+			]
+		},
+		"properties": {
+			"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f87302ab3bc2f9254545393086e0eb149b5b547c.001.1",
+			"@type": "wx:Alert",
+			"id": "urn:oid:2.49.0.1.840.0.f87302ab3bc2f9254545393086e0eb149b5b547c.001.1",
+			"areaDesc": "Scott; Lane; Ness",
+			"geocode": {
+				"SAME": ["020171", "020101", "020135"],
+				"UGC": ["KSZ043", "KSZ044", "KSZ045"]
+			},
+			"affectedZones": ["https://api.weather.gov/zones/forecast/KSZ043", "https://api.weather.gov/zones/forecast/KSZ044", "https://api.weather.gov/zones/forecast/KSZ045"],
+			"references": [],
+			"sent": "2024-07-20T00:21:00-05:00",
+			"effective": "2024-07-20T00:21:00-05:00",
+			"onset": "2024-07-20T00:21:00-05:00",
+			"expires": "2024-07-20T01:00:00-05:00",
+			"ends": null,
+			"status": "Actual",
+			"messageType": "Alert",
+			"category": "Met",
+			"severity": "Moderate",
+			"certainty": "Observed",
+			"urgency": "Expected",
+			"event": "Special Weather Statement",
+			"sender": "w-nws.webmaster@noaa.gov",
+			"senderName": "NWS Dodge City KS",
+			"headline": "Special Weather Statement issued July 20 at 12:21AM CDT by NWS Dodge City KS",
+			"description": "At 1221 AM CDT, Doppler radar was tracking strong thunderstorms along\na line extending from near Collyer to 8 miles north of Scott State\nLake. Movement was south at 40 mph.\n\nHAZARD...Wind gusts of 50 to 55 mph.\n\nSOURCE...Radar indicated.\n\nIMPACT...Gusty winds could knock down tree limbs and blow around\nunsecured objects.\n\nStrong thunderstorms will be near...\nHealy, Pendennis, and Shields around 1240 AM CDT.\n\nOther locations in the path of these storms include Utica, Manning,\nArnold and Grigston.",
+			"instruction": "If outdoors, consider seeking shelter inside a building.",
+			"response": "Execute",
+			"parameters": {
+				"AWIPSidentifier": ["SPSDDC"],
+				"WMOidentifier": ["WWUS83 KDDC 200521"],
+				"NWSheadline": ["STRONG THUNDERSTORMS WILL IMPACT EASTERN SCOTT...WESTERN NESS AND LANE COUNTIES THROUGH 100 AM CDT"],
+				"eventMotionDescription": ["2024-07-20T05:21:00-00:00...storm...350DEG...36KT...38.97,-100.12 38.79,-100.87"],
+				"maxWindGust": ["55 MPH"],
+				"maxHailSize": ["0.00"],
+				"BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"],
+				"EAS-ORG": ["WXR"]
+			}
+		}
+	}, {
+		"id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c53509c28e5aa862050db748aec4ab8ba1044f7a.001.1",
+		"type": "Feature",
+		"geometry": {
+			"type": "Polygon",
+			"coordinates": [
+				[
+					[-112.96, 32.76],
+					[-112.89, 32.89],
+					[-112.69, 32.96],
+					[-112.56, 32.9],
+					[-112.57, 32.84],
+					[-112.8, 32.78],
+					[-112.96, 32.76]
+				]
+			]
+		},
+		"properties": {
+			"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c53509c28e5aa862050db748aec4ab8ba1044f7a.001.1",
+			"@type": "wx:Alert",
+			"id": "urn:oid:2.49.0.1.840.0.c53509c28e5aa862050db748aec4ab8ba1044f7a.001.1",
+			"areaDesc": "Maricopa, AZ",
+			"geocode": {
+				"SAME": ["004013"],
+				"UGC": ["AZC013"]
+			},
+			"affectedZones": ["https://api.weather.gov/zones/county/AZC013"],
+			"references": [],
+			"sent": "2024-07-19T22:20:00-07:00",
+			"effective": "2024-07-19T22:20:00-07:00",
+			"onset": "2024-07-19T22:20:00-07:00",
+			"expires": "2024-07-20T01:15:00-07:00",
+			"ends": "2024-07-20T01:15:00-07:00",
+			"status": "Actual",
+			"messageType": "Alert",
+			"category": "Met",
+			"severity": "Minor",
+			"certainty": "Likely",
+			"urgency": "Expected",
+			"event": "Flood Advisory",
+			"sender": "w-nws.webmaster@noaa.gov",
+			"senderName": "NWS Phoenix AZ",
+			"headline": "Flood Advisory issued July 19 at 10:20PM MST until July 20 at 1:15AM MST by NWS Phoenix AZ",
+			"description": "* WHAT...Flooding caused by excessive rainfall is expected.\n\n* WHERE...A portion of south central Arizona, including the\nfollowing county, Maricopa.\n\n* WHEN...Until 115 AM MST.\n\n* IMPACTS...Minor flooding in low-lying and poor drainage areas.\n\n* ADDITIONAL DETAILS...\n- At 1020 PM MST, Doppler radar indicated heavy rain due to\nthunderstorms. Minor flooding is ongoing or expected to begin\nshortly in the advisory area. Between 0.5 and 1.5 inches of\nrain have fallen.\n- Additional rainfall amounts of 0.5 to 1 inch are expected\nover the area. This additional rain will result in minor\nflooding.\n- Some locations that will experience flooding include...\nGila Bend and Gila Bend Auxiliary Field.\n- http://www.weather.gov/safety/flood",
+			"instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.",
+			"response": "Avoid",
+			"parameters": {
+				"AWIPSidentifier": ["FLSPSR"],
+				"WMOidentifier": ["WGUS85 KPSR 200520"],
+				"NWSheadline": ["FLOOD ADVISORY IN EFFECT UNTIL 115 AM MST SATURDAY"],
+				"BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"],
+				"VTEC": ["/O.NEW.KPSR.FA.Y.0021.240720T0520Z-240720T0815Z/"],
+				"eventEndingTime": ["2024-07-20T08:15:00+00:00"]
+			},
+			"replacedBy": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.956262bcd4a542823bb68ceff4344fa1128a70f0.001.1",
+			"replacedAt": "2024-07-20T01:07:00-07:00"
+		}
+	}, {
+		"id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0c00916e552e3c0afee75edfc9599fe0f30fcbf6.001.1",
+		"type": "Feature",
+		"geometry": {
+			"type": "Polygon",
+			"coordinates": [
+				[
+					[-101.5, 36.36],
+					[-101.22, 36.4],
+					[-101.18, 36.36],
+					[-102.12, 35.83],
+					[-102.17, 35.97],
+					[-102.06, 36.1599999],
+					[-101.5, 36.36]
+				]
+			]
+		},
+		"properties": {
+			"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0c00916e552e3c0afee75edfc9599fe0f30fcbf6.001.1",
+			"@type": "wx:Alert",
+			"id": "urn:oid:2.49.0.1.840.0.0c00916e552e3c0afee75edfc9599fe0f30fcbf6.001.1",
+			"areaDesc": "Hansford, TX; Moore, TX; Sherman, TX",
+			"geocode": {
+				"SAME": ["048195", "048341", "048421"],
+				"UGC": ["TXC195", "TXC341", "TXC421"]
+			},
+			"affectedZones": ["https://api.weather.gov/zones/county/TXC195", "https://api.weather.gov/zones/county/TXC341", "https://api.weather.gov/zones/county/TXC421"],
+			"references": [{
+				"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.eb036374573b008b7636f01d753536a6c1daa425.001.1",
+				"identifier": "urn:oid:2.49.0.1.840.0.eb036374573b008b7636f01d753536a6c1daa425.001.1",
+				"sender": "w-nws.webmaster@noaa.gov",
+				"sent": "2024-07-19T23:25:00-05:00"
+			}, {
+				"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f385e648cacd8b628f8f706bc28307b357e9b2ec.002.1",
+				"identifier": "urn:oid:2.49.0.1.840.0.f385e648cacd8b628f8f706bc28307b357e9b2ec.002.1",
+				"sender": "w-nws.webmaster@noaa.gov",
+				"sent": "2024-07-19T23:51:00-05:00"
+			}],
+			"sent": "2024-07-20T00:16:00-05:00",
+			"effective": "2024-07-20T00:16:00-05:00",
+			"onset": "2024-07-20T00:16:00-05:00",
+			"expires": "2024-07-20T00:30:00-05:00",
+			"ends": "2024-07-20T00:30:00-05:00",
+			"status": "Actual",
+			"messageType": "Update",
+			"category": "Met",
+			"severity": "Severe",
+			"certainty": "Observed",
+			"urgency": "Immediate",
+			"event": "Severe Thunderstorm Warning",
+			"sender": "w-nws.webmaster@noaa.gov",
+			"senderName": "NWS Amarillo TX",
+			"headline": "Severe Thunderstorm Warning issued July 20 at 12:16AM CDT until July 20 at 12:30AM CDT by NWS Amarillo TX",
+			"description": "At 1215 AM CDT, severe thunderstorms were located along a line\nextending from 4 miles northeast of Spearman to 7 miles east of\nDumas, moving southeast at 30 mph.\n\nHAZARD...60 mph wind gusts.\n\nSOURCE...Radar indicated.\n\nIMPACT...Minor damage to roofs, siding, and trees is possible.\n\nLocations impacted include...\nCactus, Sunray, and Gruver.",
+			"instruction": "For your protection move to an interior room on the lowest floor of a\nbuilding.\n\nTorrential rainfall is occurring with these storms, and may lead to\nflash flooding. Do not drive your vehicle through flooded roadways.",
+			"response": "Shelter",
+			"parameters": {
+				"AWIPSidentifier": ["SVSAMA"],
+				"WMOidentifier": ["WWUS54 KAMA 200516"],
+				"NWSheadline": ["A SEVERE THUNDERSTORM WARNING REMAINS IN EFFECT UNTIL 1230 AM CDT FOR CENTRAL HANSFORD...SOUTHERN SHERMAN AND NORTHWESTERN MOORE COUNTIES"],
+				"eventMotionDescription": ["2024-07-20T05:15:00-00:00...storm...314DEG...24KT...36.26,-101.16 35.9,-101.84"],
+				"windThreat": ["RADAR INDICATED"],
+				"maxWindGust": ["60 MPH"],
+				"hailThreat": ["RADAR INDICATED"],
+				"maxHailSize": ["Up to .75"],
+				"BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"],
+				"EAS-ORG": ["WXR"],
+				"VTEC": ["/O.CON.KAMA.SV.W.0232.000000T0000Z-240720T0530Z/"],
+				"eventEndingTime": ["2024-07-20T05:30:00+00:00"]
+			},
+			"replacedBy": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.87d7c080af1ecb29532d1554e6a5cb8974a233a0.001.1",
+			"replacedAt": "2024-07-20T00:25:00-05:00"
+		}
+	}, {
+		"id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6a3c5efbe11e9d479f651ef5e5088400ce7b82cb.001.1",
+		"type": "Feature",
+		"geometry": {
+			"type": "Polygon",
+			"coordinates": [
+				[
+					[-113.03, 32.96],
+					[-112.63, 33.01],
+					[-112.56, 32.78],
+					[-112.9, 32.62],
+					[-113.03, 32.96]
+				]
+			]
+		},
+		"properties": {
+			"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6a3c5efbe11e9d479f651ef5e5088400ce7b82cb.001.1",
+			"@type": "wx:Alert",
+			"id": "urn:oid:2.49.0.1.840.0.6a3c5efbe11e9d479f651ef5e5088400ce7b82cb.001.1",
+			"areaDesc": "Gila Bend; Sonoran Desert Natl Monument",
+			"geocode": {
+				"SAME": ["004013"],
+				"UGC": ["AZZ539", "AZZ559"]
+			},
+			"affectedZones": ["https://api.weather.gov/zones/forecast/AZZ539", "https://api.weather.gov/zones/forecast/AZZ559"],
+			"references": [],
+			"sent": "2024-07-19T22:16:00-07:00",
+			"effective": "2024-07-19T22:16:00-07:00",
+			"onset": "2024-07-19T22:16:00-07:00",
+			"expires": "2024-07-19T23:00:00-07:00",
+			"ends": null,
+			"status": "Actual",
+			"messageType": "Alert",
+			"category": "Met",
+			"severity": "Moderate",
+			"certainty": "Observed",
+			"urgency": "Expected",
+			"event": "Special Weather Statement",
+			"sender": "w-nws.webmaster@noaa.gov",
+			"senderName": "NWS Phoenix AZ",
+			"headline": "Special Weather Statement issued July 19 at 10:16PM MST by NWS Phoenix AZ",
+			"description": "At 1016 PM MST, Doppler radar was tracking a strong thunderstorm over\nGila Bend Auxiliary Field, or near Gila Bend, moving west at 5 mph.\n\nHAZARD...Wind gusts up to 50 mph.\n\nSOURCE...Radar indicated.\n\nIMPACT...Gusty winds could knock down tree limbs and blow around\nunsecured objects.\n\nLocations impacted include...\nGila Bend and Gila Bend Auxiliary Field.\n\nThis includes the following highways...\nAZ Interstate 8 between mile markers 100 and 123.\nAZ Route 238 between mile markers 1 and 4.\nAZ Route 85 between mile markers 1 and 23, and between mile markers\n119 and 125.",
+			"instruction": "If outdoors, consider seeking shelter inside a building.\n\nFrequent cloud to ground lightning is occurring with this storm.\nLightning can strike 10 miles away from a thunderstorm. Seek a safe\nshelter inside a building or vehicle.",
+			"response": "Execute",
+			"parameters": {
+				"AWIPSidentifier": ["SPSPSR"],
+				"WMOidentifier": ["WWUS85 KPSR 200516"],
+				"NWSheadline": ["A STRONG THUNDERSTORM WILL IMPACT MARICOPA COUNTY THROUGH 1100 PM MST"],
+				"eventMotionDescription": ["2024-07-20T05:16:00-00:00...storm...074DEG...6KT...32.87,-112.75"],
+				"maxWindGust": ["50 MPH"],
+				"maxHailSize": ["0.00"],
+				"BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"],
+				"EAS-ORG": ["WXR"]
+			}
+		}
+	}, {
+		"id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.07a34b95416e78940aeecbaff7d53698ab3c0b5a.001.1",
+		"type": "Feature",
+		"geometry": {
+			"type": "Polygon",
+			"coordinates": [
+				[
+					[-101.5699999, 38.7],
+					[-101.13, 38.7],
+					[-101.13, 38.26],
+					[-101.5699999, 38.26],
+					[-101.5699999, 38.7]
+				]
+			]
+		},
+		"properties": {
+			"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.07a34b95416e78940aeecbaff7d53698ab3c0b5a.001.1",
+			"@type": "wx:Alert",
+			"id": "urn:oid:2.49.0.1.840.0.07a34b95416e78940aeecbaff7d53698ab3c0b5a.001.1",
+			"areaDesc": "Wichita, KS",
+			"geocode": {
+				"SAME": ["020203"],
+				"UGC": ["KSC203"]
+			},
+			"affectedZones": ["https://api.weather.gov/zones/county/KSC203"],
+			"references": [{
+				"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ea74ee11e55a3057cdfc28a938c7d15ec25abc34.001.1",
+				"identifier": "urn:oid:2.49.0.1.840.0.ea74ee11e55a3057cdfc28a938c7d15ec25abc34.001.1",
+				"sender": "w-nws.webmaster@noaa.gov",
+				"sent": "2024-07-19T23:52:00-05:00"
+			}],
+			"sent": "2024-07-20T00:08:00-05:00",
+			"effective": "2024-07-20T00:08:00-05:00",
+			"onset": "2024-07-20T00:08:00-05:00",
+			"expires": "2024-07-20T00:45:00-05:00",
+			"ends": "2024-07-20T00:45:00-05:00",
+			"status": "Actual",
+			"messageType": "Update",
+			"category": "Met",
+			"severity": "Severe",
+			"certainty": "Observed",
+			"urgency": "Immediate",
+			"event": "Severe Thunderstorm Warning",
+			"sender": "w-nws.webmaster@noaa.gov",
+			"senderName": "NWS Goodland KS",
+			"headline": "Severe Thunderstorm Warning issued July 20 at 12:08AM CDT until July 20 at 12:45AM CDT by NWS Goodland KS",
+			"description": "At 1206 AM CDT, severe thunderstorms were located along a line\nextending from 9 miles northwest of Modoc to 13 miles northwest of\nLeoti, moving south at 25 mph.\n\nHAZARD...60 to 70 mph wind gusts.\n\nSOURCE...Radar indicated.\n\nIMPACT...Expect considerable tree damage. Damage is likely to mobile\nhomes, roofs, and outbuildings.\n\nThese severe storms will be near...\nLeoti around 1215 AM CDT.\n\nOther locations impacted by these severe thunderstorms include\nMarienthal, Lydia, and Selkirk.\n\nThese storms have a history of producing 60 to 70 mph wind gusts,\nmainly along the leading edge of thunderstorm outflow, in advance of\nany rain. A 67 mph wind gust was observed at NWS Goodland at 958 PM\nMDT. A 69 mph wind gust was measured by a home weather station in\nMcAllaster at 1033 PM MDT.",
+			"instruction": "For your protection move to an interior room on the lowest floor of a\nbuilding.",
+			"response": "Shelter",
+			"parameters": {
+				"AWIPSidentifier": ["SVSGLD"],
+				"WMOidentifier": ["WWUS53 KGLD 200508"],
+				"NWSheadline": ["A SEVERE THUNDERSTORM WARNING REMAINS IN EFFECT UNTIL 1245 AM CDT FOR WICHITA COUNTY"],
+				"eventMotionDescription": ["2024-07-20T05:06:00-00:00...storm...002DEG...20KT...38.6,-101.15 38.6,-101.55"],
+				"windThreat": ["OBSERVED"],
+				"maxWindGust": ["70 MPH"],
+				"hailThreat": ["RADAR INDICATED"],
+				"maxHailSize": ["Up to .75"],
+				"thunderstormDamageThreat": ["CONSIDERABLE"],
+				"BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"],
+				"EAS-ORG": ["WXR"],
+				"VTEC": ["/O.CON.KGLD.SV.W.0285.000000T0000Z-240720T0545Z/"],
+				"eventEndingTime": ["2024-07-20T05:45:00+00:00"]
+			},
+			"replacedBy": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.34e8d731e4000847d00cb597cafd01c368873f2f.001.1",
+			"replacedAt": "2024-07-20T00:40:00-05:00"
+		}
+	}, {
+		"id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.613c08fe175a90d535b703025167969da97c661e.001.1",
+		"type": "Feature",
+		"geometry": {
+			"type": "Polygon",
+			"coordinates": [
+				[
+					[-112.9, 34.52],
+					[-112.92, 34.55],
+					[-112.94, 34.55],
+					[-112.96, 34.54],
+					[-112.98, 34.53],
+					[-113, 34.52],
+					[-113.01, 34.53],
+					[-112.97, 34.56],
+					[-112.95, 34.58],
+					[-112.96, 34.62],
+					[-112.88, 34.63],
+					[-112.8, 34.61],
+					[-112.8, 34.54],
+					[-112.8, 34.51],
+					[-112.89, 34.51],
+					[-112.9, 34.52]
+				]
+			]
+		},
+		"properties": {
+			"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.613c08fe175a90d535b703025167969da97c661e.001.1",
+			"@type": "wx:Alert",
+			"id": "urn:oid:2.49.0.1.840.0.613c08fe175a90d535b703025167969da97c661e.001.1",
+			"areaDesc": "Yavapai, AZ",
+			"geocode": {
+				"SAME": ["004025"],
+				"UGC": ["AZC025"]
+			},
+			"affectedZones": ["https://api.weather.gov/zones/county/AZC025"],
+			"references": [{
+				"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.35c43aabd52e92eb413c396e9c36a6f948b130a0.001.1",
+				"identifier": "urn:oid:2.49.0.1.840.0.35c43aabd52e92eb413c396e9c36a6f948b130a0.001.1",
+				"sender": "w-nws.webmaster@noaa.gov",
+				"sent": "2024-07-19T19:11:00-07:00"
+			}, {
+				"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e2d98e9a138d48e1b5979dc7c5a5df5d45857fe6.001.1",
+				"identifier": "urn:oid:2.49.0.1.840.0.e2d98e9a138d48e1b5979dc7c5a5df5d45857fe6.001.1",
+				"sender": "w-nws.webmaster@noaa.gov",
+				"sent": "2024-07-19T20:12:00-07:00"
+			}],
+			"sent": "2024-07-19T22:06:00-07:00",
+			"effective": "2024-07-19T22:06:00-07:00",
+			"onset": "2024-07-19T22:06:00-07:00",
+			"expires": "2024-07-19T22:16:00-07:00",
+			"ends": "2024-07-19T22:15:00-07:00",
+			"status": "Actual",
+			"messageType": "Update",
+			"category": "Met",
+			"severity": "Minor",
+			"certainty": "Likely",
+			"urgency": "Expected",
+			"event": "Flood Advisory",
+			"sender": "w-nws.webmaster@noaa.gov",
+			"senderName": "NWS Flagstaff AZ",
+			"headline": "Flood Advisory issued July 19 at 10:06PM MST until July 19 at 10:15PM MST by NWS Flagstaff AZ",
+			"description": "The Flood Advisory will expire at 1015 PM MST this evening for a\nportion of west central Arizona, including the following area,\nYavapai.\n\nFlood waters have receded. The heavy rain has ended. Flooding is no\nlonger expected to pose a threat. Please continue to heed remaining\nroad closures and stay away from elevated creeks and rivers.",
+			"instruction": null,
+			"response": "Avoid",
+			"parameters": {
+				"AWIPSidentifier": ["FLSFGZ"],
+				"WMOidentifier": ["WGUS85 KFGZ 200506"],
+				"NWSheadline": ["FLOOD ADVISORY WILL EXPIRE AT 1015 PM MST THIS EVENING"],
+				"BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"],
+				"VTEC": ["/O.EXP.KFGZ.FA.Y.0019.000000T0000Z-240720T0515Z/"],
+				"eventEndingTime": ["2024-07-20T05:15:00+00:00"]
+			}
+		}
+	}, {
+		"id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.652ff8844235c89ef9a655ec976ba23faa2f4ec0.001.1",
+		"type": "Feature",
+		"geometry": {
+			"type": "Polygon",
+			"coordinates": [
+				[
+					[-105.77, 33.39],
+					[-105.73, 33.39],
+					[-105.73, 33.37],
+					[-105.73, 33.31],
+					[-105.7099999, 33.3],
+					[-105.65, 33.31],
+					[-105.63, 33.31],
+					[-105.58, 33.31],
+					[-105.59, 33.26],
+					[-105.7, 33.2299999],
+					[-105.74, 33.3],
+					[-105.78, 33.39],
+					[-105.77, 33.39]
+				]
+			]
+		},
+		"properties": {
+			"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.652ff8844235c89ef9a655ec976ba23faa2f4ec0.001.1",
+			"@type": "wx:Alert",
+			"id": "urn:oid:2.49.0.1.840.0.652ff8844235c89ef9a655ec976ba23faa2f4ec0.001.1",
+			"areaDesc": "Otero, NM",
+			"geocode": {
+				"SAME": ["035035"],
+				"UGC": ["NMC035"]
+			},
+			"affectedZones": ["https://api.weather.gov/zones/county/NMC035"],
+			"references": [],
+			"sent": "2024-07-19T22:59:00-06:00",
+			"effective": "2024-07-19T22:59:00-06:00",
+			"onset": "2024-07-19T22:59:00-06:00",
+			"expires": "2024-07-20T02:00:00-06:00",
+			"ends": "2024-07-20T02:00:00-06:00",
+			"status": "Actual",
+			"messageType": "Alert",
+			"category": "Met",
+			"severity": "Severe",
+			"certainty": "Likely",
+			"urgency": "Immediate",
+			"event": "Flash Flood Warning",
+			"sender": "w-nws.webmaster@noaa.gov",
+			"senderName": "NWS El Paso Tx/Santa Teresa NM",
+			"headline": "Flash Flood Warning issued July 19 at 10:59PM MDT until July 20 at 2:00AM MDT by NWS El Paso Tx/Santa Teresa NM",
+			"description": "FFWEPZ\n\nThe National Weather Service in El Paso Tx/Santa Teresa has issued a\n\n* Flash Flood Warning for...\nThe South Fork and Salt Fire burn scar in...\nNorthern Otero in south central New Mexico...\n\n* Until 200 AM MDT.\n\n* At 1059 PM MDT, Doppler radar indicated thunderstorms producing\nheavy rain over the South Fork and Salt Fire Burn Scar. Between\n0.5 and 1 inch of rain has fallen. Additional rainfall amounts of\n0.5 to 1 inch are possible in the warned area. Flash flooding is\nongoing or expected to begin shortly.\n\nExcessive rainfall over the burn scar will result in debris flow\nmoving through the South Fork and Salt Fire Burn scars. The debris\nflow can consist of rock, mud, vegetation and other loose materials.\n\nHAZARD...Life threatening flash flooding. Thunderstorms\nproducing flash flooding in and around the South Fork\nand Salt Fire Burn Scar.\n\nSOURCE...Radar.\n\nIMPACT...Life threatening flash flooding of areas in and around\nthe South Fork and Salt Fire Burn Scar.\n\n* Some locations that will experience flash flooding include...\nLake Mescalero.",
+			"instruction": "This is a life threatening situation. Heavy rainfall will cause\nextensive and severe flash flooding of creeks...streams...and\nditches in the South Fork and Salt Fire Burn Scar. Severe debris\nflows can also be anticipated across roads. Roads and driveways may\nbe washed away in places. If you encounter flood waters...climb to\nsafety.\n\nMove away from recently burned areas. Life-threatening flooding of\ncreeks, roads and normally dry arroyos is likely. The heavy rains\nwill likely trigger rockslides, mudslides and debris flows in steep\nterrain, especially in and around these areas.",
+			"response": "Avoid",
+			"parameters": {
+				"AWIPSidentifier": ["FFWEPZ"],
+				"WMOidentifier": ["WGUS54 KEPZ 200459"],
+				"flashFloodDetection": ["RADAR INDICATED"],
+				"flashFloodDamageThreat": ["CONSIDERABLE"],
+				"BLOCKCHANNEL": ["EAS", "NWEM"],
+				"EAS-ORG": ["WXR"],
+				"VTEC": ["/O.NEW.KEPZ.FF.W.0040.240720T0459Z-240720T0800Z/"],
+				"eventEndingTime": ["2024-07-20T08:00:00+00:00"],
+				"WEAHandling": ["Imminent Threat"],
+				"CMAMtext": ["NWS: FLASH FLOOD WARNING this area til 2:00 AM MDT. Avoid flooded areas."],
+				"CMAMlongtext": ["National Weather Service: A FLASH FLOOD WARNING is in effect for this area until 2:00 AM MDT. This is a dangerous and life-threatening situation. Do not attempt to travel unless you are fleeing an area subject to flooding or under an evacuation order."]
+			},
+			"replacedBy": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.8a4f4565cc48e7b911c177baa0e8a77023bbefc2.001.1",
+			"replacedAt": "2024-07-20T01:56:00-06:00"
+		}
+	}, {
+		"id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f748c0345ed0d1a40aac8db636ad0b4699839028.001.1",
+		"type": "Feature",
+		"geometry": {
+			"type": "Polygon",
+			"coordinates": [
+				[
+					[-100.84, 38.7],
+					[-100.83, 38.69],
+					[-100.93, 38.27],
+					[-101.12, 38.27],
+					[-101.13, 38.7],
+					[-100.84, 38.7]
+				]
+			]
+		},
+		"properties": {
+			"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f748c0345ed0d1a40aac8db636ad0b4699839028.001.1",
+			"@type": "wx:Alert",
+			"id": "urn:oid:2.49.0.1.840.0.f748c0345ed0d1a40aac8db636ad0b4699839028.001.1",
+			"areaDesc": "Scott, KS",
+			"geocode": {
+				"SAME": ["020171"],
+				"UGC": ["KSC171"]
+			},
+			"affectedZones": ["https://api.weather.gov/zones/county/KSC171"],
+			"references": [{
+				"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1fd864ab533efbab9aa7f41d6e7debca79f0f52b.001.1",
+				"identifier": "urn:oid:2.49.0.1.840.0.1fd864ab533efbab9aa7f41d6e7debca79f0f52b.001.1",
+				"sender": "w-nws.webmaster@noaa.gov",
+				"sent": "2024-07-19T23:56:00-05:00"
+			}],
+			"sent": "2024-07-19T23:58:00-05:00",
+			"effective": "2024-07-19T23:58:00-05:00",
+			"onset": "2024-07-19T23:56:00-05:00",
+			"expires": "2024-07-20T00:45:00-05:00",
+			"ends": "2024-07-20T00:45:00-05:00",
+			"status": "Actual",
+			"messageType": "Update",
+			"category": "Met",
+			"severity": "Severe",
+			"certainty": "Observed",
+			"urgency": "Immediate",
+			"event": "Severe Thunderstorm Warning",
+			"sender": "w-nws.webmaster@noaa.gov",
+			"senderName": "NWS Dodge City KS",
+			"headline": "Severe Thunderstorm Warning issued July 19 at 11:58PM CDT until July 20 at 12:45AM CDT by NWS Dodge City KS",
+			"description": "SVRDDC\n\nThe National Weather Service in Dodge City has issued a\n\n* Severe Thunderstorm Warning for...\nWestern Scott County in west central Kansas...\n\n* Until 1245 AM CDT.\n\n* At 1157 PM CDT, severe thunderstorms were located along a line\nextending from 7 miles east of Russell Springs to 10 miles west of\nScott State Lake to 8 miles north of Leoti, moving south at 40 mph.\n\nHAZARD...60 mph wind gusts.\n\nSOURCE...Radar indicated.\n\nIMPACT...Expect damage to roofs, siding, and trees.\n\n* Severe thunderstorms will be near...\nModoc and Scott State Lake around 1215 AM CDT.\n\nOther locations in the path of these severe thunderstorms include\nScott City.",
+			"instruction": "For your protection move to an interior room on the lowest floor of a\nbuilding.",
+			"response": "Shelter",
+			"parameters": {
+				"AWIPSidentifier": ["SVRDDC"],
+				"WMOidentifier": ["WUUS53 KDDC 200458 CCA"],
+				"eventMotionDescription": ["2024-07-20T04:57:00-00:00...storm...347DEG...35KT...38.9,-101.03 38.7,-101.12 38.61,-101.37"],
+				"windThreat": ["RADAR INDICATED"],
+				"maxWindGust": ["60 MPH"],
+				"hailThreat": ["RADAR INDICATED"],
+				"maxHailSize": ["Up to .75"],
+				"BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"],
+				"EAS-ORG": ["WXR"],
+				"VTEC": ["/O.COR.KDDC.SV.W.0271.240720T0456Z-240720T0545Z/"],
+				"eventEndingTime": ["2024-07-20T05:45:00+00:00"]
+			},
+			"replacedBy": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2a5ee59d820157ec79ae9b2c5ef66faafeea13ef.001.1",
+			"replacedAt": "2024-07-20T00:35:00-05:00"
+		}
+	}, {
+		"id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3bb3d45c340bed8b9afc2b537a606580dd2b7af0.001.1",
+		"type": "Feature",
+		"geometry": {
+			"type": "Polygon",
+			"coordinates": [
+				[
+					[-101.45, 38.71],
+					[-101.97, 38.81],
+					[-102.05, 38.88],
+					[-102.05, 39.13],
+					[-101.12, 39.13],
+					[-100.81, 39.12],
+					[-100.81, 39.1],
+					[-100.8199999, 39.02],
+					[-101.13, 38.7],
+					[-101.45, 38.71]
+				]
+			]
+		},
+		"properties": {
+			"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3bb3d45c340bed8b9afc2b537a606580dd2b7af0.001.1",
+			"@type": "wx:Alert",
+			"id": "urn:oid:2.49.0.1.840.0.3bb3d45c340bed8b9afc2b537a606580dd2b7af0.001.1",
+			"areaDesc": "Logan, KS; Wallace, KS",
+			"geocode": {
+				"SAME": ["020109", "020199"],
+				"UGC": ["KSC109", "KSC199"]
+			},
+			"affectedZones": ["https://api.weather.gov/zones/county/KSC109", "https://api.weather.gov/zones/county/KSC199"],
+			"references": [{
+				"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.82bd1560ab37303438bccdd2cc0f5e341dc56bcf.001.1",
+				"identifier": "urn:oid:2.49.0.1.840.0.82bd1560ab37303438bccdd2cc0f5e341dc56bcf.001.1",
+				"sender": "w-nws.webmaster@noaa.gov",
+				"sent": "2024-07-19T22:01:00-06:00"
+			}, {
+				"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0eb93ea0e4988d9a1761d4406253d80bd4169214.002.1",
+				"identifier": "urn:oid:2.49.0.1.840.0.0eb93ea0e4988d9a1761d4406253d80bd4169214.002.1",
+				"sender": "w-nws.webmaster@noaa.gov",
+				"sent": "2024-07-19T22:19:00-06:00"
+			}, {
+				"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ae437d22c782a002af6159fe0e2e17ad9e29b119.002.1",
+				"identifier": "urn:oid:2.49.0.1.840.0.ae437d22c782a002af6159fe0e2e17ad9e29b119.002.1",
+				"sender": "w-nws.webmaster@noaa.gov",
+				"sent": "2024-07-19T22:31:00-06:00"
+			}, {
+				"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7adfe2aab78f60d2a46b88eceb16371a7399dd35.002.1",
+				"identifier": "urn:oid:2.49.0.1.840.0.7adfe2aab78f60d2a46b88eceb16371a7399dd35.002.1",
+				"sender": "w-nws.webmaster@noaa.gov",
+				"sent": "2024-07-19T22:40:00-06:00"
+			}],
+			"sent": "2024-07-19T22:57:00-06:00",
+			"effective": "2024-07-19T22:57:00-06:00",
+			"onset": "2024-07-19T22:57:00-06:00",
+			"expires": "2024-07-19T23:06:00-06:00",
+			"ends": "2024-07-19T23:00:00-06:00",
+			"status": "Actual",
+			"messageType": "Update",
+			"category": "Met",
+			"severity": "Severe",
+			"certainty": "Observed",
+			"urgency": "Immediate",
+			"event": "Severe Thunderstorm Warning",
+			"sender": "w-nws.webmaster@noaa.gov",
+			"senderName": "NWS Goodland KS",
+			"headline": "Severe Thunderstorm Warning issued July 19 at 10:57PM MDT until July 19 at 11:00PM MDT by NWS Goodland KS",
+			"description": "The storms which prompted the warning have moved out of the warned\narea. As a result, the warning will be allowed to expire.",
+			"instruction": null,
+			"response": "Shelter",
+			"parameters": {
+				"AWIPSidentifier": ["SVSGLD"],
+				"WMOidentifier": ["WWUS53 KGLD 200457"],
+				"NWSheadline": ["THE SEVERE THUNDERSTORM WARNING FOR WALLACE AND LOGAN COUNTIES WILL EXPIRE AT 1100 PM MDT/MIDNIGHT CDT/"],
+				"eventMotionDescription": ["2024-07-20T04:56:00-00:00...storm...005DEG...52KT...38.81,-101.99 38.65,-101.06"],
+				"BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"],
+				"EAS-ORG": ["WXR"],
+				"VTEC": ["/O.EXP.KGLD.SV.W.0284.000000T0000Z-240720T0500Z/"],
+				"eventEndingTime": ["2024-07-20T05:00:00+00:00"]
+			}
+		}
+	}, {
+		"id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d33d97dfd91c729dfb6269e51b9dec05984168b1.001.1",
+		"type": "Feature",
+		"geometry": {
+			"type": "Polygon",
+			"coordinates": [
+				[
+					[-105.36, 33.44],
+					[-105.38, 33.4099999],
+					[-105.42, 33.4],
+					[-105.58, 33.31],
+					[-105.73, 33.31],
+					[-105.73, 33.39],
+					[-105.78, 33.39],
+					[-105.78, 33.4],
+					[-105.8, 33.4099999],
+					[-105.81, 33.44],
+					[-105.8, 33.4799999],
+					[-105.74, 33.4799999],
+					[-105.64, 33.46],
+					[-105.5699999, 33.4799999],
+					[-105.45, 33.54],
+					[-105.36, 33.5],
+					[-105.36, 33.44]
+				]
+			]
+		},
+		"properties": {
+			"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d33d97dfd91c729dfb6269e51b9dec05984168b1.001.1",
+			"@type": "wx:Alert",
+			"id": "urn:oid:2.49.0.1.840.0.d33d97dfd91c729dfb6269e51b9dec05984168b1.001.1",
+			"areaDesc": "Lincoln, NM",
+			"geocode": {
+				"SAME": ["035027"],
+				"UGC": ["NMC027"]
+			},
+			"affectedZones": ["https://api.weather.gov/zones/county/NMC027"],
+			"references": [],
+			"sent": "2024-07-19T22:57:00-06:00",
+			"effective": "2024-07-19T22:57:00-06:00",
+			"onset": "2024-07-19T22:57:00-06:00",
+			"expires": "2024-07-20T02:00:00-06:00",
+			"ends": "2024-07-20T02:00:00-06:00",
+			"status": "Actual",
+			"messageType": "Alert",
+			"category": "Met",
+			"severity": "Severe",
+			"certainty": "Likely",
+			"urgency": "Immediate",
+			"event": "Flash Flood Warning",
+			"sender": "w-nws.webmaster@noaa.gov",
+			"senderName": "NWS Albuquerque NM",
+			"headline": "Flash Flood Warning issued July 19 at 10:57PM MDT until July 20 at 2:00AM MDT by NWS Albuquerque NM",
+			"description": "FFWABQ\n\nThe National Weather Service in Albuquerque has issued a\n\n* Flash Flood Warning for...\nThe Blue 2, South Fork and McBride burn scars in...\nSouth Central Lincoln County in central New Mexico...\n\n* Until 200 AM MDT.\n\n* At 1057 PM MDT, Doppler radar and automated rain gauges indicated\nthunderstorms producing heavy rain over the Blue 2, South Fork and\nMcBride burn scars. Up to 0.25 inches of rain have fallen.\nAdditional rainfall amounts of 0.25 to 0.75 inches are possible in\nthe warned area. Flash flooding is ongoing or expected to begin\nshortly.\n\nExcessive rainfall over the burn scar will impact the Rio Bonito,\nEagle Creek, Cedar Creek and Rio Ruidoso drainages as well as\ndownstream along the Rio Hondo. Impacts will include but are not\nlimited to all nearby reservoirs, bridges, culverts and roadways\nassociated with these drainages, especially at those points where\nstreams merge.  Vulnerable properties in low lying areas are\nespecially at risk. Impacts could extend at least to Picacho, New\nMexico. The debris flow can consist of rock, mud, vegetation and\nother loose materials.\n\nHAZARD...Life threatening flash flooding. Thunderstorms\nproducing flash flooding in and around the Blue 2,\nSouth Fork and McBride burn scars.\n\nSOURCE...Radar and automated gauges.\n\nIMPACT...Life threatening flash flooding of areas in and around\nthe Blue 2, South Fork and McBride burn scars.\n\n* Some locations that will experience flash flooding include...\nRuidoso, Lincoln, Ruidoso Downs, Fort Stanton, Alto, Glencoe,\nBonito Lake, Lincoln State Monument and Hollywood.\n\nThis includes Highway 380 between Mile Markers 91 and 99.",
+			"instruction": "This is a life threatening situation. Heavy rainfall will cause\nextensive and severe flash flooding of creeks, streams and ditches\nin the Blue 2, South Fork and McBride burn scars. Severe debris\nflows can also be anticipated across roads. Roads and driveways may\nbe washed away in places. If you encounter flood waters, climb to\nsafety.",
+			"response": "Avoid",
+			"parameters": {
+				"AWIPSidentifier": ["FFWABQ"],
+				"WMOidentifier": ["WGUS55 KABQ 200457"],
+				"flashFloodDetection": ["RADAR AND GAUGE INDICATED"],
+				"flashFloodDamageThreat": ["CONSIDERABLE"],
+				"BLOCKCHANNEL": ["EAS", "NWEM"],
+				"EAS-ORG": ["WXR"],
+				"VTEC": ["/O.NEW.KABQ.FF.W.0150.240720T0457Z-240720T0800Z/"],
+				"eventEndingTime": ["2024-07-20T08:00:00+00:00"],
+				"WEAHandling": ["Imminent Threat"],
+				"CMAMtext": ["NWS: FLASH FLOOD WARNING this area til 2:00 AM MDT. Avoid flooded areas."],
+				"CMAMlongtext": ["National Weather Service: A FLASH FLOOD WARNING is in effect for this area until 2:00 AM MDT. This is a dangerous and life-threatening situation. Do not attempt to travel unless you are fleeing an area subject to flooding or under an evacuation order."]
+			},
+			"replacedBy": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.76dfb6d14755f6854c893d149204f8883ada6978.001.1",
+			"replacedAt": "2024-07-20T01:52:00-06:00"
+		}
+	}, {
+		"id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1fd864ab533efbab9aa7f41d6e7debca79f0f52b.001.1",
+		"type": "Feature",
+		"geometry": {
+			"type": "Polygon",
+			"coordinates": [
+				[
+					[-100.84, 38.7],
+					[-100.83, 38.69],
+					[-100.93, 38.27],
+					[-101.12, 38.27],
+					[-101.13, 38.7],
+					[-100.84, 38.7]
+				]
+			]
+		},
+		"properties": {
+			"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1fd864ab533efbab9aa7f41d6e7debca79f0f52b.001.1",
+			"@type": "wx:Alert",
+			"id": "urn:oid:2.49.0.1.840.0.1fd864ab533efbab9aa7f41d6e7debca79f0f52b.001.1",
+			"areaDesc": "Scott, KS",
+			"geocode": {
+				"SAME": ["020171"],
+				"UGC": ["KSC171"]
+			},
+			"affectedZones": ["https://api.weather.gov/zones/county/KSC171"],
+			"references": [],
+			"sent": "2024-07-19T23:56:00-05:00",
+			"effective": "2024-07-19T23:56:00-05:00",
+			"onset": "2024-07-19T23:56:00-05:00",
+			"expires": "2024-07-20T00:45:00-05:00",
+			"ends": "2024-07-20T00:45:00-05:00",
+			"status": "Actual",
+			"messageType": "Alert",
+			"category": "Met",
+			"severity": "Severe",
+			"certainty": "Observed",
+			"urgency": "Immediate",
+			"event": "Severe Thunderstorm Warning",
+			"sender": "w-nws.webmaster@noaa.gov",
+			"senderName": "NWS Dodge City KS",
+			"headline": "Severe Thunderstorm Warning issued July 19 at 11:56PM CDT until July 20 at 12:45AM CDT by NWS Dodge City KS",
+			"description": "SVRDDC\n\nThe National Weather Service in Dodge City has issued a\n\n* Severe Thunderstorm Warning for...\nWestern Scott County in west central Kansas...\n\n* Until 1245 AM CDT.\n\n* At 1156 PM CDT, severe thunderstorms were located along a line\nextending from 8 miles east of Russell Springs to 10 miles west of\nScott State Lake to 8 miles north of Leoti, moving south at 40 mph.\n\nHAZARD...Two inch hail and 60 mph wind gusts.\n\nSOURCE...Radar indicated.\n\nIMPACT...People and animals outdoors will be injured. Expect hail\ndamage to roofs, siding, windows, and vehicles. Expect\nwind damage to roofs, siding, and trees.\n\n* Severe thunderstorms will be near...\nModoc and Scott State Lake around 1215 AM CDT.\n\nOther locations in the path of these severe thunderstorms include\nScott City and Shallow Water.",
+			"instruction": "For your protection move to an interior room on the lowest floor of a\nbuilding.",
+			"response": "Shelter",
+			"parameters": {
+				"AWIPSidentifier": ["SVRDDC"],
+				"WMOidentifier": ["WUUS53 KDDC 200456"],
+				"eventMotionDescription": ["2024-07-20T04:56:00-00:00...storm...347DEG...35KT...38.9,-101.03 38.7,-101.12 38.61,-101.37"],
+				"windThreat": ["RADAR INDICATED"],
+				"maxWindGust": ["60 MPH"],
+				"hailThreat": ["RADAR INDICATED"],
+				"maxHailSize": ["2.00"],
+				"thunderstormDamageThreat": ["CONSIDERABLE"],
+				"BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"],
+				"EAS-ORG": ["WXR"],
+				"VTEC": ["/O.NEW.KDDC.SV.W.0271.240720T0456Z-240720T0545Z/"],
+				"eventEndingTime": ["2024-07-20T05:45:00+00:00"]
+			},
+			"replacedBy": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2a5ee59d820157ec79ae9b2c5ef66faafeea13ef.001.1",
+			"replacedAt": "2024-07-20T00:35:00-05:00"
+		}
+	}, {
+		"id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.35ed2313715bdc1d5fd975784ec77193e5fdfdb8.001.1",
+		"type": "Feature",
+		"geometry": null,
+		"properties": {
+			"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.35ed2313715bdc1d5fd975784ec77193e5fdfdb8.001.1",
+			"@type": "wx:Alert",
+			"id": "urn:oid:2.49.0.1.840.0.35ed2313715bdc1d5fd975784ec77193e5fdfdb8.001.1",
+			"areaDesc": "Cheyenne, CO; Kit Carson, CO; Yuma, CO; Cheyenne, KS; Greeley, KS; Logan, KS; Rawlins, KS; Sherman, KS; Thomas, KS; Wallace, KS; Wichita, KS; Dundy, NE; Hitchcock, NE",
+			"geocode": {
+				"SAME": ["008017", "008063", "008125", "020023", "020071", "020109", "020153", "020181", "020193", "020199", "020203", "031057", "031087"],
+				"UGC": ["COC017", "COC063", "COC125", "KSC023", "KSC071", "KSC109", "KSC153", "KSC181", "KSC193", "KSC199", "KSC203", "NEC057", "NEC087"]
+			},
+			"affectedZones": ["https://api.weather.gov/zones/county/COC017", "https://api.weather.gov/zones/county/COC063", "https://api.weather.gov/zones/county/COC125", "https://api.weather.gov/zones/county/KSC023", "https://api.weather.gov/zones/county/KSC071", "https://api.weather.gov/zones/county/KSC109", "https://api.weather.gov/zones/county/KSC153", "https://api.weather.gov/zones/county/KSC181", "https://api.weather.gov/zones/county/KSC193", "https://api.weather.gov/zones/county/KSC199", "https://api.weather.gov/zones/county/KSC203", "https://api.weather.gov/zones/county/NEC057", "https://api.weather.gov/zones/county/NEC087"],
+			"references": [{
+				"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6863c5dc88b78d444eb4e08125d6797b466ac214.002.1",
+				"identifier": "urn:oid:2.49.0.1.840.0.6863c5dc88b78d444eb4e08125d6797b466ac214.002.1",
+				"sender": "w-nws.webmaster@noaa.gov",
+				"sent": "2024-07-19T20:18:00-06:00"
+			}],
+			"sent": "2024-07-19T22:55:00-06:00",
+			"effective": "2024-07-19T22:55:00-06:00",
+			"onset": "2024-07-19T22:55:00-06:00",
+			"expires": "2024-07-20T00:00:00-06:00",
+			"ends": "2024-07-19T23:00:00-06:00",
+			"status": "Actual",
+			"messageType": "Update",
+			"category": "Met",
+			"severity": "Severe",
+			"certainty": "Possible",
+			"urgency": "Future",
+			"event": "Severe Thunderstorm Watch",
+			"sender": "w-nws.webmaster@noaa.gov",
+			"senderName": "NWS Goodland KS",
+			"headline": "Severe Thunderstorm Watch issued July 19 at 10:55PM MDT until July 19 at 11:00PM MDT by NWS Goodland KS",
+			"description": "THE NATIONAL WEATHER SERVICE WILL ALLOW SEVERE THUNDERSTORM WATCH\n555 TO EXPIRE AT 11 PM MDT /MIDNIGHT CDT/ THIS EVENING FOR THE\nFOLLOWING AREAS\n\nIN COLORADO THIS ALLOWS TO EXPIRE 3 COUNTIES\n\nIN EAST CENTRAL COLORADO\n\nCHEYENNE              KIT CARSON\n\nIN NORTHEAST COLORADO\n\nYUMA\n\nIN KANSAS THIS ALLOWS TO EXPIRE 8 COUNTIES\n\nIN NORTHWEST KANSAS\n\nCHEYENNE              RAWLINS               SHERMAN\nTHOMAS\n\nIN WEST CENTRAL KANSAS\n\nGREELEY               LOGAN                 WALLACE\nWICHITA\n\nIN NEBRASKA THIS ALLOWS TO EXPIRE 2 COUNTIES\n\nIN SOUTHWEST NEBRASKA\n\nDUNDY                 HITCHCOCK\n\nTHIS INCLUDES THE CITIES OF ARAPAHOE, ATWOOD, BENKELMAN,\nBIRD CITY, BURLINGTON, CHEYENNE WELLS, COLBY, CULBERTSON,\nGOODLAND, LEOTI, OAKLEY, PALISADE, SHARON SPRINGS, ST. FRANCIS,\nSTRATTON NE, TRENTON, TRIBUNE, WRAY, AND YUMA.",
+			"instruction": null,
+			"response": "Monitor",
+			"parameters": {
+				"AWIPSidentifier": ["WCNGLD"],
+				"WMOidentifier": ["WWUS63 KGLD 200455 AAA"],
+				"BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"],
+				"EAS-ORG": ["WXR"],
+				"VTEC": ["/O.EXP.KGLD.SV.A.0555.000000T0000Z-240720T0500Z/"],
+				"eventEndingTime": ["2024-07-20T05:00:00+00:00"],
+				"expiredReferences": ["w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.86f048893624f50bf853eee7e4ccf7cd587fb794.001.1,2024-07-19T13:25:00-06:00"]
+			}
+		}
+	}, {
+		"id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.eadae77817e8cfdefdc4a1045175a84b255a92ea.001.1",
+		"type": "Feature",
+		"geometry": {
+			"type": "Polygon",
+			"coordinates": [
+				[
+					[-117.58, 37.37],
+					[-117.73, 37.4099999],
+					[-117.84, 37.47],
+					[-117.72, 37.51],
+					[-117.59, 37.5],
+					[-117.5, 37.46],
+					[-117.52, 37.4099999],
+					[-117.58, 37.37]
+				]
+			]
+		},
+		"properties": {
+			"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.eadae77817e8cfdefdc4a1045175a84b255a92ea.001.1",
+			"@type": "wx:Alert",
+			"id": "urn:oid:2.49.0.1.840.0.eadae77817e8cfdefdc4a1045175a84b255a92ea.001.1",
+			"areaDesc": "Esmeralda, NV",
+			"geocode": {
+				"SAME": ["032009"],
+				"UGC": ["NVC009"]
+			},
+			"affectedZones": ["https://api.weather.gov/zones/county/NVC009"],
+			"references": [{
+				"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.af8666d67f935a40c118d88263c54e178eab1828.001.1",
+				"identifier": "urn:oid:2.49.0.1.840.0.af8666d67f935a40c118d88263c54e178eab1828.001.1",
+				"sender": "w-nws.webmaster@noaa.gov",
+				"sent": "2024-07-19T20:39:00-07:00"
+			}],
+			"sent": "2024-07-19T21:54:00-07:00",
+			"effective": "2024-07-19T21:54:00-07:00",
+			"onset": "2024-07-19T21:54:00-07:00",
+			"expires": "2024-07-19T23:45:00-07:00",
+			"ends": "2024-07-19T23:45:00-07:00",
+			"status": "Actual",
+			"messageType": "Update",
+			"category": "Met",
+			"severity": "Minor",
+			"certainty": "Likely",
+			"urgency": "Expected",
+			"event": "Flood Advisory",
+			"sender": "w-nws.webmaster@noaa.gov",
+			"senderName": "NWS Las Vegas NV",
+			"headline": "Flood Advisory issued July 19 at 9:54PM PDT until July 19 at 11:45PM PDT by NWS Las Vegas NV",
+			"description": "* WHAT...Flooding caused by excessive rainfall continues.\n\n* WHERE...A portion of south central Nevada, including the following\ncounty, Esmeralda.\n\n* WHEN...Until 1145 PM PDT.\n\n* IMPACTS...Minor flooding in low-lying and poor drainage areas.\n\n* ADDITIONAL DETAILS...\n- At 953 PM PDT, Doppler radar indicated heavy rain due to\nthunderstorms. Minor flooding is ongoing or expected to begin\nshortly in the advisory area.\n- Some locations that will experience flooding include...\nNevada State Route 266 from mile markers 0 to 21\n- http://www.weather.gov/safety/flood",
+			"instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.\n\nBe especially cautious at night when it is harder to recognize the\ndangers of flooding.",
+			"response": "Avoid",
+			"parameters": {
+				"AWIPSidentifier": ["FLSVEF"],
+				"WMOidentifier": ["WGUS85 KVEF 200454"],
+				"NWSheadline": ["FLOOD ADVISORY REMAINS IN EFFECT UNTIL 1145 PM PDT THIS EVENING"],
+				"BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"],
+				"VTEC": ["/O.CON.KVEF.FA.Y.0027.000000T0000Z-240720T0645Z/"],
+				"eventEndingTime": ["2024-07-20T06:45:00+00:00"]
+			},
+			"replacedBy": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1d97dd8efc2ffbe59ba352f2a197597aaf15025f.001.1",
+			"replacedAt": "2024-07-19T23:37:00-07:00"
+		}
+	}, {
+		"id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ea74ee11e55a3057cdfc28a938c7d15ec25abc34.001.1",
+		"type": "Feature",
+		"geometry": {
+			"type": "Polygon",
+			"coordinates": [
+				[
+					[-101.5699999, 38.7],
+					[-101.13, 38.7],
+					[-101.13, 38.26],
+					[-101.5699999, 38.26],
+					[-101.5699999, 38.7]
+				]
+			]
+		},
+		"properties": {
+			"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ea74ee11e55a3057cdfc28a938c7d15ec25abc34.001.1",
+			"@type": "wx:Alert",
+			"id": "urn:oid:2.49.0.1.840.0.ea74ee11e55a3057cdfc28a938c7d15ec25abc34.001.1",
+			"areaDesc": "Wichita, KS",
+			"geocode": {
+				"SAME": ["020203"],
+				"UGC": ["KSC203"]
+			},
+			"affectedZones": ["https://api.weather.gov/zones/county/KSC203"],
+			"references": [],
+			"sent": "2024-07-19T23:52:00-05:00",
+			"effective": "2024-07-19T23:52:00-05:00",
+			"onset": "2024-07-19T23:52:00-05:00",
+			"expires": "2024-07-20T00:45:00-05:00",
+			"ends": "2024-07-20T00:45:00-05:00",
+			"status": "Actual",
+			"messageType": "Alert",
+			"category": "Met",
+			"severity": "Severe",
+			"certainty": "Observed",
+			"urgency": "Immediate",
+			"event": "Severe Thunderstorm Warning",
+			"sender": "w-nws.webmaster@noaa.gov",
+			"senderName": "NWS Goodland KS",
+			"headline": "Severe Thunderstorm Warning issued July 19 at 11:52PM CDT until July 20 at 12:45AM CDT by NWS Goodland KS",
+			"description": "SVRGLD\n\nThe National Weather Service in Goodland has issued a\n\n* Severe Thunderstorm Warning for...\nWichita County in west central Kansas...\n\n* Until 1245 AM CDT.\n\n* At 1152 PM CDT, severe thunderstorms were located along a line\nextending from 10 miles west of Scott State Lake to 14 miles south\nof Wallace, moving south at 35 mph.\n\nHAZARD...60 to 70 mph wind gusts.\n\nSOURCE...Radar indicated.\n\nIMPACT...Expect considerable tree damage. Damage is likely to\nmobile homes, roofs, and outbuildings.\n\n* Severe thunderstorms will be near...\nLeoti around 1210 AM CDT.\n\nThese storms have a history of producing 60 to 70 mph wind gusts,\nmainly along the leading edge of thunderstorm outflow, in advance of\nany rain.",
+			"instruction": "For your protection move to an interior room on the lowest floor of a\nbuilding.",
+			"response": "Shelter",
+			"parameters": {
+				"AWIPSidentifier": ["SVRGLD"],
+				"WMOidentifier": ["WUUS53 KGLD 200452"],
+				"eventMotionDescription": ["2024-07-20T04:52:00-00:00...storm...358DEG...31KT...38.7,-101.11 38.72,-101.5"],
+				"windThreat": ["OBSERVED"],
+				"maxWindGust": ["70 MPH"],
+				"hailThreat": ["RADAR INDICATED"],
+				"maxHailSize": ["Up to .75"],
+				"thunderstormDamageThreat": ["CONSIDERABLE"],
+				"BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"],
+				"EAS-ORG": ["WXR"],
+				"VTEC": ["/O.NEW.KGLD.SV.W.0285.240720T0452Z-240720T0545Z/"],
+				"eventEndingTime": ["2024-07-20T05:45:00+00:00"]
+			},
+			"replacedBy": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.34e8d731e4000847d00cb597cafd01c368873f2f.001.1",
+			"replacedAt": "2024-07-20T00:40:00-05:00"
+		}
+	}, {
+		"id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f385e648cacd8b628f8f706bc28307b357e9b2ec.002.1",
+		"type": "Feature",
+		"geometry": {
+			"type": "Polygon",
+			"coordinates": [
+				[
+					[-101.17, 36.5],
+					[-101.09, 36.46],
+					[-101.09, 36.4],
+					[-102.12, 35.83],
+					[-102.17, 35.97],
+					[-102.16, 36.4],
+					[-102.06, 36.5],
+					[-101.17, 36.5]
+				]
+			]
+		},
+		"properties": {
+			"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f385e648cacd8b628f8f706bc28307b357e9b2ec.002.1",
+			"@type": "wx:Alert",
+			"id": "urn:oid:2.49.0.1.840.0.f385e648cacd8b628f8f706bc28307b357e9b2ec.002.1",
+			"areaDesc": "Hansford, TX; Moore, TX; Sherman, TX",
+			"geocode": {
+				"SAME": ["048195", "048341", "048421"],
+				"UGC": ["TXC195", "TXC341", "TXC421"]
+			},
+			"affectedZones": ["https://api.weather.gov/zones/county/TXC195", "https://api.weather.gov/zones/county/TXC341", "https://api.weather.gov/zones/county/TXC421"],
+			"references": [{
+				"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.eb036374573b008b7636f01d753536a6c1daa425.001.1",
+				"identifier": "urn:oid:2.49.0.1.840.0.eb036374573b008b7636f01d753536a6c1daa425.001.1",
+				"sender": "w-nws.webmaster@noaa.gov",
+				"sent": "2024-07-19T23:25:00-05:00"
+			}],
+			"sent": "2024-07-19T23:51:00-05:00",
+			"effective": "2024-07-19T23:51:00-05:00",
+			"onset": "2024-07-19T23:51:00-05:00",
+			"expires": "2024-07-20T00:30:00-05:00",
+			"ends": "2024-07-20T00:30:00-05:00",
+			"status": "Actual",
+			"messageType": "Update",
+			"category": "Met",
+			"severity": "Severe",
+			"certainty": "Observed",
+			"urgency": "Immediate",
+			"event": "Severe Thunderstorm Warning",
+			"sender": "w-nws.webmaster@noaa.gov",
+			"senderName": "NWS Amarillo TX",
+			"headline": "Severe Thunderstorm Warning issued July 19 at 11:51PM CDT until July 20 at 12:30AM CDT by NWS Amarillo TX",
+			"description": "At 1150 PM CDT, automated weather equipment reported severe\nthunderstorms were located along a line extending from 10 miles\nnortheast of Gruver to near Cactus, moving southeast at 30 mph.\n\nHAZARD...60 mph wind gusts.\n\nSOURCE...Automated weather equipment north of Sunray reported a 63\nmph wind gust at 11:40 PM.\n\nIMPACT...Minor damage to roofs, siding, and trees is possible.\n\nLocations impacted include...\nStratford, Cactus, Sunray, Gruver, and Texhoma.",
+			"instruction": "For your protection move to an interior room on the lowest floor of a\nbuilding.\n\nTorrential rainfall is occurring with these storms, and may lead to\nflash flooding. Do not drive your vehicle through flooded roadways.",
+			"response": "Shelter",
+			"parameters": {
+				"AWIPSidentifier": ["SVSAMA"],
+				"WMOidentifier": ["WWUS54 KAMA 200451"],
+				"NWSheadline": ["A SEVERE THUNDERSTORM WARNING REMAINS IN EFFECT UNTIL 1230 AM CDT FOR NORTHERN HANSFORD...SHERMAN AND NORTHWESTERN MOORE COUNTIES"],
+				"eventMotionDescription": ["2024-07-20T04:50:00-00:00...storm...314DEG...24KT...36.37,-101.3 36.01,-101.98"],
+				"windThreat": ["RADAR INDICATED"],
+				"maxWindGust": ["60 MPH"],
+				"hailThreat": ["RADAR INDICATED"],
+				"maxHailSize": ["Up to .75"],
+				"BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"],
+				"EAS-ORG": ["WXR"],
+				"VTEC": ["/O.CON.KAMA.SV.W.0232.000000T0000Z-240720T0530Z/"],
+				"eventEndingTime": ["2024-07-20T05:30:00+00:00"]
+			},
+			"replacedBy": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.87d7c080af1ecb29532d1554e6a5cb8974a233a0.001.1",
+			"replacedAt": "2024-07-20T00:25:00-05:00"
+		}
+	}, {
+		"id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f385e648cacd8b628f8f706bc28307b357e9b2ec.001.1",
+		"type": "Feature",
+		"geometry": {
+			"type": "Polygon",
+			"coordinates": [
+				[
+					[-101.17, 36.5],
+					[-101.09, 36.46],
+					[-101.09, 36.4],
+					[-102.12, 35.83],
+					[-102.17, 35.97],
+					[-102.16, 36.4],
+					[-102.06, 36.5],
+					[-101.17, 36.5]
+				]
+			]
+		},
+		"properties": {
+			"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f385e648cacd8b628f8f706bc28307b357e9b2ec.001.1",
+			"@type": "wx:Alert",
+			"id": "urn:oid:2.49.0.1.840.0.f385e648cacd8b628f8f706bc28307b357e9b2ec.001.1",
+			"areaDesc": "Texas, OK",
+			"geocode": {
+				"SAME": ["040139"],
+				"UGC": ["OKC139"]
+			},
+			"affectedZones": ["https://api.weather.gov/zones/county/OKC139"],
+			"references": [{
+				"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.eb036374573b008b7636f01d753536a6c1daa425.001.1",
+				"identifier": "urn:oid:2.49.0.1.840.0.eb036374573b008b7636f01d753536a6c1daa425.001.1",
+				"sender": "w-nws.webmaster@noaa.gov",
+				"sent": "2024-07-19T23:25:00-05:00"
+			}],
+			"sent": "2024-07-19T23:51:00-05:00",
+			"effective": "2024-07-19T23:51:00-05:00",
+			"onset": "2024-07-19T23:51:00-05:00",
+			"expires": "2024-07-20T00:06:56-05:00",
+			"ends": "2024-07-20T00:30:00-05:00",
+			"status": "Actual",
+			"messageType": "Cancel",
+			"category": "Met",
+			"severity": "Minor",
+			"certainty": "Observed",
+			"urgency": "Past",
+			"event": "Severe Thunderstorm Warning",
+			"sender": "w-nws.webmaster@noaa.gov",
+			"senderName": "NWS Amarillo TX",
+			"headline": "The Severe Thunderstorm Warning has been cancelled.",
+			"description": "The Severe Thunderstorm Warning has been cancelled and is no longer in effect.",
+			"instruction": null,
+			"response": "AllClear",
+			"parameters": {
+				"AWIPSidentifier": ["SVSAMA"],
+				"WMOidentifier": ["WWUS54 KAMA 200451"],
+				"NWSheadline": ["THE SEVERE THUNDERSTORM WARNING FOR SOUTHWESTERN TEXAS COUNTY IS CANCELLED"],
+				"eventMotionDescription": ["2024-07-20T04:50:00-00:00...storm...314DEG...24KT...36.37,-101.3 36.01,-101.98"],
+				"BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"],
+				"EAS-ORG": ["WXR"],
+				"VTEC": ["/O.CAN.KAMA.SV.W.0232.000000T0000Z-240720T0530Z/"],
+				"eventEndingTime": ["2024-07-20T05:30:00+00:00"]
+			}
+		}
+	}, {
+		"id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0-KEEPALIVE-8615",
+		"type": "Feature",
+		"geometry": null,
+		"properties": {
+			"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0-KEEPALIVE-8615",
+			"@type": "wx:Alert",
+			"id": "urn:oid:2.49.0.1.840.0-KEEPALIVE-8615",
+			"areaDesc": "Montgomery",
+			"geocode": {
+				"SAME": ["024031"],
+				"UGC": ["MDC031"]
+			},
+			"affectedZones": ["https://api.weather.gov/zones/county/MDC031"],
+			"references": [],
+			"sent": "2024-07-20T04:49:38+00:00",
+			"effective": "2024-07-20T04:49:38+00:00",
+			"onset": null,
+			"expires": "2024-07-20T04:59:38+00:00",
+			"ends": null,
+			"status": "Test",
+			"messageType": "Alert",
+			"category": "Met",
+			"severity": "Unknown",
+			"certainty": "Unknown",
+			"urgency": "Unknown",
+			"event": "Test Message",
+			"sender": "w-nws.webmaster@noaa.gov",
+			"senderName": "NWS",
+			"headline": null,
+			"description": "Monitoring message only. Please disregard.",
+			"instruction": "Monitoring message only. Please disregard.",
+			"response": "None",
+			"parameters": {
+				"AWIPSidentifier": ["KEPWBC"],
+				"WMOidentifier": ["NZUS91 KWBC 200449"],
+				"BLOCKCHANNEL": ["CMAS", "EAS", "NWEM"]
+			}
+		}
+	}, {
+		"id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.77782dfd96a8525bb7e0265e0c2220aeb17cc55b.001.1",
+		"type": "Feature",
+		"geometry": null,
+		"properties": {
+			"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.77782dfd96a8525bb7e0265e0c2220aeb17cc55b.001.1",
+			"@type": "wx:Alert",
+			"id": "urn:oid:2.49.0.1.840.0.77782dfd96a8525bb7e0265e0c2220aeb17cc55b.001.1",
+			"areaDesc": "Guam; Rota; Tinian; Saipan",
+			"geocode": {
+				"SAME": ["066010", "069100", "069120", "069110"],
+				"UGC": ["GUZ001", "MPZ001", "MPZ002", "MPZ003"]
+			},
+			"affectedZones": ["https://api.weather.gov/zones/forecast/GUZ001", "https://api.weather.gov/zones/forecast/MPZ001", "https://api.weather.gov/zones/forecast/MPZ002", "https://api.weather.gov/zones/forecast/MPZ003"],
+			"references": [],
+			"sent": "2024-07-20T14:47:00+10:00",
+			"effective": "2024-07-20T14:47:00+10:00",
+			"onset": "2024-07-20T14:47:00+10:00",
+			"expires": "2024-07-21T15:00:00+10:00",
+			"ends": null,
+			"status": "Actual",
+			"messageType": "Alert",
+			"category": "Met",
+			"severity": "Moderate",
+			"certainty": "Observed",
+			"urgency": "Expected",
+			"event": "Special Weather Statement",
+			"sender": "w-nws.webmaster@noaa.gov",
+			"senderName": "NWS Tiyan GU",
+			"headline": "Special Weather Statement issued July 20 at 2:47PM ChST by NWS Tiyan GU",
+			"description": "Invest 93W has been issued by the Joint Typhoon Warning Center (JTWC)\nfor a system located near 10.8N 153.6E, 620nm east-southeast of Guam\nand 260 nm north-northeast of Weno, Chuuk. Scatterometry at 2130Z\nindicated mostly winds of 17 to 23 mph with a localized area of 29\nmph along the sharp trough axis. Currently there are no observations\nwhich indicate a surface circulation, but visible satellite shows\na low-level cloud pattern which may indicate a circulation. Invest\n93W is expected to track west-northwest towards Guam and the northern\nMariana Islands. Currently it is moving west at around 22 mph but is\nnot expected to develop into a tropical cyclone anytime soon.\n\nExpected impacts are gusty winds up to 30 mph and possibly locally\nheavy showers impacting all of the Marianas, but models show impacts\nto be more likely for Guam and Rota with the peak of the impacts to\nbe around afternoon timeframe.\n\nHAZARD...Wind gusts up to 30 mph and possible locally heavy showers.\n\nSOURCE...JTWC, scatterometry and satellite data.\n\nIMPACT...Gusty winds could blow around unsecured objects. Heavy\nshowers could cause flooding in low lying areas.",
+			"instruction": "Secure tents and tarps for outdoor activites.",
+			"response": "Execute",
+			"parameters": {
+				"AWIPSidentifier": ["SPSGUM"],
+				"WMOidentifier": ["WWMY80 PGUM 200447"],
+				"NWSheadline": ["SHOWERS AND GUSTY WINDS TO IMPACT GUAM AND THE NORTHERN MARIANAS SUNDAY"],
+				"BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"],
+				"EAS-ORG": ["WXR"]
+			}
+		}
+	}, {
+		"id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2fbfe0c998a541d2e8da3463e5395ef3272fbaf6.001.1",
+		"type": "Feature",
+		"geometry": {
+			"type": "Polygon",
+			"coordinates": [
+				[
+					[-101.09, 36.07],
+					[-101.39, 35.74],
+					[-101.56, 35.63],
+					[-102.1, 35.62],
+					[-102.15, 35.97],
+					[-101.86, 36.11],
+					[-101.77, 36.1599999],
+					[-101.6, 36.25],
+					[-101.44, 36.34],
+					[-101.27, 36.5],
+					[-101.25, 36.5],
+					[-101.09, 36.07]
+				]
+			]
+		},
+		"properties": {
+			"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2fbfe0c998a541d2e8da3463e5395ef3272fbaf6.001.1",
+			"@type": "wx:Alert",
+			"id": "urn:oid:2.49.0.1.840.0.2fbfe0c998a541d2e8da3463e5395ef3272fbaf6.001.1",
+			"areaDesc": "Hansford, TX; Hutchinson, TX; Moore, TX; Sherman, TX",
+			"geocode": {
+				"SAME": ["048195", "048233", "048341", "048421"],
+				"UGC": ["TXC195", "TXC233", "TXC341", "TXC421"]
+			},
+			"affectedZones": ["https://api.weather.gov/zones/county/TXC195", "https://api.weather.gov/zones/county/TXC233", "https://api.weather.gov/zones/county/TXC341", "https://api.weather.gov/zones/county/TXC421"],
+			"references": [],
+			"sent": "2024-07-19T23:47:00-05:00",
+			"effective": "2024-07-19T23:47:00-05:00",
+			"onset": "2024-07-19T23:47:00-05:00",
+			"expires": "2024-07-20T00:45:00-05:00",
+			"ends": "2024-07-20T00:45:00-05:00",
+			"status": "Actual",
+			"messageType": "Alert",
+			"category": "Met",
+			"severity": "Severe",
+			"certainty": "Observed",
+			"urgency": "Immediate",
+			"event": "Severe Thunderstorm Warning",
+			"sender": "w-nws.webmaster@noaa.gov",
+			"senderName": "NWS Amarillo TX",
+			"headline": "Severe Thunderstorm Warning issued July 19 at 11:47PM CDT until July 20 at 12:45AM CDT by NWS Amarillo TX",
+			"description": "SVRAMA\n\nThe National Weather Service in Amarillo has issued a\n\n* Severe Thunderstorm Warning for...\nNorthwestern Hutchinson County in the Panhandle of Texas...\nHansford County in the Panhandle of Texas...\nSoutheastern Sherman County in the Panhandle of Texas...\nMoore County in the Panhandle of Texas...\n\n* Until 1245 AM CDT.\n\n* At 1147 PM CDT, severe thunderstorms were located along a line\nextending from 17 miles northwest of Spearman to 3 miles north of\nGruver to 10 miles north of Morse to Sunray to 7 miles southwest of\nCactus, moving south at 35 mph.\n\nHAZARD...60 mph wind gusts.\n\nSOURCE...Radar indicated.\n\nIMPACT...Minor damage to roofs, siding, and trees is possible.\n\n* Locations impacted include...\nDumas, Spearman, Cactus, Fritch, Sunray, Stinnett, Gruver, Sanford,\nPringle, Morse, Four Way, Masterson, and Lake Meredith.",
+			"instruction": "For your protection move to an interior room on the lowest floor of a\nbuilding.\n\nTorrential rainfall is occurring with these storms, and may lead to\nflash flooding. Do not drive your vehicle through flooded roadways.",
+			"response": "Shelter",
+			"parameters": {
+				"AWIPSidentifier": ["SVRAMA"],
+				"WMOidentifier": ["WUUS54 KAMA 200447"],
+				"eventMotionDescription": ["2024-07-20T04:47:00-00:00...storm...346DEG...29KT...36.4,-101.37 36.3,-101.43 36.2,-101.53 36.07,-101.67 36.01,-101.8 35.95,-102.06"],
+				"windThreat": ["RADAR INDICATED"],
+				"maxWindGust": ["60 MPH"],
+				"hailThreat": ["RADAR INDICATED"],
+				"maxHailSize": ["Up to .75"],
+				"BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"],
+				"EAS-ORG": ["WXR"],
+				"VTEC": ["/O.NEW.KAMA.SV.W.0233.240720T0447Z-240720T0545Z/"],
+				"eventEndingTime": ["2024-07-20T05:45:00+00:00"]
+			},
+			"replacedBy": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.095632c1a4a43af567749e3a1f3fe06609522000.001.1",
+			"replacedAt": "2024-07-20T00:32:00-05:00"
+		}
+	}, {
+		"id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5f39c66ce3241635c73f02a1065cb34c9536ec94.001.1",
+		"type": "Feature",
+		"geometry": {
+			"type": "Polygon",
+			"coordinates": [
+				[
+					[-80.34, 36.65],
+					[-80.35, 36.5],
+					[-80.45, 36.49],
+					[-80.75, 36.51],
+					[-80.7, 36.6599999],
+					[-80.34, 36.65]
+				]
+			]
+		},
+		"properties": {
+			"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5f39c66ce3241635c73f02a1065cb34c9536ec94.001.1",
+			"@type": "wx:Alert",
+			"id": "urn:oid:2.49.0.1.840.0.5f39c66ce3241635c73f02a1065cb34c9536ec94.001.1",
+			"areaDesc": "Stokes, NC; Surry, NC; Carroll, VA; Patrick, VA",
+			"geocode": {
+				"SAME": ["037169", "037171", "051035", "051141"],
+				"UGC": ["NCC169", "NCC171", "VAC035", "VAC141"]
+			},
+			"affectedZones": ["https://api.weather.gov/zones/county/NCC169", "https://api.weather.gov/zones/county/NCC171", "https://api.weather.gov/zones/county/VAC035", "https://api.weather.gov/zones/county/VAC141"],
+			"references": [{
+				"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.917cac87e6703f04ad090d24f106b3dac8f9aa28.001.1",
+				"identifier": "urn:oid:2.49.0.1.840.0.917cac87e6703f04ad090d24f106b3dac8f9aa28.001.1",
+				"sender": "w-nws.webmaster@noaa.gov",
+				"sent": "2024-07-19T23:33:00-04:00"
+			}],
+			"sent": "2024-07-20T00:46:00-04:00",
+			"effective": "2024-07-20T00:46:00-04:00",
+			"onset": "2024-07-20T00:46:00-04:00",
+			"expires": "2024-07-20T05:45:00-04:00",
+			"ends": "2024-07-20T05:45:00-04:00",
+			"status": "Actual",
+			"messageType": "Update",
+			"category": "Met",
+			"severity": "Severe",
+			"certainty": "Likely",
+			"urgency": "Immediate",
+			"event": "Flash Flood Warning",
+			"sender": "w-nws.webmaster@noaa.gov",
+			"senderName": "NWS Blacksburg VA",
+			"headline": "Flash Flood Warning issued July 20 at 12:46AM EDT until July 20 at 5:45AM EDT by NWS Blacksburg VA",
+			"description": "At 1246 AM EDT, Doppler radar indicated thunderstorms producing\nheavy rain across the warned area. Up to 4 inches of rain have\nfallen. The expected rainfall rate is 1 to 2 inches in 1 hour.\nAdditional rainfall amounts up to 1.5 inches are possible in the\nwarned area. Flash flooding is ongoing or expected to begin shortly.\n\nHAZARD...Flash flooding caused by thunderstorms.\n\nSOURCE...Radar.\n\nIMPACT...Flash flooding of small creeks and streams, urban areas,\nhighways, streets and underpasses as well as other poor\ndrainage and low-lying areas.\n\nSome locations that will experience flash flooding include...\nMount Airy...                      Flat Rock...\nArarat...                          Cana...\nFrancisco...                       Fancy Gap...\nWoodville...\n\nThis includes the following streams and drainages...\nArarat River, Archies Creek and Big Creek.",
+			"instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.\n\nBe especially cautious at night when it is harder to recognize the\ndangers of flooding.\n\nWhen it is safe to do so, please send your reports of flooding,\nincluding mudslides or flooded roads, to the National Weather\nService by calling toll free at 1...8 6 6...2 1 5...4 3 2 4. Reports\nand pictures can also be shared on the National Weather Service\nBlacksburg Facebook page and on Twitter.",
+			"response": "Avoid",
+			"parameters": {
+				"AWIPSidentifier": ["FFSRNK"],
+				"WMOidentifier": ["WGUS71 KRNK 200446"],
+				"NWSheadline": ["FLASH FLOOD WARNING REMAINS IN EFFECT UNTIL 545 AM EDT EARLY THIS MORNING FOR NORTHWESTERN STOKES, NORTHEASTERN SURRY, SOUTHEASTERN CARROLL AND SOUTHWESTERN PATRICK COUNTIES"],
+				"flashFloodDetection": ["RADAR INDICATED"],
+				"BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"],
+				"EAS-ORG": ["WXR"],
+				"VTEC": ["/O.CON.KRNK.FF.W.0022.000000T0000Z-240720T0945Z/"],
+				"eventEndingTime": ["2024-07-20T09:45:00+00:00"]
+			},
+			"replacedBy": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6f0ae64a6b9f8f7b23350996e618dc5f3e1a0790.001.1",
+			"replacedAt": "2024-07-20T03:58:00-04:00"
+		}
+	}, {
+		"id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f01cd1d32ad258357b80b68247afa1d214a8f99f.001.1",
+		"type": "Feature",
+		"geometry": {
+			"type": "Polygon",
+			"coordinates": [
+				[
+					[-94.6, 29.5],
+					[-94.5699999, 29.53],
+					[-94.52, 29.57],
+					[-94.4599999, 29.58],
+					[-94.41, 29.61],
+					[-94.35, 29.61],
+					[-94.35, 29.6],
+					[-94.35, 29.56],
+					[-94.37, 29.56],
+					[-94.37, 29.55],
+					[-94.38, 29.55],
+					[-94.39, 29.55],
+					[-94.39, 29.54],
+					[-94.59, 29.47],
+					[-94.6, 29.49],
+					[-94.6, 29.5]
+				]
+			]
+		},
+		"properties": {
+			"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f01cd1d32ad258357b80b68247afa1d214a8f99f.001.1",
+			"@type": "wx:Alert",
+			"id": "urn:oid:2.49.0.1.840.0.f01cd1d32ad258357b80b68247afa1d214a8f99f.001.1",
+			"areaDesc": "Chambers, TX; Galveston, TX",
+			"geocode": {
+				"SAME": ["048071", "048167"],
+				"UGC": ["TXC071", "TXC167"]
+			},
+			"affectedZones": ["https://api.weather.gov/zones/county/TXC071", "https://api.weather.gov/zones/county/TXC167"],
+			"references": [],
+			"sent": "2024-07-19T23:46:00-05:00",
+			"effective": "2024-07-19T23:46:00-05:00",
+			"onset": "2024-07-19T23:46:00-05:00",
+			"expires": "2024-07-20T02:45:00-05:00",
+			"ends": "2024-07-20T02:45:00-05:00",
+			"status": "Actual",
+			"messageType": "Alert",
+			"category": "Met",
+			"severity": "Minor",
+			"certainty": "Likely",
+			"urgency": "Expected",
+			"event": "Flood Advisory",
+			"sender": "w-nws.webmaster@noaa.gov",
+			"senderName": "NWS Houston/Galveston TX",
+			"headline": "Flood Advisory issued July 19 at 11:46PM CDT until July 20 at 2:45AM CDT by NWS Houston/Galveston TX",
+			"description": "* WHAT...Urban and small stream flooding caused by excessive\nrainfall is expected.\n\n* WHERE...A portion of southeast Texas, including the following\ncounties, Chambers and Galveston.\n\n* WHEN...Until 245 AM CDT.\n\n* IMPACTS...Minor flooding in low-lying and poor drainage areas.\n\n* ADDITIONAL DETAILS...\n- At 1146 PM CDT, Doppler radar indicated heavy rain due to\nthunderstorms. This will cause urban and small stream\nflooding. Between 1 and 2 inches of rain have fallen.\n- Additional rainfall amounts of 1 to 2 inches are expected\nover the area. This additional rain will result in minor\nflooding.\n- Some locations that will experience flooding include...\nGilchrist, Rollover Pass, High Island and Bolivar Peninsula.\n- http://www.weather.gov/safety/flood",
+			"instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.\n\nBe especially cautious at night when it is harder to recognize the\ndangers of flooding.",
+			"response": "Avoid",
+			"parameters": {
+				"AWIPSidentifier": ["FLSHGX"],
+				"WMOidentifier": ["WGUS84 KHGX 200446"],
+				"NWSheadline": ["FLOOD ADVISORY IN EFFECT UNTIL 245 AM CDT SATURDAY"],
+				"BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"],
+				"VTEC": ["/O.NEW.KHGX.FA.Y.0102.240720T0446Z-240720T0745Z/"],
+				"eventEndingTime": ["2024-07-20T07:45:00+00:00"]
+			}
+		}
+	}, {
+		"id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.05b14a740539b3f985c71d2f645820325a917ab5.001.1",
+		"type": "Feature",
+		"geometry": null,
+		"properties": {
+			"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.05b14a740539b3f985c71d2f645820325a917ab5.001.1",
+			"@type": "wx:Alert",
+			"id": "urn:oid:2.49.0.1.840.0.05b14a740539b3f985c71d2f645820325a917ab5.001.1",
+			"areaDesc": "Guam; Rota; Tinian; Saipan",
+			"geocode": {
+				"SAME": ["066010", "069100", "069120", "069110"],
+				"UGC": ["GUZ001", "MPZ001", "MPZ002", "MPZ003"]
+			},
+			"affectedZones": ["https://api.weather.gov/zones/forecast/GUZ001", "https://api.weather.gov/zones/forecast/MPZ001", "https://api.weather.gov/zones/forecast/MPZ002", "https://api.weather.gov/zones/forecast/MPZ003"],
+			"references": [],
+			"sent": "2024-07-20T14:44:00+10:00",
+			"effective": "2024-07-20T14:44:00+10:00",
+			"onset": "2024-07-20T14:44:00+10:00",
+			"expires": "2024-07-20T16:45:00+10:00",
+			"ends": null,
+			"status": "Actual",
+			"messageType": "Alert",
+			"category": "Met",
+			"severity": "Moderate",
+			"certainty": "Observed",
+			"urgency": "Expected",
+			"event": "Special Weather Statement",
+			"sender": "w-nws.webmaster@noaa.gov",
+			"senderName": "NWS Tiyan GU",
+			"headline": "Special Weather Statement issued July 20 at 2:44PM ChST by NWS Tiyan GU",
+			"description": "Invest 93W has been issued by the Joint Typhoon Warning Center (JTWC)\nfor a system located near 10.8N 153.6E, 620nm east-southeast of Guam\nand 260 nm north-northeast of Weno, Chuuk. Scatterometry at 2130Z\nindicated mostly winds of 17 to 23 mph with a localized area of 29\nmph along the sharp trough axis. Currently there are no observations\nwhich indicate a surface circulation, but visible satellite shows\na low-level cloud pattern which may indicate a circulation. Invest\n93W is expected to track west-northwest towards Guam and the northern\nMariana Islands. Currently it is moving west at around 22 mph but is\nnot expected to develop into a tropical cyclone anytime soon.\n\nExpected impacts are gusty winds up to 30 mph and possibly locally\nheavy showers impacting all of the Marianas, but models show impacts\nto be more likely for Guam and Rota with the peak of the impacts to\nbe around afternoon timeframe.\n\nHAZARD...Wind gusts up to 30 mph and possible locally heavy showers.\n\nSOURCE...JTWC, scatterometry and satellite data.\n\nIMPACT...Gusty winds could blow around unsecured objects. Heavy\nshowers could cause flooding in low lying areas.",
+			"instruction": "Secure tents and tarps for outdoor activites.",
+			"response": "Execute",
+			"parameters": {
+				"AWIPSidentifier": ["SPSGUM"],
+				"WMOidentifier": ["WWMY80 PGUM 200444"],
+				"NWSheadline": ["SHOWERS AND GUSTY WINDS TO IMPACT GUAM AND THE NORTHERN MARIANAS SUNDAY"],
+				"BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"],
+				"EAS-ORG": ["WXR"]
+			}
+		}
+	}, {
+		"id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c43318909f1ef3aee4120d01bdc1a4f76c65d214.001.1",
+		"type": "Feature",
+		"geometry": {
+			"type": "Polygon",
+			"coordinates": [
+				[
+					[-77.91, 33.97],
+					[-77.92, 33.97],
+					[-77.94, 33.92],
+					[-77.95, 33.9099999],
+					[-77.9599999, 33.84],
+					[-78.01, 33.86],
+					[-78.01, 33.88],
+					[-78.02, 33.87],
+					[-78.02, 33.89],
+					[-78.08, 33.9],
+					[-77.89, 34.04],
+					[-77.91, 33.97]
+				]
+			]
+		},
+		"properties": {
+			"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c43318909f1ef3aee4120d01bdc1a4f76c65d214.001.1",
+			"@type": "wx:Alert",
+			"id": "urn:oid:2.49.0.1.840.0.c43318909f1ef3aee4120d01bdc1a4f76c65d214.001.1",
+			"areaDesc": "Coastal New Hanover; Coastal Brunswick",
+			"geocode": {
+				"SAME": ["037129", "037019"],
+				"UGC": ["NCZ108", "NCZ110"]
+			},
+			"affectedZones": ["https://api.weather.gov/zones/forecast/NCZ108", "https://api.weather.gov/zones/forecast/NCZ110"],
+			"references": [],
+			"sent": "2024-07-20T00:44:00-04:00",
+			"effective": "2024-07-20T00:44:00-04:00",
+			"onset": "2024-07-20T00:44:00-04:00",
+			"expires": "2024-07-20T01:15:00-04:00",
+			"ends": null,
+			"status": "Actual",
+			"messageType": "Alert",
+			"category": "Met",
+			"severity": "Moderate",
+			"certainty": "Observed",
+			"urgency": "Expected",
+			"event": "Special Weather Statement",
+			"sender": "w-nws.webmaster@noaa.gov",
+			"senderName": "NWS Wilmington NC",
+			"headline": "Special Weather Statement issued July 20 at 12:44AM EDT by NWS Wilmington NC",
+			"description": "At 1244 AM EDT, Doppler radar was tracking a strong thunderstorm near\nYaupon Beach, moving northeast at 35 mph.\n\nHAZARD...Wind gusts up to 40 mph.\n\nSOURCE...Radar indicated.\n\nIMPACT...Gusty winds could knock down tree limbs and blow around\nunsecured objects.\n\nLocations impacted include...\nCarolina Beach, Kure Beach, Caswell Beach, Bald Head Island,\nSouthport, Fort Fisher, and Dosher Memorial Hospital.",
+			"instruction": "If outdoors, consider seeking shelter inside a building.\n\nTorrential rainfall is also occurring with this storm and may lead to\nlocalized flooding. Do not drive your vehicle through flooded\nroadways.\n\nContinuous cloud to ground lightning is occurring with this storm.\nMove indoors immediately. Lightning is one of nature's leading\nkillers. Remember, if you can hear thunder, you are close enough to\nbe struck by lightning.",
+			"response": "Execute",
+			"parameters": {
+				"AWIPSidentifier": ["SPSILM"],
+				"WMOidentifier": ["WWUS82 KILM 200444"],
+				"NWSheadline": ["A STRONG THUNDERSTORM WILL IMPACT SOUTH CENTRAL NEW HANOVER AND SOUTHEASTERN BRUNSWICK COUNTIES THROUGH 115 AM EDT"],
+				"eventMotionDescription": ["2024-07-20T04:44:00-00:00...storm...228DEG...32KT...33.82,-78.11"],
+				"maxWindGust": ["40 MPH"],
+				"maxHailSize": ["0.00"],
+				"BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"],
+				"EAS-ORG": ["WXR"]
+			}
+		}
+	}, {
+		"id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.71be728c3b4b987263969bcbd1bd8463731ca1a5.006.1",
+		"type": "Feature",
+		"geometry": null,
+		"properties": {
+			"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.71be728c3b4b987263969bcbd1bd8463731ca1a5.006.1",
+			"@type": "wx:Alert",
+			"id": "urn:oid:2.49.0.1.840.0.71be728c3b4b987263969bcbd1bd8463731ca1a5.006.1",
+			"areaDesc": "San Bernardino County Mountains; Riverside County Mountains",
+			"geocode": {
+				"SAME": ["006071", "006065"],
+				"UGC": ["CAZ055", "CAZ056"]
+			},
+			"affectedZones": ["https://api.weather.gov/zones/forecast/CAZ055", "https://api.weather.gov/zones/forecast/CAZ056"],
+			"references": [{
+				"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3515c59fbd99e6ab23dafb01a98fb90e9dbcc322.006.1",
+				"identifier": "urn:oid:2.49.0.1.840.0.3515c59fbd99e6ab23dafb01a98fb90e9dbcc322.006.1",
+				"sender": "w-nws.webmaster@noaa.gov",
+				"sent": "2024-07-19T13:26:00-07:00"
+			}],
+			"sent": "2024-07-19T21:43:00-07:00",
+			"effective": "2024-07-19T21:43:00-07:00",
+			"onset": "2024-07-19T21:43:00-07:00",
+			"expires": "2024-07-20T05:45:00-07:00",
+			"ends": "2024-07-21T21:00:00-07:00",
+			"status": "Actual",
+			"messageType": "Update",
+			"category": "Met",
+			"severity": "Moderate",
+			"certainty": "Likely",
+			"urgency": "Expected",
+			"event": "Heat Advisory",
+			"sender": "w-nws.webmaster@noaa.gov",
+			"senderName": "NWS San Diego CA",
+			"headline": "Heat Advisory issued July 19 at 9:43PM PDT until July 21 at 9:00PM PDT by NWS San Diego CA",
+			"description": "* WHAT...Temperatures up to 100 at elevations below 4,000 feet. Low\ntemperatures as high as 75 on desert slopes.\n\n* WHERE...Riverside County Mountains and San Bernardino County\nMountains.\n\n* WHEN...Until 9 PM PDT Sunday.\n\n* IMPACTS...Hot temperatures may cause heat illnesses.",
+			"instruction": "Drink plenty of fluids, stay in an air-conditioned room, stay out of\nthe sun, and check up on relatives and neighbors.",
+			"response": "Execute",
+			"parameters": {
+				"AWIPSidentifier": ["NPWSGX"],
+				"WMOidentifier": ["WWUS76 KSGX 200443"],
+				"NWSheadline": ["HEAT ADVISORY REMAINS IN EFFECT UNTIL 9 PM PDT SUNDAY"],
+				"BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"],
+				"VTEC": ["/O.CON.KSGX.HT.Y.0006.000000T0000Z-240722T0400Z/"],
+				"eventEndingTime": ["2024-07-22T04:00:00+00:00"],
+				"expiredReferences": ["w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.6d48094d4fe163908a0bb36ba56bac62b240bdff.006.1,2024-07-19T03:11:00-07:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.6be6d5f29ad9426356a518dffde6905bb41c01f3.006.1,2024-07-18T20:48:00-07:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.38c0696a33d6a4a0b870e071776d4200a85bedfa.006.1,2024-07-18T13:34:00-07:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.9f857c1714b589cd69286ac34155ab76577a837b.006.1,2024-07-18T02:21:00-07:00"]
+			}
+		}
+	}, {
+		"id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.71be728c3b4b987263969bcbd1bd8463731ca1a5.002.1",
+		"type": "Feature",
+		"geometry": null,
+		"properties": {
+			"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.71be728c3b4b987263969bcbd1bd8463731ca1a5.002.1",
+			"@type": "wx:Alert",
+			"id": "urn:oid:2.49.0.1.840.0.71be728c3b4b987263969bcbd1bd8463731ca1a5.002.1",
+			"areaDesc": "San Gorgonio Pass Near Banning",
+			"geocode": {
+				"SAME": ["006065"],
+				"UGC": ["CAZ065"]
+			},
+			"affectedZones": ["https://api.weather.gov/zones/forecast/CAZ065"],
+			"references": [{
+				"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3515c59fbd99e6ab23dafb01a98fb90e9dbcc322.002.1",
+				"identifier": "urn:oid:2.49.0.1.840.0.3515c59fbd99e6ab23dafb01a98fb90e9dbcc322.002.1",
+				"sender": "w-nws.webmaster@noaa.gov",
+				"sent": "2024-07-19T13:26:00-07:00"
+			}],
+			"sent": "2024-07-19T21:43:00-07:00",
+			"effective": "2024-07-19T21:43:00-07:00",
+			"onset": "2024-07-19T21:43:00-07:00",
+			"expires": "2024-07-20T05:45:00-07:00",
+			"ends": "2024-07-21T21:00:00-07:00",
+			"status": "Actual",
+			"messageType": "Update",
+			"category": "Met",
+			"severity": "Severe",
+			"certainty": "Likely",
+			"urgency": "Expected",
+			"event": "Excessive Heat Warning",
+			"sender": "w-nws.webmaster@noaa.gov",
+			"senderName": "NWS San Diego CA",
+			"headline": "Excessive Heat Warning issued July 19 at 9:43PM PDT until July 21 at 9:00PM PDT by NWS San Diego CA",
+			"description": "* WHAT...Dangerously hot conditions with temperatures up to 113. Low\ntemperatures as high as 90.\n\n* WHERE...San Gorgonio Pass Near Banning.\n\n* WHEN...Until 9 PM PDT Sunday.\n\n* IMPACTS...Heat related illnesses increase significantly during\nextreme heat events.",
+			"instruction": "Drink plenty of fluids, stay in an air-conditioned room, stay out of\nthe sun, and check up on relatives and neighbors.",
+			"response": "Execute",
+			"parameters": {
+				"AWIPSidentifier": ["NPWSGX"],
+				"WMOidentifier": ["WWUS76 KSGX 200443"],
+				"NWSheadline": ["EXCESSIVE HEAT WARNING REMAINS IN EFFECT UNTIL 9 PM PDT SUNDAY"],
+				"BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"],
+				"VTEC": ["/O.CON.KSGX.EH.W.0006.000000T0000Z-240722T0400Z/"],
+				"eventEndingTime": ["2024-07-22T04:00:00+00:00"],
+				"expiredReferences": ["w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.6d48094d4fe163908a0bb36ba56bac62b240bdff.002.1,2024-07-19T03:11:00-07:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.6be6d5f29ad9426356a518dffde6905bb41c01f3.002.1,2024-07-18T20:48:00-07:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.38c0696a33d6a4a0b870e071776d4200a85bedfa.002.1,2024-07-18T13:34:00-07:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.9f857c1714b589cd69286ac34155ab76577a837b.002.2,2024-07-18T02:21:00-07:00"]
+			}
+		}
+	}, {
+		"id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.71be728c3b4b987263969bcbd1bd8463731ca1a5.007.1",
+		"type": "Feature",
+		"geometry": null,
+		"properties": {
+			"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.71be728c3b4b987263969bcbd1bd8463731ca1a5.007.1",
+			"@type": "wx:Alert",
+			"id": "urn:oid:2.49.0.1.840.0.71be728c3b4b987263969bcbd1bd8463731ca1a5.007.1",
+			"areaDesc": "San Diego County Mountains",
+			"geocode": {
+				"SAME": ["006073"],
+				"UGC": ["CAZ058"]
+			},
+			"affectedZones": ["https://api.weather.gov/zones/forecast/CAZ058"],
+			"references": [{
+				"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3515c59fbd99e6ab23dafb01a98fb90e9dbcc322.007.1",
+				"identifier": "urn:oid:2.49.0.1.840.0.3515c59fbd99e6ab23dafb01a98fb90e9dbcc322.007.1",
+				"sender": "w-nws.webmaster@noaa.gov",
+				"sent": "2024-07-19T13:26:00-07:00"
+			}],
+			"sent": "2024-07-19T21:43:00-07:00",
+			"effective": "2024-07-19T21:43:00-07:00",
+			"onset": "2024-07-19T21:43:00-07:00",
+			"expires": "2024-07-20T05:45:00-07:00",
+			"ends": "2024-07-21T21:00:00-07:00",
+			"status": "Actual",
+			"messageType": "Update",
+			"category": "Met",
+			"severity": "Moderate",
+			"certainty": "Likely",
+			"urgency": "Expected",
+			"event": "Heat Advisory",
+			"sender": "w-nws.webmaster@noaa.gov",
+			"senderName": "NWS San Diego CA",
+			"headline": "Heat Advisory issued July 19 at 9:43PM PDT until July 21 at 9:00PM PDT by NWS San Diego CA",
+			"description": "* WHAT...Temperatures up to 101 at elevations below 4,000 feet. Low\ntemperatures as high as 75 on desert slopes.\n\n* WHERE...San Diego County Mountains.\n\n* WHEN...Until 9 PM PDT Sunday.\n\n* IMPACTS...Hot temperatures may cause heat illnesses.",
+			"instruction": "Drink plenty of fluids, stay in an air-conditioned room, stay out of\nthe sun, and check up on relatives and neighbors.",
+			"response": "Execute",
+			"parameters": {
+				"AWIPSidentifier": ["NPWSGX"],
+				"WMOidentifier": ["WWUS76 KSGX 200443"],
+				"NWSheadline": ["HEAT ADVISORY REMAINS IN EFFECT UNTIL 9 PM PDT SUNDAY"],
+				"BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"],
+				"VTEC": ["/O.CON.KSGX.HT.Y.0006.000000T0000Z-240722T0400Z/"],
+				"eventEndingTime": ["2024-07-22T04:00:00+00:00"],
+				"expiredReferences": ["w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.6d48094d4fe163908a0bb36ba56bac62b240bdff.007.1,2024-07-19T03:11:00-07:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.6be6d5f29ad9426356a518dffde6905bb41c01f3.007.1,2024-07-18T20:48:00-07:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.38c0696a33d6a4a0b870e071776d4200a85bedfa.007.1,2024-07-18T13:34:00-07:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.9f857c1714b589cd69286ac34155ab76577a837b.007.1,2024-07-18T02:21:00-07:00"]
+			}
+		}
+	}, {
+		"id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.71be728c3b4b987263969bcbd1bd8463731ca1a5.003.1",
+		"type": "Feature",
+		"geometry": null,
+		"properties": {
+			"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.71be728c3b4b987263969bcbd1bd8463731ca1a5.003.1",
+			"@type": "wx:Alert",
+			"id": "urn:oid:2.49.0.1.840.0.71be728c3b4b987263969bcbd1bd8463731ca1a5.003.1",
+			"areaDesc": "Apple and Lucerne Valleys",
+			"geocode": {
+				"SAME": ["006071"],
+				"UGC": ["CAZ060"]
+			},
+			"affectedZones": ["https://api.weather.gov/zones/forecast/CAZ060"],
+			"references": [{
+				"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3515c59fbd99e6ab23dafb01a98fb90e9dbcc322.003.1",
+				"identifier": "urn:oid:2.49.0.1.840.0.3515c59fbd99e6ab23dafb01a98fb90e9dbcc322.003.1",
+				"sender": "w-nws.webmaster@noaa.gov",
+				"sent": "2024-07-19T13:26:00-07:00"
+			}],
+			"sent": "2024-07-19T21:43:00-07:00",
+			"effective": "2024-07-19T21:43:00-07:00",
+			"onset": "2024-07-20T11:00:00-07:00",
+			"expires": "2024-07-20T05:45:00-07:00",
+			"ends": "2024-07-21T21:00:00-07:00",
+			"status": "Actual",
+			"messageType": "Update",
+			"category": "Met",
+			"severity": "Severe",
+			"certainty": "Likely",
+			"urgency": "Expected",
+			"event": "Excessive Heat Warning",
+			"sender": "w-nws.webmaster@noaa.gov",
+			"senderName": "NWS San Diego CA",
+			"headline": "Excessive Heat Warning issued July 19 at 9:43PM PDT until July 21 at 9:00PM PDT by NWS San Diego CA",
+			"description": "* WHAT...Dangerously hot conditions with temperatures up to 109\nexpected. Low temperatures as high as 80.\n\n* WHERE...Apple and Lucerne Valleys.\n\n* WHEN...From 11 AM Saturday to 9 PM PDT Sunday.\n\n* IMPACTS...Heat related illnesses increase significantly during\nextreme heat events.",
+			"instruction": "Drink plenty of fluids, stay in an air-conditioned room, stay out of\nthe sun, and check up on relatives and neighbors.",
+			"response": "Execute",
+			"parameters": {
+				"AWIPSidentifier": ["NPWSGX"],
+				"WMOidentifier": ["WWUS76 KSGX 200443"],
+				"NWSheadline": ["EXCESSIVE HEAT WARNING REMAINS IN EFFECT FROM 11 AM SATURDAY TO 9 PM PDT SUNDAY"],
+				"BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"],
+				"VTEC": ["/O.CON.KSGX.EH.W.0006.240720T1800Z-240722T0400Z/"],
+				"eventEndingTime": ["2024-07-22T04:00:00+00:00"],
+				"expiredReferences": ["w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.6d48094d4fe163908a0bb36ba56bac62b240bdff.003.1,2024-07-19T03:11:00-07:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.6be6d5f29ad9426356a518dffde6905bb41c01f3.003.1,2024-07-18T20:48:00-07:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.38c0696a33d6a4a0b870e071776d4200a85bedfa.003.1,2024-07-18T13:34:00-07:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.9f857c1714b589cd69286ac34155ab76577a837b.003.2,2024-07-18T02:21:00-07:00"]
+			}
+		}
+	}, {
+		"id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.71be728c3b4b987263969bcbd1bd8463731ca1a5.004.1",
+		"type": "Feature",
+		"geometry": null,
+		"properties": {
+			"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.71be728c3b4b987263969bcbd1bd8463731ca1a5.004.1",
+			"@type": "wx:Alert",
+			"id": "urn:oid:2.49.0.1.840.0.71be728c3b4b987263969bcbd1bd8463731ca1a5.004.1",
+			"areaDesc": "San Bernardino and Riverside County Valleys-The Inland Empire",
+			"geocode": {
+				"SAME": ["006065", "006071"],
+				"UGC": ["CAZ048"]
+			},
+			"affectedZones": ["https://api.weather.gov/zones/forecast/CAZ048"],
+			"references": [{
+				"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3515c59fbd99e6ab23dafb01a98fb90e9dbcc322.004.1",
+				"identifier": "urn:oid:2.49.0.1.840.0.3515c59fbd99e6ab23dafb01a98fb90e9dbcc322.004.1",
+				"sender": "w-nws.webmaster@noaa.gov",
+				"sent": "2024-07-19T13:26:00-07:00"
+			}],
+			"sent": "2024-07-19T21:43:00-07:00",
+			"effective": "2024-07-19T21:43:00-07:00",
+			"onset": "2024-07-19T21:43:00-07:00",
+			"expires": "2024-07-20T05:45:00-07:00",
+			"ends": "2024-07-21T21:00:00-07:00",
+			"status": "Actual",
+			"messageType": "Update",
+			"category": "Met",
+			"severity": "Moderate",
+			"certainty": "Likely",
+			"urgency": "Expected",
+			"event": "Heat Advisory",
+			"sender": "w-nws.webmaster@noaa.gov",
+			"senderName": "NWS San Diego CA",
+			"headline": "Heat Advisory issued July 19 at 9:43PM PDT until July 21 at 9:00PM PDT by NWS San Diego CA",
+			"description": "* WHAT...Temperatures up to 106. Low temperatures as high as 74.\n\n* WHERE...San Bernardino and Riverside County Valleys-The Inland\nEmpire.\n\n* WHEN...Until 9 PM PDT Sunday.\n\n* IMPACTS...Hot temperatures may cause heat illnesses.",
+			"instruction": "Drink plenty of fluids, stay in an air-conditioned room, stay out of\nthe sun, and check up on relatives and neighbors.",
+			"response": "Execute",
+			"parameters": {
+				"AWIPSidentifier": ["NPWSGX"],
+				"WMOidentifier": ["WWUS76 KSGX 200443"],
+				"NWSheadline": ["HEAT ADVISORY REMAINS IN EFFECT UNTIL 9 PM PDT SUNDAY"],
+				"BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"],
+				"VTEC": ["/O.CON.KSGX.HT.Y.0006.000000T0000Z-240722T0400Z/"],
+				"eventEndingTime": ["2024-07-22T04:00:00+00:00"],
+				"expiredReferences": ["w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.6d48094d4fe163908a0bb36ba56bac62b240bdff.004.1,2024-07-19T03:11:00-07:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.6be6d5f29ad9426356a518dffde6905bb41c01f3.004.1,2024-07-18T20:48:00-07:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.38c0696a33d6a4a0b870e071776d4200a85bedfa.004.1,2024-07-18T13:34:00-07:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.9f857c1714b589cd69286ac34155ab76577a837b.004.1,2024-07-18T02:21:00-07:00"]
+			}
+		}
+	}, {
+		"id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.71be728c3b4b987263969bcbd1bd8463731ca1a5.005.1",
+		"type": "Feature",
+		"geometry": null,
+		"properties": {
+			"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.71be728c3b4b987263969bcbd1bd8463731ca1a5.005.1",
+			"@type": "wx:Alert",
+			"id": "urn:oid:2.49.0.1.840.0.71be728c3b4b987263969bcbd1bd8463731ca1a5.005.1",
+			"areaDesc": "San Diego County Inland Valleys",
+			"geocode": {
+				"SAME": ["006073"],
+				"UGC": ["CAZ050"]
+			},
+			"affectedZones": ["https://api.weather.gov/zones/forecast/CAZ050"],
+			"references": [{
+				"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3515c59fbd99e6ab23dafb01a98fb90e9dbcc322.005.1",
+				"identifier": "urn:oid:2.49.0.1.840.0.3515c59fbd99e6ab23dafb01a98fb90e9dbcc322.005.1",
+				"sender": "w-nws.webmaster@noaa.gov",
+				"sent": "2024-07-19T13:26:00-07:00"
+			}],
+			"sent": "2024-07-19T21:43:00-07:00",
+			"effective": "2024-07-19T21:43:00-07:00",
+			"onset": "2024-07-19T21:43:00-07:00",
+			"expires": "2024-07-20T05:45:00-07:00",
+			"ends": "2024-07-21T21:00:00-07:00",
+			"status": "Actual",
+			"messageType": "Update",
+			"category": "Met",
+			"severity": "Moderate",
+			"certainty": "Likely",
+			"urgency": "Expected",
+			"event": "Heat Advisory",
+			"sender": "w-nws.webmaster@noaa.gov",
+			"senderName": "NWS San Diego CA",
+			"headline": "Heat Advisory issued July 19 at 9:43PM PDT until July 21 at 9:00PM PDT by NWS San Diego CA",
+			"description": "* WHAT...Temperatures up to 100 in eastern valleys. Low temperatures\nas high as 74.\n\n* WHERE...San Diego County Valleys.\n\n* WHEN...Until 9 PM PDT Sunday.\n\n* IMPACTS...Hot temperatures may cause heat illnesses.",
+			"instruction": "Drink plenty of fluids, stay in an air-conditioned room, stay out of\nthe sun, and check up on relatives and neighbors.",
+			"response": "Execute",
+			"parameters": {
+				"AWIPSidentifier": ["NPWSGX"],
+				"WMOidentifier": ["WWUS76 KSGX 200443"],
+				"NWSheadline": ["HEAT ADVISORY REMAINS IN EFFECT UNTIL 9 PM PDT SUNDAY"],
+				"BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"],
+				"VTEC": ["/O.CON.KSGX.HT.Y.0006.000000T0000Z-240722T0400Z/"],
+				"eventEndingTime": ["2024-07-22T04:00:00+00:00"],
+				"expiredReferences": ["w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.6d48094d4fe163908a0bb36ba56bac62b240bdff.005.1,2024-07-19T03:11:00-07:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.6be6d5f29ad9426356a518dffde6905bb41c01f3.005.1,2024-07-18T20:48:00-07:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.38c0696a33d6a4a0b870e071776d4200a85bedfa.005.1,2024-07-18T13:34:00-07:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.9f857c1714b589cd69286ac34155ab76577a837b.005.1,2024-07-18T02:21:00-07:00"]
+			}
+		}
+	}, {
+		"id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.71be728c3b4b987263969bcbd1bd8463731ca1a5.001.1",
+		"type": "Feature",
+		"geometry": null,
+		"properties": {
+			"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.71be728c3b4b987263969bcbd1bd8463731ca1a5.001.1",
+			"@type": "wx:Alert",
+			"id": "urn:oid:2.49.0.1.840.0.71be728c3b4b987263969bcbd1bd8463731ca1a5.001.1",
+			"areaDesc": "Coachella Valley; San Diego County Deserts",
+			"geocode": {
+				"SAME": ["006065", "006073"],
+				"UGC": ["CAZ061", "CAZ062"]
+			},
+			"affectedZones": ["https://api.weather.gov/zones/forecast/CAZ061", "https://api.weather.gov/zones/forecast/CAZ062"],
+			"references": [{
+				"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3515c59fbd99e6ab23dafb01a98fb90e9dbcc322.001.1",
+				"identifier": "urn:oid:2.49.0.1.840.0.3515c59fbd99e6ab23dafb01a98fb90e9dbcc322.001.1",
+				"sender": "w-nws.webmaster@noaa.gov",
+				"sent": "2024-07-19T13:26:00-07:00"
+			}],
+			"sent": "2024-07-19T21:43:00-07:00",
+			"effective": "2024-07-19T21:43:00-07:00",
+			"onset": "2024-07-19T21:43:00-07:00",
+			"expires": "2024-07-20T05:45:00-07:00",
+			"ends": "2024-07-21T21:00:00-07:00",
+			"status": "Actual",
+			"messageType": "Update",
+			"category": "Met",
+			"severity": "Severe",
+			"certainty": "Likely",
+			"urgency": "Expected",
+			"event": "Excessive Heat Warning",
+			"sender": "w-nws.webmaster@noaa.gov",
+			"senderName": "NWS San Diego CA",
+			"headline": "Excessive Heat Warning issued July 19 at 9:43PM PDT until July 21 at 9:00PM PDT by NWS San Diego CA",
+			"description": "* WHAT...Dangerously hot conditions with temperatures up to 117. Low\ntemperatures as high as 92.\n\n* WHERE...Coachella Valley and San Diego County Deserts.\n\n* WHEN...Until 9 PM PDT Sunday.\n\n* IMPACTS...Heat related illnesses increase significantly during\nextreme heat events.",
+			"instruction": "Drink plenty of fluids, stay in an air-conditioned room, stay out of\nthe sun, and check up on relatives and neighbors.",
+			"response": "Execute",
+			"parameters": {
+				"AWIPSidentifier": ["NPWSGX"],
+				"WMOidentifier": ["WWUS76 KSGX 200443"],
+				"NWSheadline": ["EXCESSIVE HEAT WARNING REMAINS IN EFFECT UNTIL 9 PM PDT SUNDAY"],
+				"BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"],
+				"VTEC": ["/O.CON.KSGX.EH.W.0006.000000T0000Z-240722T0400Z/"],
+				"eventEndingTime": ["2024-07-22T04:00:00+00:00"],
+				"expiredReferences": ["w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.6d48094d4fe163908a0bb36ba56bac62b240bdff.001.1,2024-07-19T03:11:00-07:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.6be6d5f29ad9426356a518dffde6905bb41c01f3.001.1,2024-07-18T20:48:00-07:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.38c0696a33d6a4a0b870e071776d4200a85bedfa.001.1,2024-07-18T13:34:00-07:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.9f857c1714b589cd69286ac34155ab76577a837b.001.2,2024-07-18T02:21:00-07:00"]
+			}
+		}
+	}, {
+		"id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0eb93ea0e4988d9a1761d4406253d80bd4169214.001.1",
+		"type": "Feature",
+		"geometry": {
+			"type": "Polygon",
+			"coordinates": [
+				[
+					[-102.17, 39.38],
+					[-102.08, 39.57],
+					[-101.04, 39.13],
+					[-100.81, 39.12],
+					[-100.81, 39.09],
+					[-100.8199999, 39.02],
+					[-101.13, 38.7],
+					[-101.45, 38.71],
+					[-101.97, 38.81],
+					[-102.19, 39],
+					[-102.3199999, 39.09],
+					[-102.17, 39.38]
+				]
+			]
+		},
+		"properties": {
+			"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0eb93ea0e4988d9a1761d4406253d80bd4169214.001.1",
+			"@type": "wx:Alert",
+			"id": "urn:oid:2.49.0.1.840.0.0eb93ea0e4988d9a1761d4406253d80bd4169214.001.1",
+			"areaDesc": "Greeley, KS; Wichita, KS",
+			"geocode": {
+				"SAME": ["020071", "020203"],
+				"UGC": ["KSC071", "KSC203"]
+			},
+			"affectedZones": ["https://api.weather.gov/zones/county/KSC071", "https://api.weather.gov/zones/county/KSC203"],
+			"references": [{
+				"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.82bd1560ab37303438bccdd2cc0f5e341dc56bcf.001.1",
+				"identifier": "urn:oid:2.49.0.1.840.0.82bd1560ab37303438bccdd2cc0f5e341dc56bcf.001.1",
+				"sender": "w-nws.webmaster@noaa.gov",
+				"sent": "2024-07-19T22:01:00-06:00"
+			}],
+			"sent": "2024-07-19T22:19:00-06:00",
+			"effective": "2024-07-19T22:19:00-06:00",
+			"onset": "2024-07-19T22:19:00-06:00",
+			"expires": "2024-07-19T22:35:00-06:00",
+			"ends": "2024-07-19T23:00:00-06:00",
+			"status": "Actual",
+			"messageType": "Cancel",
+			"category": "Met",
+			"severity": "Minor",
+			"certainty": "Observed",
+			"urgency": "Past",
+			"event": "Severe Thunderstorm Warning",
+			"sender": "w-nws.webmaster@noaa.gov",
+			"senderName": "NWS Goodland KS",
+			"headline": "The Severe Thunderstorm Warning has been cancelled.",
+			"description": "The Severe Thunderstorm Warning has been cancelled and is no longer in effect.",
+			"instruction": null,
+			"response": "AllClear",
+			"parameters": {
+				"AWIPSidentifier": ["SVSGLD"],
+				"WMOidentifier": ["WWUS53 KGLD 200419"],
+				"NWSheadline": ["THE SEVERE THUNDERSTORM WARNING FOR WICHITA AND NORTHERN GREELEY COUNTIES IS CANCELLED"],
+				"eventMotionDescription": ["2024-07-20T04:18:00-00:00...storm...022DEG...40KT...39.34,-102.05 38.9,-101.03"],
+				"BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"],
+				"EAS-ORG": ["WXR"],
+				"VTEC": ["/O.CAN.KGLD.SV.W.0284.000000T0000Z-240720T0500Z/"],
+				"eventEndingTime": ["2024-07-20T05:00:00+00:00"]
+			}
+		}
+	}, {
+		"id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0eb93ea0e4988d9a1761d4406253d80bd4169214.002.1",
+		"type": "Feature",
+		"geometry": {
+			"type": "Polygon",
+			"coordinates": [
+				[
+					[-102.17, 39.38],
+					[-102.08, 39.57],
+					[-101.04, 39.13],
+					[-100.81, 39.12],
+					[-100.81, 39.09],
+					[-100.8199999, 39.02],
+					[-101.13, 38.7],
+					[-101.45, 38.71],
+					[-101.97, 38.81],
+					[-102.19, 39],
+					[-102.3199999, 39.09],
+					[-102.17, 39.38]
+				]
+			]
+		},
+		"properties": {
+			"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0eb93ea0e4988d9a1761d4406253d80bd4169214.002.1",
+			"@type": "wx:Alert",
+			"id": "urn:oid:2.49.0.1.840.0.0eb93ea0e4988d9a1761d4406253d80bd4169214.002.1",
+			"areaDesc": "Cheyenne, CO; Kit Carson, CO; Logan, KS; Sherman, KS; Thomas, KS; Wallace, KS",
+			"geocode": {
+				"SAME": ["008017", "008063", "020109", "020181", "020193", "020199"],
+				"UGC": ["COC017", "COC063", "KSC109", "KSC181", "KSC193", "KSC199"]
+			},
+			"affectedZones": ["https://api.weather.gov/zones/county/COC017", "https://api.weather.gov/zones/county/COC063", "https://api.weather.gov/zones/county/KSC109", "https://api.weather.gov/zones/county/KSC181", "https://api.weather.gov/zones/county/KSC193", "https://api.weather.gov/zones/county/KSC199"],
+			"references": [{
+				"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.82bd1560ab37303438bccdd2cc0f5e341dc56bcf.001.1",
+				"identifier": "urn:oid:2.49.0.1.840.0.82bd1560ab37303438bccdd2cc0f5e341dc56bcf.001.1",
+				"sender": "w-nws.webmaster@noaa.gov",
+				"sent": "2024-07-19T22:01:00-06:00"
+			}],
+			"sent": "2024-07-19T22:19:00-06:00",
+			"effective": "2024-07-19T22:19:00-06:00",
+			"onset": "2024-07-19T22:19:00-06:00",
+			"expires": "2024-07-19T23:00:00-06:00",
+			"ends": "2024-07-19T23:00:00-06:00",
+			"status": "Actual",
+			"messageType": "Update",
+			"category": "Met",
+			"severity": "Severe",
+			"certainty": "Observed",
+			"urgency": "Immediate",
+			"event": "Severe Thunderstorm Warning",
+			"sender": "w-nws.webmaster@noaa.gov",
+			"senderName": "NWS Goodland KS",
+			"headline": "Severe Thunderstorm Warning issued July 19 at 10:19PM MDT until July 19 at 11:00PM MDT by NWS Goodland KS",
+			"description": "At 1018 PM MDT/1118 PM CDT/, severe thunderstorms were located along\na line extending from Kanorado to 7 miles east of Russell Springs,\nmoving southwest at 45 mph.\n\nHAZARD...70 mph wind gusts.\n\nSOURCE...The National Weather Service in Goodland measured wind\ngusts up to 67 mph at 958 pm MDT.\n\nIMPACT...Expect considerable tree damage. Damage is likely to mobile\nhomes, roofs, and outbuildings.\n\nThese severe storms will be near...\nRussell Springs around 1125 PM CDT.\nWallace around 1030 PM MDT.\nSharon Springs around 1040 PM MDT.\nWeskan around 1050 PM MDT.\n\nOther locations impacted by these severe thunderstorms include Edson.\n\nThis includes the following highways...\nInterstate 70 in Kansas between mile markers 0 and 28.",
+			"instruction": "For your protection move to an interior room on the lowest floor of a\nbuilding.",
+			"response": "Shelter",
+			"parameters": {
+				"AWIPSidentifier": ["SVSGLD"],
+				"WMOidentifier": ["WWUS53 KGLD 200419"],
+				"NWSheadline": ["A SEVERE THUNDERSTORM WARNING REMAINS IN EFFECT UNTIL 1100 PM MDT/MIDNIGHT CDT/ FOR NORTHEASTERN CHEYENNE AND EASTERN KIT CARSON COUNTIES IN EAST CENTRAL COLORADO...WALLACE COUNTY IN WEST CENTRAL KANSAS...SOUTHWESTERN THOMAS COUNTY IN NORTHWESTERN KANSAS...LOGAN COUNTY IN WEST CENTRAL KANSAS AND SHERMAN COUNTIES IN NORTHWESTERN KANSAS"],
+				"eventMotionDescription": ["2024-07-20T04:18:00-00:00...storm...022DEG...40KT...39.34,-102.05 38.9,-101.03"],
+				"windThreat": ["OBSERVED"],
+				"maxWindGust": ["70 MPH"],
+				"hailThreat": ["RADAR INDICATED"],
+				"maxHailSize": ["Up to .75"],
+				"thunderstormDamageThreat": ["CONSIDERABLE"],
+				"BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"],
+				"EAS-ORG": ["WXR"],
+				"VTEC": ["/O.CON.KGLD.SV.W.0284.000000T0000Z-240720T0500Z/"],
+				"eventEndingTime": ["2024-07-20T05:00:00+00:00"]
+			},
+			"replacedBy": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3bb3d45c340bed8b9afc2b537a606580dd2b7af0.001.1",
+			"replacedAt": "2024-07-19T22:57:00-06:00"
+		}
+	}, {
+		"id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.fe9b7970a1c9f73f8c228f7d52e9ff04353e7d3a.001.1",
+		"type": "Feature",
+		"geometry": {
+			"type": "Polygon",
+			"coordinates": [
+				[
+					[-101.23, 39.54],
+					[-100.98, 39.42],
+					[-100.72, 39.31],
+					[-100.69, 39.13],
+					[-101.05, 39.13],
+					[-102.03, 39.64],
+					[-102.04, 39.86],
+					[-101.94, 39.86],
+					[-101.69, 39.76],
+					[-101.23, 39.54]
+				]
+			]
+		},
+		"properties": {
+			"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.fe9b7970a1c9f73f8c228f7d52e9ff04353e7d3a.001.1",
+			"@type": "wx:Alert",
+			"id": "urn:oid:2.49.0.1.840.0.fe9b7970a1c9f73f8c228f7d52e9ff04353e7d3a.001.1",
+			"areaDesc": "Cheyenne, KS; Rawlins, KS; Sheridan, KS; Sherman, KS; Thomas, KS",
+			"geocode": {
+				"SAME": ["020023", "020153", "020179", "020181", "020193"],
+				"UGC": ["KSC023", "KSC153", "KSC179", "KSC181", "KSC193"]
+			},
+			"affectedZones": ["https://api.weather.gov/zones/county/KSC023", "https://api.weather.gov/zones/county/KSC153", "https://api.weather.gov/zones/county/KSC179", "https://api.weather.gov/zones/county/KSC181", "https://api.weather.gov/zones/county/KSC193"],
+			"references": [{
+				"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2028f87df7fd5c833d30d27740729fc519611f2c.001.1",
+				"identifier": "urn:oid:2.49.0.1.840.0.2028f87df7fd5c833d30d27740729fc519611f2c.001.1",
+				"sender": "w-nws.webmaster@noaa.gov",
+				"sent": "2024-07-19T21:32:00-06:00"
+			}, {
+				"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a8d39a541e15f28cac55a8376d175aaa806f832e.001.1",
+				"identifier": "urn:oid:2.49.0.1.840.0.a8d39a541e15f28cac55a8376d175aaa806f832e.001.1",
+				"sender": "w-nws.webmaster@noaa.gov",
+				"sent": "2024-07-19T21:40:00-06:00"
+			}],
+			"sent": "2024-07-19T22:12:00-06:00",
+			"effective": "2024-07-19T22:12:00-06:00",
+			"onset": "2024-07-19T22:12:00-06:00",
+			"expires": "2024-07-19T22:30:00-06:00",
+			"ends": "2024-07-19T22:30:00-06:00",
+			"status": "Actual",
+			"messageType": "Update",
+			"category": "Met",
+			"severity": "Severe",
+			"certainty": "Observed",
+			"urgency": "Immediate",
+			"event": "Severe Thunderstorm Warning",
+			"sender": "w-nws.webmaster@noaa.gov",
+			"senderName": "NWS Goodland KS",
+			"headline": "Severe Thunderstorm Warning issued July 19 at 10:12PM MDT until July 19 at 10:30PM MDT by NWS Goodland KS",
+			"description": "At 1012 PM MDT/1112 PM CDT/, severe thunderstorms were located along\na line extending from 9 miles southwest of St. Francis to 9 miles\nnorth of Monument, moving southwest at 20 mph.\n\nHAZARD...70 mph wind gusts and nickel size hail.\n\nSOURCE...Radar indicated.\n\nIMPACT...Expect considerable tree damage. Damage is likely to mobile\nhomes, roofs, and outbuildings.\n\nThese severe storms will be near...\nBrewster around 1120 PM CDT.\n\nOther locations impacted by these severe thunderstorms include\nWheeler, Mingo, and Halford.\n\nThis includes Interstate 70 in Kansas between mile markers 33 and 75.",
+			"instruction": "For your protection move to an interior room on the lowest floor of a\nbuilding.",
+			"response": "Shelter",
+			"parameters": {
+				"AWIPSidentifier": ["SVSGLD"],
+				"WMOidentifier": ["WWUS53 KGLD 200412"],
+				"NWSheadline": ["A SEVERE THUNDERSTORM WARNING REMAINS IN EFFECT UNTIL 1030 PM MDT/1130 PM CDT/ FOR SOUTHERN CHEYENNE...THOMAS...SOUTHWESTERN SHERIDAN...SOUTHWESTERN RAWLINS AND NORTHEASTERN SHERMAN COUNTIES IN NORTHWESTERN KANSAS"],
+				"eventMotionDescription": ["2024-07-20T04:12:00-00:00...storm...024DEG...19KT...39.66,-101.89 39.23,-101.02"],
+				"windThreat": ["RADAR INDICATED"],
+				"maxWindGust": ["70 MPH"],
+				"hailThreat": ["OBSERVED"],
+				"maxHailSize": ["0.88"],
+				"thunderstormDamageThreat": ["CONSIDERABLE"],
+				"BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"],
+				"EAS-ORG": ["WXR"],
+				"VTEC": ["/O.CON.KGLD.SV.W.0283.000000T0000Z-240720T0430Z/"],
+				"eventEndingTime": ["2024-07-20T04:30:00+00:00"]
+			},
+			"replacedBy": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c3d860d12a15e676090ab1a2ce55f3315fda4ac3.001.1",
+			"replacedAt": "2024-07-19T22:24:00-06:00"
+		}
+	}, {
+		"id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3634b107a84ea2f7b5aadaf767184c65fca642f1.001.1",
+		"type": "Feature",
+		"geometry": null,
+		"properties": {
+			"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3634b107a84ea2f7b5aadaf767184c65fca642f1.001.1",
+			"@type": "wx:Alert",
+			"id": "urn:oid:2.49.0.1.840.0.3634b107a84ea2f7b5aadaf767184c65fca642f1.001.1",
+			"areaDesc": "West Slopes Sacramento Mountains Below 7500 Feet; Sacramento Mountains Above 7500 Feet; East Slopes Sacramento Mountains Below 7500 Feet",
+			"geocode": {
+				"SAME": ["035035"],
+				"UGC": ["NMZ414", "NMZ415", "NMZ416"]
+			},
+			"affectedZones": ["https://api.weather.gov/zones/forecast/NMZ414", "https://api.weather.gov/zones/forecast/NMZ415", "https://api.weather.gov/zones/forecast/NMZ416"],
+			"references": [{
+				"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.debce165dca5f8e5f9511c81c84accdfa946225d.001.2",
+				"identifier": "urn:oid:2.49.0.1.840.0.debce165dca5f8e5f9511c81c84accdfa946225d.001.2",
+				"sender": "w-nws.webmaster@noaa.gov",
+				"sent": "2024-07-19T14:27:00-06:00"
+			}],
+			"sent": "2024-07-19T22:11:00-06:00",
+			"effective": "2024-07-19T22:11:00-06:00",
+			"onset": "2024-07-19T22:11:00-06:00",
+			"expires": "2024-07-20T07:00:00-06:00",
+			"ends": "2024-07-20T03:00:00-06:00",
+			"status": "Actual",
+			"messageType": "Update",
+			"category": "Met",
+			"severity": "Severe",
+			"certainty": "Possible",
+			"urgency": "Future",
+			"event": "Flood Watch",
+			"sender": "w-nws.webmaster@noaa.gov",
+			"senderName": "NWS El Paso Tx/Santa Teresa NM",
+			"headline": "Flood Watch issued July 19 at 10:11PM MDT until July 20 at 3:00AM MDT by NWS El Paso Tx/Santa Teresa NM",
+			"description": "* WHAT...Flash flooding caused by excessive rainfall is possible.\n\n* WHERE...A portion of south central New Mexico, including the\nfollowing areas, East Slopes Sacramento Mountains Below 7500 Feet,\nSacramento Mountains Above 7500 Feet and West Slopes Sacramento\nMountains Below 7500 Feet.\n\n* WHEN...Until 3 AM MDT Saturday.\n\n* IMPACTS...Excessive runoff may result in flooding of rivers,\ncreeks, streams, and other low-lying and flood-prone locations.\nStorm drains and ditches may become clogged with debris. Dangerous\ndebris flow near burn scar areas also possible with flash flooding.\n\n* ADDITIONAL DETAILS...\n- Moist atmospheric conditions will persist over the region\nwith slow moving and training storms producing heavy rainfall\nwith a potential for flash flooding along drainages and\nstreams. Recent wildfire burn scars will be particularly\nsensitive to lesser rainfall totals with flash flooding and\ndebris flows possible.\n- http://www.weather.gov/safety/flood",
+			"instruction": "You should monitor later forecasts and be prepared to take action\nshould Flash Flood Warnings be issued.\n\n\nYou should monitor later forecasts and be prepared to take action\nshould Flash Flood Warnings be issued.",
+			"response": "Prepare",
+			"parameters": {
+				"AWIPSidentifier": ["FFAEPZ"],
+				"WMOidentifier": ["WGUS64 KEPZ 200411"],
+				"NWSheadline": ["FLOOD WATCH REMAINS IN EFFECT THROUGH LATE SATURDAY NIGHT"],
+				"BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"],
+				"EAS-ORG": ["WXR"],
+				"VTEC": ["/O.CON.KEPZ.FA.A.0011.000000T0000Z-240720T0900Z/"],
+				"eventEndingTime": ["2024-07-20T09:00:00+00:00"],
+				"expiredReferences": ["w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.77fa2f007746336e66109ba2d074461730dd9091.001.1,2024-07-19T05:42:00-06:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.ca4f9ad289cb5f0eca0070efadcf764f6809e410.001.1,2024-07-18T14:28:00-06:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.abc9f1971eabdd4e7a3e8f73c07b8857deeb8e22.001.1,2024-07-18T05:59:00-06:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.33feb4a10d44c9377445cb7cba51bcdd314b8edc.001.1,2024-07-17T13:56:00-06:00"]
+			}
+		}
+	},{
+		"id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.630da386eeeab78aa03b2f540d2c8c29abf07c8e.001.1",
+		"type": "Feature",
+		"geometry": {
+			"type": "Polygon",
+			"coordinates": [
+				[
+					[-102.3, 39.97],
+					[-102.14, 39.58],
+					[-102.4, 39.57],
+					[-102.4599999, 39.57],
+					[-102.56, 39.88],
+					[-102.3, 39.97]
+				]
+			]
+		},
+		"properties": {
+			"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.630da386eeeab78aa03b2f540d2c8c29abf07c8e.001.1",
+			"@type": "wx:Alert",
+			"id": "urn:oid:2.49.0.1.840.0.630da386eeeab78aa03b2f540d2c8c29abf07c8e.001.1",
+			"areaDesc": "Yuma, CO",
+			"geocode": {
+				"SAME": ["008125"],
+				"UGC": ["COC125"]
+			},
+			"affectedZones": ["https://api.weather.gov/zones/county/COC125"],
+			"references": [{
+				"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.752fd78eaa0caed1664450a8303c5bab65c188d2.001.1",
+				"identifier": "urn:oid:2.49.0.1.840.0.752fd78eaa0caed1664450a8303c5bab65c188d2.001.1",
+				"sender": "w-nws.webmaster@noaa.gov",
+				"sent": "2024-07-19T21:24:00-06:00"
+			}, {
+				"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0c4ab465b29cc059ef1df7a03ffd3373ed65249a.001.1",
+				"identifier": "urn:oid:2.49.0.1.840.0.0c4ab465b29cc059ef1df7a03ffd3373ed65249a.001.1",
+				"sender": "w-nws.webmaster@noaa.gov",
+				"sent": "2024-07-19T21:49:00-06:00"
+			}, {
+				"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c85ac5f038ec29b547c4b5882a3d86a1b1de809d.001.1",
+				"identifier": "urn:oid:2.49.0.1.840.0.c85ac5f038ec29b547c4b5882a3d86a1b1de809d.001.1",
+				"sender": "w-nws.webmaster@noaa.gov",
+				"sent": "2024-07-19T21:56:00-06:00"
+			}],
+			"sent": "2024-07-19T22:05:00-06:00",
+			"effective": "2024-07-19T22:05:00-06:00",
+			"onset": "2024-07-19T22:05:00-06:00",
+			"expires": "2024-07-19T22:30:00-06:00",
+			"ends": "2024-07-19T22:30:00-06:00",
+			"status": "Actual",
+			"messageType": "Update",
+			"category": "Met",
+			"severity": "Severe",
+			"certainty": "Observed",
+			"urgency": "Immediate",
+			"event": "Severe Thunderstorm Warning",
+			"sender": "w-nws.webmaster@noaa.gov",
+			"senderName": "NWS Goodland KS",
+			"headline": "Severe Thunderstorm Warning issued July 19 at 10:05PM MDT until July 19 at 10:30PM MDT by NWS Goodland KS",
+			"description": "At 1005 PM MDT, a severe thunderstorm was located 6 miles northwest\nof Bonny Reservoir, moving southeast at 35 mph.\n\nHAZARD...60 mph wind gusts and nickel size hail.\n\nSOURCE...Radar indicated.\n\nIMPACT...Expect damage to roofs, siding, and trees.\n\nLocations impacted include...\nBonny Reservoir, Idalia, and Vernon.\n\nThis includes Highway 385 between mile markers 208 and 210, and\nbetween mile markers 212 and 226.",
+			"instruction": "For your protection move to an interior room on the lowest floor of a\nbuilding.",
+			"response": "Shelter",
+			"parameters": {
+				"AWIPSidentifier": ["SVSGLD"],
+				"WMOidentifier": ["WWUS53 KGLD 200405"],
+				"NWSheadline": ["A SEVERE THUNDERSTORM WARNING REMAINS IN EFFECT UNTIL 1030 PM MDT FOR SOUTHEASTERN YUMA COUNTY"],
+				"eventMotionDescription": ["2024-07-20T04:05:00-00:00...storm...330DEG...32KT...39.68,-102.26"],
+				"windThreat": ["RADAR INDICATED"],
+				"maxWindGust": ["60 MPH"],
+				"hailThreat": ["RADAR INDICATED"],
+				"maxHailSize": ["0.88"],
+				"BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"],
+				"EAS-ORG": ["WXR"],
+				"VTEC": ["/O.CON.KGLD.SV.W.0282.000000T0000Z-240720T0430Z/"],
+				"eventEndingTime": ["2024-07-20T04:30:00+00:00"]
+			},
+			"replacedBy": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.12c2391057982b0bc738604e129c1fcbe97d362f.001.1",
+			"replacedAt": "2024-07-19T22:20:00-06:00"
+		}
+	}, {
+		"id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b72ad4df284bba84e5e484e23fc00728091b5868.001.1",
+		"type": "Feature",
+		"geometry": {
+			"type": "Polygon",
+			"coordinates": [
+				[
+					[-101.25, 36.1599999],
+					[-101.48, 36.05],
+					[-102.05, 36.06],
+					[-102.17, 36.25],
+					[-102.16, 36.34],
+					[-101.69, 36.56],
+					[-101.25, 36.1599999]
+				]
+			]
+		},
+		"properties": {
+			"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b72ad4df284bba84e5e484e23fc00728091b5868.001.1",
+			"@type": "wx:Alert",
+			"id": "urn:oid:2.49.0.1.840.0.b72ad4df284bba84e5e484e23fc00728091b5868.001.1",
+			"areaDesc": "Texas; Sherman; Hansford",
+			"geocode": {
+				"SAME": ["040139", "048421", "048195"],
+				"UGC": ["OKZ002", "TXZ002", "TXZ003"]
+			},
+			"affectedZones": ["https://api.weather.gov/zones/forecast/OKZ002", "https://api.weather.gov/zones/forecast/TXZ002", "https://api.weather.gov/zones/forecast/TXZ003"],
+			"references": [],
+			"sent": "2024-07-19T23:05:00-05:00",
+			"effective": "2024-07-19T23:05:00-05:00",
+			"onset": "2024-07-19T23:05:00-05:00",
+			"expires": "2024-07-19T23:30:00-05:00",
+			"ends": null,
+			"status": "Actual",
+			"messageType": "Alert",
+			"category": "Met",
+			"severity": "Moderate",
+			"certainty": "Observed",
+			"urgency": "Expected",
+			"event": "Special Weather Statement",
+			"sender": "w-nws.webmaster@noaa.gov",
+			"senderName": "NWS Amarillo TX",
+			"headline": "Special Weather Statement issued July 19 at 11:05PM CDT by NWS Amarillo TX",
+			"description": "At 1105 PM CDT, Doppler radar was tracking strong thunderstorms along\na line extending from 3 miles southeast of Texhoma to near Stratford.\nMovement was southeast at 45 mph.\n\nHAZARD...Wind gusts up to 50 mph and penny size hail.\n\nSOURCE...Radar indicated.\n\nIMPACT...Gusty winds could knock down tree limbs and blow around\nunsecured objects. Minor hail damage to vegetation is\npossible.\n\nLocations impacted include...\nStratford, Gruver, Morse, and Texhoma.",
+			"instruction": "If outdoors, consider seeking shelter inside a building.\n\nA Severe Thunderstorm Watch remains in effect until midnight CDT for\nthe Panhandle of Oklahoma...and the Panhandle of Texas.",
+			"response": "Execute",
+			"parameters": {
+				"AWIPSidentifier": ["SPSAMA"],
+				"WMOidentifier": ["WWUS84 KAMA 200405"],
+				"NWSheadline": ["STRONG THUNDERSTORMS WILL IMPACT SOUTHWESTERN TEXAS...SOUTHWESTERN HANSFORD AND SHERMAN COUNTIES THROUGH 1130 PM CDT"],
+				"eventMotionDescription": ["2024-07-20T04:05:00-00:00...storm...325DEG...39KT...36.48,-101.73 36.31,-102.09"],
+				"maxWindGust": ["50 MPH"],
+				"maxHailSize": ["0.75"],
+				"BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"],
+				"EAS-ORG": ["WXR"]
+			}
+		}
+	}, {
+		"id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.82bd1560ab37303438bccdd2cc0f5e341dc56bcf.001.1",
+		"type": "Feature",
+		"geometry": {
+			"type": "Polygon",
+			"coordinates": [
+				[
+					[-102.78, 38.97],
+					[-102.37, 39.57],
+					[-102.08, 39.57],
+					[-100.81, 39.12],
+					[-100.86, 38.7],
+					[-101.13, 38.7],
+					[-101.12, 38.27],
+					[-102.78, 38.97]
+				]
+			]
+		},
+		"properties": {
+			"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.82bd1560ab37303438bccdd2cc0f5e341dc56bcf.001.1",
+			"@type": "wx:Alert",
+			"id": "urn:oid:2.49.0.1.840.0.82bd1560ab37303438bccdd2cc0f5e341dc56bcf.001.1",
+			"areaDesc": "Cheyenne, CO; Kit Carson, CO; Greeley, KS; Logan, KS; Sherman, KS; Thomas, KS; Wallace, KS; Wichita, KS",
+			"geocode": {
+				"SAME": ["008017", "008063", "020071", "020109", "020181", "020193", "020199", "020203"],
+				"UGC": ["COC017", "COC063", "KSC071", "KSC109", "KSC181", "KSC193", "KSC199", "KSC203"]
+			},
+			"affectedZones": ["https://api.weather.gov/zones/county/COC017", "https://api.weather.gov/zones/county/COC063", "https://api.weather.gov/zones/county/KSC071", "https://api.weather.gov/zones/county/KSC109", "https://api.weather.gov/zones/county/KSC181", "https://api.weather.gov/zones/county/KSC193", "https://api.weather.gov/zones/county/KSC199", "https://api.weather.gov/zones/county/KSC203"],
+			"references": [],
+			"sent": "2024-07-19T22:01:00-06:00",
+			"effective": "2024-07-19T22:01:00-06:00",
+			"onset": "2024-07-19T22:01:00-06:00",
+			"expires": "2024-07-19T23:00:00-06:00",
+			"ends": "2024-07-19T23:00:00-06:00",
+			"status": "Actual",
+			"messageType": "Alert",
+			"category": "Met",
+			"severity": "Severe",
+			"certainty": "Observed",
+			"urgency": "Immediate",
+			"event": "Severe Thunderstorm Warning",
+			"sender": "w-nws.webmaster@noaa.gov",
+			"senderName": "NWS Goodland KS",
+			"headline": "Severe Thunderstorm Warning issued July 19 at 10:01PM MDT until July 19 at 11:00PM MDT by NWS Goodland KS",
+			"description": "SVRGLD\n\nThe National Weather Service in Goodland has issued a\n\n* Severe Thunderstorm Warning for...\nNortheastern Cheyenne County in east central Colorado...\nEastern Kit Carson County in east central Colorado...\nWichita County in west central Kansas...\nWallace County in west central Kansas...\nSouthwestern Thomas County in northwestern Kansas...\nLogan County in west central Kansas...\nNorthern Greeley County in west central Kansas...\nSherman County in northwestern Kansas...\n\n* Until 1100 PM MDT/midnight CDT/.\n\n* At 1000 PM MDT/1100 PM CDT/, severe thunderstorms were located\nalong a line extending from 13 miles north of Ruleton to 3 miles\nsouthwest of Oakley, moving south at 60 mph.\n\nHAZARD...70 mph wind gusts.\n\nSOURCE...The National Weather Service in Goodland measured a 67\nmph wind gust at 958 pm MDT.\n\nIMPACT...Expect considerable tree damage. Damage is likely to\nmobile homes, roofs, and outbuildings.\n\n* Severe thunderstorms will be near...\nMonument around 1105 PM CDT.\nGoodland and Ruleton around 1005 PM MDT.\nWinona around 1110 PM CDT.\nRussell Springs around 1115 PM CDT.\nKanorado around 1015 PM MDT.\n\nOther locations in the path of these severe thunderstorms include\nWallace, Sharon Springs, Weskan and Leoti.\n\nThis includes the following highways...\nInterstate 70 in Kansas between mile markers 0 and 34.\nInterstate 70 in Colorado between mile markers 422 and 450.\nHighway 385 between mile markers 147 and 206, and near mile marker\n211.",
+			"instruction": "For your protection move to an interior room on the lowest floor of a\nbuilding.",
+			"response": "Shelter",
+			"parameters": {
+				"AWIPSidentifier": ["SVRGLD"],
+				"WMOidentifier": ["WUUS53 KGLD 200401"],
+				"eventMotionDescription": ["2024-07-20T04:00:00-00:00...storm...005DEG...52KT...39.53,-101.93 39.09,-100.91"],
+				"windThreat": ["OBSERVED"],
+				"maxWindGust": ["70 MPH"],
+				"hailThreat": ["RADAR INDICATED"],
+				"maxHailSize": ["Up to .75"],
+				"thunderstormDamageThreat": ["CONSIDERABLE"],
+				"BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"],
+				"EAS-ORG": ["WXR"],
+				"VTEC": ["/O.NEW.KGLD.SV.W.0284.240720T0401Z-240720T0500Z/"],
+				"eventEndingTime": ["2024-07-20T05:00:00+00:00"]
+			},
+			"replacedBy": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3bb3d45c340bed8b9afc2b537a606580dd2b7af0.001.1",
+			"replacedAt": "2024-07-19T22:57:00-06:00"
+		}
+	}, {
+		"id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.82c845283fe07a757f191e08d2613d2e628da10a.001.1",
+		"type": "Feature",
+		"geometry": {
+			"type": "Polygon",
+			"coordinates": [
+				[
+					[-77.84, 34.3],
+					[-77.74, 34.27],
+					[-77.83, 34.1599999],
+					[-77.88, 34.07],
+					[-77.89, 34.03],
+					[-77.89, 34.02],
+					[-77.9, 34.02],
+					[-77.94, 34],
+					[-77.93, 34.05],
+					[-77.94, 34.12],
+					[-77.9599999, 34.17],
+					[-77.95, 34.2299999],
+					[-77.84, 34.3]
+				]
+			]
+		},
+		"properties": {
+			"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.82c845283fe07a757f191e08d2613d2e628da10a.001.1",
+			"@type": "wx:Alert",
+			"id": "urn:oid:2.49.0.1.840.0.82c845283fe07a757f191e08d2613d2e628da10a.001.1",
+			"areaDesc": "Pender, NC",
+			"geocode": {
+				"SAME": ["037141"],
+				"UGC": ["NCC141"]
+			},
+			"affectedZones": ["https://api.weather.gov/zones/county/NCC141"],
+			"references": [{
+				"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ddbfe8afb3797e2b30c23f67271d4b055ed765c3.001.1",
+				"identifier": "urn:oid:2.49.0.1.840.0.ddbfe8afb3797e2b30c23f67271d4b055ed765c3.001.1",
+				"sender": "w-nws.webmaster@noaa.gov",
+				"sent": "2024-07-19T23:19:00-04:00"
+			}],
+			"sent": "2024-07-19T23:58:00-04:00",
+			"effective": "2024-07-19T23:58:00-04:00",
+			"onset": "2024-07-19T23:58:00-04:00",
+			"expires": "2024-07-20T00:13:08-04:00",
+			"ends": "2024-07-20T02:30:00-04:00",
+			"status": "Actual",
+			"messageType": "Cancel",
+			"category": "Met",
+			"severity": "Minor",
+			"certainty": "Observed",
+			"urgency": "Past",
+			"event": "Flood Advisory",
+			"sender": "w-nws.webmaster@noaa.gov",
+			"senderName": "NWS Wilmington NC",
+			"headline": "The Flood Advisory has been cancelled.",
+			"description": "The Flood Advisory has been cancelled and is no longer in effect.",
+			"instruction": null,
+			"response": "AllClear",
+			"parameters": {
+				"AWIPSidentifier": ["FLSILM"],
+				"WMOidentifier": ["WGUS82 KILM 200358"],
+				"NWSheadline": ["FLOOD ADVISORY IS CANCELLED"],
+				"BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"],
+				"VTEC": ["/O.CAN.KILM.FA.Y.0025.000000T0000Z-240720T0630Z/"],
+				"eventEndingTime": ["2024-07-20T06:30:00+00:00"]
+			}
+		}
+	}, {
+		"id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.82c845283fe07a757f191e08d2613d2e628da10a.002.1",
+		"type": "Feature",
+		"geometry": {
+			"type": "Polygon",
+			"coordinates": [
+				[
+					[-77.84, 34.3],
+					[-77.74, 34.27],
+					[-77.83, 34.1599999],
+					[-77.88, 34.07],
+					[-77.89, 34.03],
+					[-77.89, 34.02],
+					[-77.9, 34.02],
+					[-77.94, 34],
+					[-77.93, 34.05],
+					[-77.94, 34.12],
+					[-77.9599999, 34.17],
+					[-77.95, 34.2299999],
+					[-77.84, 34.3]
+				]
+			]
+		},
+		"properties": {
+			"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.82c845283fe07a757f191e08d2613d2e628da10a.002.1",
+			"@type": "wx:Alert",
+			"id": "urn:oid:2.49.0.1.840.0.82c845283fe07a757f191e08d2613d2e628da10a.002.1",
+			"areaDesc": "New Hanover, NC",
+			"geocode": {
+				"SAME": ["037129"],
+				"UGC": ["NCC129"]
+			},
+			"affectedZones": ["https://api.weather.gov/zones/county/NCC129"],
+			"references": [{
+				"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ddbfe8afb3797e2b30c23f67271d4b055ed765c3.001.1",
+				"identifier": "urn:oid:2.49.0.1.840.0.ddbfe8afb3797e2b30c23f67271d4b055ed765c3.001.1",
+				"sender": "w-nws.webmaster@noaa.gov",
+				"sent": "2024-07-19T23:19:00-04:00"
+			}],
+			"sent": "2024-07-19T23:58:00-04:00",
+			"effective": "2024-07-19T23:58:00-04:00",
+			"onset": "2024-07-19T23:58:00-04:00",
+			"expires": "2024-07-20T02:30:00-04:00",
+			"ends": "2024-07-20T02:30:00-04:00",
+			"status": "Actual",
+			"messageType": "Update",
+			"category": "Met",
+			"severity": "Minor",
+			"certainty": "Likely",
+			"urgency": "Expected",
+			"event": "Flood Advisory",
+			"sender": "w-nws.webmaster@noaa.gov",
+			"senderName": "NWS Wilmington NC",
+			"headline": "Flood Advisory issued July 19 at 11:58PM EDT until July 20 at 2:30AM EDT by NWS Wilmington NC",
+			"description": "* WHAT...Flooding caused by excessive rainfall continues.\n\n* WHERE...A portion of southeast North Carolina, including the\nfollowing county, New Hanover.\n\n* WHEN...Until 230 AM EDT.\n\n* IMPACTS...Minor flooding in low-lying and poor drainage areas.\n\n* ADDITIONAL DETAILS...\n- At 1152 PM EDT, Doppler radar indicated heavy rain due to\nthunderstorms. Minor flooding is ongoing or expected to begin\nshortly in the advisory area. Between 1.5 and 3 inches of\nrain have fallen.\n- Additional rainfall amounts up to 1 inch are expected over\nthe area. This additional rain will result in minor flooding.\n- Some locations that will experience flooding include...\nWilmington, Carolina Beach, Wrightsville Beach, North\nMasonboro Island, South Masonboro Island, Johnny Mercer Pier,\nSnows Cut, Figure Eight Island, Masonboro, Seagate,\nUniversity Of North Carolina At Wilmington, Silver Lake,\nMyrtle Grove, Windemere, Mayfaire, Landfall, Kings Grant,\nWilmington International Airport, Ogden and Murrayville.\n- http://www.weather.gov/safety/flood",
+			"instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.",
+			"response": "Avoid",
+			"parameters": {
+				"AWIPSidentifier": ["FLSILM"],
+				"WMOidentifier": ["WGUS82 KILM 200358"],
+				"NWSheadline": ["FLOOD ADVISORY REMAINS IN EFFECT UNTIL 230 AM EDT SATURDAY"],
+				"BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"],
+				"VTEC": ["/O.CON.KILM.FA.Y.0025.000000T0000Z-240720T0630Z/"],
+				"eventEndingTime": ["2024-07-20T06:30:00+00:00"]
+			},
+			"replacedBy": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.fedbf06cd8226d675f43df0e3261ed711eaed492.001.1",
+			"replacedAt": "2024-07-20T02:30:00-04:00"
+		}
+	}, {
+		"id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c85ac5f038ec29b547c4b5882a3d86a1b1de809d.001.1",
+		"type": "Feature",
+		"geometry": {
+			"type": "Polygon",
+			"coordinates": [
+				[
+					[-102.34, 40.08],
+					[-102.14, 39.58],
+					[-102.4, 39.57],
+					[-102.4599999, 39.57],
+					[-102.6, 40.02],
+					[-102.34, 40.08]
+				]
+			]
+		},
+		"properties": {
+			"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c85ac5f038ec29b547c4b5882a3d86a1b1de809d.001.1",
+			"@type": "wx:Alert",
+			"id": "urn:oid:2.49.0.1.840.0.c85ac5f038ec29b547c4b5882a3d86a1b1de809d.001.1",
+			"areaDesc": "Yuma, CO",
+			"geocode": {
+				"SAME": ["008125"],
+				"UGC": ["COC125"]
+			},
+			"affectedZones": ["https://api.weather.gov/zones/county/COC125"],
+			"references": [{
+				"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.752fd78eaa0caed1664450a8303c5bab65c188d2.001.1",
+				"identifier": "urn:oid:2.49.0.1.840.0.752fd78eaa0caed1664450a8303c5bab65c188d2.001.1",
+				"sender": "w-nws.webmaster@noaa.gov",
+				"sent": "2024-07-19T21:24:00-06:00"
+			}, {
+				"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0c4ab465b29cc059ef1df7a03ffd3373ed65249a.001.1",
+				"identifier": "urn:oid:2.49.0.1.840.0.0c4ab465b29cc059ef1df7a03ffd3373ed65249a.001.1",
+				"sender": "w-nws.webmaster@noaa.gov",
+				"sent": "2024-07-19T21:49:00-06:00"
+			}],
+			"sent": "2024-07-19T21:56:00-06:00",
+			"effective": "2024-07-19T21:56:00-06:00",
+			"onset": "2024-07-19T21:56:00-06:00",
+			"expires": "2024-07-19T22:30:00-06:00",
+			"ends": "2024-07-19T22:30:00-06:00",
+			"status": "Actual",
+			"messageType": "Update",
+			"category": "Met",
+			"severity": "Severe",
+			"certainty": "Observed",
+			"urgency": "Immediate",
+			"event": "Severe Thunderstorm Warning",
+			"sender": "w-nws.webmaster@noaa.gov",
+			"senderName": "NWS Goodland KS",
+			"headline": "Severe Thunderstorm Warning issued July 19 at 9:56PM MDT until July 19 at 10:30PM MDT by NWS Goodland KS",
+			"description": "At 956 PM MDT, a severe thunderstorm was located 12 miles northwest\nof Bonny Reservoir, moving southeast at 35 mph.\n\nHAZARD...70 mph wind gusts and nickel size hail.\n\nSOURCE...Radar indicated.\n\nIMPACT...Expect considerable tree damage. Damage is likely to mobile\nhomes, roofs, and outbuildings.\n\nLocations impacted include...\nBonny Reservoir, Idalia, and Vernon.\n\nThis includes Highway 385 between mile markers 208 and 210, and\nbetween mile markers 212 and 227.",
+			"instruction": "For your protection move to an interior room on the lowest floor of a\nbuilding.",
+			"response": "Shelter",
+			"parameters": {
+				"AWIPSidentifier": ["SVSGLD"],
+				"WMOidentifier": ["WWUS53 KGLD 200356"],
+				"NWSheadline": ["A SEVERE THUNDERSTORM WARNING REMAINS IN EFFECT UNTIL 1030 PM MDT FOR SOUTHEASTERN YUMA COUNTY"],
+				"eventMotionDescription": ["2024-07-20T03:56:00-00:00...storm...330DEG...32KT...39.75,-102.31"],
+				"windThreat": ["RADAR INDICATED"],
+				"maxWindGust": ["70 MPH"],
+				"hailThreat": ["RADAR INDICATED"],
+				"maxHailSize": ["0.88"],
+				"thunderstormDamageThreat": ["CONSIDERABLE"],
+				"BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"],
+				"EAS-ORG": ["WXR"],
+				"VTEC": ["/O.CON.KGLD.SV.W.0282.000000T0000Z-240720T0430Z/"],
+				"eventEndingTime": ["2024-07-20T04:30:00+00:00"]
+			},
+			"replacedBy": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.12c2391057982b0bc738604e129c1fcbe97d362f.001.1",
+			"replacedAt": "2024-07-19T22:20:00-06:00"
+		}
+	}, {
+		"id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.23a404faeacd9b06f932d33fd80d789927789058.001.1",
+		"type": "Feature",
+		"geometry": {
+			"type": "Polygon",
+			"coordinates": [
+				[
+					[-98.87, 39.43],
+					[-98.49, 39.43],
+					[-98.49, 39.13],
+					[-98.84, 39.13],
+					[-98.87, 39.43]
+				]
+			]
+		},
+		"properties": {
+			"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.23a404faeacd9b06f932d33fd80d789927789058.001.1",
+			"@type": "wx:Alert",
+			"id": "urn:oid:2.49.0.1.840.0.23a404faeacd9b06f932d33fd80d789927789058.001.1",
+			"areaDesc": "Osborne, KS",
+			"geocode": {
+				"SAME": ["020141"],
+				"UGC": ["KSC141"]
+			},
+			"affectedZones": ["https://api.weather.gov/zones/county/KSC141"],
+			"references": [{
+				"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.47806ad4981eb852bee2d167e78d1b25404830d2.001.1",
+				"identifier": "urn:oid:2.49.0.1.840.0.47806ad4981eb852bee2d167e78d1b25404830d2.001.1",
+				"sender": "w-nws.webmaster@noaa.gov",
+				"sent": "2024-07-19T22:22:00-05:00"
+			}],
+			"sent": "2024-07-19T22:54:00-05:00",
+			"effective": "2024-07-19T22:54:00-05:00",
+			"onset": "2024-07-19T22:54:00-05:00",
+			"expires": "2024-07-19T23:15:00-05:00",
+			"ends": "2024-07-19T23:15:00-05:00",
+			"status": "Actual",
+			"messageType": "Update",
+			"category": "Met",
+			"severity": "Severe",
+			"certainty": "Observed",
+			"urgency": "Immediate",
+			"event": "Severe Thunderstorm Warning",
+			"sender": "w-nws.webmaster@noaa.gov",
+			"senderName": "NWS Hastings NE",
+			"headline": "Severe Thunderstorm Warning issued July 19 at 10:54PM CDT until July 19 at 11:15PM CDT by NWS Hastings NE",
+			"description": "At 1053 PM CDT, a severe thunderstorm was located 9 miles west of\nTipton, or 30 miles north of Russell, moving south at 30 mph.\n\nHAZARD...60 mph wind gusts.\n\nSOURCE...Radar indicated.\n\nIMPACT...Expect damage to roofs, siding, and trees.\n\nThis severe thunderstorm will remain over mainly rural areas of\nsoutheastern Osborne County.\n\n58 mph winds were measured in Osborne as the storm passed.",
+			"instruction": "For your protection move to an interior room on the lowest floor of a\nbuilding.",
+			"response": "Shelter",
+			"parameters": {
+				"AWIPSidentifier": ["SVSGID"],
+				"WMOidentifier": ["WWUS53 KGID 200354"],
+				"NWSheadline": ["A SEVERE THUNDERSTORM WARNING REMAINS IN EFFECT UNTIL 1115 PM CDT FOR SOUTHEASTERN OSBORNE COUNTY"],
+				"eventMotionDescription": ["2024-07-20T03:53:00-00:00...storm...344DEG...28KT...39.29,-98.64"],
+				"windThreat": ["RADAR INDICATED"],
+				"maxWindGust": ["60 MPH"],
+				"hailThreat": ["RADAR INDICATED"],
+				"maxHailSize": ["Up to .75"],
+				"BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"],
+				"EAS-ORG": ["WXR"],
+				"VTEC": ["/O.CON.KGID.SV.W.0254.000000T0000Z-240720T0415Z/"],
+				"eventEndingTime": ["2024-07-20T04:15:00+00:00"]
+			},
+			"replacedBy": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.28a0a472a87d37b19daf5032e3ee52fd74903422.001.1",
+			"replacedAt": "2024-07-19T23:09:00-05:00"
+		}
+	}, {
+		"id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d86e0c105c7bdada7674b71b2bcae24e1e100e5f.001.1",
+		"type": "Feature",
+		"geometry": null,
+		"properties": {
+			"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d86e0c105c7bdada7674b71b2bcae24e1e100e5f.001.1",
+			"@type": "wx:Alert",
+			"id": "urn:oid:2.49.0.1.840.0.d86e0c105c7bdada7674b71b2bcae24e1e100e5f.001.1",
+			"areaDesc": "Chesapeake Bay north of Pooles Island MD; Chesapeake Bay from Pooles Island to Sandy Point MD; Chesapeake Bay from Sandy Point to North Beach MD",
+			"geocode": {
+				"SAME": ["073530", "073531", "073532"],
+				"UGC": ["ANZ530", "ANZ531", "ANZ532"]
+			},
+			"affectedZones": ["https://api.weather.gov/zones/forecast/ANZ530", "https://api.weather.gov/zones/forecast/ANZ531", "https://api.weather.gov/zones/forecast/ANZ532"],
+			"references": [],
+			"sent": "2024-07-19T23:54:00-04:00",
+			"effective": "2024-07-19T23:54:00-04:00",
+			"onset": "2024-07-19T23:54:00-04:00",
+			"expires": "2024-07-20T03:00:00-04:00",
+			"ends": null,
+			"status": "Actual",
+			"messageType": "Alert",
+			"category": "Met",
+			"severity": "Minor",
+			"certainty": "Observed",
+			"urgency": "Expected",
+			"event": "Marine Weather Statement",
+			"sender": "w-nws.webmaster@noaa.gov",
+			"senderName": "NWS Baltimore MD/Washington DC",
+			"headline": "Marine Weather Statement issued July 19 at 11:54PM EDT by NWS Baltimore MD/Washington DC",
+			"description": "A few southerly to southeasterly wind gusts to near 20 knots are\npossible late this evening and into the overnight hours,\nparticularly in the open waters of the central and northern\nChesapeake Bay. Inexperienced mariners, especially those operating\nsmaller vessels, should exercise extra caution if navigating the\nwaters during this time.",
+			"instruction": null,
+			"response": "Monitor",
+			"parameters": {
+				"AWIPSidentifier": ["MWSLWX"],
+				"WMOidentifier": ["FZUS71 KLWX 200354"],
+				"NWSheadline": ["SPORADIC WIND GUSTS THIS EVENING"],
+				"BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"]
+			}
+		}
+	}, {
+		"id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4897532af37ad777fadee9a19e4d3b6da4b2d916.001.1",
+		"type": "Feature",
+		"geometry": {
+			"type": "Polygon",
+			"coordinates": [
+				[
+					[-101.67, 39.95],
+					[-100.75, 39.51],
+					[-100.69, 39.26],
+					[-100.7099999, 39.13],
+					[-101.25, 39.14],
+					[-102.05, 39.51],
+					[-102.03, 39.95],
+					[-101.67, 39.95]
+				]
+			]
+		},
+		"properties": {
+			"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4897532af37ad777fadee9a19e4d3b6da4b2d916.001.1",
+			"@type": "wx:Alert",
+			"id": "urn:oid:2.49.0.1.840.0.4897532af37ad777fadee9a19e4d3b6da4b2d916.001.1",
+			"areaDesc": "Cheyenne, KS; Rawlins, KS; Sheridan, KS; Sherman, KS; Thomas, KS",
+			"geocode": {
+				"SAME": ["020023", "020153", "020179", "020181", "020193"],
+				"UGC": ["KSC023", "KSC153", "KSC179", "KSC181", "KSC193"]
+			},
+			"affectedZones": ["https://api.weather.gov/zones/county/KSC023", "https://api.weather.gov/zones/county/KSC153", "https://api.weather.gov/zones/county/KSC179", "https://api.weather.gov/zones/county/KSC181", "https://api.weather.gov/zones/county/KSC193"],
+			"references": [],
+			"sent": "2024-07-19T22:54:00-05:00",
+			"effective": "2024-07-19T22:54:00-05:00",
+			"onset": "2024-07-19T22:54:00-05:00",
+			"expires": "2024-07-20T02:00:00-05:00",
+			"ends": "2024-07-20T02:00:00-05:00",
+			"status": "Actual",
+			"messageType": "Alert",
+			"category": "Met",
+			"severity": "Minor",
+			"certainty": "Likely",
+			"urgency": "Expected",
+			"event": "Flood Advisory",
+			"sender": "w-nws.webmaster@noaa.gov",
+			"senderName": "NWS Goodland KS",
+			"headline": "Flood Advisory issued July 19 at 10:54PM CDT until July 20 at 2:00AM CDT by NWS Goodland KS",
+			"description": "* WHAT...Flooding caused by excessive rainfall is expected.\n\n* WHERE...A portion of northwest Kansas, including the following\ncounties, Cheyenne, Rawlins, Sheridan, Sherman and Thomas.\n\n* WHEN...Until 200 AM CDT /100 AM MDT/.\n\n* IMPACTS...Minor flooding in low-lying and poor drainage areas.\nWater over roadways. Ponding of water in urban or other areas is\noccurring or is imminent.\n\n* ADDITIONAL DETAILS...\n- At 1053 PM CDT /953 PM MDT/, Doppler radar indicated heavy\nrain due to thunderstorms. Minor flooding is ongoing or\nexpected to begin shortly in the advisory area. Between 0.5\nand 1 inch of rain has already fallen.\n- Additional rainfall amounts of 0.5 to 1 inch are expected\nover the area.\n- Some locations that will experience flooding include...\nColby, Goodland, Oakley, St. Francis, Brewster, Levant, Bird\nCity, Rexford, McDonald, Gem, Menlo, Edson, Wheeler, Mingo\nand Halford.\n- http://www.weather.gov/safety/flood",
+			"instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.\n\nBe especially cautious at night when it is harder to recognize the\ndangers of flooding.\n\nBe aware of your surroundings and do not drive on flooded roads.\n\nIn hilly terrain there are hundreds of low water crossings which are\npotentially dangerous in heavy rain. Do not attempt to cross flooded\nroads. Find an alternate route.",
+			"response": "Avoid",
+			"parameters": {
+				"AWIPSidentifier": ["FLSGLD"],
+				"WMOidentifier": ["WGUS83 KGLD 200354"],
+				"NWSheadline": ["FLOOD ADVISORY IN EFFECT UNTIL 2 AM CDT /1 AM MDT/ SATURDAY"],
+				"BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"],
+				"VTEC": ["/O.NEW.KGLD.FA.Y.0031.240720T0354Z-240720T0700Z/"],
+				"eventEndingTime": ["2024-07-20T07:00:00+00:00"]
+			},
+			"replacedBy": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.908f09f56344dedf509169f4d1b4d0ff7bb1e98f.001.1",
+			"replacedAt": "2024-07-20T00:57:00-05:00"
+		}
+	}, {
+		"id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7d0a312c574027261bd30fa892bbb78d06711fef.001.1",
+		"type": "Feature",
+		"geometry": {
+			"type": "Polygon",
+			"coordinates": [
+				[
+					[-101.9, 41.17],
+					[-101.59, 41.15],
+					[-101.59, 41.02],
+					[-101.98, 41.02],
+					[-101.9, 41.17]
+				]
+			]
+		},
+		"properties": {
+			"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7d0a312c574027261bd30fa892bbb78d06711fef.001.1",
+			"@type": "wx:Alert",
+			"id": "urn:oid:2.49.0.1.840.0.7d0a312c574027261bd30fa892bbb78d06711fef.001.1",
+			"areaDesc": "Keith, NE",
+			"geocode": {
+				"SAME": ["031101"],
+				"UGC": ["NEC101"]
+			},
+			"affectedZones": ["https://api.weather.gov/zones/county/NEC101"],
+			"references": [{
+				"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.27a574ad23b19d0451030f562c8fd64771e7a725.001.1",
+				"identifier": "urn:oid:2.49.0.1.840.0.27a574ad23b19d0451030f562c8fd64771e7a725.001.1",
+				"sender": "w-nws.webmaster@noaa.gov",
+				"sent": "2024-07-19T18:21:00-06:00"
+			}, {
+				"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.dc931ebed4d078681dff54bc4aebb6b997d5f6ba.001.1",
+				"identifier": "urn:oid:2.49.0.1.840.0.dc931ebed4d078681dff54bc4aebb6b997d5f6ba.001.1",
+				"sender": "w-nws.webmaster@noaa.gov",
+				"sent": "2024-07-19T18:32:00-06:00"
+			}, {
+				"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.50dae7bff6ea65f4018821f39e7a6d4317f809e8.001.1",
+				"identifier": "urn:oid:2.49.0.1.840.0.50dae7bff6ea65f4018821f39e7a6d4317f809e8.001.1",
+				"sender": "w-nws.webmaster@noaa.gov",
+				"sent": "2024-07-19T18:38:00-06:00"
+			}],
+			"sent": "2024-07-19T18:47:00-06:00",
+			"effective": "2024-07-19T18:47:00-06:00",
+			"onset": "2024-07-19T18:47:00-06:00",
+			"expires": "2024-07-19T19:00:00-06:00",
+			"ends": "2024-07-19T19:00:00-06:00",
+			"status": "Actual",
+			"messageType": "Update",
+			"category": "Met",
+			"severity": "Extreme",
+			"certainty": "Observed",
+			"urgency": "Immediate",
+			"event": "Tornado Warning",
+			"sender": "w-nws.webmaster@noaa.gov",
+			"senderName": "NWS North Platte NE",
+			"headline": "Tornado Warning issued July 19 at 6:47PM MDT until July 19 at 7:00PM MDT by NWS North Platte NE",
+			"description": "At 646 PM MDT, a severe thunderstorm capable of producing a tornado\nwas located near Brule, or 8 miles southwest of Ogallala, moving\nsouthwest at 35 mph.\n\nHAZARD...Tornado and tennis ball size hail.\n\nSOURCE...Radar indicated rotation.\n\nIMPACT...Flying debris will be dangerous to those caught without\nshelter. Mobile homes will be damaged or destroyed. Damage\nto roofs, windows, and vehicles will occur.  Tree damage is\nlikely.\n\nThis tornadic thunderstorm will remain over mainly rural areas of\nsouthwestern Keith County.\n\nThis includes the following highways...\nHighway 61 between mile markers 80 and 86.\nInterstate 80 in Nebraska between mile markers 114 and 133.",
+			"instruction": "TAKE COVER NOW! Move to a basement or an interior room on the lowest\nfloor of a sturdy building. Avoid windows. If you are outdoors, in a\nmobile home, or in a vehicle, move to the closest substantial shelter\nand protect yourself from flying debris.\n\nIf on or near Lake McConaughy, get away from the water and move to\nsafe shelter immediately. If you can hear thunder, you are close\nenough to be struck by lightning. Severe thunderstorms can produce\nlarge capsizing waves, even on small bodies of water. Move into dock\nand seek safe shelter now! Do not be caught on the water in a\nthunderstorm.",
+			"response": "Shelter",
+			"parameters": {
+				"AWIPSidentifier": ["SVSLBF"],
+				"WMOidentifier": ["WWUS53 KLBF 200047"],
+				"NWSheadline": ["A TORNADO WARNING REMAINS IN EFFECT UNTIL 700 PM MDT FOR SOUTHWESTERN KEITH COUNTY"],
+				"eventMotionDescription": ["2024-07-20T00:46:00-00:00...storm...023DEG...29KT...41.05,-101.83"],
+				"maxHailSize": ["2.50"],
+				"tornadoDetection": ["RADAR INDICATED"],
+				"BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"],
+				"EAS-ORG": ["WXR"],
+				"VTEC": ["/O.CON.KLBF.TO.W.0032.000000T0000Z-240720T0100Z/"],
+				"eventEndingTime": ["2024-07-20T01:00:00+00:00"]
+			}
+		}
+	}, {
+		"id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.27a574ad23b19d0451030f562c8fd64771e7a725.001.1",
+		"type": "Feature",
+		"geometry": {
+			"type": "Polygon",
+			"coordinates": [
+				[
+					[-101.83, 41.36],
+					[-101.59, 41.34],
+					[-101.59, 41.02],
+					[-101.98, 41.02],
+					[-101.83, 41.36]
+				]
+			]
+		},
+		"properties": {
+			"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.27a574ad23b19d0451030f562c8fd64771e7a725.001.1",
+			"@type": "wx:Alert",
+			"id": "urn:oid:2.49.0.1.840.0.27a574ad23b19d0451030f562c8fd64771e7a725.001.1",
+			"areaDesc": "Keith, NE",
+			"geocode": {
+				"SAME": ["031101"],
+				"UGC": ["NEC101"]
+			},
+			"affectedZones": ["https://api.weather.gov/zones/county/NEC101"],
+			"references": [],
+			"sent": "2024-07-19T18:21:00-06:00",
+			"effective": "2024-07-19T18:21:00-06:00",
+			"onset": "2024-07-19T18:21:00-06:00",
+			"expires": "2024-07-19T19:00:00-06:00",
+			"ends": "2024-07-19T19:00:00-06:00",
+			"status": "Actual",
+			"messageType": "Alert",
+			"category": "Met",
+			"severity": "Extreme",
+			"certainty": "Observed",
+			"urgency": "Immediate",
+			"event": "Tornado Warning",
+			"sender": "w-nws.webmaster@noaa.gov",
+			"senderName": "NWS North Platte NE",
+			"headline": "Tornado Warning issued July 19 at 6:21PM MDT until July 19 at 7:00PM MDT by NWS North Platte NE",
+			"description": "TORLBF\n\nThe National Weather Service in North Platte has issued a\n\n* Tornado Warning for...\nCentral Keith County in southwestern Nebraska...\n\n* Until 700 PM MDT.\n\n* At 620 PM MDT, a severe thunderstorm capable of producing a tornado\nwas located near Lemoyne, or 10 miles north of Ogallala, moving\nsouth at 35 mph.\n\nHAZARD...Tornado and golf ball size hail.\n\nSOURCE...Radar indicated rotation.\n\nIMPACT...Flying debris will be dangerous to those caught without\nshelter. Mobile homes will be damaged or destroyed.\nDamage to roofs, windows, and vehicles will occur.  Tree\ndamage is likely.\n\n* This dangerous storm will be near...\nOgallala around 625 PM MDT.\n\nOther locations impacted by this tornadic thunderstorm include Lake\nView Campground.\n\nThis includes the following highways...\nHighway 61 between mile markers 80 and 107.\nHighway 92 between mile markers 130 and 138.\nInterstate 80 in Nebraska between mile markers 114 and 133.",
+			"instruction": "TAKE COVER NOW! Move to a basement or an interior room on the lowest\nfloor of a sturdy building. Avoid windows. If you are outdoors, in a\nmobile home, or in a vehicle, move to the closest substantial shelter\nand protect yourself from flying debris.\n\nIf on or near Lake McConaughy, get away from the water and move to\nsafe shelter immediately. If you can hear thunder, you are close\nenough to be struck by lightning. Severe thunderstorms can produce\nlarge capsizing waves, even on small bodies of water. Move into dock\nand seek safe shelter now! Do not be caught on the water in a\nthunderstorm.",
+			"response": "Shelter",
+			"parameters": {
+				"AWIPSidentifier": ["TORLBF"],
+				"WMOidentifier": ["WFUS53 KLBF 200021"],
+				"eventMotionDescription": ["2024-07-20T00:20:00-00:00...storm...008DEG...32KT...41.28,-101.73"],
+				"maxHailSize": ["1.75"],
+				"tornadoDetection": ["RADAR INDICATED"],
+				"BLOCKCHANNEL": ["EAS", "NWEM"],
+				"EAS-ORG": ["WXR"],
+				"VTEC": ["/O.NEW.KLBF.TO.W.0032.240720T0021Z-240720T0100Z/"],
+				"eventEndingTime": ["2024-07-20T01:00:00+00:00"],
+				"WEAHandling": ["Imminent Threat"],
+				"CMAMtext": ["NWS: TORNADO WARNING in this area til 7:00 PM MDT. Take shelter now. Check media."],
+				"CMAMlongtext": ["National Weather Service: TORNADO WARNING in this area until 7:00 PM MDT. Take shelter now in a basement or an interior room on the lowest floor of a sturdy building. If you are outdoors, in a mobile home, or in a vehicle, move to the closest substantial shelter and protect yourself from flying debris. Check media."]
+			},
+			"replacedBy": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7d0a312c574027261bd30fa892bbb78d06711fef.001.1",
+			"replacedAt": "2024-07-19T18:47:00-06:00"
+		}
+	}, {
+		"id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f570d6151ac43998f38f994bf1012a78f6deefde.001.1",
+		"type": "Feature",
+		"geometry": null,
+		"properties": {
+			"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f570d6151ac43998f38f994bf1012a78f6deefde.001.1",
+			"@type": "wx:Alert",
+			"id": "urn:oid:2.49.0.1.840.0.f570d6151ac43998f38f994bf1012a78f6deefde.001.1",
+			"areaDesc": "Anderson, TN; Bedford, TN; Benton, TN; Bledsoe, TN; Blount, TN; Bradley, TN; Campbell, TN; Cannon, TN; Carroll, TN; Carter, TN; Cheatham, TN; Chester, TN; Claiborne, TN; Clay, TN; Cocke, TN; Coffee, TN; Crockett, TN; Cumberland, TN; Davidson, TN; Decatur, TN; De Kalb, TN; Dickson, TN; Dyer, TN; Fayette, TN; Fentress, TN; Franklin, TN; Gibson, TN; Giles, TN; Grainger, TN; Greene, TN; Grundy, TN; Hamblen, TN; Hamilton, TN; Hancock, TN; Hardeman, TN; Hardin, TN; Hawkins, TN; Haywood, TN; Henderson, TN; Henry, TN; Hickman, TN; Houston, TN; Humphreys, TN; Jackson, TN; Jefferson, TN; Johnson, TN; Knox, TN; Lake, TN; Lauderdale, TN; Lawrence, TN; Lewis, TN; Lincoln, TN; Loudon, TN; McMinn, TN; McNairy, TN; Macon, TN; Madison, TN; Marion, TN; Marshall, TN; Maury, TN; Meigs, TN; Monroe, TN; Montgomery, TN; Moore, TN; Morgan, TN; Obion, TN; Overton, TN; Perry, TN; Pickett, TN; Polk, TN; Putnam, TN; Rhea, TN; Roane, TN; Robertson, TN; Rutherford, TN; Scott, TN; Sequatchie, TN; Sevier, TN; Shelby, TN; Smith, TN; Stewart, TN; Sullivan, TN; Sumner, TN; Tipton, TN; Trousdale, TN; Unicoi, TN; Union, TN; Van Buren, TN; Warren, TN; Washington, TN; Wayne, TN; Weakley, TN; White, TN; Williamson, TN; Wilson, TN",
+			"geocode": {
+				"SAME": ["047001", "047003", "047005", "047007", "047009", "047011", "047013", "047015", "047017", "047019", "047021", "047023", "047025", "047027", "047029", "047031", "047033", "047035", "047037", "047039", "047041", "047043", "047045", "047047", "047049", "047051", "047053", "047055", "047057", "047059", "047061", "047063", "047065", "047067", "047069", "047071", "047073", "047075", "047077", "047079", "047081", "047083", "047085", "047087", "047089", "047091", "047093", "047095", "047097", "047099", "047101", "047103", "047105", "047107", "047109", "047111", "047113", "047115", "047117", "047119", "047121", "047123", "047125", "047127", "047129", "047131", "047133", "047135", "047137", "047139", "047141", "047143", "047145", "047147", "047149", "047151", "047153", "047155", "047157", "047159", "047161", "047163", "047165", "047167", "047169", "047171", "047173", "047175", "047177", "047179", "047181", "047183", "047185", "047187", "047189"],
+				"UGC": ["TNC001", "TNC003", "TNC005", "TNC007", "TNC009", "TNC011", "TNC013", "TNC015", "TNC017", "TNC019", "TNC021", "TNC023", "TNC025", "TNC027", "TNC029", "TNC031", "TNC033", "TNC035", "TNC037", "TNC039", "TNC041", "TNC043", "TNC045", "TNC047", "TNC049", "TNC051", "TNC053", "TNC055", "TNC057", "TNC059", "TNC061", "TNC063", "TNC065", "TNC067", "TNC069", "TNC071", "TNC073", "TNC075", "TNC077", "TNC079", "TNC081", "TNC083", "TNC085", "TNC087", "TNC089", "TNC091", "TNC093", "TNC095", "TNC097", "TNC099", "TNC101", "TNC103", "TNC105", "TNC107", "TNC109", "TNC111", "TNC113", "TNC115", "TNC117", "TNC119", "TNC121", "TNC123", "TNC125", "TNC127", "TNC129", "TNC131", "TNC133", "TNC135", "TNC137", "TNC139", "TNC141", "TNC143", "TNC145", "TNC147", "TNC149", "TNC151", "TNC153", "TNC155", "TNC157", "TNC159", "TNC161", "TNC163", "TNC165", "TNC167", "TNC169", "TNC171", "TNC173", "TNC175", "TNC177", "TNC179", "TNC181", "TNC183", "TNC185", "TNC187", "TNC189"]
+			},
+			"affectedZones": ["https://api.weather.gov/zones/county/TNC001", "https://api.weather.gov/zones/county/TNC003", "https://api.weather.gov/zones/county/TNC005", "https://api.weather.gov/zones/county/TNC007", "https://api.weather.gov/zones/county/TNC009", "https://api.weather.gov/zones/county/TNC011", "https://api.weather.gov/zones/county/TNC013", "https://api.weather.gov/zones/county/TNC015", "https://api.weather.gov/zones/county/TNC017", "https://api.weather.gov/zones/county/TNC019", "https://api.weather.gov/zones/county/TNC021", "https://api.weather.gov/zones/county/TNC023", "https://api.weather.gov/zones/county/TNC025", "https://api.weather.gov/zones/county/TNC027", "https://api.weather.gov/zones/county/TNC029", "https://api.weather.gov/zones/county/TNC031", "https://api.weather.gov/zones/county/TNC033", "https://api.weather.gov/zones/county/TNC035", "https://api.weather.gov/zones/county/TNC037", "https://api.weather.gov/zones/county/TNC039", "https://api.weather.gov/zones/county/TNC041", "https://api.weather.gov/zones/county/TNC043", "https://api.weather.gov/zones/county/TNC045", "https://api.weather.gov/zones/county/TNC047", "https://api.weather.gov/zones/county/TNC049", "https://api.weather.gov/zones/county/TNC051", "https://api.weather.gov/zones/county/TNC053", "https://api.weather.gov/zones/county/TNC055", "https://api.weather.gov/zones/county/TNC057", "https://api.weather.gov/zones/county/TNC059", "https://api.weather.gov/zones/county/TNC061", "https://api.weather.gov/zones/county/TNC063", "https://api.weather.gov/zones/county/TNC065", "https://api.weather.gov/zones/county/TNC067", "https://api.weather.gov/zones/county/TNC069", "https://api.weather.gov/zones/county/TNC071", "https://api.weather.gov/zones/county/TNC073", "https://api.weather.gov/zones/county/TNC075", "https://api.weather.gov/zones/county/TNC077", "https://api.weather.gov/zones/county/TNC079", "https://api.weather.gov/zones/county/TNC081", "https://api.weather.gov/zones/county/TNC083", "https://api.weather.gov/zones/county/TNC085", "https://api.weather.gov/zones/county/TNC087", "https://api.weather.gov/zones/county/TNC089", "https://api.weather.gov/zones/county/TNC091", "https://api.weather.gov/zones/county/TNC093", "https://api.weather.gov/zones/county/TNC095", "https://api.weather.gov/zones/county/TNC097", "https://api.weather.gov/zones/county/TNC099", "https://api.weather.gov/zones/county/TNC101", "https://api.weather.gov/zones/county/TNC103", "https://api.weather.gov/zones/county/TNC105", "https://api.weather.gov/zones/county/TNC107", "https://api.weather.gov/zones/county/TNC109", "https://api.weather.gov/zones/county/TNC111", "https://api.weather.gov/zones/county/TNC113", "https://api.weather.gov/zones/county/TNC115", "https://api.weather.gov/zones/county/TNC117", "https://api.weather.gov/zones/county/TNC119", "https://api.weather.gov/zones/county/TNC121", "https://api.weather.gov/zones/county/TNC123", "https://api.weather.gov/zones/county/TNC125", "https://api.weather.gov/zones/county/TNC127", "https://api.weather.gov/zones/county/TNC129", "https://api.weather.gov/zones/county/TNC131", "https://api.weather.gov/zones/county/TNC133", "https://api.weather.gov/zones/county/TNC135", "https://api.weather.gov/zones/county/TNC137", "https://api.weather.gov/zones/county/TNC139", "https://api.weather.gov/zones/county/TNC141", "https://api.weather.gov/zones/county/TNC143", "https://api.weather.gov/zones/county/TNC145", "https://api.weather.gov/zones/county/TNC147", "https://api.weather.gov/zones/county/TNC149", "https://api.weather.gov/zones/county/TNC151", "https://api.weather.gov/zones/county/TNC153", "https://api.weather.gov/zones/county/TNC155", "https://api.weather.gov/zones/county/TNC157", "https://api.weather.gov/zones/county/TNC159", "https://api.weather.gov/zones/county/TNC161", "https://api.weather.gov/zones/county/TNC163", "https://api.weather.gov/zones/county/TNC165", "https://api.weather.gov/zones/county/TNC167", "https://api.weather.gov/zones/county/TNC169", "https://api.weather.gov/zones/county/TNC171", "https://api.weather.gov/zones/county/TNC173", "https://api.weather.gov/zones/county/TNC175", "https://api.weather.gov/zones/county/TNC177", "https://api.weather.gov/zones/county/TNC179", "https://api.weather.gov/zones/county/TNC181", "https://api.weather.gov/zones/county/TNC183", "https://api.weather.gov/zones/county/TNC185", "https://api.weather.gov/zones/county/TNC187", "https://api.weather.gov/zones/county/TNC189"],
+			"references": [],
+			"sent": "2024-07-19T22:51:00-05:00",
+			"effective": "2024-07-19T22:51:00-05:00",
+			"onset": "2024-07-19T22:51:00-05:00",
+			"expires": "2024-07-20T01:00:00-05:00",
+			"ends": null,
+			"status": "Actual",
+			"messageType": "Alert",
+			"category": "Met",
+			"severity": "Unknown",
+			"certainty": "Unknown",
+			"urgency": "Unknown",
+			"event": "Blue Alert",
+			"sender": "w-nws.webmaster@noaa.gov",
+			"senderName": "NWS Nashville TN",
+			"headline": "Blue Alert issued July 19 at 10:51PM CDT by NWS Nashville TN",
+			"description": "BLUTN\n\nThe following message is transmitted at the request of the\nTennessee Bureau of Investigation.\n\nThe Tennessee Bureau of Investigation has issued a statewide Blue\nAlert for unknown subjects traveling in a white Kia Forte with\ntemporary tag Q 9 S C 4 J R, driven by two black males with face\ntattoos. The subjects in the vehicle are wanted for shooting a\nTennessee Highway Patrol Trooper in Putnam County. The vehicle has\na tail light out on the right passenger side. There is no known\ndirection of travel at this time. If you have any information\nconcerning the occupants or whereabouts of this white Kia Forte,\nplease contact the Tennessee Bureau of Investigation at 1 8 0 0 T\nB I F I N D.",
+			"instruction": null,
+			"response": "Monitor",
+			"parameters": {
+				"AWIPSidentifier": ["BLUTN"],
+				"WMOidentifier": ["WOUS44 KOHX 200351"],
+				"BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"],
+				"EAS-ORG": ["CIV"]
+			}
+		}
+	}, {
+		"id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.410defa141c0384e7b56686764a81a09301cd45d.001.1",
+		"type": "Feature",
+		"geometry": {
+			"type": "Polygon",
+			"coordinates": [
+				[
+					[-102.55, 40.3],
+					[-102.44, 40.06],
+					[-102.78, 40],
+					[-102.8, 40.12],
+					[-102.79, 40.26],
+					[-102.55, 40.3]
+				]
+			]
+		},
+		"properties": {
+			"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.410defa141c0384e7b56686764a81a09301cd45d.001.1",
+			"@type": "wx:Alert",
+			"id": "urn:oid:2.49.0.1.840.0.410defa141c0384e7b56686764a81a09301cd45d.001.1",
+			"areaDesc": "Yuma, CO",
+			"geocode": {
+				"SAME": ["008125"],
+				"UGC": ["COC125"]
+			},
+			"affectedZones": ["https://api.weather.gov/zones/county/COC125"],
+			"references": [{
+				"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a0fcc50f3c4d78e041ee70c1865323462e636726.001.1",
+				"identifier": "urn:oid:2.49.0.1.840.0.a0fcc50f3c4d78e041ee70c1865323462e636726.001.1",
+				"sender": "w-nws.webmaster@noaa.gov",
+				"sent": "2024-07-19T20:55:00-06:00"
+			}, {
+				"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6f155a95e62f37fc87a7c3aa335e4479a57a0417.001.1",
+				"identifier": "urn:oid:2.49.0.1.840.0.6f155a95e62f37fc87a7c3aa335e4479a57a0417.001.1",
+				"sender": "w-nws.webmaster@noaa.gov",
+				"sent": "2024-07-19T21:11:00-06:00"
+			}, {
+				"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.d05576cc760fc14d246fffa8bd28874471a525d3.001.1",
+				"identifier": "urn:oid:2.49.0.1.840.0.d05576cc760fc14d246fffa8bd28874471a525d3.001.1",
+				"sender": "w-nws.webmaster@noaa.gov",
+				"sent": "2024-07-19T21:17:00-06:00"
+			}, {
+				"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.84921f0d30e46cb280bf9b6ee4074f9ab77e373f.001.1",
+				"identifier": "urn:oid:2.49.0.1.840.0.84921f0d30e46cb280bf9b6ee4074f9ab77e373f.001.1",
+				"sender": "w-nws.webmaster@noaa.gov",
+				"sent": "2024-07-19T21:36:00-06:00"
+			}],
+			"sent": "2024-07-19T21:50:00-06:00",
+			"effective": "2024-07-19T21:50:00-06:00",
+			"onset": "2024-07-19T21:50:00-06:00",
+			"expires": "2024-07-19T22:00:00-06:00",
+			"ends": "2024-07-19T22:00:00-06:00",
+			"status": "Actual",
+			"messageType": "Update",
+			"category": "Met",
+			"severity": "Severe",
+			"certainty": "Observed",
+			"urgency": "Immediate",
+			"event": "Severe Thunderstorm Warning",
+			"sender": "w-nws.webmaster@noaa.gov",
+			"senderName": "NWS Goodland KS",
+			"headline": "Severe Thunderstorm Warning issued July 19 at 9:50PM MDT until July 19 at 10:00PM MDT by NWS Goodland KS",
+			"description": "The storm which prompted the warning has moved out of the area.\nTherefore, the warning will be allowed to expire.  However, gusty\nwinds and heavy rain are still possible with this thunderstorm.\n\nA Severe Thunderstorm Watch remains in effect until 1100 PM MDT for\nnortheastern Colorado.\n\nTo report severe weather, contact your nearest law enforcement\nagency. They will relay your report to the National Weather Service\nGoodland.",
+			"instruction": null,
+			"response": "Shelter",
+			"parameters": {
+				"AWIPSidentifier": ["SVSGLD"],
+				"WMOidentifier": ["WWUS53 KGLD 200350"],
+				"NWSheadline": ["THE SEVERE THUNDERSTORM WARNING FOR NORTHWESTERN YUMA COUNTY WILL EXPIRE AT 1000 PM MDT"],
+				"eventMotionDescription": ["2024-07-20T03:50:00-00:00...storm...345DEG...24KT...39.91,-102.57"],
+				"BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"],
+				"EAS-ORG": ["WXR"],
+				"VTEC": ["/O.EXP.KGLD.SV.W.0281.000000T0000Z-240720T0400Z/"],
+				"eventEndingTime": ["2024-07-20T04:00:00+00:00"]
+			}
+		}
+	}, {
+		"id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0-KEEPALIVE-4867",
+		"type": "Feature",
+		"geometry": null,
+		"properties": {
+			"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0-KEEPALIVE-4867",
+			"@type": "wx:Alert",
+			"id": "urn:oid:2.49.0.1.840.0-KEEPALIVE-4867",
+			"areaDesc": "Montgomery",
+			"geocode": {
+				"SAME": ["024031"],
+				"UGC": ["MDC031"]
+			},
+			"affectedZones": ["https://api.weather.gov/zones/county/MDC031"],
+			"references": [],
+			"sent": "2024-07-20T03:49:38+00:00",
+			"effective": "2024-07-20T03:49:38+00:00",
+			"onset": null,
+			"expires": "2024-07-20T03:59:38+00:00",
+			"ends": null,
+			"status": "Test",
+			"messageType": "Alert",
+			"category": "Met",
+			"severity": "Unknown",
+			"certainty": "Unknown",
+			"urgency": "Unknown",
+			"event": "Test Message",
+			"sender": "w-nws.webmaster@noaa.gov",
+			"senderName": "NWS",
+			"headline": null,
+			"description": "Monitoring message only. Please disregard.",
+			"instruction": "Monitoring message only. Please disregard.",
+			"response": "None",
+			"parameters": {
+				"AWIPSidentifier": ["KEPWBC"],
+				"WMOidentifier": ["NZUS91 KWBC 200349"],
+				"BLOCKCHANNEL": ["CMAS", "EAS", "NWEM"]
+			}
+		}
+	}, {
+		"id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0c4ab465b29cc059ef1df7a03ffd3373ed65249a.001.1",
+		"type": "Feature",
+		"geometry": {
+			"type": "Polygon",
+			"coordinates": [
+				[
+					[-102.34, 40.08],
+					[-102.14, 39.58],
+					[-102.4, 39.57],
+					[-102.59, 39.57],
+					[-102.77, 40],
+					[-102.34, 40.08]
+				]
+			]
+		},
+		"properties": {
+			"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0c4ab465b29cc059ef1df7a03ffd3373ed65249a.001.1",
+			"@type": "wx:Alert",
+			"id": "urn:oid:2.49.0.1.840.0.0c4ab465b29cc059ef1df7a03ffd3373ed65249a.001.1",
+			"areaDesc": "Yuma, CO",
+			"geocode": {
+				"SAME": ["008125"],
+				"UGC": ["COC125"]
+			},
+			"affectedZones": ["https://api.weather.gov/zones/county/COC125"],
+			"references": [{
+				"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.752fd78eaa0caed1664450a8303c5bab65c188d2.001.1",
+				"identifier": "urn:oid:2.49.0.1.840.0.752fd78eaa0caed1664450a8303c5bab65c188d2.001.1",
+				"sender": "w-nws.webmaster@noaa.gov",
+				"sent": "2024-07-19T21:24:00-06:00"
+			}],
+			"sent": "2024-07-19T21:49:00-06:00",
+			"effective": "2024-07-19T21:49:00-06:00",
+			"onset": "2024-07-19T21:49:00-06:00",
+			"expires": "2024-07-19T22:30:00-06:00",
+			"ends": "2024-07-19T22:30:00-06:00",
+			"status": "Actual",
+			"messageType": "Update",
+			"category": "Met",
+			"severity": "Severe",
+			"certainty": "Observed",
+			"urgency": "Immediate",
+			"event": "Severe Thunderstorm Warning",
+			"sender": "w-nws.webmaster@noaa.gov",
+			"senderName": "NWS Goodland KS",
+			"headline": "Severe Thunderstorm Warning issued July 19 at 9:49PM MDT until July 19 at 10:30PM MDT by NWS Goodland KS",
+			"description": "At 949 PM MDT, a severe thunderstorm was located 18 miles northwest\nof Bonny Reservoir, moving south at 40 mph.\n\nHAZARD...70 mph wind gusts and nickel size hail.\n\nSOURCE...Radar indicated.\n\nIMPACT...Expect considerable tree damage. Damage is likely to mobile\nhomes, roofs, and outbuildings.\n\nLocations impacted include...\nBonny Reservoir, Kirk, Heartstrong, Idalia, and Vernon.\n\nThis includes Highway 385 between mile markers 208 and 210, and\nbetween mile markers 212 and 227.",
+			"instruction": "For your protection move to an interior room on the lowest floor of a\nbuilding.",
+			"response": "Shelter",
+			"parameters": {
+				"AWIPSidentifier": ["SVSGLD"],
+				"WMOidentifier": ["WWUS53 KGLD 200349"],
+				"NWSheadline": ["A SEVERE THUNDERSTORM WARNING REMAINS IN EFFECT UNTIL 1030 PM MDT FOR SOUTHERN YUMA COUNTY"],
+				"eventMotionDescription": ["2024-07-20T03:49:00-00:00...storm...350DEG...33KT...39.8,-102.41"],
+				"windThreat": ["RADAR INDICATED"],
+				"maxWindGust": ["70 MPH"],
+				"hailThreat": ["RADAR INDICATED"],
+				"maxHailSize": ["0.88"],
+				"thunderstormDamageThreat": ["CONSIDERABLE"],
+				"BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"],
+				"EAS-ORG": ["WXR"],
+				"VTEC": ["/O.CON.KGLD.SV.W.0282.000000T0000Z-240720T0430Z/"],
+				"eventEndingTime": ["2024-07-20T04:30:00+00:00"]
+			},
+			"replacedBy": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.12c2391057982b0bc738604e129c1fcbe97d362f.001.1",
+			"replacedAt": "2024-07-19T22:20:00-06:00"
+		}
+	}, {
+		"id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.521b9af5f7ff84100c5e1da3382986e7e13ef430.001.1",
+		"type": "Feature",
+		"geometry": {
+			"type": "Polygon",
+			"coordinates": [
+				[
+					[-101.66, 41.7299999],
+					[-101.26, 41.7299999],
+					[-101.23, 41.43],
+					[-101.8, 41.51],
+					[-101.66, 41.7299999]
+				]
+			]
+		},
+		"properties": {
+			"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.521b9af5f7ff84100c5e1da3382986e7e13ef430.001.1",
+			"@type": "wx:Alert",
+			"id": "urn:oid:2.49.0.1.840.0.521b9af5f7ff84100c5e1da3382986e7e13ef430.001.1",
+			"areaDesc": "Grant, NE; Hooker, NE",
+			"geocode": {
+				"SAME": ["031075", "031091"],
+				"UGC": ["NEC075", "NEC091"]
+			},
+			"affectedZones": ["https://api.weather.gov/zones/county/NEC075", "https://api.weather.gov/zones/county/NEC091"],
+			"references": [{
+				"@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4355476760a14cfd79c5c6566b52e7465d2a79c2.001.1",
+				"identifier": "urn:oid:2.49.0.1.840.0.4355476760a14cfd79c5c6566b52e7465d2a79c2.001.1",
+				"sender": "w-nws.webmaster@noaa.gov",
+				"sent": "2024-07-19T18:24:00-05:00"
+			}],
+			"sent": "2024-07-19T18:45:00-05:00",
+			"effective": "2024-07-19T18:45:00-05:00",
+			"onset": "2024-07-19T18:45:00-05:00",
+			"expires": "2024-07-19T19:00:48-05:00",
+			"ends": "2024-07-19T19:15:00-05:00",
+			"status": "Actual",
+			"messageType": "Cancel",
+			"category": "Met",
+			"severity": "Minor",
+			"certainty": "Observed",
+			"urgency": "Past",
+			"event": "Severe Thunderstorm Warning",
+			"sender": "w-nws.webmaster@noaa.gov",
+			"senderName": "NWS North Platte NE",
+			"headline": "The Severe Thunderstorm Warning has been cancelled.",
+			"description": "The Severe Thunderstorm Warning has been cancelled and is no longer in effect.",
+			"instruction": null,
+			"response": "AllClear",
+			"parameters": {
+				"AWIPSidentifier": ["SVSLBF"],
+				"WMOidentifier": ["WWUS53 KLBF 192345"],
+				"NWSheadline": ["THE SEVERE THUNDERSTORM WARNING FOR SOUTHEASTERN GRANT AND SOUTHWESTERN HOOKER COUNTIES IS CANCELLED"],
+				"eventMotionDescription": ["2024-07-19T23:44:00-00:00...storm...014DEG...35KT...41.6,-101.58"],
+				"BLOCKCHANNEL": ["EAS", "NWEM", "CMAS"],
+				"EAS-ORG": ["WXR"],
+				"VTEC": ["/O.CAN.KLBF.SV.W.0226.000000T0000Z-240720T0015Z/"],
+				"eventEndingTime": ["2024-07-20T00:15:00+00:00"]
+			}
+		}
+	}],
+	"title": "Watches, warnings, and advisories issued between Fri, Jul 19, 2024 5:40:08 AM +0000 and Sat, Jul 20, 2024 5:40:08 AM +0000",
+	"updated": "2024-07-20T08:33:27+00:00",
+	"pagination": {
+		"next": "https://api.weather.gov/alerts?start=2024-07-19T05:40:08Z&end=2024-07-20T05:40:08Z&limit=500&cursor=eyJ0IjoxNzIxNDMyNzAwLCJpIjoidXJuOm9pZDoyLjQ5LjAuMS44NDAuMC41MjFiOWFmNWY3ZmY4NDEwMGM1ZTFkYTMzODI5ODZlN2UxM2VmNDMwLjAwMS4xIn0%3D"
+	}
+}
