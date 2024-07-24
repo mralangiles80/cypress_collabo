@@ -87,12 +87,13 @@
       "RIZ678",
       "WYC901",
       "IDC234",
-      "NMZ567"
+      "NMZ567",
+      "NYC123",
+      "AKZ000"
 
   ],
   "invalidZoneCodes": [
       "AKC1234",
-      "NYC123",
       "CAZ12",
       "CAX123",
       "ca123",
@@ -107,7 +108,6 @@
       "AKCA23",
       "AK123C",
       "AKC1Z3",
-      "AKZ000",
       "RIC1234",
       "HIC1234",
       "AK123Z",
