@@ -24,6 +24,36 @@ interface WeatherAPIResponse {
   };
 }
 
+interface Request {
+   url: string;
+   on: (response: any, responseBody: any) => void;
+}
+
+interface QueryParameter {
+   parameter: string; 
+   enumeration: {};
+}
+
+interface Response {
+   status: number;
+   body: ErrorResponse;
+}
+
+interface ErrorResponse {
+   correlationId: string;
+   title: string;
+   detail: string;
+   type: string;
+   instance: string;
+   status: number;
+   parameterErrors: ParameterErrors[];
+}
+
+interface ParameterErrors {
+   parameter: string;
+   message: string;
+}
+
 interface Feature {
   id: string;
   type: string;
@@ -70,7 +100,6 @@ interface FeatureProperties {
     [key: string]: any;
   };
 }
-
 
 function getLastWeekDates(startOffset: number, endOffset: number) {
   const dates = [];
@@ -144,14 +173,14 @@ describe('Weather API Response Structure Validation', () => {
 });
 
 describe('Query Parameter Tests', () => {
-  queryParameters.forEach((item: { parameter: string; enumeration: {} }) => {
+  queryParameters.forEach((item: QueryParameter) => {
     const queryParameter = item.parameter;
 
       it(`config for ${queryParameter} query parameter matches values in error message array`, () => {
          cy.request({
             url: `/alerts/active?${queryParameter}`,
             failOnStatusCode: false,
-         }).then((response: {body:{[key:string]:any}}) => {
+         }).then((response: {body: ErrorResponse}) => {
             const errorMessage = response.body.parameterErrors[0].message;
             const parsedErrorMessageValues = (errorMessage).replace(/Does not have a value in the enumeration/g, "");
             const errorMessageValues = JSON.parse(parsedErrorMessageValues);
@@ -229,8 +258,8 @@ describe("Weather API Alert Types", () => {
             }, {
                statusCode: 503
             }),
-            (request: {[key:string]:any}) => {
-               request.on('response', (response: Record<string, number>) => {
+            (request: Request) => {
+               request.on('response', (response: ErrorResponse) => {
                   expect(response.status).to.eq(503);
                   expect(response).to.have.property("correlationId");
                   expect(response).to.have.property("title");
@@ -249,8 +278,8 @@ describe("Weather API Alert Types", () => {
             }, {
                statusCode: 500
             }),
-            (request: {[key:string]:any}) => {
-               request.on('response', (response: Record<string, number>) => {
+            (request: Request) => {
+               request.on('response', (response: ErrorResponse) => {
                   expect(response.status).to.eq(500);
                   expect(response).to.have.property("correlationId");
                   expect(response).to.have.property("title");
@@ -302,8 +331,8 @@ describe("Weather API Alert Types", () => {
                method: 'GET', url: 'alerts?point=38.09,-43.999999'}, {
                statusCode: 503
             }),
-            (request: {[key:string]:any}) => {
-               request.on('response', (response: Record<string, number>) => {
+            (request: Request) => {
+               request.on('response', (response: ErrorResponse) => {
                   expect(response.status).to.eq(503);
                   expect(response).to.have.property("correlationId");
                   expect(response).to.have.property("title");
@@ -320,8 +349,8 @@ describe("Weather API Alert Types", () => {
          cy.intercept({ method: 'GET', url: '/alerts?point=38.09,-43.999999/'}, {
                statusCode: 500
             }),
-            (request: {[key:string]:any}) => {
-               request.on('response', (response: Record<string, number>) => { 
+            (request: Request) => {
+               request.on('response', (response: ErrorResponse) => { 
                   expect(response.status).to.eq(500) 
                   expect(response).to.have.property("correlationId");
                   expect(response).to.have.property("title");
@@ -338,7 +367,7 @@ describe("Weather API Alert Types", () => {
          cy.fixture('alerts/alert-description').then(response => {
             cy.intercept({ method: 'GET', url: '/alerts?point=38.09,-76.999999'}, response)
             var forecastFeatures = response.features;
-            forecastFeatures.forEach(function(forecastFeature: {[key:string]:any}) {
+            forecastFeatures.forEach(function(forecastFeature: Feature) {
                var forecastFeatureDescription = forecastFeature.properties.description;
                if (forecastFeatureDescription.includes(" IN ")) {
                   expect(forecastFeatureDescription).to.contain("\n");
@@ -366,8 +395,8 @@ describe("Weather API Alert Types", () => {
             }, {
                statusCode: 503
             }),
-            (request: {[key:string]:any}) => {
-               request.on('response', (response: Record<string, number>) => {
+            (request: Request) => {
+               request.on('response', (response: ErrorResponse) => {
                   expect(response.status).to.eq(503);
                   expect(response).to.have.property("correlationId");
                   expect(response).to.have.property("title");
@@ -386,8 +415,8 @@ describe("Weather API Alert Types", () => {
             }, {
                statusCode: 500
             }),
-            (request: {[key:string]:any}) => {
-               request.on('response', (response: Record<string, number>) => {
+            (request: Request) => {
+               request.on('response', (response: ErrorResponse) => {
                   expect(response.status).to.eq(500);
                   expect(response).to.have.property("correlationId");
                   expect(response).to.have.property("title");
@@ -435,8 +464,8 @@ describe("Weather API Alert Types", () => {
          }, {
             statusCode: 503
          }),
-         (request: {[key:string]:any}) => {
-            request.on('response', (response: Record<string, number>) => {
+         (request: Request) => {
+            request.on('response', (response: ErrorResponse) => {
                expect(response.status).to.eq(503);
                expect(response).to.have.property("correlationId");
                expect(response).to.have.property("title");
@@ -456,8 +485,8 @@ describe("Weather API Alert Types", () => {
             }, {
                statusCode: 500
             }),
-            (request: {[key:string]:any}) => {
-               request.on('response', (response: Record<string, number>) => {
+            (request: Request) => {
+               request.on('response', (response: ErrorResponse) => {
                   expect(response.status).to.eq(500);
                   expect(response).to.have.property("correlationId");
                   expect(response).to.have.property("title");
@@ -543,7 +572,7 @@ describe("Weather API Alert Types", () => {
          cy.request({
             url: `/alerts?${invalidQueryParameter}=Avoid`,
             failOnStatusCode: false,
-         }).then((response: {status:number, body:{[key:string]:any}}) => {
+         }).then((response: Response) => {
             expect(response.status).to.eq(400);
             expect(response.body).to.have.property("correlationId");
             expect(response.body).to.have.property("parameterErrors");
@@ -562,7 +591,7 @@ describe("Weather API Alert Types", () => {
          cy.request({
             url: `/alerts?event=&&`,
             failOnStatusCode: false,
-         }).then((response: {status:number, body: {[key:string]:any}}) => {
+         }).then((response: Response) => {
             expect(response.status).to.eq(400);
             expect(response.body).to.have.property("correlationId");
             expect(response.body).to.have.property("parameterErrors");
