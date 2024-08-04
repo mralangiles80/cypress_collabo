@@ -12,7 +12,6 @@ import {
    invalidAreaCodes
 } from '../../fixtures/test-data.json';
 
-
 interface WeatherAPIResponse {
   '@context': any;
   type: string;
@@ -24,14 +23,19 @@ interface WeatherAPIResponse {
   };
 }
 
-interface Request {
-   url: string;
-   on: (response: any, responseBody: any) => void;
-}
-
 interface QueryParameter {
    parameter: string; 
    enumeration: {};
+}
+
+interface InvalidLimitValue {
+   number: number;
+   text: string;
+   value: number;
+}
+
+interface Request {
+   on: (response: string, responseBody: { [key: string]: any; } ) => void;
 }
 
 interface Response {
@@ -180,7 +184,7 @@ describe('Query Parameter Tests', () => {
          cy.request({
             url: `/alerts/active?${queryParameter}`,
             failOnStatusCode: false,
-         }).then((response: {body: ErrorResponse}) => {
+         }).then((response: Response) => {
             const errorMessage = response.body.parameterErrors[0].message;
             const parsedErrorMessageValues = (errorMessage).replace(/Does not have a value in the enumeration/g, "");
             const errorMessageValues = JSON.parse(parsedErrorMessageValues);
@@ -715,7 +719,7 @@ describe("Weather API Alert Types", () => {
          })
       })
 
-      invalidLimitValues.forEach((item: {number: number, text: string, value: number}) => {
+      invalidLimitValues.forEach((item: InvalidLimitValue) => {
          it(`uses the most correct error message for incorrectly formatted alert searches in the path: /alerts?limit=${item.number}`, () => {
             cy.request({
                url: `/alerts?limit=${item.number}`,
