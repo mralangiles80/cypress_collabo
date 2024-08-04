@@ -1,5 +1,15 @@
 import moment from 'moment';
 
+interface Alert {
+  id: string;
+  properties: Properties;
+}
+
+interface Properties {
+  id: string;
+  event: string;
+}
+
 describe("Newsworthy Alerts If The Asserts Fail", () => {
 
    let NMlongtitudes = new Array();
@@ -93,7 +103,7 @@ describe("Newsworthy Alerts If The Asserts Fail", () => {
                url: `/alerts/active/area/FL`
             }).then((response) => {
                var alerts = response.body.features;
-               alerts.forEach(function(alert: any) {
+               alerts.forEach(function(alert: Alert) {
                   expect(alert.properties.event).to.not.eq("Hurricane Warning");
                });
             })
